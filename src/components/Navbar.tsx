@@ -24,7 +24,7 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/essentials">Essentials</NavLink>
             <NavLink to="/transport">Transport</NavLink>
-            <NavLink to="/see-and-do">See & Do</NavLink>
+            <NavLink to="/things-to-do">See & Do</NavLink>
             <NavLink to="/food-and-drink">Food & Drink</NavLink>
             <NavLink to="/living">Living</NavLink>
           </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
             <MobileNavLink to="/" onClick={toggleMenu}>Home</MobileNavLink>
             <MobileNavLink to="/essentials" onClick={toggleMenu}>Essentials</MobileNavLink>
             <MobileNavLink to="/transport" onClick={toggleMenu}>Transport</MobileNavLink>
-            <MobileNavLink to="/see-and-do" onClick={toggleMenu}>See & Do</MobileNavLink>
+            <MobileNavLink to="/things-to-do" onClick={toggleMenu}>See & Do</MobileNavLink>
             <MobileNavLink to="/food-and-drink" onClick={toggleMenu}>Food & Drink</MobileNavLink>
             <MobileNavLink to="/living" onClick={toggleMenu}>Living</MobileNavLink>
           </div>
