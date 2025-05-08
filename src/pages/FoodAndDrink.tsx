@@ -1,14 +1,57 @@
-
+import { useState } from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import ContentCard from '@/components/ContentCard';
+import SubcategorySelector from '@/components/SubcategorySelector';
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UtensilsCrossed, Utensils, Coffee } from 'lucide-react';
-import { useState } from 'react';
 
 const FoodAndDrink = () => {
   const [activeTab, setActiveTab] = useState("restaurants");
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+  
+  // Subcategories for each main category
+  const restaurantsSubcategories = [
+    "Menu del dia for €6 to €10",
+    "Diners",
+    "Vegetarian Food"
+  ];
+  
+  const tapasSubcategories = [
+    "Bars, Cafés & Cocktails",
+    "Terraces / Terrazas"
+  ];
+  
+  const cafesSubcategories = [
+    "Bars, Cafés & Cocktails", 
+    "Health Food Stores"
+  ];
+
+  const nightlifeSubcategories = [
+    "Night Clubs & Dancing",
+    "Salsa Dancing"
+  ];
+  
+  // Handle subcategory selection
+  const handleSubcategorySelect = (subcategory: string) => {
+    setSelectedSubcategory(subcategory);
+    console.log(`Selected subcategory: ${subcategory}`);
+    // In a real app, we would fetch data for this subcategory
+  };
+
+  const getSubcategoriesForActiveTab = () => {
+    switch (activeTab) {
+      case "restaurants":
+        return restaurantsSubcategories;
+      case "tapas":
+        return tapasSubcategories;
+      case "cafes":
+        return cafesSubcategories;
+      default:
+        return [];
+    }
+  };
   
   const restaurants = [
     {
@@ -107,7 +150,14 @@ const FoodAndDrink = () => {
           <TabsContent value="restaurants" className="animate-fade-in">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Top Restaurants</h2>
-              <p className="text-gray-600 mb-8">From centuries-old establishments to modern dining experiences, these restaurants showcase the best of Madrid's cuisine.</p>
+              <p className="text-gray-600 mb-4">From centuries-old establishments to modern dining experiences, these restaurants showcase the best of Madrid's cuisine.</p>
+              
+              <SubcategorySelector 
+                subcategories={restaurantsSubcategories}
+                onSelect={handleSubcategorySelect}
+                placeholder="Filter by restaurant type"
+              />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {restaurants.map((item, index) => (
                   <ContentCard
@@ -125,7 +175,14 @@ const FoodAndDrink = () => {
           <TabsContent value="tapas" className="animate-fade-in">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Best Tapas Bars</h2>
-              <p className="text-gray-600 mb-8">Experience Madrid's tapas culture at these authentic bars where small plates accompany your drinks.</p>
+              <p className="text-gray-600 mb-4">Experience Madrid's tapas culture at these authentic bars where small plates accompany your drinks.</p>
+              
+              <SubcategorySelector 
+                subcategories={tapasSubcategories}
+                onSelect={handleSubcategorySelect}
+                placeholder="Filter by tapas type"
+              />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tapas.map((item, index) => (
                   <ContentCard
@@ -143,7 +200,14 @@ const FoodAndDrink = () => {
           <TabsContent value="cafes" className="animate-fade-in">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Cozy Cafés</h2>
-              <p className="text-gray-600 mb-8">Relax and recharge at Madrid's charming cafés, offering everything from traditional Spanish coffee to artisanal brews.</p>
+              <p className="text-gray-600 mb-4">Relax and recharge at Madrid's charming cafés, offering everything from traditional Spanish coffee to artisanal brews.</p>
+              
+              <SubcategorySelector 
+                subcategories={cafesSubcategories}
+                onSelect={handleSubcategorySelect}
+                placeholder="Filter by café type"
+              />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cafes.map((item, index) => (
                   <ContentCard

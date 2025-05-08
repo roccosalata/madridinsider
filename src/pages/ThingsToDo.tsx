@@ -1,14 +1,97 @@
-
 import { useState } from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import ContentCard from '@/components/ContentCard';
+import SubcategorySelector from '@/components/SubcategorySelector';
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Map, Film, Music, ShoppingBag, MapPin } from 'lucide-react';
 
 const ThingsToDo = () => {
   const [activeTab, setActiveTab] = useState("attractions");
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+
+  // Subcategories for each main category
+  const attractionsSubcategories = [
+    "Museums: El Prado", 
+    "Museums: Reina Sofia", 
+    "Museums: Thyssen",
+    "Places of Interest",
+    "Parks, Gardens, etc.",
+    "Photo Galleries",
+    "Cool Neighborhoods"
+  ];
+
+  const activitiesSubcategories = [
+    "Bus Tours",
+    "Walking & Seg Tours",
+    "Tours (Other)",
+    "Madrid Card",
+    "Teleferico (Sky Lift)",
+    "Tourist Offices (Madrid)"
+  ];
+
+  const entertainmentSubcategories = [
+    "Flamenco Shows",
+    "Bullfights",
+    "Theater (live)",
+    "Theater (live) - Alternative",
+    "Version Original Cinemas",
+    "Movie Titles",
+    "IMAX / Planetarium",
+    "Outdoor Summer Movies",
+    "Magic & Comedy",
+    "Production Services",
+    "Radio (English)"
+  ];
+
+  const shoppingSubcategories = [
+    "Book Stores",
+    "Music Store",
+    "Computer Stores",
+    "Int. Grocery Stores",
+    "Electronic Components",
+    "Optical Shops"
+  ];
+
+  const recreationSubcategories = [
+    "Theme Parks",
+    "Zoo / Aquarium",
+    "Basketball (Baloncesto)",
+    "Soccer (Football)",
+    "Tennis",
+    "Golf",
+    "Swimming Pools",
+    "Bikes (Cycling)",
+    "Skating",
+    "Boating",
+    "Bowling",
+    "Pool (Billiards)",
+    "Skiing / Snowboarding",
+    "Water Parks"
+  ];
+
+  // Handle subcategory selection
+  const handleSubcategorySelect = (subcategory: string) => {
+    setSelectedSubcategory(subcategory);
+    console.log(`Selected subcategory: ${subcategory}`);
+    // In a real app, we would fetch data for this subcategory
+  };
+
+  const getSubcategoriesForActiveTab = () => {
+    switch (activeTab) {
+      case "attractions":
+        return attractionsSubcategories;
+      case "activities":
+        return activitiesSubcategories;
+      case "entertainment":
+        return entertainmentSubcategories;
+      case "shopping":
+        return shoppingSubcategories;
+      default:
+        return [];
+    }
+  };
 
   const attractions = [
     {
@@ -123,7 +206,14 @@ const ThingsToDo = () => {
           <TabsContent value="attractions" className="animate-fade-in">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Top Attractions</h2>
-              <p className="text-gray-600 mb-8">Madrid's must-see museums, monuments, and landmarks that showcase the city's rich history and culture.</p>
+              <p className="text-gray-600 mb-4">Madrid's must-see museums, monuments, and landmarks that showcase the city's rich history and culture.</p>
+              
+              <SubcategorySelector 
+                subcategories={attractionsSubcategories}
+                onSelect={handleSubcategorySelect}
+                placeholder="Filter by type"
+              />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {attractions.map((item, index) => (
                   <ContentCard
@@ -141,7 +231,14 @@ const ThingsToDo = () => {
           <TabsContent value="activities" className="animate-fade-in">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Fun Activities</h2>
-              <p className="text-gray-600 mb-8">Interactive experiences and tours that let you engage with Madrid's culture and lifestyle.</p>
+              <p className="text-gray-600 mb-4">Interactive experiences and tours that let you engage with Madrid's culture and lifestyle.</p>
+              
+              <SubcategorySelector 
+                subcategories={activitiesSubcategories}
+                onSelect={handleSubcategorySelect}
+                placeholder="Filter by activity type"
+              />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {activities.map((item, index) => (
                   <ContentCard
@@ -159,7 +256,14 @@ const ThingsToDo = () => {
           <TabsContent value="entertainment" className="animate-fade-in">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Entertainment</h2>
-              <p className="text-gray-600 mb-8">From traditional flamenco to modern cinema, discover Madrid's vibrant entertainment scene.</p>
+              <p className="text-gray-600 mb-4">From traditional flamenco to modern cinema, discover Madrid's vibrant entertainment scene.</p>
+              
+              <SubcategorySelector 
+                subcategories={entertainmentSubcategories}
+                onSelect={handleSubcategorySelect}
+                placeholder="Filter by entertainment type"
+              />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {entertainment.map((item, index) => (
                   <ContentCard
@@ -177,7 +281,14 @@ const ThingsToDo = () => {
           <TabsContent value="shopping" className="animate-fade-in">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Shopping</h2>
-              <p className="text-gray-600 mb-8">From luxury boutiques to local markets, Madrid offers diverse shopping opportunities for every taste and budget.</p>
+              <p className="text-gray-600 mb-4">From luxury boutiques to local markets, Madrid offers diverse shopping opportunities for every taste and budget.</p>
+              
+              <SubcategorySelector 
+                subcategories={shoppingSubcategories}
+                onSelect={handleSubcategorySelect}
+                placeholder="Filter by shop type"
+              />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {shopping.map((item, index) => (
                   <ContentCard
