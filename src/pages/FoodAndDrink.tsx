@@ -4,7 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import ContentCard from '@/components/ContentCard';
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Restaurant, Utensils, Cafe } from 'lucide-react';
+import { UtensilsCrossed, Utensils, Coffee } from 'lucide-react';
 import { useState } from 'react';
 
 const FoodAndDrink = () => {
@@ -94,13 +94,13 @@ const FoodAndDrink = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8">
             <TabsTrigger value="restaurants" className="flex items-center gap-2">
-              <Restaurant size={18} /> Restaurants
+              <UtensilsCrossed size={18} /> Restaurants
             </TabsTrigger>
             <TabsTrigger value="tapas" className="flex items-center gap-2">
               <Utensils size={18} /> Tapas Bars
             </TabsTrigger>
             <TabsTrigger value="cafes" className="flex items-center gap-2">
-              <Cafe size={18} /> Cafés
+              <Coffee size={18} /> Cafés
             </TabsTrigger>
           </TabsList>
           
