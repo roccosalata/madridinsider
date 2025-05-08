@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
@@ -11,46 +12,29 @@ const FoodAndDrink = () => {
   const [activeTab, setActiveTab] = useState("restaurants");
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   
-  // Subcategories for each main category
-  const restaurantsSubcategories = [
-    "Menu del dia for €6 to €10",
-    "Diners",
-    "Vegetarian Food"
-  ];
-  
-  const tapasSubcategories = [
-    "Bars, Cafés & Cocktails",
-    "Terraces / Terrazas"
-  ];
-  
-  const cafesSubcategories = [
-    "Bars, Cafés & Cocktails", 
-    "Health Food Stores"
-  ];
-
-  const nightlifeSubcategories = [
-    "Night Clubs & Dancing",
-    "Salsa Dancing"
-  ];
+  // Organized subcategories by logical groups
+  const foodSubcategories = {
+    "Restaurants": [
+      "Menu del dia for €6 to €10",
+      "Diners",
+      "Vegetarian Food"
+    ],
+    "Cafés & Bars": [
+      "Bars, Cafés & Cocktails",
+      "Terraces / Terrazas", 
+      "Health Food Stores"
+    ],
+    "Nightlife": [
+      "Night Clubs & Dancing",
+      "Salsa Dancing"
+    ]
+  };
   
   // Handle subcategory selection
   const handleSubcategorySelect = (subcategory: string) => {
     setSelectedSubcategory(subcategory);
     console.log(`Selected subcategory: ${subcategory}`);
     // In a real app, we would fetch data for this subcategory
-  };
-
-  const getSubcategoriesForActiveTab = () => {
-    switch (activeTab) {
-      case "restaurants":
-        return restaurantsSubcategories;
-      case "tapas":
-        return tapasSubcategories;
-      case "cafes":
-        return cafesSubcategories;
-      default:
-        return [];
-    }
   };
   
   const restaurants = [
@@ -153,9 +137,9 @@ const FoodAndDrink = () => {
               <p className="text-gray-600 mb-4">From centuries-old establishments to modern dining experiences, these restaurants showcase the best of Madrid's cuisine.</p>
               
               <SubcategorySelector 
-                subcategories={restaurantsSubcategories}
+                subcategories={foodSubcategories}
                 onSelect={handleSubcategorySelect}
-                placeholder="Filter by restaurant type"
+                placeholder="Browse food & drink categories"
               />
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -178,9 +162,9 @@ const FoodAndDrink = () => {
               <p className="text-gray-600 mb-4">Experience Madrid's tapas culture at these authentic bars where small plates accompany your drinks.</p>
               
               <SubcategorySelector 
-                subcategories={tapasSubcategories}
+                subcategories={foodSubcategories}
                 onSelect={handleSubcategorySelect}
-                placeholder="Filter by tapas type"
+                placeholder="Browse food & drink categories"
               />
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -203,9 +187,9 @@ const FoodAndDrink = () => {
               <p className="text-gray-600 mb-4">Relax and recharge at Madrid's charming cafés, offering everything from traditional Spanish coffee to artisanal brews.</p>
               
               <SubcategorySelector 
-                subcategories={cafesSubcategories}
+                subcategories={foodSubcategories}
                 onSelect={handleSubcategorySelect}
-                placeholder="Filter by café type"
+                placeholder="Browse food & drink categories"
               />
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

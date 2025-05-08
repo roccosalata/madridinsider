@@ -5,84 +5,76 @@ import HeroSection from '@/components/HeroSection';
 import SubcategorySelector from '@/components/SubcategorySelector';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, IdCard, User, BookOpen } from 'lucide-react';
+import { Home, IdCard, BookOpen, Briefcase, Heart, User } from 'lucide-react';
 
 const Living = () => {
   const [activeTab, setActiveTab] = useState("accommodation");
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
 
-  // Subcategories for each main category
-  const accommodationSubcategories = [
-    "1 or More Weeks: Rooms in Shared Flats Booking",
-    "A Do it Yourself Guide",
-    "Apart-Hotels",
-    "Hostels",
-    "Hotels"
-  ];
-
-  const paperworkSubcategories = [
-    "USA Citizens in Spain",
-    "Visa: UK",
-    "Visa: USA",
-    "Banks",
-    "Post Office & Mail",
-    "Embassies"
-  ];
-
-  const studentLifeSubcategories = [
-    "Bilingual / English Schools",
-    "1st & 2nd English Language Certificate",
-    "Language Schools",
-    "Escuela Oficial de Idiomas",
-    "Language Exchanges",
-    "Libraries",
-    "Film & Theater",
-    "Teacher Training"
-  ];
-
-  const workSubcategories = [
-    "English Teacher Advice",
-    "English Teacher Agencies",
-    "Teach in Spain",
-    "Aupair",
-    "Internships",
-    "Journalism / Writing",
-    "Film Resources",
-    "Hostess / Azafatas",
-    "Talent Agencies"
-  ];
-
-  const healthSubcategories = [
-    "Hospitals / Clinics",
-    "Doctors / Specialists",
-    "Dentists",
-    "Drug Stores",
-    "Medical Care",
-    "Immunizations",
-    "Health Clubs / Gyms",
-    "Health Food Stores",
-    "Vegetarian Food",
-    "Yoga"
-  ];
+  // Organized subcategories by logical groups
+  const livingSubcategories = {
+    "Accommodation": [
+      "1 or More Weeks: Rooms in Shared Flats Booking",
+      "A Do it Yourself Guide",
+      "Apart-Hotels",
+      "Hostels",
+      "Hotels"
+    ],
+    "Paperwork & Administration": [
+      "USA Citizens in Spain",
+      "Visa: UK",
+      "Visa: USA",
+      "Banks",
+      "Post Office & Mail",
+      "Embassies"
+    ],
+    "Student Life": [
+      "Bilingual / English Schools",
+      "1st & 2nd English Language Certificate",
+      "Language Schools",
+      "Escuela Oficial de Idiomas",
+      "Language Exchanges",
+      "Libraries",
+      "Film & Theater",
+      "Teacher Training"
+    ],
+    "Work Opportunities": [
+      "English Teacher Advice",
+      "English Teacher Agencies",
+      "Teach in Spain",
+      "Aupair",
+      "Internships",
+      "Journalism / Writing",
+      "Film Resources",
+      "Hostess / Azafatas",
+      "Talent Agencies"
+    ],
+    "Health & Wellness": [
+      "Hospitals / Clinics",
+      "Doctors / Specialists",
+      "Dentists",
+      "Drug Stores",
+      "Medical Care",
+      "Immunizations",
+      "Health Clubs / Gyms",
+      "Health Food Stores",
+      "Vegetarian Food",
+      "Yoga"
+    ],
+    "General Information": [
+      "Areas / Barrios",
+      "Local Police Stations",
+      "Emergencies",
+      "Religions & Faiths",
+      "Useful Information"
+    ]
+  };
 
   // Handle subcategory selection
   const handleSubcategorySelect = (subcategory: string) => {
     setSelectedSubcategory(subcategory);
     console.log(`Selected subcategory: ${subcategory}`);
     // In a real app, we would fetch data for this subcategory
-  };
-
-  const getSubcategoriesForActiveTab = () => {
-    switch (activeTab) {
-      case "accommodation":
-        return accommodationSubcategories;
-      case "nie":
-        return paperworkSubcategories;
-      case "student-life":
-        return studentLifeSubcategories;
-      default:
-        return [];
-    }
   };
 
   return (
@@ -102,9 +94,15 @@ const Living = () => {
             Madrid is a welcoming city with a large international community, excellent public transportation, and a high quality of life. With some insider knowledge and a bit of patience with bureaucracy, you'll soon be enjoying all the benefits of Madrid living.
           </p>
         </div>
+
+        <SubcategorySelector 
+          subcategories={livingSubcategories}
+          onSelect={handleSubcategorySelect}
+          placeholder="Browse living in Madrid categories"
+        />
         
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full mt-8">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 mb-8">
             <TabsTrigger value="accommodation" className="flex items-center gap-2">
               <Home size={18} /> Accommodation
             </TabsTrigger>
@@ -112,7 +110,7 @@ const Living = () => {
               <IdCard size={18} /> NIE & Paperwork
             </TabsTrigger>
             <TabsTrigger value="student-life" className="flex items-center gap-2">
-              <User size={18} /> Student Life
+              <BookOpen size={18} /> Student Life
             </TabsTrigger>
           </TabsList>
           
@@ -122,12 +120,6 @@ const Living = () => {
               <p className="text-gray-600 mb-6">
                 Finding the right place to live is one of the first and most important steps in settling into Madrid. Here's what you need to know:
               </p>
-
-              <SubcategorySelector 
-                subcategories={accommodationSubcategories}
-                onSelect={handleSubcategorySelect}
-                placeholder="Accommodation options"
-              />
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <Card>
@@ -185,12 +177,6 @@ const Living = () => {
               <p className="text-gray-600 mb-6">
                 Navigating Spanish bureaucracy can be challenging, but getting your paperwork in order early will make your stay much smoother.
               </p>
-
-              <SubcategorySelector 
-                subcategories={paperworkSubcategories}
-                onSelect={handleSubcategorySelect}
-                placeholder="Select paperwork category"
-              />
               
               <Card className="mb-8">
                 <CardHeader>
@@ -239,12 +225,6 @@ const Living = () => {
               <p className="text-gray-600 mb-6">
                 Madrid is home to several prestigious universities and thousands of international students each year. Here's how to make the most of your student experience.
               </p>
-
-              <SubcategorySelector 
-                subcategories={studentLifeSubcategories}
-                onSelect={handleSubcategorySelect}
-                placeholder="Select student life category"
-              />
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <Card>
@@ -296,7 +276,7 @@ const Living = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2"><BookOpen size={20} /> Study Spots</CardTitle>
+                  <CardTitle className="flex items-center gap-2"><User size={20} /> Study Spots</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">Madrid offers many great places to study beyond your university library:</p>
