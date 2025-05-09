@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import { directoryData } from '@/data/directoryData';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Utensils, Home, Theatre, Info, Heart, ShoppingBag, MapPin, Users, Activity, GraduationCap, Plane, Briefcase } from 'lucide-react';
+import { Utensils, Home, Theater, Info, Heart, ShoppingBag, MapPin, Users, Activity, GraduationCap, Plane, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Directory = () => {
@@ -29,7 +29,7 @@ const Directory = () => {
     const iconMap: Record<string, JSX.Element> = {
       foodAndDrink: <Utensils size={24} />,
       living: <Home size={24} />,
-      artsAndEntertainment: <Theatre size={24} />,
+      artsAndEntertainment: <Theater size={24} />,
       genInfoAndServices: <Info size={24} />,
       healthAndMedical: <Heart size={24} />,
       shopsAndServices: <ShoppingBag size={24} />,
