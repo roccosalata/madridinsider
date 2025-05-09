@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
@@ -6,69 +5,11 @@ import SubcategorySelector from '@/components/SubcategorySelector';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, IdCard, BookOpen, Briefcase, Heart, User } from 'lucide-react';
+import { directoryData } from '@/data/directoryData';
 
 const Living = () => {
   const [activeTab, setActiveTab] = useState("accommodation");
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
-
-  // Organized subcategories by logical groups
-  const livingSubcategories = {
-    "Accommodation": [
-      "1 or More Weeks: Rooms in Shared Flats Booking",
-      "A Do it Yourself Guide",
-      "Apart-Hotels",
-      "Hostels",
-      "Hotels"
-    ],
-    "Paperwork & Administration": [
-      "USA Citizens in Spain",
-      "Visa: UK",
-      "Visa: USA",
-      "Banks",
-      "Post Office & Mail",
-      "Embassies"
-    ],
-    "Student Life": [
-      "Bilingual / English Schools",
-      "1st & 2nd English Language Certificate",
-      "Language Schools",
-      "Escuela Oficial de Idiomas",
-      "Language Exchanges",
-      "Libraries",
-      "Film & Theater",
-      "Teacher Training"
-    ],
-    "Work Opportunities": [
-      "English Teacher Advice",
-      "English Teacher Agencies",
-      "Teach in Spain",
-      "Aupair",
-      "Internships",
-      "Journalism / Writing",
-      "Film Resources",
-      "Hostess / Azafatas",
-      "Talent Agencies"
-    ],
-    "Health & Wellness": [
-      "Hospitals / Clinics",
-      "Doctors / Specialists",
-      "Dentists",
-      "Drug Stores",
-      "Medical Care",
-      "Immunizations",
-      "Health Clubs / Gyms",
-      "Health Food Stores",
-      "Vegetarian Food",
-      "Yoga"
-    ],
-    "General Information": [
-      "Areas / Barrios",
-      "Local Police Stations",
-      "Emergencies",
-      "Religions & Faiths",
-      "Useful Information"
-    ]
-  };
 
   // Handle subcategory selection
   const handleSubcategorySelect = (subcategory: string) => {
@@ -96,7 +37,7 @@ const Living = () => {
         </div>
 
         <SubcategorySelector 
-          subcategories={livingSubcategories}
+          subcategories={directoryData.living}
           onSelect={handleSubcategorySelect}
           placeholder="Browse living in Madrid categories"
         />

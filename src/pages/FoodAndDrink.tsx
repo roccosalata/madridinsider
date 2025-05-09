@@ -7,28 +7,11 @@ import SubcategorySelector from '@/components/SubcategorySelector';
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UtensilsCrossed, Utensils, Coffee } from 'lucide-react';
+import { directoryData } from '@/data/directoryData';
 
 const FoodAndDrink = () => {
   const [activeTab, setActiveTab] = useState("restaurants");
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
-  
-  // Organized subcategories by logical groups
-  const foodSubcategories = {
-    "Restaurants": [
-      "Menu del dia for €6 to €10",
-      "Diners",
-      "Vegetarian Food"
-    ],
-    "Cafés & Bars": [
-      "Bars, Cafés & Cocktails",
-      "Terraces / Terrazas", 
-      "Health Food Stores"
-    ],
-    "Nightlife": [
-      "Night Clubs & Dancing",
-      "Salsa Dancing"
-    ]
-  };
   
   // Handle subcategory selection
   const handleSubcategorySelect = (subcategory: string) => {
@@ -118,6 +101,12 @@ const FoodAndDrink = () => {
           </p>
         </div>
         
+        <SubcategorySelector 
+          subcategories={directoryData.foodAndDrink}
+          onSelect={handleSubcategorySelect}
+          placeholder="Browse food & drink categories"
+        />
+        
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8">
             <TabsTrigger value="restaurants" className="flex items-center gap-2">
@@ -135,12 +124,6 @@ const FoodAndDrink = () => {
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Top Restaurants</h2>
               <p className="text-gray-600 mb-4">From centuries-old establishments to modern dining experiences, these restaurants showcase the best of Madrid's cuisine.</p>
-              
-              <SubcategorySelector 
-                subcategories={foodSubcategories}
-                onSelect={handleSubcategorySelect}
-                placeholder="Browse food & drink categories"
-              />
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {restaurants.map((item, index) => (
@@ -161,12 +144,6 @@ const FoodAndDrink = () => {
               <h2 className="text-3xl font-bold mb-2">Best Tapas Bars</h2>
               <p className="text-gray-600 mb-4">Experience Madrid's tapas culture at these authentic bars where small plates accompany your drinks.</p>
               
-              <SubcategorySelector 
-                subcategories={foodSubcategories}
-                onSelect={handleSubcategorySelect}
-                placeholder="Browse food & drink categories"
-              />
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tapas.map((item, index) => (
                   <ContentCard
@@ -185,12 +162,6 @@ const FoodAndDrink = () => {
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">Cozy Cafés</h2>
               <p className="text-gray-600 mb-4">Relax and recharge at Madrid's charming cafés, offering everything from traditional Spanish coffee to artisanal brews.</p>
-              
-              <SubcategorySelector 
-                subcategories={foodSubcategories}
-                onSelect={handleSubcategorySelect}
-                placeholder="Browse food & drink categories"
-              />
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cafes.map((item, index) => (

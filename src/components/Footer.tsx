@@ -21,16 +21,16 @@ const Footer = () => {
               <li><Link to="/" className="text-gray-300 hover:text-white text-sm">Home</Link></li>
               <li><Link to="/essentials" className="text-gray-300 hover:text-white text-sm">Essentials</Link></li>
               <li><Link to="/transport" className="text-gray-300 hover:text-white text-sm">Transport</Link></li>
-              <li><Link to="/see-and-do" className="text-gray-300 hover:text-white text-sm">See & Do</Link></li>
+              <li><Link to="/directory" className="text-gray-300 hover:text-white text-sm">Directory</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-3">More Links</h4>
             <ul className="space-y-2">
+              <li><Link to="/things-to-do" className="text-gray-300 hover:text-white text-sm">See & Do</Link></li>
               <li><Link to="/food-and-drink" className="text-gray-300 hover:text-white text-sm">Food & Drink</Link></li>
               <li><Link to="/living" className="text-gray-300 hover:text-white text-sm">Living in Madrid</Link></li>
-              <li><Link to="/neighborhoods" className="text-gray-300 hover:text-white text-sm">Neighborhoods</Link></li>
               <li><Link to="/about" className="text-gray-300 hover:text-white text-sm">About Us</Link></li>
             </ul>
           </div>
