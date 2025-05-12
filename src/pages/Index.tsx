@@ -7,6 +7,14 @@ import ContentCard from '@/components/ContentCard';
 import FeatureSection from '@/components/FeatureSection';
 
 const Index = () => {
+  const quickLinks = [
+    { title: "Essentials", link: "/essentials" },
+    { title: "Transport", link: "/transport" },
+    { title: "Things to Do", link: "/things-to-do" },
+    { title: "Food & Drink", link: "/food-and-drink" },
+    { title: "Living", link: "/living" }
+  ];
+
   const exploreCards = [
     {
       title: "Essential Madrid",
@@ -24,7 +32,7 @@ const Index = () => {
       title: "See & Do",
       description: "Discover Madrid's attractions, activities, and hidden gems.",
       imageUrl: "https://images.unsplash.com/photo-1577782853630-673eafa2c209?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      link: "/see-and-do"
+      link: "/things-to-do"
     },
     {
       title: "Food & Drink",
@@ -81,19 +89,33 @@ const Index = () => {
 
   return (
     <Layout>
+      {/* Quick Links Section */}
+      <div className="bg-gray-50 py-4 border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex overflow-x-auto md:justify-center space-x-6 py-2">
+            {quickLinks.map((link, index) => (
+              <Link 
+                key={index}
+                to={link.link}
+                className="whitespace-nowrap px-4 py-2 font-medium text-gray-700 hover:text-madrid-red hover:underline"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <HeroSection 
-        title="Welcome to Madrid Insider" 
-        subtitle="Your English-language guide to experiencing Madrid like a local" 
+        title="Madrid Insider" 
+        subtitle="Your English-language guide to experiencing Madrid like a local - discover the city whether you're visiting for a few days or planning to stay." 
         ctaText="Explore Madrid" 
-        ctaLink="/see-and-do" 
+        ctaLink="/things-to-do" 
       />
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-2">Discover Madrid</h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Whether you're visiting for a few days or planning to stay, Madrid Insider gives you the essential information you need.
-          </p>
+          <h2 className="text-3xl font-bold text-center mb-12">Madrid Essentials</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {exploreCards.map((card, index) => (
               <ContentCard 

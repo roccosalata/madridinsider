@@ -27,7 +27,6 @@ const Navbar = () => {
             <NavLink to="/things-to-do">See & Do</NavLink>
             <NavLink to="/food-and-drink">Food & Drink</NavLink>
             <NavLink to="/living">Living</NavLink>
-            <NavLink to="/directory">Directory</NavLink>
           </div>
           
           {/* Mobile menu button */}
@@ -54,7 +53,6 @@ const Navbar = () => {
             <MobileNavLink to="/things-to-do" onClick={toggleMenu}>See & Do</MobileNavLink>
             <MobileNavLink to="/food-and-drink" onClick={toggleMenu}>Food & Drink</MobileNavLink>
             <MobileNavLink to="/living" onClick={toggleMenu}>Living</MobileNavLink>
-            <MobileNavLink to="/directory" onClick={toggleMenu}>Directory</MobileNavLink>
           </div>
         </div>
       )}
