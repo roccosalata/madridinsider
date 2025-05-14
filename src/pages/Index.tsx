@@ -11,37 +11,48 @@ const Index = () => {
     {
       title: "Madrid: Start Here",
       description: "Your starting point: What's new, current events, key maps, city layout, and first-timer tips for Madrid.",
-      imageUrl: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1000&auto=format&fit=crop",
       link: "/",
       icon: <Compass className="h-6 w-6" />
     },
     {
       title: "Getting Around",
       description: "Navigate Madrid: Metro, buses, taxis, airport/station transfers, and car rentals.",
-      imageUrl: "https://images.unsplash.com/photo-1517516794485-431f1c59191a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1517516794485-431f1c59191a?q=80&w=1000&auto=format&fit=crop",
       link: "/transport",
       icon: <Map className="h-6 w-6" />
     },
     {
       title: "See, Do & Explore",
       description: "Discover Madrid's best: Attractions, activities, entertainment, shopping, and in-depth neighborhood guides.",
-      imageUrl: "https://images.unsplash.com/photo-1577782853630-673eafa2c209?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1577782853630-673eafa2c209?q=80&w=1000&auto=format&fit=crop",
       link: "/things-to-do",
       icon: <Star className="h-6 w-6" />
     },
     {
       title: "Eat & Drink",
       description: "Savor Madrid: Your directory to the city's top restaurants, tapas bars, cafes, and foodie hotspots.",
-      imageUrl: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=1000&auto=format&fit=crop",
       link: "/food-and-drink",
       icon: <Utensils className="h-6 w-6" />
     },
     {
       title: "Madrid Life: Practical Guide",
       description: "Make Madrid home: Advice on accommodation, paperwork, and daily services for students, expats, and long-term residents.",
-      imageUrl: "https://images.unsplash.com/photo-1551896235-94561d5d3fcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1551896235-94561d5d3fcc?q=80&w=1000&auto=format&fit=crop",
       link: "/living",
       icon: <Home className="h-6 w-6" />
+    },
+    {
+      title: "Madrid Now",
+      description: "Current local calendar, time, and weather information for Madrid.",
+      imageUrl: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1000&auto=format&fit=crop",
+      link: "/madrid-now",
+      icon: <div className="flex space-x-1">
+        <Calendar className="h-5 w-5" />
+        <Clock className="h-5 w-5" />
+        <CloudSun className="h-5 w-5" />
+      </div>
     }
   ];
 
@@ -77,9 +88,8 @@ const Index = () => {
         ctaLink="/things-to-do" 
       />
 
-      <section className="py-16">
+      <section className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Explore Madrid</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mainCategories.map((card, index) => (
               <ContentCard 
@@ -91,22 +101,11 @@ const Index = () => {
                 icon={card.icon}
               />
             ))}
-            <ContentCard 
-              title="Madrid Now"
-              description="Current local calendar, time, and weather information for Madrid."
-              imageUrl="https://images.unsplash.com/photo-1543783207-ec64e4d95325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              link="/madrid-now"
-              icon={<div className="flex space-x-1">
-                <Calendar className="h-5 w-5" />
-                <Clock className="h-5 w-5" />
-                <CloudSun className="h-5 w-5" />
-              </div>}
-            />
           </div>
         </div>
       </section>
 
-      <FeatureSection title="Why Madrid Insider?" features={features} />
+      <FeatureSection title="" features={features} />
 
       <section className="py-16 bg-madrid-red text-white">
         <div className="container mx-auto px-4 text-center">
@@ -114,9 +113,6 @@ const Index = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Start your journey with our insider tips and recommendations.
           </p>
-          <Link to="/" className="inline-block bg-white text-madrid-red font-bold py-3 px-6 rounded-md hover:bg-gray-100 transition-colors">
-            Start Here
-          </Link>
         </div>
       </section>
     </Layout>
