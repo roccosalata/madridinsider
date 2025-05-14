@@ -31,7 +31,7 @@ const Index = () => {
     },
     {
       title: "Eat & Drink",
-      description: "Savor Madrid: Your directory to the city's top restaurants, tapas bars, cafes, and foodie hotspots.",
+      description: "Savor Madrid: Your guide to the city's top restaurants, tapas bars, cafes, and foodie hotspots.",
       imageUrl: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=1000&auto=format&fit=crop",
       link: "/food-and-drink",
       icon: <Utensils className="h-6 w-6" />
@@ -84,8 +84,6 @@ const Index = () => {
       <HeroSection 
         title="Welcome to Madrid Insider" 
         subtitle="Your English-language guide to experiencing Madrid like a local - discover the city whether you're visiting for a few days or planning to stay." 
-        ctaText="Explore Madrid" 
-        ctaLink="/things-to-do" 
       />
 
       <section className="py-12">
