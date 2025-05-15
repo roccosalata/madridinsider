@@ -9,10 +9,10 @@ import FeatureSection from '@/components/FeatureSection';
 const Index = () => {
   const mainCategories = [
     {
-      title: "Madrid: Start Here",
+      title: "Madrid Essentials",
       description: "Your starting point: What's new, current events, key maps, city layout, and first-timer tips for Madrid.",
       imageUrl: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1000&auto=format&fit=crop",
-      link: "/",
+      link: "/madrid-essentials",
       icon: <Compass className="h-6 w-6" />
     },
     {

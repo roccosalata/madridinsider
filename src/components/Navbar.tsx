@@ -21,7 +21,7 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-1">
-            <NavLink to="/" icon={<Compass className="h-4 w-4 mr-1" />}>Madrid: Start Here</NavLink>
+            <NavLink to="/madrid-essentials" icon={<Compass className="h-4 w-4 mr-1" />}>Madrid Essentials</NavLink>
             <NavLink to="/transport" icon={<Map className="h-4 w-4 mr-1" />}>Getting Around</NavLink>
             <NavLink to="/things-to-do" icon={<Star className="h-4 w-4 mr-1" />}>See, Do & Explore</NavLink>
             <NavLink to="/food-and-drink" icon={<Utensils className="h-4 w-4 mr-1" />}>Eat & Drink</NavLink>
@@ -46,7 +46,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white pb-4 px-4 animate-fade-in">
           <div className="flex flex-col space-y-2">
-            <MobileNavLink to="/" onClick={toggleMenu} icon={<Compass className="h-4 w-4 mr-1" />}>Madrid: Start Here</MobileNavLink>
+            <MobileNavLink to="/madrid-essentials" onClick={toggleMenu} icon={<Compass className="h-4 w-4 mr-1" />}>Madrid Essentials</MobileNavLink>
             <MobileNavLink to="/transport" onClick={toggleMenu} icon={<Map className="h-4 w-4 mr-1" />}>Getting Around</MobileNavLink>
             <MobileNavLink to="/things-to-do" onClick={toggleMenu} icon={<Star className="h-4 w-4 mr-1" />}>See, Do & Explore</MobileNavLink>
             <MobileNavLink to="/food-and-drink" onClick={toggleMenu} icon={<Utensils className="h-4 w-4 mr-1" />}>Eat & Drink</MobileNavLink>
