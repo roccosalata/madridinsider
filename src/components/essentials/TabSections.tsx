@@ -20,11 +20,6 @@ const TabSections = () => {
       content: <WhatsOnContent />,
     },
     {
-      id: 'maps',
-      title: 'Madrid Maps Hub',
-      content: 'Essential maps to help you navigate Madrid like a local.',
-    },
-    {
       id: 'weather',
       title: 'Weather & Best Time to Visit Madrid',
       content: <WeatherVisitInfo />,
@@ -38,15 +33,15 @@ const TabSections = () => {
 
   return (
     <Tabs defaultValue="useful" className="w-full">
-      <TabsList className="grid grid-cols-2 md:grid-cols-3 mb-8">
-        {sections.slice(0, 3).map((section) => (
+      <TabsList className="grid grid-cols-2 mb-8">
+        {sections.slice(0, 2).map((section) => (
           <TabsTrigger key={section.id} value={section.id}>
             {section.title}
           </TabsTrigger>
         ))}
       </TabsList>
-      <TabsList className="grid grid-cols-2 md:grid-cols-3 mb-8">
-        {sections.slice(3).map((section) => (
+      <TabsList className="grid grid-cols-2 mb-8">
+        {sections.slice(2).map((section) => (
           <TabsTrigger key={section.id} value={section.id}>
             {section.title}
           </TabsTrigger>
