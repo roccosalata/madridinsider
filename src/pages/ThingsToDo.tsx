@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { MapPinned } from 'lucide-react';
+import { MapPinned, Landmark, Building, Compass } from 'lucide-react';
 import MapHubLink from '@/components/transport/MapHubLink';
 import NeighborhoodGuide from '@/components/attractions/NeighborhoodGuide';
 
@@ -20,7 +20,10 @@ const ThingsToDo = () => {
         <p className="text-lg mb-12">Discover the best attractions, activities, entertainment, and shopping experiences that Madrid has to offer.</p>
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Explore by Neighborhood</h2>
+          <div className="flex items-center gap-2 mb-6">
+            <Compass className="h-6 w-6 text-madrid-red" />
+            <h2 className="text-2xl font-bold">Explore Madrid's Neighborhoods</h2>
+          </div>
           <div className="flex items-center gap-2 mb-6">
             <MapPinned className="h-5 w-5 text-madrid-red" />
             <MapHubLink variant="compact" />
@@ -29,7 +32,10 @@ const ThingsToDo = () => {
         </section>
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Sights & Attractions</h2>
+          <div className="flex items-center gap-2 mb-6">
+            <Landmark className="h-6 w-6 text-madrid-red" />
+            <h2 className="text-2xl font-bold">Sights & Attractions</h2>
+          </div>
           <Card>
             <CardContent className="pt-6">
               <p>Details coming soon about Madrid's landmarks, museums, parks, planetarium, and other must-see attractions.</p>
@@ -38,7 +44,10 @@ const ThingsToDo = () => {
         </section>
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Activities & Entertainment</h2>
+          <div className="flex items-center gap-2 mb-6">
+            <Building className="h-6 w-6 text-madrid-red" />
+            <h2 className="text-2xl font-bold">Activities & Entertainment</h2>
+          </div>
           <Card>
             <CardContent className="pt-6">
               <p>Details coming soon about shows, cinemas, theme parks, sports/fitness/wellness activities, and casinos in Madrid.</p>

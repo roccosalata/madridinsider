@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 type Neighborhood = {
   id: string;
@@ -208,6 +208,39 @@ const neighborhoods: Neighborhood[] = [
   },
 ];
 
+const coolNeighborhoods = [
+  {
+    id: "castellana",
+    name: "The Castellana",
+    description: "This street forms the backbone of the city. In the summer it is dotted with terrazas and chiringuitos. All year round it takes you north to a haven of smart, popular clubs and bars around Santiago Bernabeu stadium and Avenida de Brasil.",
+  },
+  {
+    id: "chueca-cool",
+    name: "Chueca",
+    description: "Once a drug and crime haven, this is now Madrid's slickest neighborhood, and the heart of gay Madrid. It gets packed with hunky men in tight shorts during June's Gay Pride festival. With swanky bars and cafes, this barrio is a sophisticated departure from other Madrid nightlife.",
+  },
+  {
+    id: "huertas-cool",
+    name: "Huertas",
+    description: "This area heading down towards Paseo del Prado from Plaza Santa Ana is chock-full of theaters, restaurants and bars. On the weekends, the streets overflow with tourists and Madrileños alike.",
+  },
+  {
+    id: "la-latina-cool",
+    name: "La Latina",
+    description: "Home of some of Madrid's best summertime terrazas, caña-slinging bars and slick restaurants, La Latina is in the crossroads of traditional and contemporary Madrid. Many a Sunday has slipped (and been sipped) away in the post-Rastro gatherings in Plaza de la Cebada and San Andres.",
+  },
+  {
+    id: "lavapies-cool",
+    name: "Lavapies",
+    description: "Home to many of Madrid's alternative theaters and some of its best bars, Lavapies is a diverse, funky neighborhood that's equally good by day or by night. In the summer, terrazas buzz and the streets are teeming. One thing about Lavapies: try not to look like a tourist. Pick-pocketing and mugging are very common here.",
+  },
+  {
+    id: "malasana-cool",
+    name: "Malasaña",
+    description: "This less-touristy part of Madrid is home to many of the bars of the movida, the post-Franco fiesta frenzy that launched some of Spain's most famous musicians and artists. A few alternative theaters serve up mostly comedy and some bars here feature live music.",
+  }
+];
+
 const neighborhoodGroups = [
   { id: "central", name: "Central Madrid" },
   { id: "north", name: "North Madrid" },
@@ -220,6 +253,7 @@ const neighborhoodGroups = [
 
 const NeighborhoodGuide = () => {
   const [activeGroup, setActiveGroup] = useState("central");
+  const [coolSectionOpen, setCoolSectionOpen] = useState(false);
   
   return (
     <Card className="border-0 shadow-none">
@@ -231,6 +265,39 @@ const NeighborhoodGuide = () => {
           Madrid is a city of distinct neighborhoods, each with its own character and charm.
           Explore our guide to Madrid's diverse barrios to find the perfect area for your visit.
         </p>
+        
+        {/* Cool Neighborhoods Collapsible */}
+        <Collapsible 
+          open={coolSectionOpen}
+          onOpenChange={setCoolSectionOpen}
+          className="mb-6 border rounded-md p-4 bg-gradient-to-r from-blue-50 to-indigo-50"
+        >
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-xl font-semibold">✨ Cool Neighborhoods</h3>
+            <CollapsibleTrigger asChild>
+              <Button variant="ghost" size="sm">
+                {coolSectionOpen ? "Show Less" : "Discover More"}
+              </Button>
+            </CollapsibleTrigger>
+          </div>
+          <p className="text-sm text-muted-foreground mb-2">
+            Discover Madrid's trendiest and most vibrant neighborhoods, each with its own unique atmosphere.
+          </p>
+          <CollapsibleContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              {coolNeighborhoods.map((neighborhood) => (
+                <Card key={neighborhood.id} className="overflow-hidden border shadow-sm">
+                  <CardHeader className="p-4 pb-2 bg-gradient-to-r from-blue-50 to-purple-50">
+                    <CardTitle className="text-lg">{neighborhood.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-3">
+                    <p className="text-sm">{neighborhood.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
         
         <Tabs value={activeGroup} onValueChange={setActiveGroup} className="mb-6">
           <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 w-full mb-4">
