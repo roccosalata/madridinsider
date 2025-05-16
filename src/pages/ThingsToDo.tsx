@@ -2,6 +2,10 @@
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
+import { MapPinned } from 'lucide-react';
+import MapHubLink from '@/components/transport/MapHubLink';
+import NeighborhoodGuide from '@/components/attractions/NeighborhoodGuide';
 
 const ThingsToDo = () => {
   return (
@@ -17,11 +21,11 @@ const ThingsToDo = () => {
         
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Explore by Neighborhood</h2>
-          <Card>
-            <CardContent className="pt-6">
-              <p>Details coming soon about Madrid's diverse neighborhoods, each with its own character and attractions.</p>
-            </CardContent>
-          </Card>
+          <div className="flex items-center gap-2 mb-6">
+            <MapPinned className="h-5 w-5 text-madrid-red" />
+            <MapHubLink variant="compact" />
+          </div>
+          <NeighborhoodGuide />
         </section>
         
         <section className="mb-12">
