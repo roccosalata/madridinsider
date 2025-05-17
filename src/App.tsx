@@ -1,4 +1,4 @@
-import SeeDoExplorePage from './pages/SeeDoExplorePage';
+
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import MadridEssentials from "./pages/MadridEssentials";
 import Essentials from "./pages/Essentials";
 import Transport from "./pages/Transport";
+import SeeDoExplorePage from './pages/SeeDoExplorePage';
+import SightsAttractionsPage from './pages/SightsAttractionsPage';
 import ThingsToDo from "./pages/ThingsToDo";
 import FoodAndDrink from "./pages/FoodAndDrink";
 import Living from "./pages/Living";
