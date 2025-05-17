@@ -1,4 +1,4 @@
-
+import SeeDoExplorePage from './pages/SeeDoExplorePage';
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -31,7 +31,7 @@ const App = () => {
               <Route path="/madrid-essentials" element={<MadridEssentials />} />
               <Route path="/essentials" element={<Essentials />} />
               <Route path="/transport" element={<Transport />} />
-              <Route path="/things-to-do" element={<ThingsToDo />} />
+              <Route path="/see-do-explore" element={<SeeDoExplore />} />
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
               <Route path="/living" element={<Living />} />
               <Route path="/madrid-now" element={<MadridNow />} />
