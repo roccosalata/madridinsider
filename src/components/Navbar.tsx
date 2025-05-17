@@ -23,7 +23,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-1">
             <NavLink to="/madrid-essentials" icon={<Compass className="h-4 w-4 mr-1" />}>Madrid Essentials</NavLink>
             <NavLink to="/transport" icon={<Map className="h-4 w-4 mr-1" />}>Getting Around</NavLink>
-            <NavLink to="/things-to-do" icon={<Star className="h-4 w-4 mr-1" />}>See, Do & Explore</NavLink>
+            <NavLink to="/see-do-explore" icon={<Star className="h-4 w-4 mr-1" />}>See, Do & Explore</NavLink>
             <NavLink to="/food-and-drink" icon={<Utensils className="h-4 w-4 mr-1" />}>Eat & Drink</NavLink>
             <NavLink to="/living" icon={<Home className="h-4 w-4 mr-1" />}>Madrid Life</NavLink>
           </div>
