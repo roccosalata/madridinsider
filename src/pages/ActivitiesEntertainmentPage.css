@@ -1,0 +1,22 @@
+/* src/pages/ActivitiesEntertainmentPage.css */
+.activities-entertainment-page {
+  padding: 20px;
+}
+
+/* Reusing .page-header-sub style from SightsAttractionsPage.css */
+/* If you haven't, you might want to move .page-header-sub to a more global CSS file, */
+/* or just ensure it's defined (you can copy it from SightsAttractionsPage.css if needed) */
+/* For now, assuming .page-header-sub and .back-link are styled globally or in a shared way */
+
+.activities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .activities-list {
+    grid-template-columns: 1fr;
+  }
+}
