@@ -31,7 +31,7 @@ const App = () => {
               <Route path="/madrid-essentials" element={<MadridEssentials />} />
               <Route path="/essentials" element={<Essentials />} />
               <Route path="/transport" element={<Transport />} />
-              <Route path="/see-do-explore" element={<SeeDoExplore />} />
+              <Route path="/see-do-explore" element={<SeeDoExplorePage />} />
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
               <Route path="/living" element={<Living />} />
               <Route path="/madrid-now" element={<MadridNow />} />
