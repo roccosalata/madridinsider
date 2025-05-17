@@ -11,6 +11,7 @@ import Essentials from "./pages/Essentials";
 import Transport from "./pages/Transport";
 import SeeDoExplorePage from './pages/SeeDoExplorePage';
 import SightsAttractionsPage from './pages/SightsAttractionsPage';
+import ActivitiesEntertainmentPage from './pages/ActivitiesEntertainmentPage';
 import ThingsToDo from "./pages/ThingsToDo";
 import FoodAndDrink from "./pages/FoodAndDrink";
 import Living from "./pages/Living";
@@ -36,7 +37,8 @@ const App = () => {
               <Route path="/things-to-do" element={<SeeDoExplore />} />              
               <Route path="/see-do-explore" element={<SeeDoExplorePage />} />
               <Route path="/see-do-explore/sights-attractions" element={<SightsAttractionsPage />} />
-              <Route path="/food-and-drink" element={<FoodAndDrink />} />
+              <Route path="/see-do-explore/activities-entertainment" element={<ActivitiesEntertainmentPage />} />
+              <Route path="/food-and-drink" element={<FoodAndDrink />} />            
               <Route path="/living" element={<Living />} />
               <Route path="/madrid-now" element={<MadridNow />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
