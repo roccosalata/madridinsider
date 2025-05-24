@@ -2,6 +2,7 @@
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
+import { useParams } from 'react-router-dom';
 
 const FoodAndDrink = () => {
   
@@ -20,10 +21,6 @@ const FoodAndDrink = () => {
           <section key={subCategory} className="mb-12">
             <h2 className="text-2xl font-bold mb-6">{subCategory}</h2>
             <Card>
-              <CardContent className="pt-6">
-                <ul>
-                  {categoryData[subCategory].map(item => (
-                    <li key={item} className="mb-2">
                       <Link to={`/${primaryCategory}/${secondCategory}/${encodeURIComponent(item)}`} className="text-blue-600 hover:underline">
                         {item}
                       </Link>
@@ -33,7 +30,7 @@ const FoodAndDrink = () => {
               </CardContent>
             </Card>
           </section>
-        ))} */} {/* End of commented out block */}
+        ))} */} 
 
        <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Dining Etiquette in Madrid</h2> 
@@ -42,6 +39,7 @@ const FoodAndDrink = () => {
               <p>Details coming soon about local dining customs and etiquette in Madrid.</p>
             </CardContent>
           </Card>
+        </section> */}
         </section>
       </div>
     </Layout>

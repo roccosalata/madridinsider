@@ -39,10 +39,9 @@ const SeeDoExplore: React.FC = () => {
         {/* Do Section */}
         <section id="do-in-madrid" className="mb-12 p-6 border rounded-lg shadow-sm">
           <h2 className="text-3xl font-bold mb-6">Do</h2>
-          
+
           <section className="mb-8 p-6 border rounded-lg shadow-sm">
             <h3 className="text-2xl font-bold mb-6">Sports & Recreation</h3>
-
             <p className="mb-4">Find opportunities for sports, fitness, outdoor activities, and recreation throughout the city.</p>
             {/* Placeholder link to conceptual Sports & Recreation page */}
             <Link to="/see-do-explore/sports-recreation" className="text-madrid-red hover:underline font-semibold">
@@ -50,12 +49,8 @@ const SeeDoExplore: React.FC = () => {
             </Link>
           </section><section className="mb-8 p-6 border rounded-lg shadow-sm">
             <h3 className="text-2xl font-bold mb-6">Shopping Guide</h3>
-
-            <p className="mb-4">Discover the best places to shop in Madrid, from high-end boutiques to local markets.</p>
-            {/* Placeholder link to conceptual Shopping page */}
-            <Link to="/see-do-explore/shopping" className="text-madrid-red hover:underline font-semibold">
-              Go Shopping
-            </Link>
+            <p className="mb-4">Discover the best places to shop in Madrid, from high-end boutiques to local markets.</p>{/* Placeholder link to conceptual Shopping page */}
+            <Link to="/see-do-explore/shopping" className="text-madrid-red hover:underline font-semibold">Go Shopping</Link>
           </section>
         </section>
       </div>
