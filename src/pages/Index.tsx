@@ -26,7 +26,7 @@ const Index = () => {
       title: "See, Do & Explore",
       description: "Discover Madrid's best: Attractions, activities, entertainment, shopping, and in-depth neighborhood guides.",
       imageUrl: "https://images.unsplash.com/photo-1577782853630-673eafa2c209?q=80&w=1000&auto=format&fit=crop",
-      link: "/things-to-do",
+      link: "/see-do-explore", // Updated link
       icon: <Star className="h-6 w-6" />
     },
     {
