@@ -9,26 +9,18 @@ import { Utensils, Home, Theater, Info, Heart, ShoppingBag, MapPin, Users, Activ
 import { Link } from 'react-router-dom';
 
 const Directory = () => {
-  const [activeCategory, setActiveCategory] = useState("foodAndDrink");
+  const [activeCategory, setActiveCategory] = useState("essentials");
   
   // Function to get the section link based on category key
   const getCategoryLink = (categoryKey: string) => {
-    const linkMap: Record<string, string> = {
-      foodAndDrink: "/food-and-drink",
-      living: "/living",
-      artsAndEntertainment: "/things-to-do",
-      sightseeing: "/things-to-do",
-      travel: "/transport",
-      // Add more mappings as needed
-    };
-    return linkMap[categoryKey] || "/";
+ return `/${categoryKey}`;
   };
   
   // Get the icon for each category
   const getCategoryIcon = (category: string) => {
     const iconMap: Record<string, JSX.Element> = {
-      foodAndDrink: <Utensils size={24} />,
-      living: <Home size={24} />,
+ essentials: <MapPin size={24} />, // Using MapPin for Essentials (Tourist focus)
+      living: <Home size={24} />, // Using Home for Living
       artsAndEntertainment: <Theater size={24} />,
       genInfoAndServices: <Info size={24} />,
       healthAndMedical: <Heart size={24} />,
@@ -44,8 +36,8 @@ const Directory = () => {
   };
   
   const categoryLabels: Record<string, string> = {
-    foodAndDrink: "Food & Drink",
-    living: "Living",
+ essentials: "Essentials",
+ living: "Living",
     artsAndEntertainment: "Arts & Entertainment",
     genInfoAndServices: "General Info & Services",
     healthAndMedical: "Health & Medical",
@@ -107,7 +99,7 @@ const Directory = () => {
                   {directoryData[activeCategory as keyof typeof directoryData][section].map((item) => (
                     <li key={item} className="text-gray-700 hover:text-madrid-red">
                       <Link 
-                        to={`${getCategoryLink(activeCategory)}?subcategory=${encodeURIComponent(item)}`}
+ to={`/${activeCategory}/${section.toLowerCase().replace(/\\s+/g, '-')}/${encodeURIComponent(item)}`}
                         className="flex items-center py-2"
                       >
                         <span className="text-gray-400 mr-2">•</span>
@@ -121,7 +113,7 @@ const Directory = () => {
             
             <div className="mt-6 text-center">
               <Link 
-                to={getCategoryLink(activeCategory)}
+ to={`/${activeCategory}`}
                 className="inline-block bg-madrid-red text-white font-medium px-6 py-2 rounded-md hover:bg-madrid-red/90 transition-colors"
               >
                 View all {categoryLabels[activeCategory]} content
