@@ -60,3 +60,4 @@ const Transport = () => {
     </Layout>
   );
 };
+export default Transport;

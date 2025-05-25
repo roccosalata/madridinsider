@@ -13,7 +13,7 @@ import SeeDoExplorePage from './pages/SeeDoExplorePage';
 import SightsAttractionsPage from './pages/SightsAttractionsPage';
 import ActivitiesEntertainmentPage from './pages/ActivitiesEntertainmentPage';
 import FoodAndDrink from "./pages/FoodAndDrink";
-import Living from "./pages/Living";
+import Living from "@/pages/Living"; // Corrected import path
 import MadridNow from "./pages/MadridNow";
 import NotFound from "./pages/NotFound";
 

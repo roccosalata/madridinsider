@@ -33,7 +33,7 @@ const FoodAndDrink = () => {
               </CardContent>
             </Card>
           </section>
-        ))} */}
+        ))} */} {/* End of commented out block */}
 
        <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Dining Etiquette in Madrid</h2> 
@@ -42,7 +42,6 @@ const FoodAndDrink = () => {
               <p>Details coming soon about local dining customs and etiquette in Madrid.</p>
             </CardContent>
           </Card>
-        </section> */}
         </section>
       </div>
     </Layout>

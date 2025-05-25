@@ -8,6 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -80,8 +82,4 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
   }
-}
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
 }
