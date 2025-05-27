@@ -5,17 +5,16 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import MadridEssentials from "./pages/MadridEssentials";
-import Essentials from "./pages/Essentials";
-import Transport from "./pages/Transport";
 import SeeDoExplore from "./pages/SeeDoExplore";
 import SeeDoExplorePage from './pages/SeeDoExplorePage';
-import SightsAttractionsPage from './pages/SightsAttractionsPage';
-import ActivitiesEntertainmentPage from './pages/ActivitiesEntertainmentPage';
+import MadridEssentialsPage from './pages/MadridEssentialsPage';
+import SeeMadridPage from './pages/SeeMadridPage';
+import DoMadridPage from './pages/DoMadridPage';
 import FoodAndDrink from "./pages/FoodAndDrink";
-import Living from "@/pages/Living"; // Corrected import path
-import MadridNow from "./pages/MadridNow";
-import NotFound from "./pages/NotFound";
+import LivingMadridPage from "@/pages/LivingMadridPage";
+import Transport from "./pages/Transport";
+import MadridNowPage from "./pages/MadridNowPage";
+import NotFound from "./pages/NotFound"; // Keep NotFound import
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient();
@@ -30,9 +29,6 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/madrid-essentials" element={<MadridEssentials />} />
-              <Route path="/essentials" element={<Essentials />} />
-              <Route path="/transport" element={<Transport />} />
 
               {/* Updated routing for See, Do & Explore */}
               {/* /see-do-explore now points to the overview page */}
@@ -40,13 +36,15 @@ const App = () => {
               {/* /see-do-explore/:secondCategory will point to the dynamic page */}
               <Route path="/see-do-explore/:secondCategory" element={<SeeDoExplorePage />} />
 
-              {/* Keep specific routes for now, potentially refactor later */}
-              <Route path="/see-do-explore/sights-attractions" element={<SightsAttractionsPage />} />
-              <Route path="/see-do-explore/activities-entertainment" element={<ActivitiesEntertainmentPage />} />
+              {/* New Top-Level Routes */}
+              <Route path="/madrid-essentials" element={<MadridEssentialsPage />} />
+              <Route path="/see-madrid" element={<SeeMadridPage />} />
+              <Route path="/do-madrid" element={<DoMadridPage />} />
+              <Route path="/living-madrid" element={<LivingMadridPage />} />
+              <Route path="/madrid-now" element={<MadridNowPage />} />
 
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
-              <Route path="/living" element={<Living />} />
-              <Route path="/madrid-now" element={<MadridNow />} />
+              <Route path="/transport" element={<Transport />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

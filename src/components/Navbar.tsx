@@ -1,15 +1,38 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Compass, Map, Star, Utensils, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { mainCategories } from '@/pages/Index'; // Assuming mainCategories is exported from Index.tsx
+
+import SubcategorySelector from './SubcategorySelector';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  }; 
+
+  const handleSubcategorySelect = (subcategoryTitle: string) => {
+    // Find the subcategory link and navigate
+    let foundLink: string | null = null;
+    for (const category of mainCategories) {
+      const subcategory = category.subcategories.find(sub => sub.title === subcategoryTitle);
+      if (subcategory) {
+        foundLink = subcategory.link;
+        break;
+      }
+    }
+    if (foundLink) {
+      navigate(foundLink);
+    } else {
+      console.warn(`Subcategory with title "${subcategoryTitle}" not found.`);
+      // Optional: display an error or handle the case where the link is not found
+    }
   };
+
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -20,14 +43,27 @@ const Navbar = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-1">
-            <NavLink to="/madrid-essentials" icon={<Compass className="h-4 w-4 mr-1" />}>Madrid Essentials</NavLink>
-            <NavLink to="/transport" icon={<Map className="h-4 w-4 mr-1" />}>Getting Around</NavLink>
-            <NavLink to="/see-do-explore" icon={<Star className="h-4 w-4 mr-1" />}>See, Do & Explore</NavLink>
-            <NavLink to="/food-and-drink" icon={<Utensils className="h-4 w-4 mr-1" />}>Eat & Drink</NavLink>
-            <NavLink to="/living" icon={<Home className="h-4 w-4 mr-1" />}>Madrid Life</NavLink>
-          </div>
-          
+          <div className="hidden md:flex items-center space-x-4"> {/* Added items-center for vertical alignment */}
+            {/* Iterate through mainCategories for desktop navigation */}
+ {mainCategories.map(category => (
+ <SubcategorySelector // Using SubcategorySelector as it suggests dropdown behavior
+ key={category.title}
+ categoryTitle={category.title}
+ // For now, subcategories will be empty or placeholder.
+ // We will define the actual second-tier options later.
+ subcategories={[]}
+ // The onSelect handler might need adjustment later based on how
+ // second-tier navigation is implemented.
+ onSelect={() => console.log(`Clicked on ${category.title}`)}
+ />
+ ))}
+ </div>
+
+
+
+
+
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
@@ -46,11 +82,14 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white pb-4 px-4 animate-fade-in">
           <div className="flex flex-col space-y-2">
-            <MobileNavLink to="/madrid-essentials" onClick={toggleMenu} icon={<Compass className="h-4 w-4 mr-1" />}>Madrid Essentials</MobileNavLink>
-            <MobileNavLink to="/transport" onClick={toggleMenu} icon={<Map className="h-4 w-4 mr-1" />}>Getting Around</MobileNavLink>
-            <MobileNavLink to="/things-to-do" onClick={toggleMenu} icon={<Star className="h-4 w-4 mr-1" />}>See, Do & Explore</MobileNavLink>
-            <MobileNavLink to="/food-and-drink" onClick={toggleMenu} icon={<Utensils className="h-4 w-4 mr-1" />}>Eat & Drink</MobileNavLink>
-            <MobileNavLink to="/living" onClick={toggleMenu} icon={<Home className="h-4 w-4 mr-1" />}>Madrid Life</MobileNavLink>
+            {/* Mobile Navigation - Display categories as clickable links */}
+ {mainCategories.map(category => (
+ <MobileNavLink
+ key={category.title}
+ to={category.link}
+ onClick={toggleMenu} // Close menu on click
+ >{category.title}</MobileNavLink>
+ ))}
           </div>
         </div>
       )}
