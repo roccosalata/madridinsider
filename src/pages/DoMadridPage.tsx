@@ -1,10 +1,10 @@
-typescriptreact
+
 import React from 'react';
-import Layout from '@/components/Layout'; // Assuming you have a Layout component
-import HeroSection from '@/components/HeroSection'; // Assuming you have a HeroSection component
-import ActivityCard from '../components/ActivityCard'; // Import the ActivityCard component
-import { activities as activitiesData } from '../data/activitiesData'; // Import your activities data
-import { Card, CardContent } from '@/components/ui/card'; // Assuming you use Shadcn UI cards
+import Layout from '@/components/Layout';
+import HeroSection from '@/components/HeroSection';
+import ActivityCard from '../components/ActivityCard';
+import { activities as activitiesData } from '../data/activitiesData';
+import { Card, CardContent } from '@/components/ui/card';
 
 const SportsAndRecreationContent: React.FC = () => {
   const sports = [
@@ -46,7 +46,6 @@ const SportsAndRecreationContent: React.FC = () => {
   );
 };
 
-
 const DoMadridPage: React.FC = () => {
   return (
     <Layout>
@@ -72,7 +71,6 @@ const DoMadridPage: React.FC = () => {
         </section>
 
         <SportsAndRecreationContent />
-
       </div>
     </Layout>
   );

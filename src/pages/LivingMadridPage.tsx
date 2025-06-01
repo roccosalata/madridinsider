@@ -1,17 +1,14 @@
-typescriptreact
 import React from 'react';
-import Layout from '@/components/Layout'; // Adjust the import path as necessary
-import HeroSection from '@/components/HeroSection'; // Adjust the import path as necessary
-import PlacesOfWorshipList from '@/components/PlacesOfWorshipList'; // Adjust the import path as necessary
-import { essentialsData } from '@/data/essentialsData'; // Adjust the import path as necessary
-import { directoryData } from '@/data/directoryData'; // Adjust the import path as necessary
-
+import Layout from '@/components/Layout';
+import HeroSection from '@/components/HeroSection';
+import PlacesOfWorshipList from '@/components/PlacesOfWorshipList';
+import { placesOfWorship } from '@/data/essentialsData';
+import { directoryData } from '@/data/directoryData';
 
 const LivingMadridPage: React.FC = () => {
   // Assuming directoryData and essentialsData contain the relevant information
   // You might need to adjust how data is accessed based on your data structure
 
-  const religionsData = essentialsData.religions || []; // Example: Accessing religious data
   const accommodationData = directoryData['living-in-madrid']?.['accommodation']; // Example: Accessing accommodation data
   const paperworkData = directoryData['living-in-madrid']?.['paperwork-formalities']; // Example: Accessing paperwork data
   const workResidencyData = directoryData['living-in-madrid']?.['work-residency']; // Example: Accessing work/residency data
@@ -226,8 +223,8 @@ const LivingMadridPage: React.FC = () => {
         {/* Religions & Faiths Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Religions & Faiths</h2>
-          {religionsData.length > 0 ? (
-            <PlacesOfWorshipList places={religionsData} />
+          {placesOfWorship.length > 0 ? (
+            <PlacesOfWorshipList places={placesOfWorship} />
           ) : (
             <p>Information about religions and faiths is coming soon.</p>
           )}
