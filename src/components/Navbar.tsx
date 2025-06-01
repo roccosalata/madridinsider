@@ -1,11 +1,10 @@
 
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, Compass, Map, Star, Utensils, Home } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { mainCategories } from '@/pages/Index'; // Assuming mainCategories is exported from Index.tsx
-
-import SubcategorySelector from './SubcategorySelector';
+import { mainCategories } from '@/pages/Index';
+import DropdownNavigation from './DropdownNavigation';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,26 +12,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  }; 
-
-  const handleSubcategorySelect = (subcategoryTitle: string) => {
-    // Find the subcategory link and navigate
-    let foundLink: string | null = null;
-    for (const category of mainCategories) {
-      const subcategory = category.subcategories.find(sub => sub.title === subcategoryTitle);
-      if (subcategory) {
-        foundLink = subcategory.link;
-        break;
-      }
-    }
-    if (foundLink) {
-      navigate(foundLink);
-    } else {
-      console.warn(`Subcategory with title "${subcategoryTitle}" not found.`);
-      // Optional: display an error or handle the case where the link is not found
-    }
   };
-
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -43,26 +23,9 @@ const Navbar = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4"> {/* Added items-center for vertical alignment */}
-            {/* Iterate through mainCategories for desktop navigation */}
- {mainCategories.map(category => (
- <SubcategorySelector // Using SubcategorySelector as it suggests dropdown behavior
- key={category.title}
- categoryTitle={category.title}
- // For now, subcategories will be empty or placeholder.
- // We will define the actual second-tier options later.
- subcategories={[]}
- // The onSelect handler might need adjustment later based on how
- // second-tier navigation is implemented.
- onSelect={() => console.log(`Clicked on ${category.title}`)}
- />
- ))}
- </div>
-
-
-
-
-
+          <div className="hidden md:flex items-center">
+            <DropdownNavigation />
+          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -80,16 +43,41 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white pb-4 px-4 animate-fade-in">
-          <div className="flex flex-col space-y-2">
-            {/* Mobile Navigation - Display categories as clickable links */}
- {mainCategories.map(category => (
- <MobileNavLink
- key={category.title}
- to={category.link}
- onClick={toggleMenu} // Close menu on click
- >{category.title}</MobileNavLink>
- ))}
+        <div className="md:hidden bg-white pb-4 px-4 animate-fade-in border-t">
+          <div className="flex flex-col space-y-2 pt-4">
+            {mainCategories.map(category => (
+              <div key={category.title} className="border-b border-gray-100 pb-3 last:border-b-0">
+                <MobileNavLink
+                  to={category.link}
+                  onClick={toggleMenu}
+                  icon={category.icon}
+                  className="font-semibold text-madrid-red mb-2"
+                >
+                  {category.title}
+                </MobileNavLink>
+                <div className="ml-4 space-y-1">
+                  {category.subcategories.slice(0, 4).map((subcategory) => (
+                    <MobileNavLink
+                      key={subcategory.title}
+                      to={subcategory.link}
+                      onClick={toggleMenu}
+                      className="text-sm text-gray-600"
+                    >
+                      {subcategory.title}
+                    </MobileNavLink>
+                  ))}
+                  {category.subcategories.length > 4 && (
+                    <MobileNavLink
+                      to={category.link}
+                      onClick={toggleMenu}
+                      className="text-sm text-madrid-red"
+                    >
+                      View all →
+                    </MobileNavLink>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
@@ -97,20 +85,22 @@ const Navbar = () => {
   );
 };
 
-const NavLink = ({ to, children, icon }: { to: string; children: React.ReactNode; icon?: React.ReactNode }) => (
+const MobileNavLink = ({ 
+  to, 
+  children, 
+  onClick, 
+  icon, 
+  className = ""
+}: { 
+  to: string; 
+  children: React.ReactNode; 
+  onClick: () => void; 
+  icon?: React.ReactNode;
+  className?: string;
+}) => (
   <Link 
     to={to} 
-    className="px-3 py-2 text-sm font-medium text-gray-800 hover:text-madrid-red hover:bg-gray-50 rounded-md transition-colors flex items-center"
-  >
-    {icon}
-    {children}
-  </Link>
-);
-
-const MobileNavLink = ({ to, children, onClick, icon }: { to: string; children: React.ReactNode; onClick: () => void; icon?: React.ReactNode }) => (
-  <Link 
-    to={to} 
-    className="px-4 py-2 text-base font-medium text-gray-800 hover:text-madrid-red hover:bg-gray-50 rounded-md flex items-center transition-colors"
+    className={`block px-2 py-1 text-gray-800 hover:text-madrid-red hover:bg-gray-50 rounded-md flex items-center gap-2 transition-colors ${className}`}
     onClick={onClick}
   >
     {icon}

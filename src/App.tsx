@@ -31,22 +31,21 @@ const App = () => {
               <Route path="/" element={<Index />} />
 
               {/* Updated routing for See, Do & Explore */}
-              {/* /see-do-explore now points to the overview page */}
               <Route path="/see-do-explore" element={<SeeDoExplore />} />
-              {/* /see-do-explore/:secondCategory will point to the dynamic page */}
               <Route path="/see-do-explore/:secondCategory" element={<SeeDoExplorePage />} />
 
-              {/* New Top-Level Routes */}
+              {/* Main Top-Level Routes */}
               <Route path="/madrid-essentials" element={<MadridEssentialsPage />} />
+              <Route path="/living-madrid" element={<LivingMadridPage />} />
               <Route path="/see-madrid" element={<SeeMadridPage />} />
               <Route path="/do-madrid" element={<DoMadridPage />} />
-              <Route path="/living-madrid" element={<LivingMadridPage />} />
               <Route path="/madrid-now" element={<MadridNowPage />} />
 
+              {/* Legacy and specific content routes */}
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
               <Route path="/transport" element={<Transport />} />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              {/* Catch-all route */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
