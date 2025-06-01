@@ -21,25 +21,12 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
 
-<<<<<<< HEAD
               {/* Generic route for the five main categories */}
               <Route path="/directory/madrid-essentials" element={<CategoryPage />} />
               <Route path="/directory/living-in-madrid" element={<CategoryPage />} />
               <Route path="/directory/see-in-madrid" element={<CategoryPage />} />
               <Route path="/directory/do-in-madrid" element={<CategoryPage />} />
               <Route path="/directory/madrid-now" element={<CategoryPage />} />
-=======
-              {/* Updated routing for See, Do & Explore */}
-              <Route path="/see-do-explore" element={<SeeDoExplore />} />
-              <Route path="/see-do-explore/:secondCategory" element={<SeeDoExplorePage />} />
-
-              {/* Main Top-Level Routes */}
-              <Route path="/madrid-essentials" element={<MadridEssentialsPage />} />
-              <Route path="/living-madrid" element={<LivingMadridPage />} />
-              <Route path="/see-madrid" element={<SeeMadridPage />} />
-              <Route path="/do-madrid" element={<DoMadridPage />} />
-              <Route path="/madrid-now" element={<MadridNowPage />} />
->>>>>>> b83373d30ebbf796363fa4771555c52212127cb1
 
               {/* Legacy and specific content routes */}
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
