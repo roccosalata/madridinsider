@@ -1,12 +1,16 @@
-// vite.config.ts
+
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
-  // base: '/madridinsider/', // must match your repo name
-  // ...other config options
+  plugins: [react()],
+  server: {
+    port: 8080
+  },
   resolve: {
     alias: {
-      "@": "/madridinsider/src",
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 })

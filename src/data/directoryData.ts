@@ -9,7 +9,8 @@ export interface PlaceOfWorship {
  website?: string;
  notes?: string;
 }
-export const directoryData: {
+
+export const directoryData = {
   "Madrid Life": {
     "Accommodation": [
       "1 or More Weeks: Rooms in Shared Flats Booking",
@@ -37,7 +38,7 @@ export const directoryData: {
     "Work & Residency": [
       "English Teacher Agencies",
       "Teach in Spain",
-      "English Teacher Advice", // Moved from both original "Work Opportunities" and "Teaching"
+      "English Teacher Advice",
       "Aupair",
       "Internships",
       "Journalism / Writing",
@@ -160,7 +161,7 @@ export const directoryData: {
       "Health Food Stores",
     ],
   },
- "Health & Medical": { // Added Health & Medical section with subcategories
+ "Health & Medical": {
     "Emergency Services": [
       "Emergency Number (112)",
       "Medical Emergencies",
