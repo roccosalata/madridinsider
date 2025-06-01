@@ -1,3 +1,4 @@
+
 // src/data/essentialsData.ts
 
 export interface PoliceContact {
@@ -11,6 +12,7 @@ export interface LostPropertyContact {
   phone: string;
   notes?: string;
 }
+
 export interface EmergencyContact {
   type: string;
   phone: string;
@@ -21,6 +23,15 @@ export interface Embassy {
   address: string;
   phone: string;
   website: string;
+}
+
+export interface PlaceOfWorship {
+  name: string;
+  denomination: string;
+  address: string;
+  phone?: string;
+  website?: string;
+  notes?: string;
 }
 
 export interface PostAndMail {
@@ -89,11 +100,6 @@ export const lostPropertyContacts: LostPropertyContact[] = [
   { location: 'Plaza Legazpi, 7 (Metro: Legazpi)', phone: '91 588 4348' },
   { location: 'Paseo Molino, 7', phone: '91 527 9590' },
 ];
-
-
-
-
-
 
 export const embassies: Embassy[] = [
   {
@@ -177,8 +183,6 @@ export const postAndMailInfo: PostAndMail = {
     ],
   },
 };
-
-];
 
 export const placesOfWorship: PlaceOfWorship[] = [
   {
