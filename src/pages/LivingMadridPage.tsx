@@ -1,4 +1,3 @@
-typescriptreact
 import React from 'react';
 import Layout from '@/components/Layout'; // Adjust the import path as necessary
 import HeroSection from '@/components/HeroSection'; // Adjust the import path as necessary
