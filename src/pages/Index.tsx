@@ -65,3 +65,5 @@ const IndexPage = () => {
   );
 };
 export default IndexPage; // Export the component as the default export
+
+export { mainCategories };
