@@ -1,0 +1,81 @@
+/* src/pages/SeeDoExplorePage.css */
+.see-do-explore-page {
+  padding: 20px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #333; /* Or your primary heading color */
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: #555; /* Or your primary text color */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sub-categories-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards if they don't fill the row */
+  gap: 30px; /* Space between cards */
+}
+
+.sub-category-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* Max width for each card */
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content within the card */
+  text-align: center;
+}
+
+.sub-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sub-category-card h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #337ab7; /* Or your link/accent color */
+}
+
+.sub-category-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.sub-category-card .card-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 15px;
+}
+
+.sights-bg {
+  background-color: #e9ecef; /* Fallback color */
+  /* background-image: url('/path/to/your-sights-image.jpg'); */
+}
+
+.activities-bg {
+  background-color: #e9ecef; /* Fallback color */
+  /* background-image: url('/path/to/your-activities-image.jpg'); */
+}
