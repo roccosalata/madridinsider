@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -5,7 +6,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound"; // Keep NotFound import
+import NotFound from "./pages/NotFound";
+import MadridEssentials from "./pages/MadridEssentials";
+import LivingMadridPage from "./pages/LivingMadridPage";
+import SeeMadridPage from "./pages/SeeMadridPage";
+import DoMadridPage from "./pages/DoMadridPage";
+import MadridNowPage from "./pages/MadridNowPage";
+import FoodAndDrink from "./pages/FoodAndDrink";
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient();
@@ -21,12 +28,12 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
 
-              {/* Generic route for the five main categories */}
-              <Route path="/directory/madrid-essentials" element={<CategoryPage />} />
-              <Route path="/directory/living-in-madrid" element={<CategoryPage />} />
-              <Route path="/directory/see-in-madrid" element={<CategoryPage />} />
-              <Route path="/directory/do-in-madrid" element={<CategoryPage />} />
-              <Route path="/directory/madrid-now" element={<CategoryPage />} />
+              {/* Main category routes */}
+              <Route path="/madrid-essentials" element={<MadridEssentials />} />
+              <Route path="/living-in-madrid" element={<LivingMadridPage />} />
+              <Route path="/see-in-madrid" element={<SeeMadridPage />} />
+              <Route path="/do-in-madrid" element={<DoMadridPage />} />
+              <Route path="/madrid-now" element={<MadridNowPage />} />
 
               {/* Legacy and specific content routes */}
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
