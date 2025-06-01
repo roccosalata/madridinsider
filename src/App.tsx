@@ -13,8 +13,8 @@ import SeeMadridPage from "./pages/SeeMadridPage";
 import DoMadridPage from "./pages/DoMadridPage";
 import MadridNowPage from "./pages/MadridNowPage";
 import FoodAndDrink from "./pages/FoodAndDrink";
+import HealthAndWellness from "./pages/HealthAndWellness";
 
-// Create a new QueryClient instance
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -35,8 +35,9 @@ const App = () => {
               <Route path="/do-in-madrid" element={<DoMadridPage />} />
               <Route path="/madrid-now" element={<MadridNowPage />} />
 
-              {/* Legacy and specific content routes */}
+              {/* Specific content routes */}
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
+              <Route path="/health-and-wellness" element={<HealthAndWellness />} />
 
               {/* Catch-all route */}
               <Route path="*" element={<NotFound />} />
