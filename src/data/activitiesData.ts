@@ -40,4 +40,8 @@ export const activities: Activity[] = [
     category: "Outdoor Activities",
     shortDescription: "Explore Madrid's highlights on two wheels with this guided bicycle tour.",
     hours: "Daily at 10:00 and 15:00",
-    imageUrl: "https://images.unsplash.com/photo-1558618047-fd
+    imageUrl: "https://images.unsplash.com/photo-1558618047-fd3c60444949?q=80&w=1000&auto=format&fit=crop",
+    tags: ["Cycling", "Sightseeing", "Active"],
+    price: "€25-40"
+  }
+];
