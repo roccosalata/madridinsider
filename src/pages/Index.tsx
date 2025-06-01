@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 import Layout from '@/components/Layout';
@@ -13,15 +12,11 @@ export const mainCategories = [
     link: "/madrid-essentials",
     icon: <Compass className="h-6 w-6" />,
     subcategories: [
-      { title: "First-Timer Tips & Useful Information", link: "/madrid-essentials#useful" },
-      { title: "Maps & Navigation", link: "/transport#maps" },
-      { title: "Current Events & What's On", link: "/madrid-essentials#events" },
+      { title: "First-Timer Information", link: "/madrid-essentials#first-timer" },
+      { title: "Maps & Navigation", link: "/madrid-essentials#maps" },
       { title: "Weather & Best Time to Visit", link: "/madrid-essentials#weather" },
-      { title: "Spanish Customs & Culture", link: "/madrid-essentials#customs" },
-      { title: "Emergency Contacts", link: "/madrid-essentials#emergencies" },
-      { title: "Embassies & Consulates", link: "/madrid-essentials#embassies" },
-      { title: "Post Office & Mail", link: "/madrid-essentials#post" },
-      { title: "Police Stations", link: "/madrid-essentials#police" }
+      { title: "Emergency & Safety", link: "/madrid-essentials#emergency" },
+      { title: "Essential Services", link: "/madrid-essentials#services" },
     ]
   },
   {
@@ -31,18 +26,14 @@ export const mainCategories = [
     link: "/living-madrid",
     icon: <Home className="h-6 w-6" />,
     subcategories: [
-      { title: "Finding Accommodation", link: "/living-madrid#accommodation" },
-      { title: "Paperwork & Formalities (NIE, TIE)", link: "/living-madrid#paperwork" },
-      { title: "Work & Residency", link: "/living-madrid#work-residency" },
+      { title: "Accommodation", link: "/living-madrid#accommodation" },
+      { title: "Paperwork & Legal", link: "/living-madrid#paperwork" },
       { title: "Banking & Finances", link: "/living-madrid#banking" },
-      { title: "Healthcare Guide", link: "/living-madrid#healthcare" },
+      { title: "Healthcare System", link: "/living-madrid#healthcare" },
       { title: "Education & Childcare", link: "/living-madrid#education" },
-      { title: "Student Life", link: "/living-madrid#student" },
       { title: "Working in Madrid", link: "/living-madrid#working" },
-      { title: "Connectivity & Home Services", link: "/living-madrid#connectivity" },
-      { title: "Daily Necessities & Services", link: "/living-madrid#daily" },
+      { title: "Daily Life Services", link: "/living-madrid#daily-services" },
       { title: "Community & Integration", link: "/living-madrid#community" },
-      { title: "Religions & Faiths", link: "/living-madrid#religions" }
     ]
   },
   {
@@ -52,13 +43,12 @@ export const mainCategories = [
     link: "/see-madrid",
     icon: <Eye className="h-6 w-6" />,
     subcategories: [
-      { title: "Sights & Attractions", link: "/see-madrid#sights" },
+      { title: "Iconic Sights & Landmarks", link: "/see-madrid#sights" },
       { title: "Museums & Galleries", link: "/see-madrid#museums" },
-      { title: "Parks & Gardens", link: "/see-madrid#parks" },
-      { title: "Architecture & Landmarks", link: "/see-madrid#architecture" },
+      { title: "Parks & Green Spaces", link: "/see-madrid#parks" },
+      { title: "Architecture & Buildings", link: "/see-madrid#architecture" },
       { title: "Neighborhoods Guide", link: "/see-madrid#neighborhoods" },
-      { title: "Cool Neighborhoods", link: "/see-madrid#cool-neighborhoods" },
-      { title: "Day Trips from Madrid", link: "/see-madrid#day-trips" }
+      { title: "Day Trips from Madrid", link: "/see-madrid#day-trips" },
     ]
   },
   {
@@ -68,27 +58,26 @@ export const mainCategories = [
     link: "/do-madrid",
     icon: <Activity className="h-6 w-6" />,
     subcategories: [
-      { title: "Activities & Entertainment", link: "/do-madrid#activities" },
+      { title: "Entertainment & Culture", link: "/do-madrid#entertainment" },
       { title: "Sports & Recreation", link: "/do-madrid#sports" },
-      { title: "Shopping Guide", link: "/do-madrid#shopping" },
-      { title: "Nightlife & Bars", link: "/do-madrid#nightlife" },
-      { title: "Food & Drink", link: "/food-and-drink" },
+      { title: "Shopping", link: "/do-madrid#shopping" },
+      { title: "Nightlife & Social", link: "/do-madrid#nightlife" },
+      { title: "Food & Dining", link: "/food-and-drink" },
       { title: "Health & Wellness", link: "/health-and-wellness" },
-      { title: "Getting Around", link: "/transport" }
+      { title: "Transportation", link: "/transport" },
     ]
   },
   {
     title: "Madrid Now",
-    description: "Current time, weather, latest events, and real-time information about Madrid.",
+    description: "Current events, what's happening now, weather, and real-time information about Madrid.",
     imageUrl: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1000&auto=format&fit=crop",
     link: "/madrid-now",
     icon: <Clock className="h-6 w-6" />,
     subcategories: [
-      { title: "Current Time & Weather", link: "/madrid-now#time-weather" },
-      { title: "Today's Events", link: "/madrid-now#events" },
-      { title: "Upcoming Calendar", link: "/madrid-now#calendar" },
+      { title: "Current Events & What's On", link: "/madrid-now#events" },
+      { title: "Time & Weather", link: "/madrid-now#time-weather" },
       { title: "News & Updates", link: "/madrid-now#news" },
-      { title: "Temporary Information", link: "/madrid-now#temporary" }
+      { title: "Temporary Information", link: "/madrid-now#temporary" },
     ]
   }
 ];
@@ -135,19 +124,19 @@ const IndexPage = () => {
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold mb-6">Quick Access</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link to="/transport#maps" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <Link to="/madrid-essentials#maps" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h3 className="font-semibold text-madrid-red">Maps</h3>
               <p className="text-sm text-gray-600">Navigate Madrid</p>
             </Link>
-            <Link to="/madrid-now" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <Link to="/madrid-now#events" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h3 className="font-semibold text-madrid-red">What's On</h3>
               <p className="text-sm text-gray-600">Current events</p>
             </Link>
-            <Link to="/transport" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <Link to="/do-madrid#transportation" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h3 className="font-semibold text-madrid-red">Transport</h3>
               <p className="text-sm text-gray-600">Getting around</p>
             </Link>
-            <Link to="/madrid-essentials#emergencies" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <Link to="/madrid-essentials#emergency" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h3 className="font-semibold text-madrid-red">Emergency</h3>
               <p className="text-sm text-gray-600">Important contacts</p>
             </Link>
