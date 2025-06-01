@@ -1,7 +1,10 @@
-// src/components/PostAndMailInfo.tsx
 
 import React from 'react';
 import { PostAndMail } from '../data/essentialsData';
+
+interface PostAndMailInfoProps {
+  info: PostAndMail;
+}
 
 const PostAndMailInfo: React.FC<PostAndMailInfoProps> = ({ info }) => {
   return (
