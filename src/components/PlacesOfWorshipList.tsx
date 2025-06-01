@@ -14,7 +14,7 @@ const PlacesOfWorshipList: React.FC<PlacesOfWorshipListProps> = ({ places }) => 
         <Card key={index}>
           <CardHeader>
             <CardTitle className="text-lg">{place.name}</CardTitle>
-            <p className="text-sm text-gray-600">{place.denomination}</p>
+            <p className="text-sm text-gray-600">{place.religion}</p>
           </CardHeader>
           <CardContent>
             <p className="text-sm mb-2">{place.address}</p>

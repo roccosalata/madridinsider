@@ -1,6 +1,6 @@
-typescriptreact
+
 import React from 'react';
-import Layout from '@/components/Layout'; // Adjust the import path as necessary
+import Layout from '@/components/Layout';
 
 const PracticalInformationPage: React.FC = () => {
   return (
@@ -40,8 +40,6 @@ const PracticalInformationPage: React.FC = () => {
           <h2 className="text-2xl font-bold mb-6">Post and Mail Services</h2>
           <p>Content for Post and Mail Services will be added from existing files (likely from `PostAndMailInfo.tsx`).</p>
         </section>
-
-        {/* Add other relevant sections as identified */}
       </div>
     </Layout>
   );

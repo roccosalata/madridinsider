@@ -1,4 +1,4 @@
-// src/components/EmergencyContactList.tsx
+
 import React from 'react';
 import { EmergencyContact } from '../data/essentialsData';
 
@@ -11,7 +11,7 @@ const EmergencyContactList: React.FC<EmergencyContactListProps> = ({ contacts })
     <ul>
       {contacts.map((contact, index) => (
         <li key={index}>
-          <strong>{contact.type}:</strong> {contact.phone}
+          <strong>{contact.service}:</strong> {contact.phone}
         </li>
       ))}
     </ul>

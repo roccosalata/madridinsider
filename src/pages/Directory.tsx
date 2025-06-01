@@ -9,45 +9,17 @@ import { Utensils, Home, Theater, Info, Heart, ShoppingBag, MapPin, Users, Activ
 import { Link } from 'react-router-dom';
 
 const Directory = () => {
-  const [activeCategory, setActiveCategory] = useState("essentials");
+  const [activeCategory, setActiveCategory] = useState("living-in-madrid");
   
-  // Function to get the section link based on category key
-  const getCategoryLink = (categoryKey: string) => {
- return `/${categoryKey}`;
-  };
-  
-  // Get the icon for each category
   const getCategoryIcon = (category: string) => {
     const iconMap: Record<string, JSX.Element> = {
- essentials: <MapPin size={24} />, // Using MapPin for Essentials (Tourist focus)
-      living: <Home size={24} />, // Using Home for Living
-      artsAndEntertainment: <Theater size={24} />,
-      genInfoAndServices: <Info size={24} />,
-      healthAndMedical: <Heart size={24} />,
-      shopsAndServices: <ShoppingBag size={24} />,
-      sightseeing: <MapPin size={24} />,
-      socializingAndFun: <Users size={24} />,
-      sportsAndRecreation: <Activity size={24} />,
-      studyAndStudentLife: <GraduationCap size={24} />,
-      travel: <Plane size={24} />,
-      workAndResidency: <Briefcase size={24} />
+      'living-in-madrid': <Home size={24} />
     };
     return iconMap[category] || <Info size={24} />;
   };
   
   const categoryLabels: Record<string, string> = {
- essentials: "Essentials",
- living: "Living",
-    artsAndEntertainment: "Arts & Entertainment",
-    genInfoAndServices: "General Info & Services",
-    healthAndMedical: "Health & Medical",
-    shopsAndServices: "Shops & Services",
-    sightseeing: "Sightseeing",
-    socializingAndFun: "Socializing & Fun",
-    sportsAndRecreation: "Sports & Recreation",
-    studyAndStudentLife: "Study & Student Life",
-    travel: "Travel",
-    workAndResidency: "Work & Residency"
+    'living-in-madrid': "Living in Madrid"
   };
 
   return (
@@ -92,28 +64,16 @@ const Directory = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {Object.keys(directoryData[activeCategory as keyof typeof directoryData]).map((section) => (
-              <div key={section} className="mb-8">
-                <h3 className="text-xl font-semibold mb-4">{section}</h3>
-                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2">
-                  {directoryData[activeCategory as keyof typeof directoryData][section].map((item) => (
-                    <li key={item} className="text-gray-700 hover:text-madrid-red">
-                      <Link 
- to={`/${activeCategory}/${section.toLowerCase().replace(/\\s+/g, '-')}/${encodeURIComponent(item)}`}
-                        className="flex items-center py-2"
-                      >
-                        <span className="text-gray-400 mr-2">•</span>
-                        {item}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            {Object.entries(directoryData[activeCategory as keyof typeof directoryData]).map(([sectionKey, section]) => (
+              <div key={sectionKey} className="mb-8">
+                <h3 className="text-xl font-semibold mb-4">{section.title}</h3>
+                <p className="text-gray-600 mb-4">{section.introduction}</p>
               </div>
             ))}
             
             <div className="mt-6 text-center">
               <Link 
- to={`/${activeCategory}`}
+                to={`/${activeCategory}`}
                 className="inline-block bg-madrid-red text-white font-medium px-6 py-2 rounded-md hover:bg-madrid-red/90 transition-colors"
               >
                 View all {categoryLabels[activeCategory]} content
