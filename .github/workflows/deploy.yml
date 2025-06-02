@@ -35,6 +35,6 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MADRIDINSIDER_COM }}'
           channelId: live # Deploys to your live production channel
-          projectId: YOUR_FIREBASE_PROJECT_ID # Replace with your Firebase Project ID
+          projectId: studio-486476286 # Replace with your Firebase Project ID
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
