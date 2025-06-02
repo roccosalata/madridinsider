@@ -2,12 +2,13 @@
 import React from 'react';
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 import Layout from '@/components/Layout';
+import HeroSection from '@/components/HeroSection';
 
 const mainCategories = [
   {
     title: "Madrid Essentials",
     description: "Essential information for tourists visiting Madrid.",
-    imageUrl: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1000&auto=format&fit=crop",
     link: "/madrid-essentials",
     icon: <Compass className="h-6 w-6" />,
     subcategories: [
@@ -26,7 +27,7 @@ const mainCategories = [
   {
     title: "Living in Madrid",
     description: "Essential information and resources for residents, students, and expats.",
-    imageUrl: "https://images.unsplash.com/photo-1551896235-94561d5d3fcc?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1000&auto=format&fit=crop",
     link: "/living-in-madrid",
     icon: <Home className="h-6 w-6" />,
     subcategories: [
@@ -85,7 +86,7 @@ const mainCategories = [
   {
     title: "Madrid Now",
     description: "Latest events and happenings in Madrid.",
-    imageUrl: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1000&auto=format&fit=crop",
     link: "/madrid-now",
     icon: <Clock className="h-6 w-6" />,
     subcategories: [
@@ -104,58 +105,81 @@ const mainCategories = [
 const IndexPage = () => {
   return (
     <Layout>
-      <div className="container mx-auto py-12 px-4">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Madrid Insider</h1>
-        <p className="text-lg mb-6">Your comprehensive English-language directory for Madrid - whether you're visiting for a few days or making Madrid your home.</p>
-        <p className="text-md text-gray-600 mb-12">Navigate through our main categories to find exactly what you need:</p>
+      <HeroSection 
+        title="Welcome to Madrid Insider"
+        subtitle="Your comprehensive English-language directory for Madrid - whether you're visiting for a few days or making Madrid your home."
+      />
+      
+      <div className="container mx-auto py-16 px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">Explore Madrid Your Way</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Navigate through our main categories to find exactly what you need, from tourist attractions to practical living information.
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {mainCategories.map(category => (
-            <div key={category.title} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <img 
-                src={category.imageUrl} 
-                alt={category.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  {category.icon}
+            <div key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative">
+                <img 
+                  src={category.imageUrl} 
+                  alt={category.title}
+                  className="w-full h-56 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+                  <div className="bg-madrid-red p-2 rounded-lg">
+                    {category.icon}
+                  </div>
                   <h2 className="text-xl font-bold">{category.title}</h2>
                 </div>
-                <p className="text-gray-600 mb-4">{category.description}</p>
+              </div>
+              
+              <div className="p-6">
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{category.description}</p>
                 
-                {/* Show first 4 subcategories as preview */}
-                <div className="mb-4">
-                  <p className="text-sm font-medium text-gray-500 mb-2">Includes:</p>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                <div className="mb-6">
+                  <p className="text-sm font-semibold text-gray-700 mb-3">Quick Access:</p>
+                  <div className="grid grid-cols-2 gap-2">
                     {category.subcategories.slice(0, 4).map((sub, index) => (
-                      <li key={index}>• {sub.title}</li>
+                      <a 
+                        key={index}
+                        href={sub.link}
+                        className="text-xs text-gray-600 hover:text-madrid-red transition-colors p-2 rounded-md hover:bg-gray-50"
+                      >
+                        • {sub.title}
+                      </a>
                     ))}
-                    {category.subcategories.length > 4 && (
-                      <li className="text-madrid-red">• And {category.subcategories.length - 4} more...</li>
-                    )}
-                  </ul>
+                  </div>
+                  {category.subcategories.length > 4 && (
+                    <p className="text-xs text-madrid-red mt-2 font-medium">
+                      + {category.subcategories.length - 4} more sections
+                    </p>
+                  )}
                 </div>
                 
                 <a 
                   href={category.link}
-                  className="text-madrid-red hover:underline font-semibold"
+                  className="inline-flex items-center justify-center w-full bg-madrid-red text-white px-4 py-3 rounded-lg hover:bg-madrid-red/90 transition-colors font-medium"
                 >
-                  Explore →
+                  Explore All →
                 </a>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-16 bg-gray-50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-4">About Madrid Insider</h2>
-          <p className="text-gray-700 mb-4">
-            Madrid Insider is your comprehensive English-language directory for everything Madrid. We serve both tourists looking for the best experiences and residents (expats, students, locals) who need practical information for daily life.
-          </p>
-          <p className="text-gray-700">
-            Our content is organized into logical hubs to help you find exactly what you need, when you need it. From emergency contacts to the best tapas bars, from NIE paperwork to hidden neighborhood gems - we've got you covered.
-          </p>
+        <div className="bg-gradient-to-r from-madrid-red to-red-600 rounded-2xl p-8 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">About Madrid Insider</h2>
+            <p className="text-lg mb-6 text-white/90">
+              Madrid Insider is your comprehensive English-language directory for everything Madrid. We serve both tourists looking for the best experiences and residents (expats, students, locals) who need practical information for daily life.
+            </p>
+            <p className="text-base text-white/80">
+              Our content is organized into logical hubs to help you find exactly what you need, when you need it. From emergency contacts to the best tapas bars, from NIE paperwork to hidden neighborhood gems - we've got you covered.
+            </p>
+          </div>
         </div>
       </div>
     </Layout>
