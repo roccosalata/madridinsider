@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import TabSections from '@/components/essentials/TabSections';
 import RelatedCategories from '@/components/essentials/RelatedCategories';
 import { Card, CardContent } from '@/components/ui/card';
-import { embassies } from '../data/essentialsData';
+import { embassies } from '../data/embassies';
 import PlacesOfWorshipList from '@/components/PlacesOfWorshipList';
 
 const MadridEssentials = () => {
