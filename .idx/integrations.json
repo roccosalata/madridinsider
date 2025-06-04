@@ -1,6 +1,7 @@
 
 {
   "firebase_hosting": {
-    "deploymentHostingUrl": "https://madridinsider.web.app"
+    "deploymentHostingUrl": "https://madridinsider.web.app",
+    "projectId": "madridinsider"
   }
 }

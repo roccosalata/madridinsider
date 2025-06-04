@@ -15,7 +15,14 @@ import MadridNowPage from "./pages/MadridNowPage";
 import FoodAndDrink from "./pages/FoodAndDrink";
 import HealthAndWellness from "./pages/HealthAndWellness";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const App = () => {
   return (
@@ -36,6 +43,10 @@ const App = () => {
               <Route path="/madrid-now" element={<MadridNowPage />} />
 
               {/* Specific content routes */}
+              <Route path="/do-in-madrid/food-drink" element={<FoodAndDrink />} />
+              <Route path="/living-in-madrid/healthcare" element={<HealthAndWellness />} />
+
+              {/* Legacy routes for backward compatibility */}
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
               <Route path="/health-and-wellness" element={<HealthAndWellness />} />
 

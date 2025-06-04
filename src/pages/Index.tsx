@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 import Layout from '@/components/Layout';
@@ -13,15 +12,15 @@ const mainCategories = [
     icon: <Compass className="h-6 w-6" />,
     subcategories: [
       { title: "Getting Started Guide", link: "/madrid-essentials/getting-started" },
-      { title: "Maps & Navigation", link: "/madrid-essentials/maps" },
-      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
+      { title: "What's On Today", link: "/madrid-essentials/whats-on" },
       { title: "Weather & Climate", link: "/madrid-essentials/weather" },
+      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
+      { title: "Maps & Navigation", link: "/madrid-essentials/maps" },
       { title: "Currency & Money", link: "/madrid-essentials/currency" },
       { title: "Language Basics", link: "/madrid-essentials/language" },
       { title: "Safety Tips", link: "/madrid-essentials/safety" },
       { title: "Tourist Information", link: "/madrid-essentials/tourist-info" },
-      { title: "Embassies & Consulates", link: "/madrid-essentials/embassies" },
-      { title: "Post Office & Mail", link: "/madrid-essentials/post-office" }
+      { title: "Embassies & Consulates", link: "/madrid-essentials/embassies" }
     ]
   },
   {
@@ -33,16 +32,16 @@ const mainCategories = [
     subcategories: [
       { title: "Paperwork & NIE/TIE", link: "/living-in-madrid/paperwork" },
       { title: "Finding Accommodation", link: "/living-in-madrid/accommodation" },
-      { title: "Banking & Finances", link: "/living-in-madrid/banking" },
       { title: "Healthcare System", link: "/living-in-madrid/healthcare" },
+      { title: "Banking & Finances", link: "/living-in-madrid/banking" },
       { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
       { title: "Working in Madrid", link: "/living-in-madrid/work" },
       { title: "Student Life", link: "/living-in-madrid/student-life" },
       { title: "Education & Schools", link: "/living-in-madrid/education" },
-      { title: "Places of Worship", link: "/living-in-madrid/worship" },
       { title: "Community & Expat Groups", link: "/living-in-madrid/community" },
       { title: "Daily Services", link: "/living-in-madrid/services" },
-      { title: "Legal Services", link: "/living-in-madrid/legal" }
+      { title: "Legal Services", link: "/living-in-madrid/legal" },
+      { title: "Places of Worship", link: "/living-in-madrid/worship" }
     ]
   },
   {
@@ -103,6 +102,8 @@ const mainCategories = [
 ];
 
 const IndexPage = () => {
+  console.log('Index page rendering successfully');
+  
   return (
     <Layout>
       <HeroSection 
