@@ -15,15 +15,21 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-white shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-madrid-red">Madrid<span className="text-gray-800">Insider</span></span>
+          <Link 
+            to="/" 
+            className="flex items-center focus:outline-none focus:ring-2 focus:ring-madrid-red rounded-md p-1"
+            aria-label="Madrid Insider home page"
+          >
+            <span className="text-2xl font-bold text-madrid-red">
+              Madrid<span className="text-gray-800">Insider</span>
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center" role="menubar">
             <DropdownNavigation />
           </div>
 
@@ -33,7 +39,9 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={toggleMenu}
-              aria-label="Toggle menu"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -43,7 +51,12 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white pb-4 px-4 animate-fade-in border-t">
+        <div 
+          id="mobile-menu"
+          className="md:hidden bg-white pb-4 px-4 animate-fade-in border-t shadow-lg"
+          role="menu"
+          aria-label="Mobile navigation menu"
+        >
           <div className="flex flex-col space-y-2 pt-4">
             {mainCategories.map(category => (
               <div key={category.title} className="border-b border-gray-100 pb-3 last:border-b-0">
@@ -52,16 +65,18 @@ const Navbar = () => {
                   onClick={toggleMenu}
                   icon={category.icon}
                   className="font-semibold text-madrid-red mb-2"
+                  role="menuitem"
                 >
                   {category.title}
                 </MobileNavLink>
-                <div className="ml-4 space-y-1">
+                <div className="ml-4 space-y-1" role="group" aria-labelledby={`${category.title}-subcategories`}>
                   {category.subcategories.slice(0, 4).map((subcategory) => (
                     <MobileNavLink
                       key={subcategory.title}
                       to={subcategory.link}
                       onClick={toggleMenu}
                       className="text-sm text-gray-600"
+                      role="menuitem"
                     >
                       {subcategory.title}
                     </MobileNavLink>
@@ -70,9 +85,10 @@ const Navbar = () => {
                     <MobileNavLink
                       to={category.link}
                       onClick={toggleMenu}
-                      className="text-sm text-madrid-red"
+                      className="text-sm text-madrid-red font-medium"
+                      role="menuitem"
                     >
-                      View all →
+                      View all {category.subcategories.length - 4} more →
                     </MobileNavLink>
                   )}
                 </div>
@@ -90,20 +106,23 @@ const MobileNavLink = ({
   children, 
   onClick, 
   icon, 
-  className = ""
+  className = "",
+  role = "menuitem"
 }: { 
   to: string; 
   children: React.ReactNode; 
   onClick: () => void; 
   icon?: React.ReactNode;
   className?: string;
+  role?: string;
 }) => (
   <Link 
     to={to} 
-    className={`block px-2 py-1 text-gray-800 hover:text-madrid-red hover:bg-gray-50 rounded-md flex items-center gap-2 transition-colors ${className}`}
+    className={`block px-3 py-2 text-gray-800 hover:text-madrid-red hover:bg-gray-50 rounded-md flex items-center gap-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-madrid-red focus:bg-gray-50 ${className}`}
     onClick={onClick}
+    role={role}
   >
-    {icon}
+    {icon && <span aria-hidden="true">{icon}</span>}
     {children}
   </Link>
 );
