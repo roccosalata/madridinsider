@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
+import { format } from 'date-fns';
 
 const mainCategories = [
   {
@@ -103,6 +104,20 @@ const mainCategories = [
 ];
 
 const IndexPage = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+  
+  // Update time every minute
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 60000);
+    
+    return () => clearInterval(timer);
+  }, []);
+  
+  const madridTime = format(currentTime, 'HH:mm');
+  const madridDate = format(currentTime, 'EEEE, MMMM d');
+  
   console.log('Index page rendering successfully');
   
   return (
@@ -117,54 +132,81 @@ const IndexPage = () => {
       />
       
       <main id="main-content" className="container mx-auto py-16 px-4">
-        <header className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Explore Madrid Your Way</h1>
-          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Navigate through our main categories to find exactly what you need, from tourist attractions to practical living information.
-          </p>
-        </header>
+        {/* Madrid Now Quick Info */}
+        <section className="bg-gradient-to-r from-madrid-red to-red-600 rounded-xl p-6 mb-12 text-white">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
+                <Clock className="h-6 w-6" />
+                Madrid Now
+              </h2>
+              <p className="text-white/90">Current time in Madrid</p>
+            </div>
+            <div className="text-center md:text-right">
+              <div className="text-3xl font-bold">{madridTime}</div>
+              <div className="text-white/90">{madridDate}</div>
+              <div className="text-sm text-white/75 mt-1">CET/CEST</div>
+            </div>
+          </div>
+          <div className="mt-4 pt-4 border-t border-white/20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+              <a href="/madrid-now/weather" className="hover:text-white/80 transition-colors">
+                📊 Weather Today
+              </a>
+              <a href="/madrid-now/events" className="hover:text-white/80 transition-colors">
+                🎭 Current Events
+              </a>
+              <a href="/madrid-now/transport" className="hover:text-white/80 transition-colors">
+                🚇 Transport Updates
+              </a>
+              <a href="/madrid-now" className="hover:text-white/80 transition-colors font-medium">
+                View All →
+              </a>
+            </div>
+          </div>
+        </section>
         
+        {/* Main Categories */}
         <section aria-label="Main categories" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {mainCategories.map(category => (
+          {mainCategories.slice(0, 4).map(category => (
             <article key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus-within:shadow-xl">
               <div className="relative">
                 <img 
                   src={category.imageUrl} 
                   alt={`${category.title} - ${category.description}`}
-                  className="w-full h-56 object-cover"
+                  className="w-full h-48 object-cover"
                   loading="lazy"
                   width="400"
-                  height="224"
+                  height="192"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden="true"></div>
                 <div className="absolute bottom-4 left-4 flex items-center gap-3 text-white">
                   <div className="bg-madrid-red p-2 rounded-lg shadow-md" aria-hidden="true">
                     {category.icon}
                   </div>
-                  <h2 className="text-xl md:text-2xl font-bold">{category.title}</h2>
+                  <h2 className="text-xl font-bold">{category.title}</h2>
                 </div>
               </div>
               
               <div className="p-6">
-                <p className="text-gray-700 mb-6 text-base leading-relaxed">{category.description}</p>
+                <p className="text-gray-700 mb-4 text-sm leading-relaxed">{category.description}</p>
                 
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-800 mb-3">Quick Access:</h3>
-                  <nav aria-label={`${category.title} subcategories`}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {category.subcategories.slice(0, 4).map((sub, index) => (
+                <div className="mb-4">
+                  <nav aria-label={`${category.title} quick links`}>
+                    <div className="grid grid-cols-1 gap-1">
+                      {category.subcategories.slice(0, 3).map((sub, index) => (
                         <a 
                           key={index}
                           href={sub.link}
-                          className="text-sm text-gray-600 hover:text-madrid-red transition-colors p-2 rounded-md hover:bg-gray-50 focus:bg-gray-50 focus:text-madrid-red focus:outline-none focus:ring-2 focus:ring-madrid-red/20"
+                          className="text-sm text-gray-600 hover:text-madrid-red transition-colors p-1 rounded hover:bg-gray-50 focus:bg-gray-50 focus:text-madrid-red focus:outline-none"
                         >
                           • {sub.title}
                         </a>
                       ))}
                     </div>
-                    {category.subcategories.length > 4 && (
-                      <p className="text-sm text-madrid-red mt-3 font-medium" aria-label={`${category.subcategories.length - 4} more sections available`}>
-                        + {category.subcategories.length - 4} more sections
+                    {category.subcategories.length > 3 && (
+                      <p className="text-sm text-madrid-red mt-2 font-medium">
+                        + {category.subcategories.length - 3} more sections
                       </p>
                     )}
                   </nav>
@@ -172,7 +214,7 @@ const IndexPage = () => {
                 
                 <a 
                   href={category.link}
-                  className="inline-flex items-center justify-center w-full bg-madrid-red text-white px-6 py-3 rounded-lg hover:bg-madrid-red/90 transition-all duration-200 font-medium shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-madrid-red focus:ring-offset-2"
+                  className="inline-flex items-center justify-center w-full bg-madrid-red text-white px-4 py-2 rounded-lg hover:bg-madrid-red/90 transition-all duration-200 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-madrid-red focus:ring-offset-2"
                   aria-label={`Explore all ${category.title} content`}
                 >
                   Explore All →
@@ -180,18 +222,6 @@ const IndexPage = () => {
               </div>
             </article>
           ))}
-        </section>
-        
-        <section className="bg-gradient-to-r from-madrid-red to-red-600 rounded-2xl p-8 md:p-12 text-white" aria-labelledby="about-heading">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="about-heading" className="text-3xl md:text-4xl font-bold mb-6">About Madrid Insider</h2>
-            <p className="text-lg md:text-xl mb-6 text-white/95 leading-relaxed">
-              Madrid Insider is your comprehensive English-language directory for everything Madrid. We serve both tourists looking for the best experiences and residents (expats, students, locals) who need practical information for daily life.
-            </p>
-            <p className="text-base md:text-lg text-white/85 leading-relaxed">
-              Our content is organized into logical hubs to help you find exactly what you need, when you need it. From emergency contacts to the best tapas bars, from NIE paperwork to hidden neighborhood gems - we've got you covered.
-            </p>
-          </div>
         </section>
       </main>
     </Layout>
