@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 import Layout from '@/components/Layout';
@@ -8,21 +7,20 @@ import { format } from 'date-fns';
 const mainCategories = [
   {
     title: "Madrid Essentials",
-    description: "Essential information for tourists visiting Madrid - from weather to emergency contacts.",
+    description: "Essential information for tourists and first-time visitors to Madrid.",
     imageUrl: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=800&auto=format&fit=crop",
     link: "/madrid-essentials",
     icon: <Compass className="h-6 w-6" aria-hidden="true" />,
     subcategories: [
       { title: "Getting Started Guide", link: "/madrid-essentials/getting-started" },
-      { title: "Weather & Climate", link: "/madrid-essentials/weather" },
-      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
       { title: "Maps & Navigation", link: "/madrid-essentials/maps" },
+      { title: "Weather & Climate", link: "/madrid-essentials/weather" },
       { title: "Currency & Money", link: "/madrid-essentials/currency" },
       { title: "Language Basics", link: "/madrid-essentials/language" },
       { title: "Safety Tips", link: "/madrid-essentials/safety" },
+      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
       { title: "Tourist Information", link: "/madrid-essentials/tourist-info" },
-      { title: "Embassies & Consulates", link: "/madrid-essentials/embassies" },
-      { title: "What's On Today", link: "/madrid-essentials/whats-on" }
+      { title: "Embassies & Consulates", link: "/madrid-essentials/embassies" }
     ]
   },
   {
@@ -34,15 +32,15 @@ const mainCategories = [
     subcategories: [
       { title: "Paperwork & NIE/TIE", link: "/living-in-madrid/paperwork" },
       { title: "Finding Accommodation", link: "/living-in-madrid/accommodation" },
-      { title: "Healthcare System", link: "/living-in-madrid/healthcare" },
       { title: "Banking & Finances", link: "/living-in-madrid/banking" },
+      { title: "Healthcare System", link: "/living-in-madrid/healthcare" },
+      { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
       { title: "Working in Madrid", link: "/living-in-madrid/work" },
       { title: "Student Life", link: "/living-in-madrid/student-life" },
       { title: "Education & Schools", link: "/living-in-madrid/education" },
-      { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
-      { title: "Community & Expat Groups", link: "/living-in-madrid/community" },
-      { title: "Daily Services", link: "/living-in-madrid/services" },
       { title: "Legal Services", link: "/living-in-madrid/legal" },
+      { title: "Daily Services", link: "/living-in-madrid/services" },
+      { title: "Community & Expat Groups", link: "/living-in-madrid/community" },
       { title: "Places of Worship", link: "/living-in-madrid/worship" }
     ]
   },
@@ -56,11 +54,11 @@ const mainCategories = [
       { title: "Museums & Galleries", link: "/see-in-madrid/museums" },
       { title: "Royal Sites & Palaces", link: "/see-in-madrid/royal-sites" },
       { title: "Historic Sites & Monuments", link: "/see-in-madrid/historic" },
+      { title: "Architecture Tours", link: "/see-in-madrid/architecture" },
       { title: "Parks & Gardens", link: "/see-in-madrid/parks" },
       { title: "Neighborhoods Guide", link: "/see-in-madrid/neighborhoods" },
-      { title: "Architecture Tours", link: "/see-in-madrid/architecture" },
-      { title: "Viewpoints & Rooftops", link: "/see-in-madrid/viewpoints" },
       { title: "Art Galleries", link: "/see-in-madrid/galleries" },
+      { title: "Viewpoints & Rooftops", link: "/see-in-madrid/viewpoints" },
       { title: "Street Art & Murals", link: "/see-in-madrid/street-art" },
       { title: "Hidden Gems", link: "/see-in-madrid/hidden-gems" }
     ]
@@ -76,11 +74,11 @@ const mainCategories = [
       { title: "Nightlife & Bars", link: "/do-in-madrid/nightlife" },
       { title: "Shopping Districts", link: "/do-in-madrid/shopping" },
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
-      { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
+      { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
       { title: "Tours & Experiences", link: "/do-in-madrid/tours" },
-      { title: "Day Trips from Madrid", link: "/do-in-madrid/day-trips" },
       { title: "Spa & Wellness", link: "/do-in-madrid/wellness" },
+      { title: "Day Trips from Madrid", link: "/do-in-madrid/day-trips" },
       { title: "Festivals & Events", link: "/do-in-madrid/festivals" }
     ]
   },
@@ -91,13 +89,13 @@ const mainCategories = [
     link: "/madrid-now",
     icon: <Clock className="h-6 w-6" aria-hidden="true" />,
     subcategories: [
-      { title: "Current Events", link: "/madrid-now/events" },
       { title: "Weather Today", link: "/madrid-now/weather" },
-      { title: "Local Calendar", link: "/madrid-now/calendar" },
-      { title: "Festivals This Month", link: "/madrid-now/festivals" },
+      { title: "Current Events", link: "/madrid-now/events" },
       { title: "Transportation Updates", link: "/madrid-now/transport" },
+      { title: "Festivals This Month", link: "/madrid-now/festivals" },
       { title: "Construction & Closures", link: "/madrid-now/closures" },
       { title: "New Openings", link: "/madrid-now/openings" },
+      { title: "Local Calendar", link: "/madrid-now/calendar" },
       { title: "News & Updates", link: "/madrid-now/news" }
     ]
   }
