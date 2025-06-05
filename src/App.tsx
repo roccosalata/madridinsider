@@ -15,6 +15,27 @@ import MadridNowPage from "./pages/MadridNowPage";
 import FoodAndDrink from "./pages/FoodAndDrink";
 import HealthAndWellness from "./pages/HealthAndWellness";
 
+// Madrid Essentials subcategories
+import GettingStarted from "./pages/essentials/GettingStarted";
+import Maps from "./pages/essentials/Maps";
+import Weather from "./pages/essentials/Weather";
+
+// Living in Madrid subcategories
+import Paperwork from "./pages/living/Paperwork";
+import Accommodation from "./pages/living/Accommodation";
+
+// See in Madrid subcategories
+import Museums from "./pages/see/Museums";
+import Parks from "./pages/see/Parks";
+
+// Do in Madrid subcategories
+import Nightlife from "./pages/do/Nightlife";
+import Shopping from "./pages/do/Shopping";
+
+// Madrid Now subcategories
+import CurrentEvents from "./pages/now/CurrentEvents";
+import WeatherToday from "./pages/now/WeatherToday";
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -42,9 +63,28 @@ const App = () => {
               <Route path="/do-in-madrid" element={<DoMadridPage />} />
               <Route path="/madrid-now" element={<MadridNowPage />} />
 
-              {/* Specific content routes */}
-              <Route path="/do-in-madrid/food-drink" element={<FoodAndDrink />} />
+              {/* Madrid Essentials subcategory routes */}
+              <Route path="/madrid-essentials/getting-started" element={<GettingStarted />} />
+              <Route path="/madrid-essentials/maps" element={<Maps />} />
+              <Route path="/madrid-essentials/weather" element={<Weather />} />
+
+              {/* Living in Madrid subcategory routes */}
+              <Route path="/living-in-madrid/paperwork" element={<Paperwork />} />
+              <Route path="/living-in-madrid/accommodation" element={<Accommodation />} />
               <Route path="/living-in-madrid/healthcare" element={<HealthAndWellness />} />
+
+              {/* See in Madrid subcategory routes */}
+              <Route path="/see-in-madrid/museums" element={<Museums />} />
+              <Route path="/see-in-madrid/parks" element={<Parks />} />
+
+              {/* Do in Madrid subcategory routes */}
+              <Route path="/do-in-madrid/food-drink" element={<FoodAndDrink />} />
+              <Route path="/do-in-madrid/nightlife" element={<Nightlife />} />
+              <Route path="/do-in-madrid/shopping" element={<Shopping />} />
+
+              {/* Madrid Now subcategory routes */}
+              <Route path="/madrid-now/events" element={<CurrentEvents />} />
+              <Route path="/madrid-now/weather" element={<WeatherToday />} />
 
               {/* Legacy routes for backward compatibility */}
               <Route path="/food-and-drink" element={<FoodAndDrink />} />
