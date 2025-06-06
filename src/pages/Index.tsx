@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 import Layout from '@/components/Layout';
@@ -18,9 +19,7 @@ const mainCategories = [
       { title: "Currency & Money", link: "/madrid-essentials/currency" },
       { title: "Language Basics", link: "/madrid-essentials/language" },
       { title: "Safety Tips", link: "/madrid-essentials/safety" },
-      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
-      { title: "Tourist Information", link: "/madrid-essentials/tourist-info" },
-      { title: "Embassies & Consulates", link: "/madrid-essentials/embassies" }
+      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" }
     ]
   },
   {
@@ -35,13 +34,7 @@ const mainCategories = [
       { title: "Banking & Finances", link: "/living-in-madrid/banking" },
       { title: "Healthcare System", link: "/living-in-madrid/healthcare" },
       { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
-      { title: "Working in Madrid", link: "/living-in-madrid/work" },
-      { title: "Student Life", link: "/living-in-madrid/student-life" },
-      { title: "Education & Schools", link: "/living-in-madrid/education" },
-      { title: "Legal Services", link: "/living-in-madrid/legal" },
-      { title: "Daily Services", link: "/living-in-madrid/services" },
-      { title: "Community & Expat Groups", link: "/living-in-madrid/community" },
-      { title: "Places of Worship", link: "/living-in-madrid/worship" }
+      { title: "Working in Madrid", link: "/living-in-madrid/work" }
     ]
   },
   {
@@ -54,13 +47,9 @@ const mainCategories = [
       { title: "Museums & Galleries", link: "/see-in-madrid/museums" },
       { title: "Royal Sites & Palaces", link: "/see-in-madrid/royal-sites" },
       { title: "Historic Sites & Monuments", link: "/see-in-madrid/historic" },
-      { title: "Architecture Tours", link: "/see-in-madrid/architecture" },
       { title: "Parks & Gardens", link: "/see-in-madrid/parks" },
       { title: "Neighborhoods Guide", link: "/see-in-madrid/neighborhoods" },
-      { title: "Art Galleries", link: "/see-in-madrid/galleries" },
-      { title: "Viewpoints & Rooftops", link: "/see-in-madrid/viewpoints" },
-      { title: "Street Art & Murals", link: "/see-in-madrid/street-art" },
-      { title: "Hidden Gems", link: "/see-in-madrid/hidden-gems" }
+      { title: "Viewpoints & Rooftops", link: "/see-in-madrid/viewpoints" }
     ]
   },
   {
@@ -75,28 +64,7 @@ const mainCategories = [
       { title: "Shopping Districts", link: "/do-in-madrid/shopping" },
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
-      { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
-      { title: "Tours & Experiences", link: "/do-in-madrid/tours" },
-      { title: "Spa & Wellness", link: "/do-in-madrid/wellness" },
-      { title: "Day Trips from Madrid", link: "/do-in-madrid/day-trips" },
-      { title: "Festivals & Events", link: "/do-in-madrid/festivals" }
-    ]
-  },
-  {
-    title: "Madrid Now",
-    description: "Stay updated with current events, weather, and what's happening in Madrid today.",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop",
-    link: "/madrid-now",
-    icon: <Clock className="h-6 w-6" aria-hidden="true" />,
-    subcategories: [
-      { title: "Weather Today", link: "/madrid-now/weather" },
-      { title: "Current Events", link: "/madrid-now/events" },
-      { title: "Transportation Updates", link: "/madrid-now/transport" },
-      { title: "Festivals This Month", link: "/madrid-now/festivals" },
-      { title: "Construction & Closures", link: "/madrid-now/closures" },
-      { title: "New Openings", link: "/madrid-now/openings" },
-      { title: "Local Calendar", link: "/madrid-now/calendar" },
-      { title: "News & Updates", link: "/madrid-now/news" }
+      { title: "Sports & Recreation", link: "/do-in-madrid/sports" }
     ]
   }
 ];
@@ -124,49 +92,58 @@ const IndexPage = () => {
         Skip to main content
       </a>
       
-      <HeroSection 
-        title="Welcome to Madrid Insider"
-        subtitle="Your comprehensive English-language directory for Madrid - whether you're visiting for a few days or making Madrid your home."
-      />
+      {/* Enhanced Hero Section with Madrid Now integrated */}
+      <div className="bg-gradient-to-br from-gray-100 to-gray-200 py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Welcome to Madrid Insider
+            </h1>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Your comprehensive English-language directory for Madrid - whether you're visiting for a few days or making Madrid your home.
+            </p>
+          </div>
+          
+          {/* Madrid Now integrated into hero */}
+          <div className="bg-gradient-to-r from-madrid-red to-red-600 rounded-xl p-6 text-white max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="mb-4 md:mb-0">
+                <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
+                  <Clock className="h-6 w-6" />
+                  Madrid Now
+                </h2>
+                <p className="text-white/90">Current time in Madrid</p>
+              </div>
+              <div className="text-center md:text-right">
+                <div className="text-3xl font-bold">{madridTime}</div>
+                <div className="text-white/90">{madridDate}</div>
+                <div className="text-sm text-white/75 mt-1">CET/CEST</div>
+              </div>
+            </div>
+            <div className="mt-4 pt-4 border-t border-white/20">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                <a href="/madrid-now/weather" className="hover:text-white/80 transition-colors">
+                  📊 Weather Today
+                </a>
+                <a href="/madrid-now/events" className="hover:text-white/80 transition-colors">
+                  🎭 Current Events
+                </a>
+                <a href="/madrid-now/transport" className="hover:text-white/80 transition-colors">
+                  🚇 Transport Updates
+                </a>
+                <a href="/madrid-now" className="hover:text-white/80 transition-colors font-medium">
+                  View All →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
-      <main id="main-content" className="container mx-auto py-16 px-4">
-        {/* Madrid Now Quick Info */}
-        <section className="bg-gradient-to-r from-madrid-red to-red-600 rounded-xl p-6 mb-12 text-white">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
-                <Clock className="h-6 w-6" />
-                Madrid Now
-              </h2>
-              <p className="text-white/90">Current time in Madrid</p>
-            </div>
-            <div className="text-center md:text-right">
-              <div className="text-3xl font-bold">{madridTime}</div>
-              <div className="text-white/90">{madridDate}</div>
-              <div className="text-sm text-white/75 mt-1">CET/CEST</div>
-            </div>
-          </div>
-          <div className="mt-4 pt-4 border-t border-white/20">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-              <a href="/madrid-now/weather" className="hover:text-white/80 transition-colors">
-                📊 Weather Today
-              </a>
-              <a href="/madrid-now/events" className="hover:text-white/80 transition-colors">
-                🎭 Current Events
-              </a>
-              <a href="/madrid-now/transport" className="hover:text-white/80 transition-colors">
-                🚇 Transport Updates
-              </a>
-              <a href="/madrid-now" className="hover:text-white/80 transition-colors font-medium">
-                View All →
-              </a>
-            </div>
-          </div>
-        </section>
-        
-        {/* Main Categories */}
-        <section aria-label="Main categories" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {mainCategories.slice(0, 4).map(category => (
+      <main id="main-content" className="container mx-auto py-12 px-4">
+        {/* Main Categories in a 2x2 grid */}
+        <section aria-label="Main categories" className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {mainCategories.map(category => (
             <article key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus-within:shadow-xl">
               <div className="relative">
                 <img 
