@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -27,6 +26,7 @@ import Accommodation from "./pages/living/Accommodation";
 // See in Madrid subcategories
 import Museums from "./pages/see/Museums";
 import Parks from "./pages/see/Parks";
+import Neighborhoods from "./pages/see/Neighborhoods";
 
 // Do in Madrid subcategories
 import Nightlife from "./pages/do/Nightlife";
@@ -76,6 +76,7 @@ const App = () => {
               {/* See in Madrid subcategory routes */}
               <Route path="/see-in-madrid/museums" element={<Museums />} />
               <Route path="/see-in-madrid/parks" element={<Parks />} />
+              <Route path="/see-in-madrid/neighborhoods" element={<Neighborhoods />} />
 
               {/* Do in Madrid subcategory routes */}
               <Route path="/do-in-madrid/food-drink" element={<FoodAndDrink />} />

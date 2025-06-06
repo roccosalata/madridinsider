@@ -2,21 +2,21 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
-import MuseumsHub from '@/components/museums/MuseumsHub';
+import NeighborhoodsHub from '@/components/neighborhoods/NeighborhoodsHub';
 
-const Museums = () => {
+const Neighborhoods = () => {
   return (
     <Layout>
       <HeroSection
-        title="Museums & Galleries"
-        subtitle="World-class museums and art galleries in Madrid"
+        title="Neighborhoods Guide"
+        subtitle="Discover Madrid's diverse districts and areas"
       />
       
       <div className="container mx-auto py-12 px-4">
-        <MuseumsHub />
+        <NeighborhoodsHub />
       </div>
     </Layout>
   );
 };
 
-export default Museums;
+export default Neighborhoods;
