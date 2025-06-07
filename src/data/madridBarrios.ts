@@ -40,7 +40,7 @@ export const madridBarrios: Barrio[] = [
     safety: "Generally safe but watch for pickpockets",
     bestFor: ["Students", "Culture enthusiasts", "First-time visitors", "Nightlife lovers"],
     metroStations: ["Sol", "Callao", "Opera", "La Latina"],
-    highlights: ["Historic buildings", "Cultural activities", "Nightlife", "Restaurants", "Tourist attractions", "Classical architecture"]
+    highlights: ["Historic buildings", "Cultural activities", "Nightlife", "Restaurants", "Tourist attractions", "Classical architecture", "Plaza Mayor", "Puerta del Sol"]
   },
   {
     name: "Chamartín",
@@ -142,7 +142,7 @@ export const madridBarrios: Barrio[] = [
     safety: "Generally safe, lively area",
     bestFor: ["Sunday socializing", "Artistic types", "30+ crowd", "Weekend activities"],
     metroStations: ["La Latina", "Tirso de Molina"],
-    highlights: ["Sunday afternoon scene", "Bohemian elegance", "Artistic venues", "El Rastro market", "Traditional tapas", "Plaza de la Cebada"]
+    highlights: ["Sunday afternoon scene", "Bohemian elegance", "Artistic venues", "El Rastro market", "Traditional tapas", "Plaza de la Cebada", "Basilica de San Francisco"]
   },
   {
     name: "Lavapiés",
@@ -173,7 +173,7 @@ export const madridBarrios: Barrio[] = [
     safety: "Very safe, university area",
     bestFor: ["University students", "Postgraduate students", "Academic life", "Budget-conscious students"],
     metroStations: ["Moncloa", "Ciudad Universitaria"],
-    highlights: ["University proximity", "Student community", "Bus terminal", "Academic atmosphere", "Student prices"]
+    highlights: ["University proximity", "Student community", "Bus terminal", "Academic atmosphere", "Student prices", "Faro de Moncloa viewpoint"]
   },
   {
     name: "Opera",
@@ -183,7 +183,7 @@ export const madridBarrios: Barrio[] = [
     safety: "Very safe, tourist area",
     bestFor: ["Royal Palace visits", "Historic interest", "Luxury experience", "Tourist attractions"],
     metroStations: ["Opera", "Santo Domingo"],
-    highlights: ["Royal Palace", "Historic architecture", "Tourist attractions", "Upscale dining"],
+    highlights: ["Royal Palace", "Historic architecture", "Tourist attractions", "Upscale dining", "Teatro Real", "Catedral de la Almudena"],
     warnings: ["Very expensive restaurants", "Tourist prices"]
   },
   {
@@ -235,7 +235,7 @@ export const madridBarrios: Barrio[] = [
     safety: "Watch for pickpockets and street issues",
     bestFor: ["Tourist access", "Central location", "Transport hub", "Shopping"],
     metroStations: ["Sol"],
-    highlights: ["Puerta del Sol plaza", "Geographic center", "Shopping access", "Transport hub", "Tourist attractions"],
+    highlights: ["Puerta del Sol plaza", "Geographic center", "Shopping access", "Transport hub", "Tourist attractions", "Plaza Mayor nearby"],
     warnings: ["Pickpockets common", "Street prostitution", "Construction work", "Very crowded"]
   }
 ];
