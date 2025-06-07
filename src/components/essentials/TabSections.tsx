@@ -2,16 +2,16 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import UsefulInformation from './UsefulInformation';
+import GeneralUsefulInfo from './GeneralUsefulInfo';
 import WeatherVisitInfo from './WeatherVisitInfo';
 import SpanishCustomsInfo from './SpanishCustomsInfo';
 
 const TabSections = () => {
   const sections = [
     {
-      id: 'useful',
-      title: 'Useful Information & First-Timer Tips',
-      content: <UsefulInformation />,
+      id: 'general',
+      title: 'General / Useful Info',
+      content: <GeneralUsefulInfo />,
     },
     {
       id: 'weather',
@@ -26,7 +26,7 @@ const TabSections = () => {
   ];
 
   return (
-    <Tabs defaultValue="useful" className="w-full">
+    <Tabs defaultValue="general" className="w-full">
       <TabsList className="grid grid-cols-3 mb-8">
         {sections.map((section) => (
           <TabsTrigger key={section.id} value={section.id}>
