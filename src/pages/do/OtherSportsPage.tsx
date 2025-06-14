@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { volleyballInfo, tennisInfo, skiingInfo, rugbyInfo, raceKartsInfo, poolBilliardsInfo, iceSkatingInfo } from '@/data/sportsData';
-import { Mail, MountainSnow, Users, Phone, Globe, Pool, IceSkating } from 'lucide-react';
+import { Mail, MountainSnow, Users, Phone, Globe, Target, Snowflake } from 'lucide-react';
 
 const OtherSportsPage = () => {
   return (
@@ -76,7 +75,7 @@ const OtherSportsPage = () => {
 
         <section>
             <h2 className="text-3xl font-bold mb-6 text-madrid-red flex items-center gap-3">
-              <Pool className="h-8 w-8" />
+              <Target className="h-8 w-8" />
               {poolBilliardsInfo.title}
             </h2>
             <Card className="mb-6">
@@ -114,7 +113,7 @@ const OtherSportsPage = () => {
 
         <section>
             <h2 className="text-3xl font-bold mb-6 text-madrid-red flex items-center gap-3">
-              <IceSkating className="h-8 w-8" />
+              <Snowflake className="h-8 w-8" />
               {iceSkatingInfo.title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
