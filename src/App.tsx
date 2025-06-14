@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -14,6 +15,7 @@ import EntertainmentPage from './pages/do/EntertainmentPage';
 import YogaWellnessPage from './pages/do/YogaWellnessPage';
 import Healthcare from './pages/living/Healthcare';
 import TransportMaps from './pages/essentials/TransportMaps';
+import TouristOffices from './pages/essentials/TouristOffices';
 import MadridEssentials from './pages/MadridEssentials';
 import SeeMadridPage from './pages/SeeMadridPage';
 import DoMadridPage from './pages/DoMadridPage';

@@ -22,7 +22,7 @@ export const mainCategories: MainCategory[] = [
     link: "/madrid-essentials",
     icon: <Compass className="h-6 w-6" aria-hidden="true" />,
     subcategories: [
-      { title: "Getting Started Guide", link: "/madrid-essentials/getting-started" },
+      { title: "Tourist Offices", link: "/madrid-essentials/tourist-offices" },
       { title: "Transport & Maps", link: "/madrid-essentials/transport-maps" },
       { title: "Weather & Climate", link: "/madrid-essentials/weather" },
       { title: "Currency & Money", link: "/madrid-essentials/currency" },
