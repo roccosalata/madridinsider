@@ -1,4 +1,3 @@
-
 export interface SightseeingAttraction {
   id: string;
   name: string;
@@ -19,11 +18,10 @@ export const madridAttractions: SightseeingAttraction[] = [
     id: "royal-palace",
     name: "Royal Palace and Royal Armoury",
     category: "Palaces",
-    description: "Home to the Kings of Spain from Carlos III through Alfonso XIII, Madrid's Royal Palace is now open to visitors wanting to take a trip through Spanish history. Wander through beautiful rooms, architecture and art collections.",
+    description: "Home to the Kings of Spain from Carlos III all the way through to Alfonso XIII, Madrid´s Royal Palace is now open to anyone who wants to take a trip through Spanish history. Visitors can wander through the many rooms, enjoying the beautiful architecture and the art collection still housed here.",
     address: "Calle de Bailén, s/n",
     metroStations: ["Opera"],
     openingHours: "Daily 10:00-18:00 (Oct-Mar), 10:00-20:00 (Apr-Sep)",
-    admissionFees: "€13 (EU citizens €7, Free for EU under 25)",
     specialNotes: "Closed during state ceremonies. Check calendar online.",
     neighborhood: "Opera",
     highlights: ["Royal Armory collection", "Throne Room", "Stradivarius Room", "Spanish history"]
@@ -32,7 +30,7 @@ export const madridAttractions: SightseeingAttraction[] = [
     id: "basilica-san-francisco",
     name: "Basilica de San Francisco",
     category: "Religious Sites",
-    description: "This basilica represents the transition from baroque to neoclassicism. It boasts a magnificent cupola, considered one of the most impressive of the 18th century (1760).",
+    description: "This basilica represents the transition from baroque to neoclassicism. It boasts a magnificent cupola, considered to be one of the most impressive of the 18th century (1760).",
     address: "Plaza de San Francisco el Grande, S/N",
     metroStations: ["La Latina"],
     openingHours: "Tuesday-Saturday: 11:00-12:30 & 16:00-18:30",
