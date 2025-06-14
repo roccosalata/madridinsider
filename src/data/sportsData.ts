@@ -1,4 +1,3 @@
-
 export const volleyballInfo = {
   title: "Madrid Volleyball Club",
   description: "Currently seeking medium and high level players.",
@@ -49,4 +48,65 @@ export const swimmingPools = {
   hotel: [
     { name: "Hotel Emperador", address: "Gran Via, 53 (Metro: Gran Via)", description: "Expensive, rooftop pool with great views out over the city, filled with beautiful people. Waiter service to your lounger, scattering of Greek statues.", details: "Open: 11am-9pm. Entry: 27 euros.", phone: "915-472-800" },
   ],
+};
+
+export const footballInfo = {
+  mainTitle: "Football in Madrid",
+  championsLeague: {
+    title: "Football Champions League in Madrid",
+    description: "Real Madrid is no longer on its own. With the return of Atlético de Madrid to the leading continental football competition, Madrid has the privilege of having two teams in the Champions League. Don't miss such fascinating matches as the Real Madrid-Juventus or the Atlético de Madrid-Liverpool!",
+  },
+  bernabeuTour: {
+    title: "Tour of the Santiago Bernabéu",
+    description: "The Real Madrid stadium, that will stage the Champions League Final in 2010, opens its doors to its fans on a daily basis, with the aim of showing them the corners and scenario in which their idols have played out so many great triumphs. The Tour also tells the history of the football club, and allows visitors to be level with the playing field.",
+  },
+  stadiums: [
+    { name: "Estadio Santiago Bernabéu", address: "Pº Castellana, 104 (Metro: Santiago Bernabéu)", website: "www.realmadrid.es", phone: "902 291 709" },
+    { name: "Estadio Vicente Calderón", address: "Pº Virgen del Purto, 67 (Metro: Pirámides)", website: "www.clubatleticodemadrid.com", phone: "91 366 4707" },
+    { name: "Estadio Teresa Rivero", address: "Arroyo del Olivar, 49 (Metro: Portazgo)", phone: "91 478 2253" }
+  ],
+  practiceAndSupport: {
+    title: "Practice, Support or Play",
+    clubs: [
+      { name: "Liverpool FC Supporters", description: "Meet to watch games at Triskel Tavern, c/San Vicente Ferrer, 3.", contact: "http://ifcmadrid.zoomshare.com" },
+      { name: "Británicos Football Club", description: "Always seeking new players.", contact: "Stuart: 91 234 33 87 or 650 060 371, www.fcbritanico.com" },
+      { name: "Gaelic football club", description: "Seeks members with or without experience for male and female teams.", contact: "Lorcan: 699 492 334, harps@madridgaa.com, www.madridgaa.com" }
+    ]
+  }
+};
+
+export const runningInfo = {
+  title: "Running in Madrid",
+  clubs: [
+    {
+      name: "Laister Running Club",
+      description: "If you love running and looking for a group to run with then come to LAISTER RUNNING CLUB trained by Eugenio Galan (former Spanish champion).\nWe train on every Tuesday, Thursday & on Sundays.\nWe're a group of all ages & categories.",
+      contact: "For further details contact Kamal: kamal.sirra@gmail.com"
+    }
+  ]
+};
+
+export const skiingInfo = {
+  title: "Skiing & Snowboarding",
+  resorts: [
+    { name: "Xanadú", address: "Crta. N-V KM 23.500, Margen Izquierdo Arroyomilinos", website: "www.madridxanadu.es", phone: "902 263 026" },
+    { name: "Navacerrada", address: "Puerto de Navacerrada, MADRID", phone: "91 852 14 35 - Edificio Deporte y Montaña(Puerto Navacerrada): 91 852 33 02" },
+    { name: "Valdesquí", address: "A 3 km de Valcotos, ENTRE LAS PROVINCIAS DE MADRID Y SEGOVIA.", phone: "91 852 04 16" }
+  ]
+};
+
+export const rugbyInfo = {
+  title: "Rugby in Madrid",
+  clubs: [
+    {
+      name: "Madrid Lions Rugby Club",
+      description: "Seeks players of all levels and nationalities. Pub nights on Thursdays, 20:30, at Finnegan's (Plaza de las Salesas).",
+      contact: "Charlie: 636 067 716, www.madridlionsrfc.com"
+    },
+    {
+      name: "Madrid Barbarians Rugby Club",
+      description: "Welcomes players from all over the world, both expat and Spanish, no matter what level or experience.\n\nWe stand out as the expat club to join by consistently providing regular training, matches and social events and ensuring that the club is managed, strategically, tactically and financially, for the direct benefit of its players and supporters.\n\nWe are both a competitive and social rugby club, renowned for our third half post match celebrations and our club events.\n\nWe are also always on the lookout for potential sponsors for whom we can offer significant exposure in Madrid, throughout Spain and beyond. With a membership representing at least 15 different nationalities and a management team who are committed to fulfilling sponsors' requirements, we are the expat team to talk to.",
+      contact: "Contact Andrew with an email to madridbarbarians@ymail.com"
+    }
+  ]
 };

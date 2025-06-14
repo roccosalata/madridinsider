@@ -3,15 +3,15 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { volleyballInfo, tennisInfo } from '@/data/sportsData';
-import { Mail } from 'lucide-react';
+import { volleyballInfo, tennisInfo, skiingInfo, rugbyInfo } from '@/data/sportsData';
+import { Mail, MountainSnow, Users, Phone, Globe } from 'lucide-react';
 
 const OtherSportsPage = () => {
   return (
     <Layout>
       <HeroSection
         title="Other Sports in Madrid"
-        subtitle="Explore volleyball, tennis, and more in the city."
+        subtitle="Explore volleyball, tennis, skiing, rugby and more in the city."
       />
       <div className="container mx-auto py-12 px-4 space-y-12">
         <Card>
@@ -40,6 +40,57 @@ const OtherSportsPage = () => {
             <p className="text-sm text-gray-600"><strong>More Information:</strong> {tennisInfo.moreInfo}</p>
           </CardContent>
         </Card>
+
+        <section>
+            <h2 className="text-3xl font-bold mb-6 text-madrid-red flex items-center gap-3">
+              <MountainSnow className="h-8 w-8" />
+              {skiingInfo.title}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {skiingInfo.resorts.map(resort => (
+                    <Card key={resort.name}>
+                        <CardHeader>
+                            <CardTitle>{resort.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-2 text-sm text-gray-600">
+                            <p>{resort.address}</p>
+                            {resort.website && (
+                                <div className="flex items-center gap-2">
+                                <Globe className="h-4 w-4" />
+                                <a href={`http://${resort.website}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{resort.website}</a>
+                                </div>
+                            )}
+                            {resort.phone && (
+                                <div className="flex items-center gap-2">
+                                <Phone className="h-4 w-4" />
+                                <span>{resort.phone}</span>
+                                </div>
+                            )}
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+        </section>
+        
+        <section>
+            <h2 className="text-3xl font-bold mb-6 text-madrid-red flex items-center gap-3">
+                <Users className="h-8 w-8" />
+                {rugbyInfo.title}
+            </h2>
+            <div className="space-y-6">
+                {rugbyInfo.clubs.map(club => (
+                    <Card key={club.name}>
+                        <CardHeader>
+                            <CardTitle>{club.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-2">
+                            <p className="text-gray-700 whitespace-pre-wrap">{club.description}</p>
+                            <p className="text-sm text-gray-600"><strong>Contact:</strong> {club.contact}</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+        </section>
       </div>
     </Layout>
   );

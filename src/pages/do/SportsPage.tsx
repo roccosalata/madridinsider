@@ -1,10 +1,11 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Leaf, Award, Dumbbell, Footprints, Waves, Medal, ArrowRight } from 'lucide-react';
+import { Leaf, Dumbbell, Footprints, Waves, Medal, ArrowRight, Football } from 'lucide-react';
 
 const sportCategories = [
   {
@@ -16,8 +17,8 @@ const sportCategories = [
   {
     title: "Football (Fútbol)",
     description: "Experience the passion of Spanish football. Find info on stadiums, matches, and local teams.",
-    link: "#",
-    icon: Award,
+    link: "/do-in-madrid/sports/football",
+    icon: Football,
   },
   {
     title: "Gyms & Fitness",
@@ -28,7 +29,7 @@ const sportCategories = [
   {
     title: "Running & Parks",
     description: "Discover the best running routes and parks for outdoor exercise, like Retiro and Casa de Campo.",
-    link: "#",
+    link: "/do-in-madrid/sports/running",
     icon: Footprints,
   },
   {

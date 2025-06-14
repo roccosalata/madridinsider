@@ -26,6 +26,8 @@ import MarketsPage from './pages/do/MarketsPage';
 import SportsPage from './pages/do/SportsPage';
 import SwimmingPage from './pages/do/SwimmingPage';
 import OtherSportsPage from './pages/do/OtherSportsPage';
+import FootballPage from './pages/do/FootballPage';
+import RunningPage from './pages/do/RunningPage';
 
 const queryClient = new QueryClient();
 
@@ -60,6 +62,8 @@ function App() {
             <Route path="/do-in-madrid/markets" element={<MarketsPage />} />
             <Route path="/do-in-madrid/entertainment" element={<EntertainmentPage />} />
             <Route path="/do-in-madrid/sports" element={<SportsPage />} />
+            <Route path="/do-in-madrid/sports/football" element={<FootballPage />} />
+            <Route path="/do-in-madrid/sports/running" element={<RunningPage />} />
             <Route path="/do-in-madrid/sports/swimming" element={<SwimmingPage />} />
             <Route path="/do-in-madrid/sports/other-sports" element={<OtherSportsPage />} />
             <Route path="/do-in-madrid/yoga-wellness" element={<YogaWellnessPage />} />
