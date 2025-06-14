@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Leaf, Dumbbell, Footprints, Waves, Medal, ArrowRight, Trophy, Flag, Sailboat, Bike, Dribbble, Target } from 'lucide-react';
+import { Leaf, Dumbbell, Footprints, Waves, Medal, ArrowRight, Trophy, Flag, Sailboat, Bike, Dribbble, Target, Heart } from 'lucide-react';
 
 const sportCategories = [
   {
@@ -13,6 +13,12 @@ const sportCategories = [
     description: "Find your balance with yoga studios, wellness centers, and healthy lifestyle options across the city.",
     link: "/do-in-madrid/sports/yoga-wellness",
     icon: Leaf,
+  },
+  {
+    title: "Baths & Spas",
+    description: "Relax and rejuvenate in traditional Arab baths and modern luxury spas.",
+    link: "/do-in-madrid/sports/baths",
+    icon: Heart,
   },
   {
     title: "Football (Fútbol)",

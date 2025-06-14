@@ -77,7 +77,7 @@ function App() {
             <Route path="/do-in-madrid/sports/boating" element={<BoatingPage />} />
             <Route path="/do-in-madrid/sports/bowling" element={<BowlingPage />} />
             <Route path="/do-in-madrid/sports/yoga-wellness" element={<YogaWellnessPage />} />
-            <Route path="/do-in-madrid/baths" element={<BathsPage />} />
+            <Route path="/do-in-madrid/sports/baths" element={<BathsPage />} />
             
             {/* Madrid Now */}
             <Route path="/madrid-now" element={<MadridNow />} />
