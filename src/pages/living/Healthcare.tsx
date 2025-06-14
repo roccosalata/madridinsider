@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Stethoscope, Heart, Pill, Building2, Phone, AlertTriangle, Users, MapPin } from 'lucide-react';
+import { Stethoscope, Heart, Pill, Building2, Phone, AlertTriangle, Users, MapPin, Smile } from 'lucide-react';
 
 const Healthcare = () => {
   const healthcareServices = [
@@ -69,6 +69,75 @@ const Healthcare = () => {
     { name: "Ruber International Hospital", address: "Juan Bravo, 49", phone: "914-026-100", metro: "Diego de Leon" },
     { name: "Clínica de Nuestra Señora de la Concepción", address: "Avda de los Reyes Católicos, 2", phone: "91 550 4800", note: "Jiménez Díaz Foundation" },
     { name: "Clínica Amessco", address: "José Abascal, 48, 7º", phone: "914-412-655", note: "Mon-Fri 9am-2pm, 4-9pm" }
+  ];
+
+  const dentistClinics = [
+    {
+      name: "Dental Clinic Del Rey",
+      address: "Calle Potosí 2, 28016 Madrid",
+      phone: "91 344 19 61",
+      email: "info@dentalclinicmadrid.com",
+      website: "www.dentalclinicmadrid.com",
+      note: "Registered with British, American, Canadian and Australian Embassies. Aesthetic Dentistry, Implants, Orthodontics"
+    },
+    {
+      name: "Clínica Dental Cisne",
+      address: "Magallanes, 18",
+      phone: "914-463-221 / 661-857-170",
+      metro: "Quevedo",
+      note: "Dr. Ian Daniel, BDS. Complete spectrum of care, US-trained dental hygienist"
+    },
+    {
+      name: "Clínica Plaza Prosperidad",
+      address: "Plaza Prosperidad Nº 3, 2-B",
+      phone: "91 415 8197",
+      metro: "Prosperidad (Line 4)",
+      website: "www.clinicadentalplazaprosperidad.com",
+      note: "English speaking dentist trained in the United States"
+    },
+    {
+      name: "Clínica Cloe",
+      address: "Contact for location",
+      website: "www.clinicacloe.com",
+      note: "Modern clinic with American dentist, very reasonable prices. Featured on Sensodyne adverts"
+    },
+    {
+      name: "Dr. Richard Klein / Clínica Benalal",
+      address: "Paseo Castellana, 15, Bajo B",
+      phone: "91 310 5152",
+      email: "drklein@dentalimplant.net"
+    },
+    {
+      name: "Clínica Dental Vilaboa",
+      address: "Hermosilla, 31, 1º ext izq",
+      phone: "915-765-429",
+      note: "Dras Deborah and Beatriz Vilaboa"
+    }
+  ];
+
+  const englishSpeakingDoctors = [
+    {
+      name: "Dr. M. Franzreb Corbelletti",
+      specialty: "General Practitioner, Orthopedics and Traumatology",
+      address: "Castellana 171, Lower Left",
+      phone: "914491957",
+      email: "info@drmarcofranzreb.com",
+      website: "www.drmarcofranzreb.com"
+    },
+    {
+      name: "Dr. Manuel Ortiz-Villajos, MD",
+      specialty: "Family Medicine, Psychosomatic Medicine",
+      address: "Paseo de la Habana, 17 - 1º B",
+      phone: "91 562 56 38 / 648 76 64 64",
+      email: "drmortizvillajosmd@yahoo.es",
+      note: "Bilingual, recommended by US Embassy, house calls available"
+    },
+    {
+      name: "Dr. Ruben Borras",
+      specialty: "General Practitioner and Family Medicine",
+      address: "Claudio Coello, 117",
+      phone: "91 576 9901 / 91 576 9902"
+    }
   ];
 
   return (
@@ -154,9 +223,9 @@ const Healthcare = () => {
           </div>
         </section>
 
-        {/* Healthcare Services */}
+        {/* Healthcare Services Overview */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-8">Healthcare Services</h2>
+          <h2 className="text-3xl font-bold mb-8">Healthcare Services Overview</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {healthcareServices.map((service, index) => (
               <Card key={index} className="h-full hover:shadow-lg transition-shadow">
@@ -175,6 +244,34 @@ const Healthcare = () => {
                       <li key={itemIndex} className="text-sm text-gray-700">• {item}</li>
                     ))}
                   </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* English-Speaking Doctors */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold mb-6">English-Speaking Doctors</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {englishSpeakingDoctors.map((doctor, index) => (
+              <Card key={index}>
+                <CardContent className="pt-4">
+                  <h4 className="font-semibold text-madrid-red mb-2">{doctor.name}</h4>
+                  <p className="text-sm text-gray-600 mb-2">{doctor.specialty}</p>
+                  <div className="space-y-1 text-sm text-gray-600">
+                    <p className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      {doctor.address}
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      {doctor.phone}
+                    </p>
+                    {doctor.email && <p>Email: {doctor.email}</p>}
+                    {doctor.website && <p>Website: {doctor.website}</p>}
+                    {doctor.note && <p className="text-blue-600 font-medium">{doctor.note}</p>}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -225,6 +322,39 @@ const Healthcare = () => {
                     </p>
                     {clinic.metro && <p>Metro: {clinic.metro}</p>}
                     {clinic.note && <p className="text-blue-600 font-medium">{clinic.note}</p>}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Dental Clinics */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Smile className="h-6 w-6 text-madrid-red" />
+            Dental Clinics
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {dentistClinics.map((clinic, index) => (
+              <Card key={index}>
+                <CardContent className="pt-4">
+                  <h4 className="font-semibold text-madrid-red mb-2">{clinic.name}</h4>
+                  <div className="space-y-1 text-sm text-gray-600">
+                    <p className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      {clinic.address}
+                    </p>
+                    {clinic.phone && (
+                      <p className="flex items-center gap-2">
+                        <Phone className="h-4 w-4" />
+                        {clinic.phone}
+                      </p>
+                    )}
+                    {clinic.metro && <p>Metro: {clinic.metro}</p>}
+                    {clinic.email && <p>Email: {clinic.email}</p>}
+                    {clinic.website && <p>Website: {clinic.website}</p>}
+                    {clinic.note && <p className="text-blue-600 font-medium mt-2">{clinic.note}</p>}
                   </div>
                 </CardContent>
               </Card>
