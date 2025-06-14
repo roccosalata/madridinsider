@@ -1,31 +1,27 @@
 import React from 'react';
-import Layout from '@/components/Layout'; // Adjust the import path as necessary
-import HeroSection from '@/components/HeroSection'; // Adjust the import path as necessary
-import PlacesOfWorshipList from '@/components/PlacesOfWorshipList'; // Adjust the import path as necessary
-import { essentialsData } from '@/data/essentialsData'; // Adjust the import path as necessary
-import { directoryData } from '@/data/directoryData'; // Adjust the import path as necessary
-import { Card, CardHeader, CardTitle, CardContent, Link } from '@radix-ui/react-card'; // Adjust the import path as necessary
-
+import Layout from '@/components/Layout';
+import HeroSection from '@/components/HeroSection';
+import PlacesOfWorshipList from '@/components/PlacesOfWorshipList';
+import { essentialsData } from '@/data/essentialsData';
+import { directoryData } from '@/data/directoryData';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const LivingMadridPage: React.FC = () => {
-  // Assuming directoryData and essentialsData contain the relevant information
-  // You might need to adjust how data is accessed based on your data structure
-
-  const religionsData = essentialsData.religions || []; // Example: Accessing religious data
-  const accommodationData = directoryData['living-in-madrid']?.['accommodation']; // Example: Accessing accommodation data
-  const paperworkData = directoryData['living-in-madrid']?.['paperwork-formalities']; // Example: Accessing paperwork data
-  const workResidencyData = directoryData['living-in-madrid']?.['work-residency']; // Example: Accessing work/residency data
-  const talentAgenciesData = directoryData['living-in-madrid']?.['talent-agencies']; // Example: Accessing talent agencies data
-  const internshipsData = directoryData['living-in-madrid']?.['internships']; // Example: Accessing internships data
-  const bankingFinancesData = directoryData['living-in-madrid']?.['banking-finances']; // Example: Accessing banking data
-  const connectivityHomeServicesData = directoryData['living-in-madrid']?.['connectivity-home-services']; // Example: Accessing connectivity data
-  const healthcareGuideData = directoryData['living-in-madrid']?.['healthcare-guide']; // Example: Accessing healthcare data
-  const educationChildcareData = directoryData['living-in-madrid']?.['education-childcare']; // Example: Accessing education data
-  const workingInMadridData = directoryData['living-in-madrid']?.['working-in-madrid']; // Example: Accessing working data
-  const studentLifeData = directoryData['living-in-madrid']?.['student-life']; // Example: Accessing student life data
-  const communityIntegrationData = directoryData['living-in-madrid']?.['community-integration']; // Example: Accessing community data
-  const dailyNecessitiesData = directoryData['living-in-madrid']?.['daily-necessities-services']; // Example: Accessing daily necessities data
-
+  const religionsData = essentialsData.religions || [];
+  const accommodationData = directoryData['living-in-madrid']?.['accommodation'];
+  const paperworkData = directoryData['living-in-madrid']?.['paperwork-formalities'];
+  const workResidencyData = directoryData['living-in-madrid']?.['work-residency'];
+  const talentAgenciesData = directoryData['living-in-madrid']?.['talent-agencies'];
+  const internshipsData = directoryData['living-in-madrid']?.['internships'];
+  const bankingFinancesData = directoryData['living-in-madrid']?.['banking-finances'];
+  const connectivityHomeServicesData = directoryData['living-in-madrid']?.['connectivity-home-services'];
+  const healthcareGuideData = directoryData['living-in-madrid']?.['healthcare-guide'];
+  const educationChildcareData = directoryData['living-in-madrid']?.['education-childcare'];
+  const workingInMadridData = directoryData['living-in-madrid']?.['working-in-madrid'];
+  const studentLifeData = directoryData['living-in-madrid']?.['student-life'];
+  const communityIntegrationData = directoryData['living-in-madrid']?.['community-integration'];
+  const dailyNecessitiesData = directoryData['living-in-madrid']?.['daily-necessities-services'];
 
   return (
     <Layout>
@@ -38,12 +34,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Accommodation Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Finding Accommodation</h2>
-          {/* Render accommodation data here */}
-           {accommodationData ? (
+          {accommodationData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
               <p>{(accommodationData as any).introduction}</p>
-              {/* Add more rendering based on accommodationData structure */}
             </div>
           ) : (
             <p>Information about finding accommodation is coming soon.</p>
@@ -53,11 +46,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Paperwork & Formalities Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Paperwork & Formalities (NIE, TIE, etc.)</h2>
-           {paperworkData ? (
+          {paperworkData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
               <p>{(paperworkData as any).introduction}</p>
-              {/* Add more rendering based on paperworkData structure */}
             </div>
           ) : (
             <p>Information about paperwork and formalities is coming soon.</p>
@@ -92,24 +83,21 @@ const LivingMadridPage: React.FC = () => {
           <p className="text-sm text-red-600 mb-4">
             Disclaimer: Visa and residency information can change frequently. Always consult official government sources for the most up-to-date requirements.
           </p>
-           {workResidencyData ? (
+          {workResidencyData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
               <p>{(workResidencyData as any).introduction}</p>
-               {/* Add sections for USA and UK citizens if data exists */}
               {(workResidencyData as any).usaCitizens && (
                 <div className="mt-4">
-                   <h3 className="text-xl font-semibold mb-2">Information for USA Citizens</h3>
-                   <p>{(workResidencyData as any).usaCitizens.details}</p>
+                  <h3 className="text-xl font-semibold mb-2">Information for USA Citizens</h3>
+                  <p>{(workResidencyData as any).usaCitizens.details}</p>
                 </div>
               )}
-               {(workResidencyData as any).ukCitizens && (
+              {(workResidencyData as any).ukCitizens && (
                 <div className="mt-4">
-                   <h3 className="text-xl font-semibold mb-2">Information for UK Citizens</h3>
-                   <p>{(workResidencyData as any).ukCitizens.details}</p>
+                  <h3 className="text-xl font-semibold mb-2">Information for UK Citizens</h3>
+                  <p>{(workResidencyData as any).ukCitizens.details}</p>
                 </div>
               )}
-               {/* Add more rendering based on workResidencyData structure */}
             </div>
           ) : (
             <p>Information about work and residency is coming soon.</p>
@@ -119,11 +107,9 @@ const LivingMadridPage: React.FC = () => {
          {/* Talent Agencies Section */}
          <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Talent Agencies</h2>
-           {talentAgenciesData ? (
+          {talentAgenciesData ? (
             <div>
-               {/* Example rendering - adjust based on actual data structure */}
-               <p>{(talentAgenciesData as any).introduction}</p>
-              {/* Add more rendering based on talentAgenciesData structure */}
+              <p>{(talentAgenciesData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about talent agencies is coming soon.</p>
@@ -133,14 +119,12 @@ const LivingMadridPage: React.FC = () => {
          {/* Internships Section */}
          <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Internships</h2>
-           <p className="text-sm text-red-600 mb-4">
+          <p className="text-sm text-red-600 mb-4">
             Disclaimer: Internship regulations and availability can change. Always consult official sources and relevant organizations for the latest information.
           </p>
-           {internshipsData ? (
+          {internshipsData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(internshipsData as any).introduction}</p>
-               {/* Add more rendering based on internshipsData structure */}
+              <p>{(internshipsData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about internships is coming soon.</p>
@@ -150,11 +134,9 @@ const LivingMadridPage: React.FC = () => {
          {/* Banking & Finances Section */}
          <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Banking & Finances</h2>
-           {bankingFinancesData ? (
+          {bankingFinancesData ? (
             <div>
-               {/* Example rendering - adjust based on actual data structure */}
-               <p>{(bankingFinancesData as any).introduction}</p>
-               {/* Add more rendering based on bankingFinancesData structure */}
+              <p>{(bankingFinancesData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about banking and finances is coming soon.</p>
@@ -164,11 +146,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Connectivity & Home Services Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Connectivity & Home Services</h2>
-           {connectivityHomeServicesData ? (
+          {connectivityHomeServicesData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(connectivityHomeServicesData as any).introduction}</p>
-              {/* Add more rendering based on connectivityHomeServicesData structure */}
+              <p>{(connectivityHomeServicesData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about connectivity and home services is coming soon.</p>
@@ -178,11 +158,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Healthcare Guide Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Healthcare Guide</h2>
-           {healthcareGuideData ? (
+          {healthcareGuideData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(healthcareGuideData as any).introduction}</p>
-              {/* Add more rendering based on healthcareGuideData structure */}
+              <p>{(healthcareGuideData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about healthcare is coming soon.</p>
@@ -192,11 +170,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Education & Childcare Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Education & Childcare</h2>
-           {educationChildcareData ? (
+          {educationChildcareData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(educationChildcareData as any).introduction}</p>
-              {/* Add more rendering based on educationChildcareData structure */}
+              <p>{(educationChildcareData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about education and childcare is coming soon.</p>
@@ -206,11 +182,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Working in Madrid Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Working in Madrid</h2>
-           {workingInMadridData ? (
+          {workingInMadridData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(workingInMadridData as any).introduction}</p>
-              {/* Add more rendering based on workingInMadridData structure */}
+              <p>{(workingInMadridData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about working in Madrid is coming soon.</p>
@@ -220,11 +194,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Student Life Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Student Life</h2>
-           {studentLifeData ? (
+          {studentLifeData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(studentLifeData as any).introduction}</p>
-              {/* Add more rendering based on studentLifeData structure */}
+              <p>{(studentLifeData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about student life is coming soon.</p>
@@ -234,11 +206,9 @@ const LivingMadridPage: React.FC = () => {
         {/* Community & Integration Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Community & Integration</h2>
-           {communityIntegrationData ? (
+          {communityIntegrationData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(communityIntegrationData as any).introduction}</p>
-              {/* Add more rendering based on communityIntegrationData structure */}
+              <p>{(communityIntegrationData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about community and integration is coming soon.</p>
@@ -258,11 +228,9 @@ const LivingMadridPage: React.FC = () => {
          {/* Daily Necessities & Services Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Daily Necessities & Services</h2>
-           {dailyNecessitiesData ? (
+          {dailyNecessitiesData ? (
             <div>
-              {/* Example rendering - adjust based on actual data structure */}
-               <p>{(dailyNecessitiesData as any).introduction}</p>
-              {/* Add more rendering based on dailyNecessitiesData structure */}
+              <p>{(dailyNecessitiesData as any).introduction}</p>
             </div>
           ) : (
             <p>Information about daily necessities and services is coming soon.</p>
