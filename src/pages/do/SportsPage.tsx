@@ -11,7 +11,7 @@ const sportCategories = [
   {
     title: "Yoga & Wellness",
     description: "Find your balance with yoga studios, wellness centers, and healthy lifestyle options across the city.",
-    link: "/do-in-madrid/yoga-wellness",
+    link: "/do-in-madrid/sports/yoga-wellness",
     icon: Leaf,
   },
   {
