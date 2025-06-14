@@ -1,9 +1,8 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Music, MapPin, Ticket, Clock, PartyPopper } from 'lucide-react';
+import { Music, MapPin, Ticket, Clock, PartyPopper, Martini, Umbrella, Phone } from 'lucide-react';
 
 const salsaClubs = [
   {
@@ -34,46 +33,34 @@ const salsaClubs = [
 
 const nightClubs = [
   {
-    name: 'Areia',
-    address: 'Hortaleza, 92 (Metro: Alonso Martinez)',
-    hours: 'Daily: Noon-3am',
-    description: 'If it\'s a "so-hip-it-hurts" atmosphere you\'re after then check out the newly opened Areia. What was once an old Irish bar has been decked out with sofas so comfy they\'re practically beds as well as cool decor and great DJs. It\'s a good place to chill out or neck.',
-  },
-  {
     name: 'Bash Line',
     address: 'Plaza Callao, 4 (Metro: Callao / Gran Via)',
     hours: 'Wednesdays: midnight-6am',
-    description: 'Hip-hop is a much maligned genre in Madrid, but it gets a regular outing on Wednesday nights at Bash Line. There\'s r\'n\'b on the agenda too. Popular with the student population, there\'s an international vibe at these nights.',
+    description: "Hip-hop is a much maligned genre in Madrid, but it gets a regular outing on Wednesday nights at Bash Line. There's r'n'b on the agenda too. Popular with the student population, there's an international vibe at these nights.",
   },
   {
     name: 'Black Jack',
     address: 'Metro: Sol',
     coverCharge: 'No',
-    description: 'It\'s free to get in so everyone who is looking to hook up with tourists goes to Black Jack. It is full of tourists and Spanish guys. The music is terrible and the dance floor is the size of a bathroom. NO WHERE else to go at 5:00am. It is always packed, sweaty and smoky. It has two floors, each with a bar.',
-  },
-  {
-    name: 'Campus Bar',
-    address: 'Paseo Juan XXIII, 22 (Metro: Metropolitano)',
-    hours: 'Daily: 6pm-6am',
-    description: 'If it\'s a bit of Spanish you\'re after, try Campus Bar. A popular one for students, there are plenty of drinks offers and the music is a touch more española than the other places listed here.',
+    description: "It's free to get in so everyone who is looking to hook up with tourists goes to Black Jack. It is full of tourists and Spanish guys. The music is terrible and the dance floor is the size of a bathroom. NO WHERE else to go at 5:00am. It is always packed, sweaty and smoky. It has two floors, each with a bar.",
   },
   {
     name: 'Cartuja',
     address: 'Metro: Sol',
     coverCharge: 'Yes',
-    description: 'Cartuja always has a line to get in. It has 2 bars and a funky dance floor. It has a step in the middle of it, which is a guarantee to cause accidents. They play the latest Pop chart hits, even though one time they played a Sevillana, that was weird. it\'s cool and I\'d go again.',
+    description: "Cartuja always has a line to get in. It has 2 bars and a funky dance floor. It has a step in the middle of it, which is a guarantee to cause accidents. They play the latest Pop chart hits, even though one time they played a Sevillana, that was weird. it's cool and I'd go again.",
   },
   {
     name: 'Chango',
     address: 'Covarubias, sem-esq Luchana (Metro: Bilbao)',
     hours: 'Friday & Saturday: midnight-6am',
-    description: 'If it\'s quality house music you\'re after, Chango is a must. The venue is a converted theater, and the promoters make good use of the stage, with go-gos, break dancers and live musicians accompanying the soulful soundtrack.',
+    description: "If it's quality house music you're after, Chango is a must. The venue is a converted theater, and the promoters make good use of the stage, with go-gos, break dancers and live musicians accompanying the soulful soundtrack.",
   },
   {
     name: 'Deep',
     address: 'Paseo Hermita del Santo, 48 - Inside shopping center (Metro: Puerto del Angel)',
     hours: 'Friday: midnight-8:30am',
-    description: 'One of the hottest nightspots of the moment is the very successful Deep. The DJ roster is impressive, with residents JL Magoya and Juan Sanchez being bolstered by the presence of John Digweed, Angel Molina and Carl Cox to name a few. It goes on until 8:30am, takes place in a great venue and counts on a really up-for-it crowd.',
+    description: "One of the hottest nightspots of the moment is the very successful Deep. The DJ roster is impressive, with residents JL Magoya and Juan Sanchez being bolstered by the presence of John Digweed, Angel Molina and Carl Cox to name a few. It goes on until 8:30am, takes place in a great venue and counts on a really up-for-it crowd.",
   },
   {
     name: 'Kapital',
@@ -157,15 +144,47 @@ const nightClubs = [
     name: 'Villa Rosa',
     address: 'Metro: Sol',
     coverCharge: 'Yes',
-    description: 'Villa Rosa is one of those places you go to at like 4:30 in the morning cause you are just not ready to go home yet. The only thing is that this place does charge. Villa Rosa is big and spacious, but the dance floor is small and elevated so people fall off often, they play the latest chart hits and have 2 bars.',
+    description: "Villa Rosa is one of those places you go to at like 4:30 in the morning cause you are just not ready to go home yet. The only thing is that this place does charge. Villa Rosa is big and spacious, but the dance floor is small and elevated so people fall off often, they play the latest chart hits and have 2 bars.",
   },
    {
     name: 'Joy Eslava',
     address: 'Calle del Arenal, 11 (Metro: Sol)',
-    description: 'A very fun and famous venue located in a former 19th-century theater. It\'s a popular spot for both locals and tourists.',
+    description: "A very fun and famous venue located in a former 19th-century theater. It's a popular spot for both locals and tourists.",
   },
 ];
 
+const barsAndCafes = [
+  { name: 'Anti Café', address: 'Union, 2 (Metro: Opera)', description: 'An establishment where you can have tea, a drink or listen to poetry, music and drama. Live Jazz features on Sundays, and unique djs abound.', hours: 'Open daily: 4pm-3am', phone: '91559 4163' },
+  { name: 'Areia', address: 'Hortaleza, 92 (Metro: Alonso Martinez)', description: "You'll have to fight for them, but if you manage to get one of the sofa-beds that are dotted around Areia, chances are you won't leave until they are throwing you out. The best chill-out bar in the city.", hours: 'Open: every day: 12noon to 3am', phone: '91 3100307' },
+  { name: 'Bar & Co.', address: 'Barco, 34 (Metro: Gran Via)', description: "Local bands play weekly, and the opening hours simply can't be beaten: Bar & Co. is the place to go after 3am if you don't feel like clubbing.", hours: 'Open: Tues-Sun: 8pm-5:30am' },
+  { name: 'Campus Bar', address: 'Paseo Juan XXIII, 22 (Metro: Metropolitano)', description: 'Top student hangout in town. Best of Spanish Music. Every Thursday first drink free from 11pm to 1am.', hours: 'Open every day from 6pm to 6am' },
+  { name: 'La Colonia de San Lorenzo', address: 'Salitre, 38 (Metro: Lavapies)', description: "Very Lavapies: mix-match bohemian furniture, a bubbly fish tank and artfully designed bathrooms. Prince look-alike owner is often seen wearing dresses at the bar.", hours: 'Open daily: 5pm-2:30am' },
+  { name: 'Delic', address: 'Plaza de la Paja, s/n (Metro: La Latina)', description: 'Wait staff pour out the best mojitos this side of the Caribbean, and when the weather heats up, the fun spills out onto the plaza. A great place to see and be seen.', hours: 'Mon-Sat: 11am-2am. Sun: 11am-midnight', phone: '91 364 5450' },
+  { name: 'Demode', address: 'Ballestas, 7 (Metro: Gran Via)', description: 'This bar used to be a brothel, while the neighboring bars are still very much brothels. A nice and seedy place for a pre-club drink and a bit of a dance.', hours: 'Open: Wednesday to Saturday: 11pm-3:30am' },
+  { name: 'Excessive Happiness', address: 'Estrella, 3 (Metro: Callao)', description: 'Cozy yet modern design, delicious cocktails and friendly multi-lingual staff. The bar is on 2 floors and hosts a varied array of acts including comedy, magic, storytelling, blues and jazz plus salsa classes and Cuban music', hours: 'Open Sunday-Thursday from 12noon to 2am. Fridays & Saturdays from 12noon to 3:30am' },
+  { name: 'La Ida', address: 'Colon, 11 (Metro: Tribunal)', description: "This tiny little cañas bar fills up afternoon and evening with hip Mercado de Fuencarral crowd. The view from a window seat is like watching the barrio on a big screen TV.", hours: 'Open daily: 1pm-2am', phone: '91 522 9107' },
+  { name: 'Gaia', address: 'Amnistia, 5 (Metro: Opera)', description: 'Every hour is cocktail hour at Gaia, where you can chill out with a Cosmopolitan like Carrie, or enjoy their very own invention: the Velvet Mactor.', hours: 'Open: Tues-Thurs: 8pm-2:30am / Fri-Sat: until 3am.' },
+  { name: 'El Juglar', address: 'Lavapies, 37 (Metro: Lavapies)', description: "There are three great reasons to go to El Juglar: 1). The excellent Djs, who spin funk and soul from yesteryear. 2). The flamenco on Sunday night. 3). The curry houses opposite - the cheapest and best in the city." },
+  { name: 'Luke soy tu padre', address: 'San Bartolome, 14 (Metro: Chueca)', description: 'Worth a "luke" just for the name alone, which translates as that very famous phrase from a certain film set in a galaxy far, far away.' },
+  { name: 'Manhattan Martini Bar', address: 'Moratín, 5 (Metro: Antón Martín)', description: 'Cool Music & Original Cocktails. Jazz, Soul, R&B, Classic Rock, 70/80s Funk. Wed & Sun 2x1. Open 7 nights a week' },
+  { name: 'Stromboli Cafe', address: 'Hortaleza, 96 (Metro: Chueca / Tribunal)', description: 'Dj weekend sessions & x-tra sessions during the week. Coffees, teas & fresh cocktails.', hours: 'Open from 4pm to 3:30am' },
+  { name: 'Syvarya', address: 'Avda. de Brazil, 19 (Metro: Cuzco)', description: 'Bar, tapas & cocktails', hours: 'Monday-Saturday', phone: '915-980-252' },
+  { name: 'Taqué', address: 'Lavapies, 11 (Metro: Lavapies)', description: "The clientele as well as the bar have a dark, urban, graffitti-esque feel, and no one's too clear on the closing time...which probably means there isn't one.", hours: 'Mon-Thurs: 9pm-3am. Fri-Sat: 9pm-3:30am. Sun: 5pm-3am' }
+];
+
+const terraces = [
+  { name: 'Ananda', address: 'Atocha Train Station (Metro: Atocha Renfe)', hours: '11pm-5am', phone: '91 506 0256' },
+  { name: 'Hotel Urban', address: 'Carrera de San Jeronimo, 34 (Metro: Sevilla)', hours: '10am-4pm', phone: '91 787 7770' },
+  { name: 'Café de Oriente', address: 'Plaza de Oriente, 2 (Metro: Opera)', hours: '8:30am-2:30pm', phone: '91 547 1564' },
+  { name: 'La Buga del Lobo', address: 'Argumosa, 11 (Metro: Lavapies)', hours: '12noon-2pm', phone: '91 467 6151' },
+  { name: 'Casa Mingo', address: 'Paseo de la Florida, 34', hours: '11am-12midnight', phone: '91 547 7918' },
+  { name: 'Terraza del Museo Thyssen Bornemisza', address: 'Paseo del Prado, 8 (Metro: Banco de España)', phone: '91 429 2732' },
+  { name: 'Castellana 8', address: 'Castellana, 8 (Metro: Serrano / Colon)', hours: '9pm-12midnight', phone: '91 578 3478' },
+  { name: 'Terraza de El Espejo', address: 'Paseo de Recoletos, 33 (Metro: Banco Espana)', hours: '9am-1:30pm', phone: '91 308 2347' },
+  { name: 'Circulo de Bellas Artes', address: 'Alcala, 42 (Metro: Banco España / Sevilla)', hours: '8am-2pm', phone: '91 360 5400' }
+];
+
+const terracesIntro = "As the temperature rises, terraces begin to spread out over almost every paved space available. After an exhausting day´s work in the heat of the city, relax on a terrace where you can chat quietly with friends and enjoy a meal or a drink. This is the essence of Madrid in summer, and its many terraces offer something to satisfy all tastes.";
 
 const Nightlife = () => {
   return (
@@ -175,8 +194,8 @@ const Nightlife = () => {
         subtitle="Discover Madrid's vibrant nightlife, from energetic salsa clubs to trendy bars and super-clubs."
       />
       
-      <div className="container mx-auto py-12 px-4">
-        <div className="mb-16">
+      <div className="container mx-auto py-12 px-4 space-y-16">
+        <section>
           <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
             <Music className="h-8 w-8 text-madrid-red" />
             Salsa Dancing
@@ -197,9 +216,9 @@ const Nightlife = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
             <PartyPopper className="h-8 w-8 text-madrid-red" />
             Night Clubs & Dancing
@@ -221,7 +240,56 @@ const Nightlife = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </section>
+
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+            <Martini className="h-8 w-8 text-madrid-red" />
+            Bars, Cafés & Cocktails
+          </h2>
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+            {barsAndCafes.map(bar => (
+              <Card key={bar.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <CardHeader>
+                  <CardTitle>{bar.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-gray-700 mb-4">{bar.description}</p>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    {bar.address && <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-madrid-red" /> {bar.address}</p>}
+                    {bar.hours && <p className="flex items-center gap-2"><Clock className="h-4 w-4 text-madrid-red" /> <strong>Hours:</strong> {bar.hours}</p>}
+                    {bar.phone && <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-madrid-red" /> {bar.phone}</p>}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+            <Umbrella className="h-8 w-8 text-madrid-red" />
+            Terraces / Terrazas
+          </h2>
+          <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">{terracesIntro}</p>
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+            {terraces.map(terrace => (
+              <Card key={terrace.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <CardHeader>
+                  <CardTitle>{terrace.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <div className="space-y-2 text-sm text-gray-600">
+                    {terrace.address && <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-madrid-red" /> {terrace.address}</p>}
+                    {terrace.hours && <p className="flex items-center gap-2"><Clock className="h-4 w-4 text-madrid-red" /> <strong>Hours:</strong> {terrace.hours}</p>}
+                    {terrace.phone && <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-madrid-red" /> {terrace.phone}</p>}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
       </div>
     </Layout>
   );
