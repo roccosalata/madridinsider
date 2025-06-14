@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import WhatsOnContent from '@/components/essentials/WhatsOnContent';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Newspaper } from 'lucide-react';
+import PageNavigatorDropdown from '@/components/PageNavigatorDropdown';
 
 const WhatsOn = () => {
   return (
@@ -14,6 +15,7 @@ const WhatsOn = () => {
         subtitle="Your guide to current happenings, seasonal events, and local tips"
       />
       <div className="container mx-auto py-12 px-4">
+        <PageNavigatorDropdown categoryTitle="Madrid Now" />
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl">

@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WeatherVisitInfo from '@/components/essentials/WeatherVisitInfo';
+import PageNavigatorDropdown from '@/components/PageNavigatorDropdown';
 
 const WeatherToday = () => {
   return (
@@ -14,6 +15,7 @@ const WeatherToday = () => {
       />
       
       <div className="container mx-auto py-12 px-4">
+        <PageNavigatorDropdown categoryTitle="Madrid Now" />
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Today's Weather in Madrid</CardTitle>
