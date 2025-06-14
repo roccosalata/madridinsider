@@ -6,6 +6,10 @@ import IndexPage from './pages/Index';
 import Museums from './pages/see/Museums';
 import Neighborhoods from './pages/see/Neighborhoods';
 import Sightseeing from './pages/see/Sightseeing';
+import MadridNow from './pages/MadridNow';
+import WeatherToday from './pages/now/WeatherToday';
+import CurrentEvents from './pages/now/CurrentEvents';
+
 
 const queryClient = new QueryClient();
 
@@ -19,6 +23,9 @@ function App() {
             <Route path="/see/museums" element={<Museums />} />
             <Route path="/see/neighborhoods" element={<Neighborhoods />} />
             <Route path="/see/sightseeing" element={<Sightseeing />} />
+            <Route path="/madrid-now" element={<MadridNow />} />
+            <Route path="/now/weather-today" element={<WeatherToday />} />
+            <Route path="/now/current-events" element={<CurrentEvents />} />
           </Routes>
         </div>
       </Router>
