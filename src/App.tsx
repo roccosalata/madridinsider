@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -24,7 +23,6 @@ import LivingMadridPage from './pages/LivingMadridPage';
 import FoodAndDrinkPage from './pages/do/FoodAndDrinkPage';
 import Nightlife from './pages/do/Nightlife';
 import Shopping from './pages/do/Shopping';
-import MarketsPage from './pages/do/MarketsPage';
 import SportsPage from './pages/do/SportsPage';
 import SwimmingPage from './pages/do/SwimmingPage';
 import OtherSportsPage from './pages/do/OtherSportsPage';
@@ -37,7 +35,7 @@ import BoatingPage from './pages/do/BoatingPage';
 import BowlingPage from './pages/do/BowlingPage';
 import ShoppingServices from './pages/living/ShoppingServices';
 import MadridCard from './pages/essentials/MadridCard';
-import FleaMarketsPage from './pages/living/FleaMarketsPage';
+import MarketsPage from './pages/living/MarketsPage';
 
 const queryClient = new QueryClient();
 
@@ -59,7 +57,7 @@ function App() {
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
             <Route path="/living-in-madrid/healthcare" element={<Healthcare />} />
             <Route path="/living-in-madrid/shopping-services" element={<ShoppingServices />} />
-            <Route path="/living-in-madrid/flea-markets" element={<FleaMarketsPage />} />
+            <Route path="/living-in-madrid/markets" element={<MarketsPage />} />
             
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />
@@ -73,7 +71,6 @@ function App() {
             <Route path="/do-in-madrid/food-drink" element={<FoodAndDrinkPage />} />
             <Route path="/do-in-madrid/nightlife" element={<Nightlife />} />
             <Route path="/do-in-madrid/shopping" element={<Shopping />} />
-            <Route path="/do-in-madrid/markets" element={<MarketsPage />} />
             <Route path="/do-in-madrid/entertainment" element={<EntertainmentPage />} />
             <Route path="/do-in-madrid/sports" element={<SportsPage />} />
             <Route path="/do-in-madrid/sports/football" element={<FootballPage />} />

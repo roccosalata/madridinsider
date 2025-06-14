@@ -1,11 +1,10 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Utensils, Wine, ShoppingBag, Ticket, Dumbbell, ArrowRight } from 'lucide-react';
+import { Utensils, Wine, Ticket, Dumbbell, ArrowRight } from 'lucide-react';
 
 const doCategories = [
   {
@@ -19,12 +18,6 @@ const doCategories = [
     description: "Experience Madrid's legendary nightlife, with endless options for bars, clubs, and live music.",
     link: "/do-in-madrid/nightlife",
     icon: Wine,
-  },
-  {
-    title: "Food Markets",
-    description: "Discover vibrant food markets like Mercado de San Miguel, and other local markets for fresh produce.",
-    link: "/do-in-madrid/markets",
-    icon: ShoppingBag,
   },
   {
     title: "Entertainment & Shows",
