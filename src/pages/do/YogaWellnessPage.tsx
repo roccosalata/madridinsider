@@ -1,58 +1,12 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Heart, Dumbbell, Leaf, User } from 'lucide-react';
+import { User, Link as LinkIcon } from 'lucide-react';
+import ProviderList from '@/components/healthcare/ProviderList';
+import { wellnessActivities, yogaStudios, yogaWellnessResources } from '@/data/yogaWellnessData';
 
 const YogaWellnessPage = () => {
-  const wellnessActivities = [
-    {
-      title: "Yoga Studios",
-      icon: User,
-      description: "Find your zen at Madrid's top yoga studios offering various styles and levels.",
-      items: [
-        "Hatha Yoga Madrid - traditional practice",
-        "Yoga Studio Madrid - hot yoga and vinyasa",
-        "Centro de Yoga Sivananda - spiritual focus",
-        "The Yoga Shala - Ashtanga specialists"
-      ]
-    },
-    {
-      title: "Wellness Spas",
-      icon: Heart,
-      description: "Relax and rejuvenate at luxury spas and wellness centers.",
-      items: [
-        "Hammam Al Ándalus - traditional Arab baths",
-        "Thai Sala Madrid - authentic Thai massage",
-        "Wellness Club Madrid - full-service spa",
-        "Urban Spa treatments throughout the city"
-      ]
-    },
-    {
-      title: "Fitness & Wellness",
-      icon: Dumbbell,
-      description: "Stay active with fitness classes and wellness activities.",
-      items: [
-        "Pilates studios and classes",
-        "Meditation and mindfulness centers",
-        "Outdoor fitness in Retiro Park",
-        "Swimming pools and aqua fitness"
-      ]
-    },
-    {
-      title: "Healthy Lifestyle",
-      icon: Leaf,
-      description: "Support your wellness journey with healthy food and lifestyle choices.",
-      items: [
-        "Organic restaurants and juice bars",
-        "Health food stores and markets",
-        "Vegetarian and vegan dining options",
-        "Wellness workshops and retreats"
-      ]
-    }
-  ];
-
   return (
     <Layout>
       <HeroSection
@@ -86,6 +40,42 @@ const YogaWellnessPage = () => {
               </Card>
             ))}
           </div>
+        </section>
+
+        <ProviderList
+          title="Yoga Studios"
+          providers={yogaStudios}
+          icon={<User className="h-6 w-6 text-madrid-red" />}
+        />
+
+        {/* Other Resources */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold mb-6">Other Wellness Resources</h3>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <LinkIcon className="h-5 w-5 text-madrid-red" />
+                Useful Links
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-4">
+                {yogaWellnessResources.map((resource, index) => (
+                  <li key={index} className="text-gray-700">
+                    <a 
+                      href={resource.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-600 hover:underline font-medium"
+                    >
+                      {resource.name}
+                    </a>
+                    <p className="text-sm text-gray-600 mt-1">{resource.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </section>
 
         {/* Popular Activities */}
