@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Museum, TreePine, MapPin, Landmark, ArrowRight } from 'lucide-react';
+import { Building2, TreePine, MapPin, Landmark, ArrowRight } from 'lucide-react';
 
 const SeeMadridPage: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const SeeMadridPage: React.FC = () => {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-madrid-red">
-                <Museum className="h-6 w-6" />
+                <Building2 className="h-6 w-6" />
                 Museums & Galleries
               </CardTitle>
             </CardHeader>
