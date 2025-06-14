@@ -42,11 +42,6 @@ function App() {
             <Route path="/see-in-madrid/sightseeing" element={<Sightseeing />} />
             <Route path="/see-in-madrid/parks" element={<Parks />} />
             
-            {/* Legacy routes for backward compatibility */}
-            <Route path="/see/museums" element={<Museums />} />
-            <Route path="/see/neighborhoods" element={<Neighborhoods />} />
-            <Route path="/see/sightseeing" element={<Sightseeing />} />
-            
             {/* Do in Madrid */}
             <Route path="/do-in-madrid" element={<DoMadridPage />} />
             <Route path="/do-in-madrid/baths" element={<BathsPage />} />
@@ -56,10 +51,6 @@ function App() {
             <Route path="/madrid-now" element={<MadridNow />} />
             <Route path="/madrid-now/weather-today" element={<WeatherToday />} />
             <Route path="/madrid-now/current-events" element={<CurrentEvents />} />
-            
-            {/* Legacy routes for backward compatibility */}
-            <Route path="/now/weather-today" element={<WeatherToday />} />
-            <Route path="/now/current-events" element={<CurrentEvents />} />
           </Routes>
         </div>
       </Router>
