@@ -1,3 +1,4 @@
+
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 
 export interface MainCategory {
@@ -76,7 +77,7 @@ export const mainCategories: MainCategory[] = [
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
       { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
       { title: "Yoga & Wellness Activities", link: "/do-in-madrid/yoga-wellness" },
-      { title: "Health Clubs & Gyms", link: "/do-in-madrid/yoga-wellness" },
+      { title: "Health Clubs & Gyms", link: "/do-in-madrid/sports" },
       { title: "Health Food Stores", link: "/do-in-madrid/food-drink" },
       { title: "Vegetarian Food", link: "/do-in-madrid/food-drink" }
     ]

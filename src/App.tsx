@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -18,6 +19,11 @@ import MadridEssentials from './pages/MadridEssentials';
 import SeeMadridPage from './pages/SeeMadridPage';
 import DoMadridPage from './pages/DoMadridPage';
 import LivingMadridPage from './pages/LivingMadridPage';
+import FoodAndDrinkPage from './pages/do/FoodAndDrinkPage';
+import Nightlife from './pages/do/Nightlife';
+import Shopping from './pages/do/Shopping';
+import MarketsPage from './pages/do/MarketsPage';
+import SportsPage from './pages/do/SportsPage';
 
 const queryClient = new QueryClient();
 
@@ -46,9 +52,14 @@ function App() {
             
             {/* Do in Madrid */}
             <Route path="/do-in-madrid" element={<DoMadridPage />} />
-            <Route path="/do-in-madrid/baths" element={<BathsPage />} />
+            <Route path="/do-in-madrid/food-drink" element={<FoodAndDrinkPage />} />
+            <Route path="/do-in-madrid/nightlife" element={<Nightlife />} />
+            <Route path="/do-in-madrid/shopping" element={<Shopping />} />
+            <Route path="/do-in-madrid/markets" element={<MarketsPage />} />
             <Route path="/do-in-madrid/entertainment" element={<EntertainmentPage />} />
+            <Route path="/do-in-madrid/sports" element={<SportsPage />} />
             <Route path="/do-in-madrid/yoga-wellness" element={<YogaWellnessPage />} />
+            <Route path="/do-in-madrid/baths" element={<BathsPage />} />
             
             {/* Madrid Now */}
             <Route path="/madrid-now" element={<MadridNow />} />

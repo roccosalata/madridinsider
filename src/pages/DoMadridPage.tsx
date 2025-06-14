@@ -2,75 +2,97 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
-import ActivityCard from '../components/ActivityCard';
-import { activities as activitiesData } from '../data/activitiesData';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { Utensils, Wine, ShoppingCart, ShoppingBag, Ticket, Dumbbell, Yoga, Heart, ArrowRight } from 'lucide-react';
 
-const SportsAndRecreationContent: React.FC = () => {
-  const sports = [
-    "Basketball",
-    "Bikes / Cycling",
-    "Boating",
-    "Bowling",
-    "Cricket",
-    "Golf",
-    "Ice Skating",
-    "Pool / Billiards",
-    "Race Karts",
-    "Rugby",
-    "Running",
-    "Skiing / Snowboarding",
-    "Soccer / Football",
-    "Swimming Pools",
-    "Tennis",
-    "Volleyball"
-  ];
+const doCategories = [
+  {
+    title: "Food & Dining",
+    description: "Explore Madrid's culinary scene, from traditional tapas to Michelin-starred restaurants.",
+    link: "/do-in-madrid/food-drink",
+    icon: Utensils,
+  },
+  {
+    title: "Nightlife & Bars",
+    description: "Experience Madrid's legendary nightlife, with endless options for bars, clubs, and live music.",
+    link: "/do-in-madrid/nightlife",
+    icon: Wine,
+  },
+  {
+    title: "Shopping",
+    description: "From luxury brands on the Golden Mile to unique boutiques in trendy neighborhoods.",
+    link: "/do-in-madrid/shopping",
+    icon: ShoppingCart,
+  },
+  {
+    title: "Markets",
+    description: "Discover vibrant markets like El Rastro, Mercado de San Miguel, and local food markets.",
+    link: "/do-in-madrid/markets",
+    icon: ShoppingBag,
+  },
+  {
+    title: "Entertainment & Shows",
+    description: "Enjoy world-class theater, flamenco shows, concerts, and other live performances.",
+    link: "/do-in-madrid/entertainment",
+    icon: Ticket,
+  },
+  {
+    title: "Sports & Recreation",
+    description: "Stay active with football matches, gyms, parks, and a variety of recreational activities.",
+    link: "/do-in-madrid/sports",
+    icon: Dumbbell,
+  },
+  {
+    title: "Yoga & Wellness",
+    description: "Find your balance with yoga studios, wellness centers, and healthy lifestyle options.",
+    link: "/do-in-madrid/yoga-wellness",
+    icon: Yoga,
+  },
+  {
+    title: "Baths & Spas",
+    description: "Relax and rejuvenate in traditional Arab baths and modern luxury spas.",
+    link: "/do-in-madrid/baths",
+    icon: Heart,
+  },
+];
 
-  return (
-    <section className="mb-12">
-      <h2 className="text-3xl font-bold mb-6">Sports & Recreation</h2>
-      <Card>
-        <CardContent className="pt-6">
-          <p className="text-lg mb-6">Discover the various sports and recreation opportunities available in Madrid.</p>
-          <ul>
-            {sports.map(sport => (
-              <li key={sport} className="mb-4">
-                <h3 className="text-2xl font-semibold mb-2">{sport}</h3>
-                <p>Details for {sport} are coming soon.</p>
-              </li>
-            ))}
-          </ul>
-        </CardContent>
-      </Card>
-    </section>
-  );
-};
 
 const DoMadridPage: React.FC = () => {
   return (
     <Layout>
       <HeroSection
-        title="Do Madrid"
-        subtitle="Experience the vibrant activities and entertainment options in Madrid"
+        title="Do in Madrid"
+        subtitle="Experience Madrid's vibrant culture through food, nightlife, shopping, entertainment, and wellness activities."
       />
 
       <div className="container mx-auto py-12 px-4">
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">Activities & Entertainment</h2>
-          <p className="text-lg mb-8">Immerse yourself in Madrid's vibrant culture with exciting shows, engaging tours, and unique local experiences.</p>
+        <h1 className="text-4xl font-bold mb-8 text-center">What to Do in Madrid</h1>
+        <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">
+          Dive into the heart of Spanish culture. Whether you're a foodie, a night owl, a culture enthusiast, or seeking relaxation, Madrid has something for everyone. Explore our guides to make the most of your time in the city.
+        </p>
 
-          <div className="activities-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {activitiesData.length > 0 ? (
-              activitiesData.map(activity => (
-                <ActivityCard key={activity.id} activity={activity} />
-              ))
-            ) : (
-              <p>No activities and entertainment options listed yet. Please check back soon!</p>
-            )}
-          </div>
-        </section>
-
-        <SportsAndRecreationContent />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {doCategories.map((category) => (
+            <Card key={category.title} className="flex flex-col hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-madrid-red">
+                  <category.icon className="h-6 w-6" />
+                  <span className="text-xl">{category.title}</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow flex flex-col">
+                <p className="text-gray-700 mb-4 flex-grow">{category.description}</p>
+                <Button asChild variant="outline" className="w-full mt-auto">
+                  <Link to={category.link} className="flex items-center justify-center gap-2">
+                    Explore {category.title} <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </Layout>
   );
