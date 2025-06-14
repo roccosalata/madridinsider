@@ -34,13 +34,13 @@ const sportCategories = [
   {
     title: "Swimming",
     description: "Cool off and get a great workout at Madrid's public and private swimming pools.",
-    link: "#",
+    link: "/do-in-madrid/sports/swimming",
     icon: Waves,
   },
   {
     title: "Other Sports",
-    description: "Explore opportunities for tennis, basketball, paddle tennis, and more throughout the city.",
-    link: "#",
+    description: "Explore opportunities for tennis, volleyball, and more throughout the city.",
+    link: "/do-in-madrid/sports/other-sports",
     icon: Medal,
   },
 ];
