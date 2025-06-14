@@ -34,7 +34,7 @@ import CyclingPage from './pages/do/CyclingPage';
 import BoatingPage from './pages/do/BoatingPage';
 import BowlingPage from './pages/do/BowlingPage';
 import ShoppingServices from './pages/living/ShoppingServices';
-import MadridCard from './pages/MadridCard';
+import MadridCard from './pages/essentials/MadridCard';
 
 const queryClient = new QueryClient();
 
