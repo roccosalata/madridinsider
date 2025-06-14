@@ -2,7 +2,8 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
-import { Stethoscope, Smile } from 'lucide-react';
+import { Stethoscope, Smile, Pill } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 import EmergencyInfo from '@/components/healthcare/EmergencyInfo';
 import MedicalCareAccess from '@/components/healthcare/MedicalCareAccess';
@@ -16,7 +17,8 @@ import {
   majorHospitals, 
   privateClinics, 
   englishSpeakingDoctors, 
-  dentistClinics 
+  dentistClinics,
+  drugStores
 } from '@/data/healthcareData';
 
 const Healthcare = () => {
@@ -31,6 +33,29 @@ const Healthcare = () => {
         <EmergencyInfo />
         <MedicalCareAccess />
         <HealthcareServices />
+        
+        <ProviderList 
+          title="24-Hour Drug Stores / Farmacias"
+          providers={drugStores}
+          icon={<Pill className="h-6 w-6 text-madrid-red" />}
+        />
+
+        <section className="mb-12">
+          <Card>
+            <CardHeader>
+              <CardTitle>Central Nacional de Información del Medicamento</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-1 text-sm text-gray-600">
+                <p className="mb-2">For hard to find medications and their equivalent in Spain.</p>
+                <p><strong>Ministry:</strong> Ministerio de Sanidad</p>
+                <p><strong>Address:</strong> Paseo del Prado, 18-20</p>
+                <p><strong>Phone:</strong> 91 596 4332</p>
+                <p><strong>Website:</strong> <a href="http://www.msc.es" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.msc.es</a></p>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
         
         <ProviderList 
           title="English-Speaking Doctors"

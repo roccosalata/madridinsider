@@ -1,4 +1,3 @@
-
 import { Stethoscope, Heart, Pill, Building2, Smile } from 'lucide-react';
 
 export const healthcareServices = [
@@ -108,6 +107,18 @@ export const dentistClinics = [
     phone: "915-765-429",
     note: "Dras Deborah and Beatriz Vilaboa"
   }
+];
+
+export const drugStores = [
+  { name: "24-Hour Pharmacy", address: "Mayor, 13" },
+  { name: "24-Hour Pharmacy", address: "Bailen, 16" },
+  { name: "24-Hour Pharmacy", address: "Mayor, 59" },
+  { name: "24-Hour Pharmacy", address: "Atocha, 46" },
+  { name: "24-Hour Pharmacy", address: "Velazquez, 30" },
+  { name: "24-Hour Pharmacy", address: "Velazquez, 70" },
+  { name: "24-Hour Pharmacy", address: "Goya, 12" },
+  { name: "24-Hour Pharmacy", address: "Goya, 89" },
+  { name: "Farmacia de Guardia", website: "www.canaldefarmacia.com", note: "Check website to confirm which pharmacy is on duty." }
 ];
 
 export const englishSpeakingDoctors = [
