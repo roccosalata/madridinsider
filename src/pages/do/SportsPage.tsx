@@ -1,18 +1,17 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Yoga, Award, Dumbbell, Footprints, Waves, Medal, ArrowRight } from 'lucide-react';
+import { Leaf, Award, Dumbbell, Footprints, Waves, Medal, ArrowRight } from 'lucide-react';
 
 const sportCategories = [
   {
     title: "Yoga & Wellness",
     description: "Find your balance with yoga studios, wellness centers, and healthy lifestyle options across the city.",
     link: "/do-in-madrid/yoga-wellness",
-    icon: Yoga,
+    icon: Leaf,
   },
   {
     title: "Football (Fútbol)",
