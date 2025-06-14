@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection'; // Adjust the import path as
 import PlacesOfWorshipList from '@/components/PlacesOfWorshipList'; // Adjust the import path as necessary
 import { essentialsData } from '@/data/essentialsData'; // Adjust the import path as necessary
 import { directoryData } from '@/data/directoryData'; // Adjust the import path as necessary
+import { Card, CardHeader, CardTitle, CardContent, Link } from '@radix-ui/react-card'; // Adjust the import path as necessary
 
 
 const LivingMadridPage: React.FC = () => {
@@ -61,6 +62,28 @@ const LivingMadridPage: React.FC = () => {
           ) : (
             <p>Information about paperwork and formalities is coming soon.</p>
           )}
+        </section>
+
+        {/* Shopping & Services Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6">Shopping & Essential Services</h2>
+          <Card>
+            <CardHeader>
+              <CardTitle>Daily Shopping & Services</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-700 mb-4">
+                Find essential shops and services for daily life in Madrid, including optical shops, 
+                bookstores, international groceries, hair salons, and more.
+              </p>
+              <Link 
+                to="/living-in-madrid/shopping-services" 
+                className="inline-flex items-center text-madrid-red hover:text-madrid-red/80 font-medium"
+              >
+                View Shopping & Services Guide →
+              </Link>
+            </CardContent>
+          </Card>
         </section>
 
         {/* Work & Residency Section */}

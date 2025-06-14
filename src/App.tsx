@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -33,6 +32,7 @@ import BasketballPage from './pages/do/BasketballPage';
 import CyclingPage from './pages/do/CyclingPage';
 import BoatingPage from './pages/do/BoatingPage';
 import BowlingPage from './pages/do/BowlingPage';
+import ShoppingServices from './pages/living/ShoppingServices';
 
 const queryClient = new QueryClient();
 
@@ -51,6 +51,7 @@ function App() {
             {/* Living in Madrid */}
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
             <Route path="/living-in-madrid/healthcare" element={<Healthcare />} />
+            <Route path="/living-in-madrid/shopping-services" element={<ShoppingServices />} />
             
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />
