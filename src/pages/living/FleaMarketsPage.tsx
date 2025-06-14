@@ -5,22 +5,22 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import PageNavigatorDropdown from '@/components/PageNavigatorDropdown';
 
-const MarketsPage = () => {
+const FleaMarketsPage = () => {
   return (
     <Layout>
       <HeroSection
-        title="Food Markets in Madrid"
-        subtitle="Discover fresh produce, gourmet delights, and local flavors"
+        title="Flea Markets in Madrid"
+        subtitle="Discover unique finds and local treasures at Madrid's flea markets"
       />
       
       <div className="container mx-auto py-12 px-4">
-        <PageNavigatorDropdown categoryTitle="Do in Madrid" />
+        <PageNavigatorDropdown categoryTitle="Living in Madrid" />
         <Card>
           <CardHeader>
-            <CardTitle>Madrid's Food Markets</CardTitle>
+            <CardTitle>Madrid's Flea Markets</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Information about Mercado de San Miguel, Mercado de la Cebada, and other food markets is coming soon.</p>
+            <p>Information about El Rastro, Madrid's most famous flea market, and other local markets is coming soon.</p>
           </CardContent>
         </Card>
       </div>
@@ -28,4 +28,4 @@ const MarketsPage = () => {
   );
 };
 
-export default MarketsPage;
+export default FleaMarketsPage;

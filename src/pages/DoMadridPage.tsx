@@ -21,8 +21,8 @@ const doCategories = [
     icon: Wine,
   },
   {
-    title: "Markets",
-    description: "Discover vibrant markets like El Rastro, Mercado de San Miguel, and local food markets.",
+    title: "Food Markets",
+    description: "Discover vibrant food markets like Mercado de San Miguel, and other local markets for fresh produce.",
     link: "/do-in-madrid/markets",
     icon: ShoppingBag,
   },

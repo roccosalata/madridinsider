@@ -37,6 +37,7 @@ import BoatingPage from './pages/do/BoatingPage';
 import BowlingPage from './pages/do/BowlingPage';
 import ShoppingServices from './pages/living/ShoppingServices';
 import MadridCard from './pages/essentials/MadridCard';
+import FleaMarketsPage from './pages/living/FleaMarketsPage';
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ function App() {
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
             <Route path="/living-in-madrid/healthcare" element={<Healthcare />} />
             <Route path="/living-in-madrid/shopping-services" element={<ShoppingServices />} />
+            <Route path="/living-in-madrid/flea-markets" element={<FleaMarketsPage />} />
             
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />
