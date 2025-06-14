@@ -50,6 +50,121 @@ export const swimmingPools = {
   ],
 };
 
+export const cricketInfo = {
+  title: "Cricket in Madrid",
+  clubs: [
+    {
+      name: "Madrid Cricket Club",
+      description: "Looking for players of all levels and nationalities.",
+      contact: "David: 670 087 637 or Manny 627 557 572",
+    },
+  ],
+};
+
+export const bowlingInfo = {
+  title: "Bowling in Madrid",
+  venues: [
+    {
+      name: "Bowling Chamartin",
+      address: "Agustin de Foxa (Metro: Chamartin), Estadio Chamartin",
+      phone: "913-157-128",
+      description: "",
+      website: ""
+    },
+    {
+      name: "Bolera del centro comercial Dreams Palacio de Hielo",
+      address: "Silvano 77 (Metro: Canillas)",
+      description: "Come to the Palacio de Hielo bowling-alley, designed for having fun. There are 24 bowling lanes, pool tables, table-football, video-games, a bar... Celebrate your Birthday or challenge your workmates to a game. And don’t forget, we have a different special deal every day.",
+      hours: "Monday - Thursday: 11:00 - 00:00. Friday, Saturday: 11:00 - 3:00",
+      website: "www.palaciodehielo.com",
+      phone: "917 160 045"
+    },
+    {
+      name: "Diversia",
+      address: "Alcobendas, Bus from Plaza Castilla",
+      description: "Diversia Food & Entertainment Center",
+      phone: "",
+      website: ""
+    },
+    {
+      name: "Tres Aguas",
+      address: "Madrid Sur, Centro Commercial Tres Aguas",
+      description: "",
+      phone: "",
+      website: ""
+    }
+  ]
+};
+
+export const boatingInfo = {
+  title: "Boating in Madrid",
+  locations: [
+    {
+      name: "Lago del Parque de El Retiro",
+      address: "(Metro: Retiro)",
+      description: "Rowing and pedal boats can be rented by the hour."
+    },
+    {
+      name: "Lago del Parque de la Casa de Campo",
+      address: "(Metro: Lago)",
+      description: "Rowing and pedal boats can be rented by the hour."
+    }
+  ]
+};
+
+export const bikesInfo = {
+  title: "Bikes / Cycling in Madrid",
+  services: [
+    {
+      name: "By Bike",
+      address: "Avda. de Menendez Pelayo, 35 (Metro: Retiro / Ibiza)",
+      description: "Rentals, sales, repairs.",
+      phone: "902 876 483",
+      website: "",
+      email: ""
+    },
+    {
+      name: "Bike Spain",
+      address: "Carmen, 17 (Metro: Sol / Callao)",
+      description: "",
+      website: "www.bikespain.info/en/inicio_en.asp",
+      email: "info@bikespain.info",
+      phone: "91 750 1945",
+    },
+    {
+      name: "Bravo Bike",
+      address: "",
+      description: "",
+      website: "www.bravobike.com",
+      email: "kaspar@bravobike.com",
+      phone: "915 595 523 / 607 44 84 40",
+    },
+    {
+      name: "Urban Movil",
+      address: "Mayor (Metro: Sol)",
+      description: "",
+      website: "www.urbanmovil.com",
+      email: "info@urbanmovil.com",
+      phone: "687 535 443",
+    }
+  ]
+};
+
+export const basketballInfo = {
+    title: "Basketball in Madrid",
+    copaDelRey: {
+        title: "BASKETBALL COPA DEL REY 2009",
+        description: "Palacio de Deportes will host on February 19 to 22 the 2009' edition of the Spanish Basketball Copa del Rey, gathering the eight clubs leading the ACB League. Madrid will host again this competition in 2011 and 2013.",
+        moreInfo: "More Information\nPalacio Vistalegre\nUTEBO, S/N (Vista Alegre)\nwww.palaciovistalegre.com\nTel. 91 422 0780"
+    },
+    practice: {
+        title: "Play & Practice Basketball",
+        description: "Practice basketball once a week, male and female, international, come and make friends! Organized nights out as well.",
+        contact: "Contact Rob: Tel. 997 345 613 or madridbasketball@googlemail.com",
+        website: "www.madridbasketball.com"
+    }
+};
+
 export const footballInfo = {
   mainTitle: "Football in Madrid",
   championsLeague: {

@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { volleyballInfo, tennisInfo, skiingInfo, rugbyInfo, raceKartsInfo, poolBilliardsInfo, iceSkatingInfo } from '@/data/sportsData';
-import { Mail, MountainSnow, Users, Phone, Globe, Target, Snowflake } from 'lucide-react';
+import { volleyballInfo, tennisInfo, skiingInfo, rugbyInfo, raceKartsInfo, poolBilliardsInfo, iceSkatingInfo, cricketInfo } from '@/data/sportsData';
+import { Mail, MountainSnow, Users, Phone, Globe, Target, Snowflake, Award } from 'lucide-react';
 
 const OtherSportsPage = () => {
   return (
@@ -188,6 +187,26 @@ const OtherSportsPage = () => {
             </h2>
             <div className="space-y-6">
                 {rugbyInfo.clubs.map(club => (
+                    <Card key={club.name}>
+                        <CardHeader>
+                            <CardTitle>{club.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-2">
+                            <p className="text-gray-700 whitespace-pre-wrap">{club.description}</p>
+                            <p className="text-sm text-gray-600"><strong>Contact:</strong> {club.contact}</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+        </section>
+
+        <section>
+            <h2 className="text-3xl font-bold mb-6 text-madrid-red flex items-center gap-3">
+                <Award className="h-8 w-8" />
+                {cricketInfo.title}
+            </h2>
+            <div className="space-y-6">
+                {cricketInfo.clubs.map(club => (
                     <Card key={club.name}>
                         <CardHeader>
                             <CardTitle>{club.name}</CardTitle>

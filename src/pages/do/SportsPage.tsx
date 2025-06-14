@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Leaf, Dumbbell, Footprints, Waves, Medal, ArrowRight, Trophy, Flag } from 'lucide-react';
+import { Leaf, Dumbbell, Footprints, Waves, Medal, ArrowRight, Trophy, Flag, Sailboat, Bike, Dribbble, Target } from 'lucide-react';
 
 const sportCategories = [
   {
@@ -19,6 +19,12 @@ const sportCategories = [
     description: "Experience the passion of Spanish football. Find info on stadiums, matches, and local teams.",
     link: "/do-in-madrid/sports/football",
     icon: Trophy,
+  },
+  {
+    title: "Basketball",
+    description: "Find information on basketball events, including the Copa del Rey, and where to play in Madrid.",
+    link: "/do-in-madrid/sports/basketball",
+    icon: Dribbble,
   },
   {
     title: "Gyms & Fitness",
@@ -45,8 +51,26 @@ const sportCategories = [
     icon: Flag,
   },
   {
+    title: "Cycling / Biking",
+    description: "Rent, repair or buy a bike and explore the city on two wheels.",
+    link: "/do-in-madrid/sports/cycling",
+    icon: Bike,
+  },
+  {
+    title: "Boating",
+    description: "Enjoy a relaxing time on the water at Madrid's main parks.",
+    link: "/do-in-madrid/sports/boating",
+    icon: Sailboat,
+  },
+  {
+    title: "Bowling",
+    description: "Challenge your friends at one of Madrid's bowling alleys.",
+    link: "/do-in-madrid/sports/bowling",
+    icon: Target,
+  },
+  {
     title: "Other Sports",
-    description: "Explore opportunities for tennis, volleyball, race karts, pool, ice skating and more throughout the city.",
+    description: "Explore opportunities for tennis, volleyball, race karts, pool, ice skating, cricket, rugby and more throughout the city.",
     link: "/do-in-madrid/sports/other-sports",
     icon: Medal,
   },

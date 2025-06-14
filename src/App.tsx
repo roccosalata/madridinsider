@@ -28,6 +28,10 @@ import OtherSportsPage from './pages/do/OtherSportsPage';
 import FootballPage from './pages/do/FootballPage';
 import RunningPage from './pages/do/RunningPage';
 import GolfPage from './pages/do/GolfPage';
+import BasketballPage from './pages/do/BasketballPage';
+import CyclingPage from './pages/do/CyclingPage';
+import BoatingPage from './pages/do/BoatingPage';
+import BowlingPage from './pages/do/BowlingPage';
 
 const queryClient = new QueryClient();
 
@@ -67,6 +71,10 @@ function App() {
             <Route path="/do-in-madrid/sports/swimming" element={<SwimmingPage />} />
             <Route path="/do-in-madrid/sports/golf" element={<GolfPage />} />
             <Route path="/do-in-madrid/sports/other-sports" element={<OtherSportsPage />} />
+            <Route path="/do-in-madrid/sports/basketball" element={<BasketballPage />} />
+            <Route path="/do-in-madrid/sports/cycling" element={<CyclingPage />} />
+            <Route path="/do-in-madrid/sports/boating" element={<BoatingPage />} />
+            <Route path="/do-in-madrid/sports/bowling" element={<BowlingPage />} />
             <Route path="/do-in-madrid/yoga-wellness" element={<YogaWellnessPage />} />
             <Route path="/do-in-madrid/baths" element={<BathsPage />} />
             
