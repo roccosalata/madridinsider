@@ -134,13 +134,17 @@ const MadridNow = () => {
             </CardContent>
           </Card>
           
-          <div className="md:col-span-2">
-            <h2 className="text-3xl font-bold my-8 text-center flex items-center justify-center gap-2">
-              <Newspaper className="h-8 w-8 text-madrid-red" />
-              What's On in Madrid
-            </h2>
-            <WhatsOnContent />
-          </div>
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-2xl justify-center">
+                <Newspaper className="h-8 w-8 text-madrid-red" />
+                What's On in Madrid
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <WhatsOnContent />
+            </CardContent>
+          </Card>
 
         </div>
       </div>
