@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
+import { Compass, Home, Eye, Activity, Clock, Bath } from 'lucide-react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { format } from 'date-fns';
@@ -64,7 +63,8 @@ const mainCategories = [
       { title: "Shopping Districts", link: "/do-in-madrid/shopping" },
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
-      { title: "Sports & Recreation", link: "/do-in-madrid/sports" }
+      { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
+      { title: "Baths & Spas", link: "/do-in-madrid/baths", icon: <Bath className="h-5 w-5" /> }
     ]
   }
 ];
@@ -84,7 +84,7 @@ const IndexPage = () => {
   const madridTime = format(currentTime, 'HH:mm');
   const madridDate = format(currentTime, 'EEEE, MMMM d');
   
-  console.log('Index page rendering successfully');
+  console.log('Index page rendering successfully with updated categories');
   
   return (
     <Layout>
@@ -92,7 +92,6 @@ const IndexPage = () => {
         Skip to main content
       </a>
       
-      {/* Enhanced Hero Section with Madrid Now integrated */}
       <div className="bg-gradient-to-br from-gray-100 to-gray-200 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -104,7 +103,6 @@ const IndexPage = () => {
             </p>
           </div>
           
-          {/* Madrid Now integrated into hero */}
           <div className="bg-gradient-to-r from-madrid-red to-red-600 rounded-xl p-6 text-white max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
@@ -141,7 +139,6 @@ const IndexPage = () => {
       </div>
       
       <main id="main-content" className="container mx-auto py-12 px-4">
-        {/* Main Categories in a 2x2 grid */}
         <section aria-label="Main categories" className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {mainCategories.map(category => (
             <article key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus-within:shadow-xl">
@@ -173,9 +170,10 @@ const IndexPage = () => {
                         <a 
                           key={index}
                           href={sub.link}
-                          className="text-sm text-gray-600 hover:text-madrid-red transition-colors p-1 rounded hover:bg-gray-50 focus:bg-gray-50 focus:text-madrid-red focus:outline-none"
+                          className="text-sm text-gray-600 hover:text-madrid-red transition-colors p-1 rounded hover:bg-gray-50 focus:bg-gray-50 focus:text-madrid-red focus:outline-none flex items-center gap-1"
                         >
-                          • {sub.title}
+                          {sub.icon && React.cloneElement(sub.icon as React.ReactElement, { className: "h-4 w-4"})} 
+                          {sub.title}
                         </a>
                       ))}
                     </div>
