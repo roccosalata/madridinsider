@@ -2,62 +2,8 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
-import ShopList from '@/components/essentials/ShopList';
-import { 
-  opticalShops,
-  bookStores,
-  internationalGroceries,
-  barberShops,
-  musicStores,
-  computerStores,
-  electronicStores,
-  locksmiths
-} from '@/data/shops';
-import { Eye, BookOpen, Globe2, Scissors, Music, Laptop, Cpu, Wrench } from 'lucide-react';
-
-const shopCategories = [
-  {
-    title: 'Locksmiths',
-    data: locksmiths,
-    icon: <Wrench className="h-6 w-6 text-madrid-red" />,
-  },
-  {
-    title: 'Optical Shops',
-    data: opticalShops,
-    icon: <Eye className="h-6 w-6 text-madrid-red" />,
-  },
-  {
-    title: 'Book Stores',
-    data: bookStores,
-    icon: <BookOpen className="h-6 w-6 text-madrid-red" />,
-  },
-  {
-    title: 'International Grocery Stores',
-    data: internationalGroceries,
-    icon: <Globe2 className="h-6 w-6 text-madrid-red" />,
-  },
-  {
-    title: 'Barbers / Hair Dressers',
-    data: barberShops,
-    icon: <Scissors className="h-6 w-6 text-madrid-red" />,
-  },
-  {
-    title: 'Music Stores',
-    data: musicStores,
-    icon: <Music className="h-6 w-6 text-madrid-red" />,
-  },
-  {
-    title: 'Computer Stores',
-    data: computerStores,
-    icon: <Laptop className="h-6 w-6 text-madrid-red" />,
-  },
-  {
-    title: 'Electronic Components',
-    data: electronicStores,
-    icon: <Cpu className="h-6 w-6 text-madrid-red" />,
-  },
-];
-
+import CategoryHubCard from '@/components/CategoryHubCard';
+import { shopCategories } from '@/data/shops';
 
 const ShopsAndServicesPage = () => {
   return (
@@ -68,12 +14,13 @@ const ShopsAndServicesPage = () => {
       />
       
       <div className="container mx-auto py-12 px-4">
-        <div className="space-y-8">
+        <h2 className="text-3xl font-bold mb-8 text-center">Shop & Service Categories</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {shopCategories.map(category => (
-            <ShopList
+            <CategoryHubCard
               key={category.title}
               title={category.title}
-              shops={category.data}
+              link={category.link}
               icon={category.icon}
             />
           ))}

@@ -34,6 +34,7 @@ import CyclingPage from './pages/do/CyclingPage';
 import BoatingPage from './pages/do/BoatingPage';
 import BowlingPage from './pages/do/BowlingPage';
 import ShopsAndServicesPage from './pages/living/ShopsAndServicesPage';
+import ShopCategoryPage from './pages/living/ShopCategoryPage';
 import MadridCard from './pages/essentials/MadridCard';
 import MarketsPage from './pages/living/MarketsPage';
 import EmergencyContactsPage from './pages/essentials/EmergencyContactsPage';
@@ -59,6 +60,7 @@ function App() {
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
             <Route path="/living-in-madrid/healthcare" element={<Healthcare />} />
             <Route path="/living-in-madrid/shopping-services" element={<ShopsAndServicesPage />} />
+            <Route path="/living-in-madrid/shopping-services/:categorySlug" element={<ShopCategoryPage />} />
             <Route path="/living-in-madrid/markets" element={<MarketsPage />} />
             
             {/* See in Madrid */}
