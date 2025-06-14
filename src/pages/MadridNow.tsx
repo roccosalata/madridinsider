@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
@@ -5,8 +6,8 @@ import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import WhatsOnContent from '@/components/essentials/WhatsOnContent';
-import { Calendar, Clock, CloudSun, Newspaper, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, CloudSun, Newspaper, Sun } from 'lucide-react';
+import CategoryHubCard from '@/components/CategoryHubCard';
 
 const MadridNow = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -20,24 +21,6 @@ const MadridNow = () => {
   
   const madridTime = format(currentTime, 'HH:mm');
   const madridDate = format(currentTime, 'EEEE, MMMM d, yyyy');
-  
-  const upcomingEvents = [
-    {
-      title: "Madrid Fashion Week",
-      date: "October 15-20, 2025",
-      location: "IFEMA Madrid"
-    },
-    {
-      title: "San Isidro Festival",
-      date: "May 15, 2025",
-      location: "Various Venues"
-    },
-    {
-      title: "International Book Fair",
-      date: "June 2-18, 2025",
-      location: "Retiro Park"
-    }
-  ];
   
   return (
     <Layout>
@@ -87,66 +70,34 @@ const MadridNow = () => {
               <p className="text-center py-2 text-gray-600 text-sm">
                 (Detailed weather information coming soon)
               </p>
-              <div className="flex flex-col items-center space-y-3 mt-3">
-                <Button asChild variant="outline">
-                  <a 
-                    href="https://www.aemet.es/en/eltiempo/prediccion/municipios/madrid-id28079" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    Check AEMET Official Forecast <ArrowRight className="h-4 w-4" />
-                  </a>
-                </Button>
-                <Button asChild>
-                  <Link to="/now/weather-today" className="flex items-center gap-2">
-                    View Our Weather Guide <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
             </CardContent>
           </Card>
-
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <Calendar className="h-6 w-6 text-madrid-red" />
-                Current & Upcoming Events
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4 mb-6">
-                {upcomingEvents.slice(0,3).map((event, index) => (
-                  <div key={index} className="border-b pb-3 last:border-b-0">
-                    <h3 className="font-semibold text-lg">{event.title}</h3>
-                    <p className="text-gray-600 text-sm">{event.date}</p>
-                    <p className="text-gray-500 text-sm">{event.location}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="text-center">
-                <Button asChild>
-                  <Link to="/now/current-events" className="flex items-center gap-2">
-                    See All Events & Calendar <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-2xl justify-center">
-                <Newspaper className="h-8 w-8 text-madrid-red" />
-                What's On in Madrid
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <WhatsOnContent />
-            </CardContent>
-          </Card>
-
         </div>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">Explore What's Happening</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <CategoryHubCard
+              icon={<Calendar className="h-8 w-8" />}
+              title="Current Events & Calendar"
+              description="See a full calendar of festivals, concerts, exhibitions, and more."
+              link="/madrid-now/current-events"
+            />
+            <CategoryHubCard
+              icon={<Newspaper className="h-8 w-8" />}
+              title="What's On in Madrid"
+              description="Your guide to seasonal events, local tips, and what to do today."
+              link="/madrid-now/whats-on"
+            />
+            <CategoryHubCard
+              icon={<Sun className="h-8 w-8" />}
+              title="Weather Guide"
+              description="Get detailed weather forecasts and learn about Madrid's climate."
+              link="/madrid-now/weather-today"
+            />
+          </div>
+        </div>
+
       </div>
     </Layout>
   );
