@@ -43,6 +43,11 @@ export const mainCategories: MainCategory[] = [
       { title: "Finding Accommodation", link: "/living-in-madrid/accommodation" },
       { title: "Banking & Finances", link: "/living-in-madrid/banking" },
       { title: "Healthcare System", link: "/living-in-madrid/healthcare" },
+      { title: "Medical Care & Hospitals", link: "/living-in-madrid/healthcare" },
+      { title: "Doctors & Specialists", link: "/living-in-madrid/healthcare" },
+      { title: "Dentists & Clinics", link: "/living-in-madrid/healthcare" },
+      { title: "Drug Stores & Pharmacies", link: "/living-in-madrid/healthcare" },
+      { title: "Immunizations", link: "/living-in-madrid/healthcare" },
       { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
       { title: "Working in Madrid", link: "/living-in-madrid/work" },
       { title: "Education & Schools", link: "/living-in-madrid/education" }
@@ -76,7 +81,10 @@ export const mainCategories: MainCategory[] = [
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
       { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
-      { title: "Yoga & Wellness Activities", link: "/do-in-madrid/yoga-wellness" }
+      { title: "Yoga & Wellness Activities", link: "/do-in-madrid/yoga-wellness" },
+      { title: "Health Clubs & Gyms", link: "/do-in-madrid/yoga-wellness" },
+      { title: "Health Food Stores", link: "/do-in-madrid/food-drink" },
+      { title: "Vegetarian Food", link: "/do-in-madrid/food-drink" }
     ]
   },
   {
