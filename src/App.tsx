@@ -14,6 +14,9 @@ import BathsPage from './pages/do/BathsPage';
 import EntertainmentPage from './pages/do/EntertainmentPage';
 import TransportMaps from './pages/essentials/TransportMaps';
 import MadridEssentials from './pages/MadridEssentials';
+import SeeMadridPage from './pages/SeeMadridPage';
+import DoMadridPage from './pages/DoMadridPage';
+import LivingMadridPage from './pages/LivingMadridPage';
 
 const queryClient = new QueryClient();
 
@@ -24,17 +27,39 @@ function App() {
         <div className="min-h-screen bg-background">
           <Routes>
             <Route path="/" element={<IndexPage />} />
+            
+            {/* Madrid Essentials */}
             <Route path="/madrid-essentials" element={<MadridEssentials />} />
             <Route path="/madrid-essentials/transport-maps" element={<TransportMaps />} />
+            
+            {/* Living in Madrid */}
+            <Route path="/living-in-madrid" element={<LivingMadridPage />} />
+            
+            {/* See in Madrid */}
+            <Route path="/see-in-madrid" element={<SeeMadridPage />} />
+            <Route path="/see-in-madrid/museums" element={<Museums />} />
+            <Route path="/see-in-madrid/neighborhoods" element={<Neighborhoods />} />
+            <Route path="/see-in-madrid/sightseeing" element={<Sightseeing />} />
+            <Route path="/see-in-madrid/parks" element={<Parks />} />
+            
+            {/* Legacy routes for backward compatibility */}
             <Route path="/see/museums" element={<Museums />} />
             <Route path="/see/neighborhoods" element={<Neighborhoods />} />
             <Route path="/see/sightseeing" element={<Sightseeing />} />
-            <Route path="/see-in-madrid/parks" element={<Parks />} />
-            <Route path="/madrid-now" element={<MadridNow />} />
-            <Route path="/now/weather-today" element={<WeatherToday />} />
-            <Route path="/now/current-events" element={<CurrentEvents />} />
+            
+            {/* Do in Madrid */}
+            <Route path="/do-in-madrid" element={<DoMadridPage />} />
             <Route path="/do-in-madrid/baths" element={<BathsPage />} />
             <Route path="/do-in-madrid/entertainment" element={<EntertainmentPage />} />
+            
+            {/* Madrid Now */}
+            <Route path="/madrid-now" element={<MadridNow />} />
+            <Route path="/madrid-now/weather-today" element={<WeatherToday />} />
+            <Route path="/madrid-now/current-events" element={<CurrentEvents />} />
+            
+            {/* Legacy routes for backward compatibility */}
+            <Route path="/now/weather-today" element={<WeatherToday />} />
+            <Route path="/now/current-events" element={<CurrentEvents />} />
           </Routes>
         </div>
       </Router>

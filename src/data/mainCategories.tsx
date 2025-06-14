@@ -53,12 +53,12 @@ export const mainCategories: MainCategory[] = [
     link: "/see-in-madrid",
     icon: <Eye className="h-6 w-6" aria-hidden="true" />,
     subcategories: [
-      { title: "Museums & Galleries", link: "/see/museums" },
-      { title: "Royal Sites & Palaces", link: "/see/sightseeing" },
-      { title: "Historic Sites & Monuments", link: "/see/sightseeing" },
+      { title: "Museums & Galleries", link: "/see-in-madrid/museums" },
+      { title: "Royal Sites & Palaces", link: "/see-in-madrid/sightseeing" },
+      { title: "Historic Sites & Monuments", link: "/see-in-madrid/sightseeing" },
       { title: "Parks & Gardens", link: "/see-in-madrid/parks" },
-      { title: "Neighborhoods Guide", link: "/see/neighborhoods" },
-      { title: "Viewpoints & Rooftops", link: "/see/sightseeing" }
+      { title: "Neighborhoods Guide", link: "/see-in-madrid/neighborhoods" },
+      { title: "Viewpoints & Rooftops", link: "/see-in-madrid/sightseeing" }
     ]
   },
   {
@@ -83,8 +83,8 @@ export const mainCategories: MainCategory[] = [
     link: "/madrid-now",
     icon: <Clock className="h-6 w-6" aria-hidden="true" />,
     subcategories: [
-      { title: "Weather Today", link: "/now/weather-today" },
-      { title: "Current Events", link: "/now/current-events" },
+      { title: "Weather Today", link: "/madrid-now/weather-today" },
+      { title: "Current Events", link: "/madrid-now/current-events" },
       { title: "What's On", link: "/madrid-now/whats-on" },
       { title: "Live Updates", link: "/madrid-now/live-updates" }
     ]
