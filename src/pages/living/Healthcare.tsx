@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Stethoscope, Heart, Pill, Building2, Phone, AlertTriangle } from 'lucide-react';
+import { Stethoscope, Heart, Pill, Building2, Phone, AlertTriangle, Users, MapPin } from 'lucide-react';
 
 const Healthcare = () => {
   const healthcareServices = [
@@ -12,6 +12,7 @@ const Healthcare = () => {
       icon: Heart,
       description: "Understanding Spain's Sistema Nacional de Salud for residents.",
       items: [
+        "EU citizens entitled to free medical care with E111 form or EHIC",
         "Registration with local health center (Centro de Salud)",
         "Getting your health card (Tarjeta Sanitaria Individual)",
         "Assigning a family doctor (Médico de Familia)",
@@ -26,7 +27,8 @@ const Healthcare = () => {
         "Sanitas - comprehensive coverage",
         "Adeslas - wide network of providers",
         "DKV - international coverage options",
-        "Asisa - local and national plans"
+        "Asisa - local and national plans",
+        "Less waiting time, English-speaking doctors available"
       ]
     },
     {
@@ -34,10 +36,10 @@ const Healthcare = () => {
       icon: Stethoscope,
       description: "Finding doctors and medical specialists in Madrid.",
       items: [
-        "General practitioners (Médico de Familia)",
-        "Pediatricians for children",
-        "Gynecologists and women's health",
-        "Cardiologists, dermatologists, and other specialists"
+        "English-speaking doctors available",
+        "General practitioners and family medicine",
+        "Specialists: cardiology, dermatology, gynecology",
+        "Mental health: psychologists and psychiatrists"
       ]
     },
     {
@@ -45,21 +47,28 @@ const Healthcare = () => {
       icon: Pill,
       description: "Prescription drugs, pharmacies, and medical supplies.",
       items: [
-        "24-hour pharmacy locations",
-        "Prescription requirements and procedures",
-        "Over-the-counter medications",
-        "Health insurance prescription coverage"
+        "24-hour pharmacy locations (green cross sign)",
+        "Many medicines available without prescription",
+        "Well-trained pharmacists provide helpful advice",
+        "Prescription (receta) required for some medications"
       ]
     }
   ];
 
   const majorHospitals = [
-    "Hospital Universitario La Paz",
-    "Hospital Clínico San Carlos",
-    "Hospital Ramón y Cajal",
-    "Hospital Gregorio Marañón",
-    "Hospital Universitario 12 de Octubre",
-    "Hospital La Princesa"
+    { name: "Hospital Universitario La Paz", address: "Paseo de la Castellana, 261", phone: "91 727 7000", metro: "Begonia" },
+    { name: "Hospital Clínico San Carlos", address: "Professor Martin Lagos, s/n", phone: "91 330 3000", metro: "Moncloa" },
+    { name: "Hospital Ramón y Cajal", address: "Colmenar Viejo Road, km 9,100", phone: "91 336 8000", metro: "Ramon y Cajal" },
+    { name: "Hospital Gregorio Marañón", address: "Doctor Esquerdo, 46", phone: "91 586 8000", metro: "Retiro District" },
+    { name: "Hospital 12 de Octubre", address: "Cordoba Avenue", phone: "91 390 8000", metro: "Carambanchel/Latina/Usera" },
+    { name: "Hospital de la Princesa", address: "Diego de Leon, 63", phone: "91 520 2200", metro: "Diego de Leon" }
+  ];
+
+  const privateClinics = [
+    { name: "British American Medical Unit", address: "Conde de Aranda, 1", phone: "914-351-823", metro: "Retiro", note: "English-speaking doctors" },
+    { name: "Ruber International Hospital", address: "Juan Bravo, 49", phone: "914-026-100", metro: "Diego de Leon" },
+    { name: "Clínica de Nuestra Señora de la Concepción", address: "Avda de los Reyes Católicos, 2", phone: "91 550 4800", note: "Jiménez Díaz Foundation" },
+    { name: "Clínica Amessco", address: "José Abascal, 48, 7º", phone: "914-412-655", note: "Mon-Fri 9am-2pm, 4-9pm" }
   ];
 
   return (
@@ -92,10 +101,57 @@ const Healthcare = () => {
                 <div>
                   <h4 className="font-semibold">Poison Control</h4>
                   <p className="text-lg font-bold text-red-600">915 620 420</p>
+                  <p className="text-sm text-gray-600">Institute of Toxicology - 24 hours</p>
                 </div>
               </div>
             </CardContent>
           </Card>
+        </section>
+
+        {/* EU vs Non-EU Citizens */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8">Medical Care Access</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="h-5 w-5" />
+                  EU Citizens
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  EU citizens are entitled to free medical care with proper documentation.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li>• Bring E111 form or European Health Insurance Card (EHIC)</li>
+                  <li>• Take form to nearest health center (centro de salud)</li>
+                  <li>• Register by providing your address</li>
+                  <li>• Note: EHIC doesn't cover dental or private care</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="h-5 w-5" />
+                  Non-EU Citizens
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Non-EU citizens must have health insurance from their home country.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li>• Universities recommend Unidad Médica (Conde de Aranda, 1)</li>
+                  <li>• English-speaking doctors available</li>
+                  <li>• Familiar with insurance paperwork (recibo)</li>
+                  <li>• Submit bills to home country insurance</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         {/* Healthcare Services */}
@@ -125,47 +181,89 @@ const Healthcare = () => {
           </div>
         </section>
 
-        {/* Major Hospitals */}
+        {/* Major Public Hospitals */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold mb-6">Major Public Hospitals</h3>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {majorHospitals.map((hospital, index) => (
-                  <div key={index} className="p-4 bg-gray-50 rounded-lg">
-                    <h4 className="font-semibold text-madrid-red">{hospital}</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            {majorHospitals.map((hospital, index) => (
+              <Card key={index}>
+                <CardContent className="pt-4">
+                  <h4 className="font-semibold text-madrid-red mb-2">{hospital.name}</h4>
+                  <div className="space-y-1 text-sm text-gray-600">
+                    <p className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      {hospital.address}
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      {hospital.phone}
+                    </p>
+                    <p>Metro: {hospital.metro}</p>
                   </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </section>
 
-        {/* Registration Process */}
+        {/* Private Clinics */}
         <section className="mb-12">
-          <h3 className="text-2xl font-bold mb-6">Healthcare Registration Process</h3>
+          <h3 className="text-2xl font-bold mb-6">Private Clinics & Medical Centers</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {privateClinics.map((clinic, index) => (
+              <Card key={index}>
+                <CardContent className="pt-4">
+                  <h4 className="font-semibold text-madrid-red mb-2">{clinic.name}</h4>
+                  <div className="space-y-1 text-sm text-gray-600">
+                    <p className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      {clinic.address}
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      {clinic.phone}
+                    </p>
+                    {clinic.metro && <p>Metro: {clinic.metro}</p>}
+                    {clinic.note && <p className="text-blue-600 font-medium">{clinic.note}</p>}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* How to Visit a Doctor */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold mb-6">How to Visit a Doctor</h3>
           <Card>
             <CardContent className="pt-6">
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="bg-madrid-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
+                  <div className="bg-madrid-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
                   <div>
-                    <h4 className="font-semibold">Get your NIE/TIE</h4>
-                    <p className="text-gray-600">You need your foreigner identification number first.</p>
+                    <h4 className="font-semibold">Call your Centro de Salud</h4>
+                    <p className="text-gray-600">Provide your address to find your nearest health center. Check yellow pages for numbers.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-madrid-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
+                  <div className="bg-madrid-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</div>
                   <div>
-                    <h4 className="font-semibold">Register at Local Health Center</h4>
-                    <p className="text-gray-600">Visit your assigned Centro de Salud with required documents.</p>
+                    <h4 className="font-semibold">Arrival and Registration</h4>
+                    <p className="text-gray-600">You'll get a time window, not specific appointment. Fill out form at reception, get doctor's name and room (sala).</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-madrid-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
+                  <div className="bg-madrid-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
                   <div>
-                    <h4 className="font-semibold">Receive Health Card</h4>
-                    <p className="text-gray-600">Get your Tarjeta Sanitaria Individual for free healthcare access.</p>
+                    <h4 className="font-semibold">Waiting and Consultation</h4>
+                    <p className="text-gray-600">Ask "¿Quién es el último?" (Who's last?) to find your place in line. Be prepared to translate symptoms as doctor may not speak English.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-madrid-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">4</div>
+                  <div>
+                    <h4 className="font-semibold">Prescription and Follow-up</h4>
+                    <p className="text-gray-600">Get prescription (receta) and take to pharmacy (green cross sign). Return to reception if referred to specialist.</p>
                   </div>
                 </div>
               </div>
@@ -173,38 +271,76 @@ const Healthcare = () => {
           </Card>
         </section>
 
-        {/* Useful Information */}
+        {/* Immunizations */}
+        <section className="mb-12">
+          <h3 className="text-2xl font-bold mb-6">Immunization Centers</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Centro de Vacunación</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <p><strong>Address:</strong> Núñez de Balboa, 111 (corner of General Oraa)</p>
+                  <p><strong>Metro:</strong> Núñez de Balboa</p>
+                  <p><strong>Ages:</strong> Birth to 14 years</p>
+                  <p><strong>Hours:</strong> 9am-2pm / 4pm-8pm</p>
+                  <p><strong>Phone:</strong> 91 561 6195</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Sanidad Internacional</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <p><strong>Address:</strong> Francisco Silvela, 57</p>
+                  <p><strong>Metro:</strong> Diego de León</p>
+                  <p><strong>Services:</strong> Adult booster vaccinations, travel vaccinations</p>
+                  <p><strong>Hours:</strong> Mon-Fri: 9am-2pm</p>
+                  <p><strong>Phone:</strong> 91 309 5603</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Important Notes */}
         <section className="mb-12">
           <h3 className="text-2xl font-bold mb-6">Important Healthcare Information</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
-                <CardTitle>Dental Care</CardTitle>
+                <CardTitle>Public vs Private Healthcare</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-3">
-                  Dental care is largely private in Spain. Most residents use private dental insurance or pay out-of-pocket.
+                  Both options provide quality care with similar standards. Key differences:
                 </p>
                 <ul className="text-sm space-y-1">
-                  <li>• Private dental clinics throughout Madrid</li>
-                  <li>• Dental insurance plans available</li>
-                  <li>• Emergency dental services available</li>
+                  <li>• <strong>Public:</strong> Free with ID and local address</li>
+                  <li>• <strong>Private:</strong> Less waiting, pay upfront, submit to insurance</li>
+                  <li>• <strong>Private:</strong> More English-speaking doctors</li>
+                  <li>• Quality difference is minimal between both systems</li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle>Prescriptions & Medications</CardTitle>
+                <CardTitle>Pharmacy Services</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-3">
-                  Many medications require prescriptions. EU prescriptions are generally accepted.
+                  Spanish pharmacies provide extensive services beyond prescriptions.
                 </p>
                 <ul className="text-sm space-y-1">
-                  <li>• Bring prescription medications when moving</li>
-                  <li>• Find equivalent medications with your doctor</li>
-                  <li>• Some medications may not be available</li>
+                  <li>• Many medicines available without prescription</li>
+                  <li>• Well-trained, helpful pharmacists</li>
+                  <li>• 24-hour locations around Sol area</li>
+                  <li>• Look for green cross signs</li>
                 </ul>
               </CardContent>
             </Card>
