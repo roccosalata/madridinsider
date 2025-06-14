@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -34,7 +33,7 @@ import BasketballPage from './pages/do/BasketballPage';
 import CyclingPage from './pages/do/CyclingPage';
 import BoatingPage from './pages/do/BoatingPage';
 import BowlingPage from './pages/do/BowlingPage';
-import ShoppingServices from './pages/living/ShoppingServices';
+import ShopsAndServicesPage from './pages/living/ShopsAndServicesPage';
 import MadridCard from './pages/essentials/MadridCard';
 import MarketsPage from './pages/living/MarketsPage';
 import EmergencyContactsPage from './pages/essentials/EmergencyContactsPage';
@@ -59,7 +58,7 @@ function App() {
             {/* Living in Madrid */}
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
             <Route path="/living-in-madrid/healthcare" element={<Healthcare />} />
-            <Route path="/living-in-madrid/shopping-services" element={<ShoppingServices />} />
+            <Route path="/living-in-madrid/shopping-services" element={<ShopsAndServicesPage />} />
             <Route path="/living-in-madrid/markets" element={<MarketsPage />} />
             
             {/* See in Madrid */}

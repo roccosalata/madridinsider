@@ -5,7 +5,6 @@ import HeroSection from '@/components/HeroSection';
 import PageNavigatorDropdown from '@/components/PageNavigatorDropdown';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { emergencyContacts, policeContacts, policeStations } from '@/data/emergencyContacts';
-import LocksmithInfo from '@/components/essentials/LocksmithInfo';
 import { Phone, Shield, Building } from 'lucide-react';
 
 const EmergencyContactsPage = () => {
@@ -39,8 +38,6 @@ const EmergencyContactsPage = () => {
                   </ul>
               </CardContent>
             </Card>
-
-            <LocksmithInfo />
 
             <Card>
               <CardHeader>

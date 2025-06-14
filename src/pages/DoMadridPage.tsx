@@ -1,10 +1,11 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Utensils, Wine, Ticket, Dumbbell, ArrowRight } from 'lucide-react';
+import { Utensils, Wine, Ticket, Dumbbell, ArrowRight, ShoppingBag } from 'lucide-react';
 
 const doCategories = [
   {
@@ -18,6 +19,12 @@ const doCategories = [
     description: "Experience Madrid's legendary nightlife, with endless options for bars, clubs, and live music.",
     link: "/do-in-madrid/nightlife",
     icon: Wine,
+  },
+  {
+    title: "Shopping",
+    description: "From luxury brands on the Golden Mile to unique boutiques and bustling markets.",
+    link: "/do-in-madrid/shopping",
+    icon: ShoppingBag,
   },
   {
     title: "Entertainment & Shows",
@@ -48,7 +55,7 @@ const DoMadridPage: React.FC = () => {
           Dive into the heart of Spanish culture. Whether you're a foodie, a night owl, a culture enthusiast, or seeking recreation, Madrid has something for everyone. Explore our guides to make the most of your time in the city.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {doCategories.map((category) => (
             <Card key={category.title} className="flex flex-col hover:shadow-lg transition-shadow">
               <CardHeader>

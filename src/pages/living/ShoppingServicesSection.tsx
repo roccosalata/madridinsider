@@ -5,21 +5,21 @@ import { Link } from "react-router-dom";
 
 const ShoppingServicesSection = () => (
   <section className="mb-12">
-    <h2 className="text-3xl font-bold mb-6">Shopping & Essential Services</h2>
+    <h2 className="text-3xl font-bold mb-6">Shops & Essential Services</h2>
     <Card>
       <CardHeader>
-        <CardTitle>Daily Shopping & Services</CardTitle>
+        <CardTitle>Shops & Services</CardTitle>
       </CardHeader>
       <CardContent>
         <p className="text-gray-700 mb-4">
-          Find essential shops and services for daily life in Madrid, including optical shops, 
+          Find essential shops and services for daily life in Madrid, including locksmiths, optical shops, 
           bookstores, international groceries, hair salons, and more.
         </p>
         <Link 
           to="/living-in-madrid/shopping-services" 
           className="inline-flex items-center text-madrid-red hover:text-madrid-red/80 font-medium"
         >
-          View Shopping & Services Guide →
+          View Shops & Services Guide →
         </Link>
       </CardContent>
     </Card>
