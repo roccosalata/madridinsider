@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
@@ -76,9 +75,15 @@ const MadridNow = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-2">
                 Get the latest weather forecast for Madrid.
               </p>
+              <ul className="text-gray-600 text-sm mb-4 list-disc list-inside space-y-1">
+                <li>🌞 Summers are hot and dry, often exceeding 35°C (95°F) in July & August.</li>
+                <li>🌱 Spring and Fall are mild and pleasant, ideal for sightseeing.</li>
+                <li>❄️ Winters are generally mild (5–15°C), but nights can feel chilly.</li>
+                <li>☀️ Madrid enjoys about 2,800 hours of sunshine each year.</li>
+              </ul>
               <p className="text-center py-2 text-gray-600 text-sm">
                 (Detailed weather information coming soon)
               </p>

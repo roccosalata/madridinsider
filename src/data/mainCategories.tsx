@@ -25,7 +25,8 @@ export const mainCategories: MainCategory[] = [
       { title: "Tourist Offices", link: "/madrid-essentials/tourist-offices" },
       { title: "Madrid Card", link: "/madrid-essentials/madrid-card" },
       { title: "Transport & Maps", link: "/madrid-essentials/transport-maps" },
-      { title: "Weather & Climate", link: "/madrid-essentials/weather" },
+      // Changed link below to point to the Weather Today in Madrid Now
+      { title: "Weather & Climate", link: "/madrid-now/weather-today" },
       { title: "Currency & Money", link: "/madrid-essentials/currency" },
       { title: "Language Basics", link: "/madrid-essentials/language" },
       { title: "Safety Tips", link: "/madrid-essentials/safety" },
@@ -94,3 +95,4 @@ export const mainCategories: MainCategory[] = [
     ]
   }
 ];
+
