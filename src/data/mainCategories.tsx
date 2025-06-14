@@ -28,7 +28,8 @@ export const mainCategories: MainCategory[] = [
       { title: "Currency & Money", link: "/madrid-essentials/currency" },
       { title: "Language Basics", link: "/madrid-essentials/language" },
       { title: "Safety Tips", link: "/madrid-essentials/safety" },
-      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" }
+      { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
+      { title: "Tourist Information", link: "/madrid-essentials/tourist-info" }
     ]
   },
   {
@@ -43,7 +44,8 @@ export const mainCategories: MainCategory[] = [
       { title: "Banking & Finances", link: "/living-in-madrid/banking" },
       { title: "Healthcare System", link: "/living-in-madrid/healthcare" },
       { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
-      { title: "Working in Madrid", link: "/living-in-madrid/work" }
+      { title: "Working in Madrid", link: "/living-in-madrid/work" },
+      { title: "Education & Schools", link: "/living-in-madrid/education" }
     ]
   },
   {
@@ -63,7 +65,7 @@ export const mainCategories: MainCategory[] = [
   },
   {
     title: "Do in Madrid",
-    description: "Experience Madrid's vibrant culture through food, nightlife, shopping, and entertainment.",
+    description: "Experience Madrid's vibrant culture through food, nightlife, shopping, entertainment, and wellness.",
     imageUrl: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=800&auto=format&fit=crop",
     link: "/do-in-madrid",
     icon: <Activity className="h-6 w-6" aria-hidden="true" />,
@@ -73,7 +75,8 @@ export const mainCategories: MainCategory[] = [
       { title: "Shopping Districts", link: "/do-in-madrid/shopping" },
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
-      { title: "Sports & Recreation", link: "/do-in-madrid/sports" }
+      { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
+      { title: "Health & Wellness", link: "/do-in-madrid/health-wellness" }
     ]
   },
   {

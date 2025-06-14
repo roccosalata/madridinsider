@@ -12,6 +12,7 @@ import WeatherToday from './pages/now/WeatherToday';
 import CurrentEvents from './pages/now/CurrentEvents';
 import BathsPage from './pages/do/BathsPage';
 import EntertainmentPage from './pages/do/EntertainmentPage';
+import HealthWellnessPage from './pages/do/HealthWellnessPage';
 import TransportMaps from './pages/essentials/TransportMaps';
 import MadridEssentials from './pages/MadridEssentials';
 import SeeMadridPage from './pages/SeeMadridPage';
