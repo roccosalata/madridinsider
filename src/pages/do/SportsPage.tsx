@@ -1,10 +1,11 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Leaf, Dumbbell, Footprints, Waves, Medal, ArrowRight, Trophy } from 'lucide-react';
+import { Leaf, Dumbbell, Footprints, Waves, Medal, ArrowRight, Trophy, Golf } from 'lucide-react';
 
 const sportCategories = [
   {
@@ -38,8 +39,14 @@ const sportCategories = [
     icon: Waves,
   },
   {
+    title: "Golf",
+    description: "Tee off at one of the many scenic golf courses in and around the Madrid region.",
+    link: "/do-in-madrid/sports/golf",
+    icon: Golf,
+  },
+  {
     title: "Other Sports",
-    description: "Explore opportunities for tennis, volleyball, and more throughout the city.",
+    description: "Explore opportunities for tennis, volleyball, race karts, pool, ice skating and more throughout the city.",
     link: "/do-in-madrid/sports/other-sports",
     icon: Medal,
   },

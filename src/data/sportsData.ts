@@ -110,3 +110,86 @@ export const rugbyInfo = {
     }
   ]
 };
+
+export const raceKartsInfo = {
+  title: "Race Karts",
+  venues: [
+    {
+      name: "Karting Feliz Vía",
+      address: "Ctra. El Pardo, km. 3,4 - Complejo Deportivo Somontes",
+      description: "Sport and fun without the risk. Located 10 minutes from Madrid at the Somontes Sports Complex (Monte del Pardo). Electric karts for kiids from 4 years old to children up to a weight of 50 Kg.. Birthday celebrations. Bouncy Castle.",
+      website: "www.felizvia.com",
+      email: "felizvia@felizvia.com",
+      phone: "913 733 035"
+    }
+  ]
+};
+
+export const poolBilliardsInfo = {
+  title: "Pool / Billiards",
+  directory: {
+    name: "Pool / Billiards Directory",
+    website: "www.poolmania.es"
+  },
+  venues: [
+    {
+      name: "No Se Lo Digas a Nadie",
+      address: "Ventura de la Vega, 7 (Metro: Sevilla - Anton Matin)",
+      description: "This bar boasts 2 floors, 6 pool tables, 3 bars, a cool atmosphere, all types of music, go-go dancers & drag queens until 6am. Weekdays, copas go for about €3. Weekends, after 1am, copas are €7& a beer €4. Stop by and let them offer you a shot!",
+      hours: "Tuesday - Wednesday: 9pm-3am\nThursday - Saturday: 9pm-6am",
+      phone: "913-691-727"
+    }
+  ]
+};
+
+export const iceSkatingInfo = {
+    title: "Ice Skating",
+    venues: [
+        {
+            name: "Dreams. Palacio de Hielo",
+            address: "Silvano, 77 (Metro: Canillas)",
+            description: "The rink opens its doors to the public on friday and staurday afternoons , 5 pm to 11:30 pm, and on sundays and bank-holiday afternoons from 5 pm to 10 pm. Cost is 8 euros, or 10 euros including skate rental. Saturdays, sundays, and bank-holiday lunch-times from 12 pm to 3 pm. Cost is 5 euros or 7 euros including skate rentals.",
+            website: "www.sporthielo.com",
+            email: "sporthielo@sporthielo.com",
+            phone: "917 160 159"
+        },
+        {
+            name: "Pabellón de Hielo",
+            address: "Leganés Cercanías C-5",
+            description: "Wed to Fri: 7pm-10pm;",
+            phone: ""
+        }
+    ]
+};
+
+export const golfInfo = {
+  title: "Golf in Madrid",
+  courses: [
+    { name: "Campo de Golf Base Aérea de Torrejón", address: "Carretera N-II s/n, TORREJÓN DE ARDOZ", phone: "91 660 37 39" },
+    { name: "Campo de Golf de Somosaguas", address: "Calle Retama 6, POZUELO DE ALARCÓN", phone: "91 352 16 47" },
+    { name: "Campo de Golf Los Pinos", address: "Calle Maragato s/n, Aranjuez", phone: "91 891 07 81" },
+    { name: "Casino Club de Golf Los Retamares", address: "Carretera Algete-Alalpardo km 2.3, Alalpardo", phone: "916202540" },
+    { name: "Centro Deportivo Barberán", address: "Carretera de Extremadura Km 10,7 , MADRID", phone: "91 509 00 59" },
+    { name: "Centro Deportivo Militar La Dehesa", address: "Carretera Extremadura km 8,800, Cuatro Vientos", phone: "91-509-0013 ext.110" },
+    { name: "Club de Campo Villa de Madrid", address: "Carretera de Castilla Km 2 , MADRID", phone: "91 550 08 40" },
+    { name: "Club de Campo y Deportes Golf Scratch", address: "Calle Isla Graciosa s/n, S. S. DE LOS REYES", phone: "91 663 70 32" },
+    { name: "Club de Golf Aranjuez", address: "0 Apartado de correos 60, Aranjuez", phone: "91 891 87 78" },
+    { name: "Club de Golf Encinar", address: "Calle Urb. Encinar del Alberche , Villa del Prado", phone: "918674516" },
+    { name: "Club de Golf La Dehesa", address: "Avenida Universidad 2, Villanueva de la Cañada", phone: "918157022" },
+    { name: "Club de Golf Madrid Control", address: "0 Apartado de Correos 197, Torrejón de Ardoz", phone: "" },
+    { name: "Club de Golf Olivar de la Hinojosa", address: "Avenida Dublín s/n, MADRID", phone: "91 721 18 89" },
+    { name: "Club Jarama RACE", address: "Carretera Burgos Km 28,1 , S. S. DE LOS REYES", phone: "91 657 00 11" },
+    { name: "Club Valdelaguila", address: "Calle Apartado de correos 9, Alcalá de Henares", phone: "91 885 96 59" },
+    { name: "Golf La Moraleja", address: "Paseo Marquesa Viuda de Aldama 50, ALCOBENDAS", phone: "91 650 07 00" },
+    { name: "Golf Park Entertainment, S.A.", address: "Avenida Europa 10, Alcobendas", phone: "916614444" },
+    { name: "GREEN PADDOCK", address: "Carretera de La Coruña km. 33, Torrelodones", phone: "91 859 51 07" },
+    { name: "La Herrería Club de Golf", address: "Carretera Robledo de Chavela s/n, San Lorenzo del Escorial", phone: "91 890 51 11" },
+    { name: "Las Encinas de Boadilla", address: "Carretera Boadilla-Pozuelo km 1.4, Boadilla del Monte", phone: "" },
+    { name: "Las Rejas de Majadahonda", address: "Calle Isaac Albeniz 77, Majadahonda", phone: "916347930" },
+    { name: "Nuevo Club de Golf de Madrid", address: "Carretera A Coruña Km 26 , LAS MATAS", phone: "91 630 08 20" },
+    { name: "Palacio del Negralejo, S.A.", address: "0 Apartado de correos 9, San Fernando de Henares", phone: "91 669 04 22" },
+    { name: "Real Club de Golf de la Puerta de Hierro", address: "Avenida Miraflores s/n, MADRID", phone: "91 316 17 45" },
+    { name: "Real Sociedad Hípica Española Club de Campo", address: "Carretera Burgos Km 26,4 , S. S. DE LOS REYES", phone: "91 657 10 18" },
+    { name: "Villa de El Escorial", address: "Carretera M-600 El Escorial-Valdemorillo km 13.3, El Escorial", phone: "" },
+  ]
+};
