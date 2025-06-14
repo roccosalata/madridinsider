@@ -46,7 +46,7 @@ const IndexPage = () => {
       
       <main id="main-content" className="container mx-auto py-12 px-4">
         <section aria-label="Main categories" className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {mainCategories.map(category => (
+          {mainCategories.filter(category => category.title !== "Madrid Now").map(category => (
             <CategoryCard key={category.title} category={category} />
           ))}
         </section>

@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Utensils, Wine, ShoppingCart, ShoppingBag, Ticket, Dumbbell, Leaf, Heart, ArrowRight } from 'lucide-react';
+import { Utensils, Wine, ShoppingCart, ShoppingBag, Ticket, Dumbbell, Heart, ArrowRight } from 'lucide-react';
 
 const doCategories = [
   {
@@ -40,15 +40,9 @@ const doCategories = [
   },
   {
     title: "Sports & Recreation",
-    description: "Stay active with football matches, gyms, parks, and a variety of recreational activities.",
+    description: "Stay active with football matches, gyms, parks, wellness, and a variety of recreational activities.",
     link: "/do-in-madrid/sports",
     icon: Dumbbell,
-  },
-  {
-    title: "Yoga & Wellness",
-    description: "Find your balance with yoga studios, wellness centers, and healthy lifestyle options.",
-    link: "/do-in-madrid/yoga-wellness",
-    icon: Leaf,
   },
   {
     title: "Baths & Spas",
