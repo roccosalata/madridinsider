@@ -7,7 +7,8 @@ import { Badge } from '@/components/ui/badge';
 import NeighborhoodCard from './NeighborhoodCard';
 import NeighborhoodGuide from './NeighborhoodGuide';
 import { madridBarrios, getBarriosByPriceLevel, getBarriosForStudents, getSafeBarrios } from '@/data/madridBarrios';
-import { MapPin, Home, Zap, Heart, Users, Euro, Filter } from 'lucide-react';
+import { madridNeighborhoods, getCoolNeighborhoods, getLivingAreaBarrios } from '@/data/neighborhoodsData';
+import { MapPin, Home, Zap, Heart, Users, Euro, Filter, Star, Building } from 'lucide-react';
 
 const NeighborhoodsHub = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
@@ -104,6 +105,19 @@ const NeighborhoodsHub = () => {
     metroStations: barrio.metroStations
   });
 
+  const convertNeighborhoodToCard = (neighborhood: typeof madridNeighborhoods[0]) => ({
+    title: neighborhood.name,
+    description: neighborhood.description,
+    icon: MapPin,
+    character: neighborhood.characteristics.join(', '),
+    bestFor: neighborhood.bestFor,
+    highlights: neighborhood.keyAttractions,
+    safety: neighborhood.safety || 'Standard safety precautions advised',
+    transport: neighborhood.transportLinks.join(', '),
+    priceLevel: neighborhood.priceLevel,
+    detailedDescription: neighborhood.detailedDescription
+  });
+
   return (
     <div className="space-y-8">
       {/* Hero Section */}
@@ -116,8 +130,10 @@ const NeighborhoodsHub = () => {
       </section>
 
       <Tabs defaultValue="overview" className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
+        <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="overview">Overview</TabsTrigger>
+          <TabsTrigger value="cool">Cool Areas</TabsTrigger>
+          <TabsTrigger value="living">Living Areas</TabsTrigger>
           <TabsTrigger value="all-barrios">All Barrios</TabsTrigger>
           <TabsTrigger value="guide">Selection Guide</TabsTrigger>
         </TabsList>
@@ -128,6 +144,121 @@ const NeighborhoodsHub = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {mainNeighborhoods.map((neighborhood, index) => (
                 <NeighborhoodCard key={index} {...neighborhood} />
+              ))}
+            </div>
+          </section>
+        </TabsContent>
+
+        <TabsContent value="cool" className="space-y-6">
+          <section>
+            <div className="flex items-center gap-2 mb-6">
+              <Star className="h-6 w-6 text-madrid-red" />
+              <h2 className="text-2xl font-bold">Cool Neighborhoods</h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Discover Madrid's trendiest and most vibrant neighborhoods, each with its unique character and nightlife scene.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {getCoolNeighborhoods().map((neighborhood, index) => (
+                <Card key={index} className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <MapPin className="h-5 w-5 text-madrid-red" />
+                      {neighborhood.name}
+                    </CardTitle>
+                    <p className="text-sm text-gray-600">{neighborhood.description}</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {neighborhood.detailedDescription && (
+                      <div className="bg-blue-50 p-3 rounded-md">
+                        <p className="text-sm text-blue-800">{neighborhood.detailedDescription}</p>
+                      </div>
+                    )}
+                    
+                    <div>
+                      <h4 className="font-semibold text-sm mb-2">Best for:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {neighborhood.bestFor.slice(0, 3).map((item, i) => (
+                          <Badge key={i} variant="outline" className="text-xs">{item}</Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="text-sm">
+                      <strong>Nightlife:</strong> {neighborhood.nightlife}
+                    </div>
+
+                    <div className="text-sm">
+                      <strong>Transport:</strong> {neighborhood.transportLinks.join(', ')}
+                    </div>
+
+                    {neighborhood.safety && (
+                      <div className="text-sm">
+                        <strong>Safety:</strong> {neighborhood.safety}
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+        </TabsContent>
+
+        <TabsContent value="living" className="space-y-6">
+          <section>
+            <div className="flex items-center gap-2 mb-6">
+              <Building className="h-6 w-6 text-madrid-red" />
+              <h2 className="text-2xl font-bold">Areas & Barrios for Living</h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Comprehensive guide to Madrid's residential areas, perfect for students, professionals, and families looking to make Madrid home.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {getLivingAreaBarrios().map((neighborhood, index) => (
+                <Card key={index} className="h-full">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-lg">{neighborhood.name}</CardTitle>
+                      <Badge variant={
+                        neighborhood.priceLevel === 'Budget' ? 'secondary' :
+                        neighborhood.priceLevel === 'Mid-range' ? 'outline' : 'destructive'
+                      }>
+                        {neighborhood.priceLevel}
+                      </Badge>
+                    </div>
+                    <p className="text-sm text-gray-600">{neighborhood.description}</p>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    {neighborhood.detailedDescription && (
+                      <div className="bg-green-50 p-3 rounded-md">
+                        <p className="text-sm text-green-800">{neighborhood.detailedDescription}</p>
+                      </div>
+                    )}
+                    
+                    <div>
+                      <h4 className="font-semibold text-sm mb-2">Best for:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {neighborhood.bestFor.slice(0, 3).map((item, i) => (
+                          <Badge key={i} variant="outline" className="text-xs">{item}</Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="text-sm">
+                      <strong>Transport:</strong> {neighborhood.transportLinks.join(', ')}
+                    </div>
+
+                    <div className="text-sm">
+                      <strong>Tourist-friendly:</strong> {neighborhood.touristFriendly ? 'Yes' : 'No'}
+                    </div>
+
+                    {neighborhood.safety && (
+                      <div className="text-sm">
+                        <strong>Safety:</strong> {neighborhood.safety}
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </section>
