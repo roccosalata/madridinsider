@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
-import { mainCategories } from '@/pages/Index';
+import { mainCategories } from '@/data/mainCategories';
 import { cn } from '@/lib/utils';
 
 const DropdownNavigation = () => {
