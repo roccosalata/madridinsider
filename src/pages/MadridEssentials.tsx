@@ -4,7 +4,10 @@ import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import TabSections from '@/components/essentials/TabSections';
 import RelatedCategories from '@/components/essentials/RelatedCategories';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { MapPin, Navigation } from 'lucide-react';
 import { embassies } from '../data/embassies';
 import PlacesOfWorshipList from '@/components/PlacesOfWorshipList';
 
@@ -19,14 +22,29 @@ const MadridEssentials = () => {
       <div className="container mx-auto px-4 py-8">
         <TabSections />
         
-        <div className="my-12">
-          <h2 className="text-2xl font-bold mb-6">Maps & Navigation</h2>
-          <Card>
-            <CardContent className="pt-6">
-              <p>Madrid maps and navigation information coming soon.</p>
+        {/* Transport & Maps Hub Link */}
+        <section className="my-12">
+          <Card className="bg-madrid-red/10">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-madrid-red">
+                <MapPin className="h-6 w-6" />
+                Transport & Maps Hub
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-800 mb-4">
+                Everything you need to navigate Madrid efficiently - comprehensive transport guides, metro maps, 
+                bus routes, and interactive city maps all in one place.
+              </p>
+              <Button asChild>
+                <Link to="/madrid-essentials/transport-maps" className="flex items-center gap-2">
+                  <Navigation className="h-4 w-4" />
+                  Explore Transport & Maps
+                </Link>
+              </Button>
             </CardContent>
           </Card>
-        </div>
+        </section>
         
         <section className="my-12">
           <h2 className="text-2xl font-bold mb-6">Emergencies</h2>

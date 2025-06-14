@@ -6,12 +6,14 @@ import IndexPage from './pages/Index';
 import Museums from './pages/see/Museums';
 import Neighborhoods from './pages/see/Neighborhoods';
 import Sightseeing from './pages/see/Sightseeing';
+import Parks from './pages/see/Parks';
 import MadridNow from './pages/MadridNow';
 import WeatherToday from './pages/now/WeatherToday';
 import CurrentEvents from './pages/now/CurrentEvents';
 import BathsPage from './pages/do/BathsPage';
 import EntertainmentPage from './pages/do/EntertainmentPage';
-import Parks from './pages/see/Parks';
+import TransportMaps from './pages/essentials/TransportMaps';
+import MadridEssentials from './pages/MadridEssentials';
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,8 @@ function App() {
         <div className="min-h-screen bg-background">
           <Routes>
             <Route path="/" element={<IndexPage />} />
+            <Route path="/madrid-essentials" element={<MadridEssentials />} />
+            <Route path="/madrid-essentials/transport-maps" element={<TransportMaps />} />
             <Route path="/see/museums" element={<Museums />} />
             <Route path="/see/neighborhoods" element={<Neighborhoods />} />
             <Route path="/see/sightseeing" element={<Sightseeing />} />

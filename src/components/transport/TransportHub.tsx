@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Train, Bus, Car, Bike, Plane, Clock, Euro, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const TransportCard = ({ 
   title, 
@@ -213,20 +211,6 @@ const TransportHub = () => {
             <TransportCard key={index} {...mode} />
           ))}
         </div>
-      </section>
-
-      {/* Maps Hub Link */}
-      <section className="bg-madrid-red/10 p-6 rounded-lg">
-        <div className="flex items-center gap-3 mb-4">
-          <MapPin className="h-6 w-6 text-madrid-red" />
-          <h3 className="font-bold text-xl">Need Transport Maps?</h3>
-        </div>
-        <p className="mb-4 text-gray-700">
-          Find detailed metro maps, bus route maps, and navigation guides in our comprehensive Madrid Maps Hub.
-        </p>
-        <Button asChild>
-          <Link to="/madrid-essentials/maps">View All Transport Maps</Link>
-        </Button>
       </section>
 
       {/* Ticket Options */}

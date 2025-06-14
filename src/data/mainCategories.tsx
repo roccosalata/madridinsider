@@ -1,5 +1,5 @@
 
-import { Compass, Home, Eye, Activity, Bath } from 'lucide-react';
+import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 
 export interface MainCategory {
   title: string;
@@ -23,7 +23,7 @@ export const mainCategories: MainCategory[] = [
     icon: <Compass className="h-6 w-6" aria-hidden="true" />,
     subcategories: [
       { title: "Getting Started Guide", link: "/madrid-essentials/getting-started" },
-      { title: "Maps & Navigation", link: "/madrid-essentials/maps" },
+      { title: "Transport & Maps", link: "/madrid-essentials/transport-maps" },
       { title: "Weather & Climate", link: "/madrid-essentials/weather" },
       { title: "Currency & Money", link: "/madrid-essentials/currency" },
       { title: "Language Basics", link: "/madrid-essentials/language" },
@@ -73,8 +73,20 @@ export const mainCategories: MainCategory[] = [
       { title: "Shopping Districts", link: "/do-in-madrid/shopping" },
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
-      { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
-      { title: "Baths & Spas", link: "/do-in-madrid/baths", icon: <Bath className="h-5 w-5" /> }
+      { title: "Sports & Recreation", link: "/do-in-madrid/sports" }
+    ]
+  },
+  {
+    title: "Madrid Now",
+    description: "Current events, weather, and what's happening in Madrid right now.",
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop",
+    link: "/madrid-now",
+    icon: <Clock className="h-6 w-6" aria-hidden="true" />,
+    subcategories: [
+      { title: "Weather Today", link: "/now/weather-today" },
+      { title: "Current Events", link: "/now/current-events" },
+      { title: "What's On", link: "/madrid-now/whats-on" },
+      { title: "Live Updates", link: "/madrid-now/live-updates" }
     ]
   }
 ];
