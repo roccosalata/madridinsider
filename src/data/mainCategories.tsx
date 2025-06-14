@@ -1,4 +1,3 @@
-
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 
 export interface MainCategory {
@@ -42,12 +41,7 @@ export const mainCategories: MainCategory[] = [
       { title: "Paperwork & NIE/TIE", link: "/living-in-madrid/paperwork" },
       { title: "Finding Accommodation", link: "/living-in-madrid/accommodation" },
       { title: "Banking & Finances", link: "/living-in-madrid/banking" },
-      { title: "Healthcare System", link: "/living-in-madrid/healthcare" },
-      { title: "Medical Care & Hospitals", link: "/living-in-madrid/healthcare" },
-      { title: "Doctors & Specialists", link: "/living-in-madrid/healthcare" },
-      { title: "Dentists & Clinics", link: "/living-in-madrid/healthcare" },
-      { title: "Drug Stores & Pharmacies", link: "/living-in-madrid/healthcare" },
-      { title: "Immunizations", link: "/living-in-madrid/healthcare" },
+      { title: "Healthcare", link: "/living-in-madrid/healthcare" },
       { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
       { title: "Working in Madrid", link: "/living-in-madrid/work" },
       { title: "Education & Schools", link: "/living-in-madrid/education" }
