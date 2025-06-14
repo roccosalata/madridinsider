@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -12,7 +11,8 @@ import WeatherToday from './pages/now/WeatherToday';
 import CurrentEvents from './pages/now/CurrentEvents';
 import BathsPage from './pages/do/BathsPage';
 import EntertainmentPage from './pages/do/EntertainmentPage';
-import HealthWellnessPage from './pages/do/HealthWellnessPage';
+import YogaWellnessPage from './pages/do/YogaWellnessPage';
+import Healthcare from './pages/living/Healthcare';
 import TransportMaps from './pages/essentials/TransportMaps';
 import MadridEssentials from './pages/MadridEssentials';
 import SeeMadridPage from './pages/SeeMadridPage';
@@ -35,6 +35,7 @@ function App() {
             
             {/* Living in Madrid */}
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
+            <Route path="/living-in-madrid/healthcare" element={<Healthcare />} />
             
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />
@@ -47,6 +48,7 @@ function App() {
             <Route path="/do-in-madrid" element={<DoMadridPage />} />
             <Route path="/do-in-madrid/baths" element={<BathsPage />} />
             <Route path="/do-in-madrid/entertainment" element={<EntertainmentPage />} />
+            <Route path="/do-in-madrid/yoga-wellness" element={<YogaWellnessPage />} />
             
             {/* Madrid Now */}
             <Route path="/madrid-now" element={<MadridNow />} />

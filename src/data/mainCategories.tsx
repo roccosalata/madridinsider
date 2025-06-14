@@ -65,7 +65,7 @@ export const mainCategories: MainCategory[] = [
   },
   {
     title: "Do in Madrid",
-    description: "Experience Madrid's vibrant culture through food, nightlife, shopping, entertainment, and wellness.",
+    description: "Experience Madrid's vibrant culture through food, nightlife, shopping, entertainment, and wellness activities.",
     imageUrl: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?q=80&w=800&auto=format&fit=crop",
     link: "/do-in-madrid",
     icon: <Activity className="h-6 w-6" aria-hidden="true" />,
@@ -76,7 +76,7 @@ export const mainCategories: MainCategory[] = [
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
       { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
-      { title: "Health & Wellness", link: "/do-in-madrid/health-wellness" }
+      { title: "Yoga & Wellness Activities", link: "/do-in-madrid/yoga-wellness" }
     ]
   },
   {
