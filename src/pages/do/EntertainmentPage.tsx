@@ -1,8 +1,9 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Film, Zap, FerrisWheel, Tent, Dice5, VenetianMask, Cable } from 'lucide-react'; // Tent for Water Parks, VenetianMask for Shows
+import { Film, Zap, FerrisWheel, Tent, Casino, VenetianMask, Cable } from 'lucide-react'; // Tent for Water Parks, VenetianMask for Shows
 
 const entertainmentSections = [
   {
@@ -41,9 +42,13 @@ const entertainmentSections = [
   {
     id: 'casinos-gambling',
     title: 'Casinos & Gambling',
-    icon: <Dice5 className="h-6 w-6 text-madrid-red" />,
-    description: 'Try your luck at Madrid\'s casinos and gaming venues.',
-    placeholder: 'Information on casinos and gambling locations is coming soon.'
+    icon: <Casino className="h-6 w-6 text-madrid-red" />,
+    description: 'Casino Gran Madrid offers a wide variety of games including poker, roulette, blackjack, and 170+ slot machines. Conditions for admission: Persons over 18 years of age. A special offer for admission plus a drink is available for 6 euros.',
+    address: 'Autovía A 6, Km 29. Free buses from Plaza de España and Plaza de Colón.',
+    hours: '4:00 p.m. - 5:00 a.m. (until 6:00 a.m. on Fridays, Saturdays and holiday eves)',
+    phone: '900 900 810 / 91-856-1100',
+    website: 'www.casinogranmadrid.es',
+    placeholder: 'For documentation details, please call or inquire at your hotel.',
   },
   {
     id: 'shows-performances',
