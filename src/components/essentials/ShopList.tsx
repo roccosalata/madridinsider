@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ShopContact } from '@/data/shoppingServicesData';
+import { ShopContact } from '@/data/shops';
 import { Phone, Globe, Mail } from 'lucide-react';
 
 interface ShopListProps {

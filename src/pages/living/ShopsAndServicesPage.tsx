@@ -12,7 +12,7 @@ import {
   computerStores,
   electronicStores,
   locksmiths
-} from '@/data/shoppingServicesData';
+} from '@/data/shops';
 import { Eye, BookOpen, Globe2, Scissors, Music, Laptop, Cpu, Wrench } from 'lucide-react';
 
 const shopCategories = [
