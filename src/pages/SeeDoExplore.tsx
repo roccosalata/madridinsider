@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { MapPinned, Landmark, Building, Compass } from 'lucide-react';
-import MapHubLink from '@/components/transport/MapHubLink';
 
 const SeeDoExplore: React.FC = () => {
   return (
