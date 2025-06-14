@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Utensils, Wine, ShoppingCart, ShoppingBag, Ticket, Dumbbell, ArrowRight } from 'lucide-react';
+import { Utensils, Wine, ShoppingBag, Ticket, Dumbbell, ArrowRight } from 'lucide-react';
 
 const doCategories = [
   {
@@ -19,12 +19,6 @@ const doCategories = [
     description: "Experience Madrid's legendary nightlife, with endless options for bars, clubs, and live music.",
     link: "/do-in-madrid/nightlife",
     icon: Wine,
-  },
-  {
-    title: "Shopping",
-    description: "From luxury brands on the Golden Mile to unique boutiques in trendy neighborhoods.",
-    link: "/do-in-madrid/shopping",
-    icon: ShoppingCart,
   },
   {
     title: "Markets",
@@ -52,16 +46,16 @@ const DoMadridPage: React.FC = () => {
     <Layout>
       <HeroSection
         title="Do in Madrid"
-        subtitle="Experience Madrid's vibrant culture through food, nightlife, shopping, entertainment, and wellness activities."
+        subtitle="Experience Madrid's vibrant culture through food, nightlife, markets, entertainment, and recreational activities."
       />
 
       <div className="container mx-auto py-12 px-4">
         <h1 className="text-4xl font-bold mb-8 text-center">What to Do in Madrid</h1>
         <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">
-          Dive into the heart of Spanish culture. Whether you're a foodie, a night owl, a culture enthusiast, or seeking relaxation, Madrid has something for everyone. Explore our guides to make the most of your time in the city.
+          Dive into the heart of Spanish culture. Whether you're a foodie, a night owl, a culture enthusiast, or seeking recreation, Madrid has something for everyone. Explore our guides to make the most of your time in the city.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {doCategories.map((category) => (
             <Card key={category.title} className="flex flex-col hover:shadow-lg transition-shadow">
               <CardHeader>

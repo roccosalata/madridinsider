@@ -1,3 +1,4 @@
+
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 
 export interface MainCategory {
@@ -45,7 +46,8 @@ export const mainCategories: MainCategory[] = [
       { title: "Internet & Utilities", link: "/living-in-madrid/utilities" },
       { title: "Working in Madrid", link: "/living-in-madrid/work" },
       { title: "Education & Schools", link: "/living-in-madrid/education" },
-      { title: "Shopping & Services", link: "/living-in-madrid/shopping-services" }
+      { title: "Shopping & Services", link: "/living-in-madrid/shopping-services" },
+      { title: "Shopping Districts", link: "/do-in-madrid/shopping" }
     ]
   },
   {
@@ -72,13 +74,9 @@ export const mainCategories: MainCategory[] = [
     subcategories: [
       { title: "Food & Dining", link: "/do-in-madrid/food-drink" },
       { title: "Nightlife & Bars", link: "/do-in-madrid/nightlife" },
-      { title: "Shopping Districts", link: "/do-in-madrid/shopping" },
       { title: "Markets & Flea Markets", link: "/do-in-madrid/markets" },
       { title: "Entertainment & Shows", link: "/do-in-madrid/entertainment" },
-      { title: "Sports & Recreation", link: "/do-in-madrid/sports" },
-      { title: "Health Clubs & Gyms", link: "/do-in-madrid/sports" },
-      { title: "Health Food Stores", link: "/do-in-madrid/food-drink" },
-      { title: "Vegetarian Food", link: "/do-in-madrid/food-drink" }
+      { title: "Sports & Recreation", link: "/do-in-madrid/sports" }
     ]
   },
   {
