@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Utensils, ArrowRight, Coffee, Wine, ChefHat, Globe } from 'lucide-react';
-import { diningCategories } from '@/data/foodDiningData';
+import { diningCategories } from '@/data/do/food/diningCategories';
 
 const categoryIcons: { [key: string]: React.ReactElement } = {
   "Traditional Tapas Bars": <Wine className="h-4 w-4" />,
