@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -9,17 +10,17 @@ import { livingCategories } from '@/data/living/livingCategories';
 import CommunityIntegrationSection from './CommunityIntegrationSection';
 import EducationChildcareSection from './EducationChildcareSection';
 import EssentialServicesSection from './EssentialServicesSection';
-import PaperworkSection from './PaperworkSection';
 import ShoppingServicesSection from './ShoppingServicesSection';
 import WorkingInMadridSection from './WorkingInMadridSection';
+import HealthcareSection from './HealthcareSection';
 
 const sectionComponents: Record<string, React.FC> = {
-  'paperwork': PaperworkSection,
   'essential-services': EssentialServicesSection,
-  'work': WorkingInMadridSection,
+  'work': WorkingIn MadridSection,
   'education': EducationChildcareSection,
   'shopping-services': ShoppingServicesSection,
   'community-integration': CommunityIntegrationSection,
+  'healthcare': HealthcareSection,
 };
 
 const LivingCategoryPage: React.FC = () => {

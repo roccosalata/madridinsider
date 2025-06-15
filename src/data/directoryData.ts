@@ -1,3 +1,4 @@
+
 export interface DirectoryCategory {
   title: string;
   introduction?: string;
@@ -39,10 +40,6 @@ export const directoryData: Record<string, Record<string, DirectoryCategory>> = 
     'connectivity-home-services': {
       title: 'Connectivity & Home Services',
       introduction: 'Information about connectivity and home services is coming soon.'
-    },
-    'healthcare-guide': {
-      title: 'Healthcare Guide',
-      introduction: 'Information about healthcare is coming soon.'
     },
     'education-childcare': {
       title: 'Education & Childcare',

@@ -2,24 +2,53 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertCircle, Building, CreditCard, HeartPulse, Wifi } from "lucide-react";
+import { AlertCircle, Building, CreditCard, Wifi, FileText } from "lucide-react";
 
 const EssentialServicesSection = () => (
   <section id="essential-services" className="mb-12 scroll-mt-20">
-    <h2 className="text-3xl font-bold mb-6">Essential Services</h2>
+    <h2 className="text-3xl font-bold mb-6">Essential Services & Paperwork</h2>
     <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">
-      Your guide to setting up essential services for living in Madrid, from banking and healthcare to utilities and connectivity.
+      Your guide to setting up essential services for living in Madrid, from banking and utilities to the necessary legal paperwork like NIE/TIE.
     </p>
 
     <Alert className="mb-8">
       <AlertCircle className="h-4 w-4" />
       <AlertTitle>Getting Started</AlertTitle>
       <AlertDescription>
-        Most services require your NIE (Número de Identificación de Extranjero) and proof of address. It's recommended to obtain these documents first before setting up other services.
+        Most services require your NIE (Número de Identificación de Extranjero) and proof of address (Empadronamiento). It's recommended to obtain these documents first.
       </AlertDescription>
     </Alert>
 
     <div className="grid md:grid-cols-2 gap-8">
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <FileText className="h-5 w-5 text-madrid-red" />
+            Paperwork & NIE/TIE
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-gray-700">
+            Navigating the necessary paperwork is a key first step to settling in Madrid.
+          </p>
+           <div className="space-y-2">
+            <h4 className="font-semibold">Key Documents:</h4>
+            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li><strong>NIE:</strong> Foreigner's Identity Number, essential for all legal and financial transactions.</li>
+              <li><strong>TIE:</strong> Foreigner's Identity Card, for non-EU residents.</li>
+              <li><strong>Empadronamiento:</strong> Proof of address from your local town hall.</li>
+            </ul>
+          </div>
+          <div className="space-y-2">
+            <h4 className="font-semibold">Process Overview:</h4>
+             <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>Book appointments (cita previa) online well in advance.</li>
+              <li>Prepare all required forms, photos, and payment receipts.</li>
+              <li>Be prepared for bureaucracy; patience is key.</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -45,36 +74,6 @@ const EssentialServicesSection = () => (
               <li>Santander - Wide network, English support</li>
               <li>BBVA - Digital banking options</li>
               <li>CaixaBank - Student-friendly accounts</li>
-            </ul>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <HeartPulse className="h-5 w-5 text-madrid-red" />
-            Healthcare System
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-gray-700">
-            Spain has both public healthcare (Sistema Nacional de Salud) and private healthcare options.
-          </p>
-          <div className="space-y-2">
-            <h4 className="font-semibold">Public Healthcare:</h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>Free with Social Security registration</li>
-              <li>Requires empadronamiento and NIE</li>
-              <li>European Health Insurance Card accepted</li>
-            </ul>
-          </div>
-          <div className="space-y-2">
-            <h4 className="font-semibold">Private Healthcare:</h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>Faster appointments and English-speaking doctors</li>
-              <li>Popular providers: Sanitas, DKV, Adeslas</li>
-              <li>Often required for visa applications</li>
             </ul>
           </div>
         </CardContent>

@@ -1,27 +1,21 @@
+
 import React from 'react';
 import { Home, FileText, Landmark, HeartPulse, Wifi, Briefcase, School, ShoppingCart, Store, Church, Users, Settings } from 'lucide-react';
 
 export const livingCategories = [
   {
-    slug: 'community-integration',
-    title: 'Community & Integration',
-    link: '/living-in-madrid/community-integration',
-    icon: Users,
-    description: 'Tips for meeting people, joining communities, and integrating into Madrid life.'
-  },
-  {
-    slug: 'shopping-services',
-    title: 'Shops & Services',
-    link: '/living-in-madrid/shopping-services',
-    icon: ShoppingCart,
-    description: 'Essential shops, markets, postal services, and other services for daily life in Madrid.'
-  },
-  {
     slug: 'essential-services',
-    title: 'Essential Services',
+    title: 'Paperwork & Essential Services',
     link: '/living-in-madrid/essential-services',
     icon: Settings,
-    description: 'Banking, healthcare, utilities, and housing - everything you need to get established.'
+    description: 'Banking, utilities, housing, and the crucial NIE/TIE paperwork to get you started.'
+  },
+  {
+    slug: 'healthcare',
+    title: 'Healthcare in Madrid',
+    link: '/living-in-madrid/healthcare',
+    icon: HeartPulse,
+    description: 'A complete guide to public and private healthcare, doctors, and pharmacies in Madrid.'
   },
   {
     slug: 'work',
@@ -38,10 +32,17 @@ export const livingCategories = [
     description: "Find information about schools, universities, childcare options, and student life."
   },
   {
-    slug: 'paperwork',
-    title: 'Paperwork & NIE/TIE',
-    link: '/living-in-madrid/paperwork',
-    icon: FileText,
-    description: "Navigate the necessary paperwork for living in Madrid, including NIE/TIE applications."
+    slug: 'community-integration',
+    title: 'Community & Integration',
+    link: '/living-in-madrid/community-integration',
+    icon: Users,
+    description: 'Tips for meeting people, joining communities, and integrating into Madrid life.'
+  },
+  {
+    slug: 'shopping-services',
+    title: 'Shops & Services',
+    link: '/living-in-madrid/shopping-services',
+    icon: ShoppingCart,
+    description: 'Essential shops, markets, postal services, and other services for daily life in Madrid.'
   },
 ];
