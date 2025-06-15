@@ -175,9 +175,13 @@ const languageSchools = [
     phone: "918-831-264"
   },
   {
-    name: "Escuela Oficial de Idiomas",
-    address: "Jesus Maestro, s/n (Metro: Guzman el Bueno)",
-    phone: "915-544-561"
+    name: "Escuela Oficial de Idiomas de Madrid",
+    address: "Jesús Maestro, s/n, 28003 Madrid (Metro: Islas Filipinas / Guzman el Bueno)",
+    phone: "915-335-802 / 915-335-803 / 915-335-804 / 915-335-805",
+    fax: "915-335-331",
+    website: "www.eoidiomas.com",
+    email: "eoimadridjm@eoidiomas.com",
+    description: "Answering Machine: 915-549-977 / 915-549-894. That's English Tel: 915-334-047. First & Second cycle English language Certificates. Call in February for the test in June."
   },
   {
     name: "Eureka, Academia de Español",
@@ -362,9 +366,12 @@ const LanguageSchoolsSection: React.FC = () => (
       </p>
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {languageSchools.map((school, index) => (
-          <div key={index} className="p-3 border rounded-lg bg-gray-50">
+          <div key={index} className="p-3 border rounded-lg bg-gray-50 flex flex-col h-full">
             <h4 className="font-semibold text-base mb-2">{school.name}</h4>
-            <div className="space-y-1 text-sm text-gray-600">
+            {(school as any).description && (
+              <p className="text-sm text-gray-700 mb-3 flex-grow">{(school as any).description}</p>
+            )}
+            <div className="space-y-1 text-sm text-gray-600 mt-auto">
               {school.address && (
                 <div className="flex items-start gap-2">
                   <MapPin className="h-3 w-3 mt-0.5 flex-shrink-0" />
@@ -386,13 +393,13 @@ const LanguageSchoolsSection: React.FC = () => (
               {school.website && (
                 <div className="flex items-center gap-2">
                   <Globe className="h-3 w-3 flex-shrink-0" />
-                  <span>{school.website}</span>
+                  <a href={`http://${school.website}`} target="_blank" rel="noopener noreferrer" className="hover:underline break-all">{school.website}</a>
                 </div>
               )}
               {school.email && (
                 <div className="flex items-center gap-2">
                   <Mail className="h-3 w-3 flex-shrink-0" />
-                  <span>{school.email}</span>
+                  <a href={`mailto:${school.email}`} className="hover:underline break-all">{school.email}</a>
                 </div>
               )}
             </div>
@@ -406,7 +413,7 @@ const LanguageSchoolsSection: React.FC = () => (
           {languageSchoolResources.map((resource, index) => (
             <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
               <Globe className="h-3 w-3 flex-shrink-0" />
-              <span>{resource}</span>
+              <a href={`http://${resource}`} target="_blank" rel="noopener noreferrer" className="hover:underline break-all">{resource}</a>
             </div>
           ))}
         </div>
