@@ -12,10 +12,10 @@ export const livingCategories = [
   },
   {
     slug: 'shopping-services',
-    title: 'Shopping & Services',
+    title: 'Shops & Services',
     link: '/living-in-madrid/shopping-services',
     icon: ShoppingCart,
-    description: 'Essential shops, postal services, and other services for daily life in Madrid.'
+    description: 'Essential shops, markets, postal services, and other services for daily life in Madrid.'
   },
   {
     slug: 'healthcare',
@@ -51,13 +51,6 @@ export const livingCategories = [
     link: '/living-in-madrid/education',
     icon: School,
     description: "Find information about schools, universities, childcare options, and student life."
-  },
-  {
-    slug: 'markets',
-    title: 'Markets',
-    link: '/living-in-madrid/markets',
-    icon: Store,
-    description: 'Explore Madrid’s flea markets and vibrant food markets.'
   },
   {
     slug: 'religions-faiths',

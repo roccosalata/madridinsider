@@ -12,7 +12,6 @@ import CommunityIntegrationSection from './CommunityIntegrationSection';
 import ConnectivityHomeSection from './ConnectivityHomeSection';
 import EducationChildcareSection from './EducationChildcareSection';
 import HealthcareGuideSection from './HealthcareGuideSection';
-import MarketsSection from './MarketsSection';
 import PaperworkSection from './PaperworkSection';
 import ReligionsFaithsSection from './ReligionsFaithsSection';
 import ShoppingServicesSection from './ShoppingServicesSection';
@@ -27,7 +26,6 @@ const sectionComponents: Record<string, React.FC> = {
   'work': WorkingInMadridSection,
   'education': EducationChildcareSection,
   'shopping-services': ShoppingServicesSection,
-  'markets': MarketsSection,
   'religions-faiths': ReligionsFaithsSection,
   'community-integration': CommunityIntegrationSection,
 };
