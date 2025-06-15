@@ -24,13 +24,9 @@ export const mainCategories: MainCategory[] = [
       { title: "Tourist Offices", link: "/madrid-essentials/tourist-offices" },
       { title: "Madrid Card", link: "/madrid-essentials/madrid-card" },
       { title: "Transport & Maps", link: "/madrid-essentials/transport-maps" },
-      // Changed link below to point to the Weather Today in Madrid Now
-      { title: "Weather & Climate", link: "/madrid-now/weather-today" },
-      { title: "Currency & Money", link: "/madrid-essentials/currency" },
-      { title: "Language Basics", link: "/madrid-essentials/language" },
-      { title: "Safety Tips", link: "/madrid-essentials/safety" },
       { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
-      { title: "Tourist Information", link: "/madrid-essentials/tourist-info" }
+      { title: "Embassies & Consulates", link: "/madrid-essentials/embassies" },
+      { title: "General Info", link: "/madrid-essentials/general-info" },
     ]
   },
   {

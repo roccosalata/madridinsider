@@ -6,12 +6,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { bankingInfo } from '@/data/bankingInfo';
 import { Banknote, Landmark, Receipt, Coins } from 'lucide-react';
 
-const BankingPage = () => {
+const BankingFinancesPage = () => {
   return (
     <Layout>
       <HeroSection
-        title="Banking & Money"
-        subtitle="A guide to managing your finances in Madrid, from opening an account to exchanging currency."
+        title="Banking & Finances"
+        subtitle="A guide to managing your finances in Madrid, from opening an account to daily banking."
       />
       <div className="container mx-auto py-12 px-4 space-y-8">
         <Card>
@@ -69,4 +69,4 @@ const BankingPage = () => {
   );
 };
 
-export default BankingPage;
+export default BankingFinancesPage;

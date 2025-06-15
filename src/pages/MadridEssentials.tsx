@@ -1,76 +1,47 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import CategoryHubCard from '@/components/CategoryHubCard';
-import { Briefcase, Map, CreditCard, HeartHandshake, ShieldCheck, Users, CloudSun, Building, Phone, Globe, Landmark } from 'lucide-react';
+import { Info, Map, CreditCard, HeartHandshake, Phone, Globe } from 'lucide-react';
 
 const MadridEssentials = () => {
   const essentialTopics = [
     {
       title: "Tourist Offices",
-      link: "/essentials/tourist-offices",
+      link: "/madrid-essentials/tourist-offices",
       icon: HeartHandshake,
       description: "Find maps, guides, and expert advice for your trip."
     },
     {
       title: "Madrid Card",
-      link: "/essentials/madrid-card",
+      link: "/madrid-essentials/madrid-card",
       icon: CreditCard,
       description: "Get access to museums and attractions with this tourist pass."
     },
     {
       title: "Transport & Maps",
-      link: "/essentials/transport-maps",
+      link: "/madrid-essentials/transport-maps",
       icon: Map,
       description: "Navigate the city with ease using public transport."
     },
     {
       title: "Emergency Contacts",
-      link: "/essentials/emergency-contacts",
+      link: "/madrid-essentials/emergency",
       icon: Phone,
       description: "Emergency numbers, police stations, and other key contacts."
     },
     {
       title: "Embassies & Consulates",
-      link: "/essentials/embassies",
+      link: "/madrid-essentials/embassies",
       icon: Globe,
       description: "Contact information for foreign embassies in Madrid."
     },
     {
-      title: "Banking & Money",
-      link: "/essentials/banking",
-      icon: Landmark,
-      description: "How to open an account, use banks, and exchange currency."
-    },
-    {
-      title: "Safety & Security",
-      link: "/madrid-essentials/general-info#safety",
-      icon: ShieldCheck,
-      description: "Tips to stay safe and be aware of your surroundings."
-    },
-    {
-      title: "Culture & Etiquette",
-      link: "/madrid-essentials/general-info#culture",
-      icon: Users,
-      description: "Learn about local customs, siesta, tipping, and more."
-    },
-    {
-      title: "Weather & Climate",
-      link: "/madrid-essentials/general-info#weather",
-      icon: CloudSun,
-      description: "What to expect from Madrid's weather year-round."
-    },
-    {
-      title: "About Madrid",
-      link: "/madrid-essentials/general-info#about",
-      icon: Building,
-      description: "A brief history of Spain's vibrant capital city."
-    },
-    {
-      title: "Professional Services",
-      link: "/madrid-essentials/general-info#professional-services",
-      icon: Briefcase,
-      description: "Find event planners, tour services, and more."
+      title: "General Information",
+      link: "/madrid-essentials/general-info",
+      icon: Info,
+      description: "Safety tips, local customs, weather, history, and more."
     },
   ];
 

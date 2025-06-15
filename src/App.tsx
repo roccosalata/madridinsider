@@ -41,6 +41,9 @@ import MarketsPage from './pages/living/MarketsPage';
 import EmergencyContactsPage from './pages/essentials/EmergencyContactsPage';
 import PostalServicesPage from './pages/living/PostalServicesPage';
 import ReligionsFaithsPage from './pages/living/ReligionsFaithsPage';
+import GeneralInfoPage from './pages/essentials/GeneralInfoPage';
+import BankingFinancesPage from './pages/living/BankingFinancesPage';
+import EmbassiesPage from './pages/essentials/EmbassiesPage';
 
 const queryClient = new QueryClient();
 
@@ -58,6 +61,8 @@ function App() {
             <Route path="/madrid-essentials/tourist-offices" element={<TouristOffices />} />
             <Route path="/madrid-essentials/madrid-card" element={<MadridCard />} />
             <Route path="/madrid-essentials/emergency" element={<EmergencyContactsPage />} />
+            <Route path="/madrid-essentials/general-info" element={<GeneralInfoPage />} />
+            <Route path="/madrid-essentials/embassies" element={<EmbassiesPage />} />
             
             {/* Living in Madrid */}
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
@@ -67,6 +72,7 @@ function App() {
             <Route path="/living-in-madrid/markets" element={<MarketsPage />} />
             <Route path="/living-in-madrid/postal-services" element={<PostalServicesPage />} />
             <Route path="/living-in-madrid/religions-faiths" element={<ReligionsFaithsPage />} />
+            <Route path="/living-in-madrid/banking" element={<BankingFinancesPage />} />
             
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />
