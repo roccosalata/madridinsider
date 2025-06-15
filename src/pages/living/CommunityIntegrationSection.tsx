@@ -5,7 +5,7 @@ import { directoryData } from "@/data/directoryData";
 const communityIntegrationData = directoryData['living-in-madrid']?.['community-integration'];
 
 const CommunityIntegrationSection = () => (
-  <section className="mb-12">
+  <section id="community-integration" className="mb-12 scroll-mt-20">
     <h2 className="text-3xl font-bold mb-6">Community & Integration</h2>
     {communityIntegrationData ? (
       <div>

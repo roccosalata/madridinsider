@@ -65,14 +65,8 @@ function App() {
             
             {/* Living in Madrid */}
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
-            <Route path="/living-in-madrid/healthcare" element={<Healthcare />} />
-            <Route path="/living-in-madrid/shopping-services" element={<ShopsAndServicesPage />} />
             <Route path="/living-in-madrid/shopping-services/:categorySlug" element={<ShopCategoryPage />} />
-            <Route path="/living-in-madrid/markets" element={<MarketsPage />} />
-            <Route path="/living-in-madrid/postal-services" element={<PostalServicesPage />} />
-            <Route path="/living-in-madrid/religions-faiths" element={<ReligionsFaithsPage />} />
-            <Route path="/living-in-madrid/banking" element={<BankingFinancesPage />} />
-            
+
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />
             <Route path="/see-in-madrid/museums" element={<Museums />} />

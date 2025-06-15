@@ -5,8 +5,8 @@ import { directoryData } from "@/data/directoryData";
 const educationChildcareData = directoryData['living-in-madrid']?.['education-childcare'];
 
 const EducationChildcareSection = () => (
-  <section className="mb-12">
-    <h2 className="text-3xl font-bold mb-6">Education & Childcare</h2>
+  <section id="education" className="mb-12 scroll-mt-20">
+    <h2 className="text-3xl font-bold mb-6">Education & Schools</h2>
     {educationChildcareData ? (
       <div>
         <p>{(educationChildcareData as any).introduction}</p>

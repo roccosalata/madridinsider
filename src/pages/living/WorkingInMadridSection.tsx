@@ -5,7 +5,7 @@ import { directoryData } from "@/data/directoryData";
 const workingInMadridData = directoryData['living-in-madrid']?.['working-in-madrid'];
 
 const WorkingInMadridSection = () => (
-  <section className="mb-12">
+  <section id="work" className="mb-12 scroll-mt-20">
     <h2 className="text-3xl font-bold mb-6">Working in Madrid</h2>
     {workingInMadridData ? (
       <div>

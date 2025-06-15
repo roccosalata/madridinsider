@@ -1,28 +1,22 @@
 
 import React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import CategoryHubCard from '@/components/CategoryHubCard';
+import { shopCategories } from '@/data/shops';
 
 const ShoppingServicesSection = () => (
-  <section className="mb-12">
-    <h2 className="text-3xl font-bold mb-6">Shops & Essential Services</h2>
-    <Card>
-      <CardHeader>
-        <CardTitle>Shops & Services</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-gray-700 mb-4">
-          Find essential shops and services for daily life in Madrid, including locksmiths, optical shops, 
-          bookstores, international groceries, hair salons, and more.
-        </p>
-        <Link 
-          to="/living-in-madrid/shopping-services" 
-          className="inline-flex items-center text-madrid-red hover:text-madrid-red/80 font-medium"
-        >
-          View Shops & Services Guide →
-        </Link>
-      </CardContent>
-    </Card>
+  <section id="shopping-services" className="mb-12 scroll-mt-20">
+    <h2 className="text-3xl font-bold mb-6">Shops & Services</h2>
+    <p className="mb-8 text-center text-lg text-gray-600">Essential shops and services for daily life in Madrid.</p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {shopCategories.map(category => (
+        <CategoryHubCard
+          key={category.title}
+          title={category.title}
+          link={category.link}
+          icon={category.icon}
+        />
+      ))}
+    </div>
   </section>
 );
 
