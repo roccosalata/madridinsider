@@ -8,6 +8,7 @@ import ProfessionalServicesInfo from '@/components/essentials/ProfessionalServic
 import SafetyInfo from '@/components/essentials/SafetyInfo';
 import WeatherInfo from '@/components/essentials/WeatherInfo';
 import MessageBoardsInfo from '@/components/essentials/MessageBoardsInfo';
+import PublicationsInfo from '@/components/essentials/PublicationsInfo';
 
 const GeneralInfoPage: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const GeneralInfoPage: React.FC = () => {
         <AboutMadridInfo />
         <ProfessionalServicesInfo />
         <MessageBoardsInfo />
+        <PublicationsInfo />
       </div>
     </Layout>
   );
