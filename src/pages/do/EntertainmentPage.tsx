@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
@@ -105,22 +104,28 @@ const entertainmentSections = [
     id: 'theme-parks',
     title: 'Theme Parks',
     icon: <FerrisWheel className="h-6 w-6 text-madrid-red" />,
-    description: 'Rollercoasters, attractions, and fun for all ages.',
-    placeholder: 'Details about Madrid\'s theme parks are coming soon!'
+    description: 'Parque de Atracciones de Madrid is one of Spain\'s leading theme parks. Located in the Casa de Campo, it offers a wide variety of roller coasters, water rides, and shows for all ages.',
+    address: 'Casa de Campo, s/n (Metro: Batán)',
+    website: 'https://www.parquedeatracciones.es',
+    phone: '912 00 07 95',
   },
   {
     id: 'water-parks',
     title: 'Water Parks',
     icon: <Tent className="h-6 w-6 text-madrid-red" />,
-    description: 'Cool off and have a splash at Madrid\'s water parks.',
-    placeholder: 'Information on water parks will be available shortly.'
+    description: 'Aquopolis Villanueva de la Cañada is a massive water park near Madrid, perfect for cooling off during the summer. Features a wide range of slides, pools, and relaxation areas. Typically open from June to September.',
+    address: 'Av. de la Dehesa, s/n, 28691 Villanueva de la Cañada',
+    website: 'https://vca.aquopolis.es',
+    phone: '918 15 69 11',
   },
   {
     id: 'zoo-aquarium',
     title: 'Zoo / Aquarium',
     icon: <Zap className="h-6 w-6 text-madrid-red" />,
-    description: 'Discover diverse wildlife from around the world.',
-    placeholder: 'Zoo and aquarium details will be updated soon.'
+    description: 'The Zoo Aquarium de Madrid, located in the Casa de Campo, is one of the largest zoos in Spain. It features a zoo, aquarium, dolphinarium, and aviary, housing over 6,000 animals from 500 different species.',
+    address: 'Casa de Campo, s/n (Metro: Casa de Campo)',
+    website: 'https://www.zoomadrid.com',
+    phone: '911 54 74 79',
   }
 ];
 
@@ -207,4 +212,3 @@ const EntertainmentPage = () => {
 };
 
 export default EntertainmentPage;
-
