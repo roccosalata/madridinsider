@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import TabSections from '@/components/essentials/TabSections';
 
 const MadridEssentialsPage: React.FC = () => {
   return (
@@ -13,14 +13,7 @@ const MadridEssentialsPage: React.FC = () => {
       />
       
       <div className="container mx-auto px-4 py-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>Madrid Essentials Information</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Essential information for Madrid is coming soon.</p>
-          </CardContent>
-        </Card>
+        <TabSections />
       </div>
     </Layout>
   );
