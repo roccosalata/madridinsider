@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Dumbbell, ArrowRight, Football, TreePine, Bike } from 'lucide-react';
+import { Dumbbell, ArrowRight, CirclePlay, TreePine, Bike } from 'lucide-react';
 
 const SportsRecreationHub = () => {
   return (
@@ -22,7 +22,7 @@ const SportsRecreationHub = () => {
         {/* Preview of sports and recreation options */}
         <div className="space-y-2 mb-4 text-sm">
           <div className="flex items-center gap-2 text-gray-600">
-            <Football className="h-4 w-4" />
+            <CirclePlay className="h-4 w-4" />
             <span>Real Madrid & Atlético Matches</span>
           </div>
           <div className="flex items-center gap-2 text-gray-600">
