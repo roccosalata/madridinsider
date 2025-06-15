@@ -44,6 +44,7 @@ import ReligionsFaithsPage from './pages/living/ReligionsFaithsPage';
 import GeneralInfoPage from './pages/essentials/GeneralInfoPage';
 import BankingFinancesPage from './pages/living/BankingFinancesPage';
 import EmbassiesPage from './pages/essentials/EmbassiesPage';
+import MessageBoardsPage from './pages/essentials/MessageBoardsPage';
 
 const queryClient = new QueryClient();
 
@@ -63,6 +64,7 @@ function App() {
             <Route path="/madrid-essentials/emergency" element={<EmergencyContactsPage />} />
             <Route path="/madrid-essentials/general-info" element={<GeneralInfoPage />} />
             <Route path="/madrid-essentials/embassies" element={<EmbassiesPage />} />
+            <Route path="/madrid-essentials/message-boards" element={<MessageBoardsPage />} />
             
             {/* Living in Madrid */}
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />

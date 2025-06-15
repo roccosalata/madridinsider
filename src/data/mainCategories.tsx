@@ -27,6 +27,7 @@ export const mainCategories: MainCategory[] = [
       { title: "Emergency Contacts", link: "/madrid-essentials/emergency" },
       { title: "Embassies & Consulates", link: "/madrid-essentials/embassies" },
       { title: "General Info", link: "/madrid-essentials/general-info" },
+      { title: "Message Boards", link: "/madrid-essentials/message-boards" },
     ]
   },
   {

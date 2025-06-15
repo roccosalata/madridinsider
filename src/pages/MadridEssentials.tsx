@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import CategoryHubCard from '@/components/CategoryHubCard';
-import { Info, Map, CreditCard, HeartHandshake, Phone, Globe } from 'lucide-react';
+import { Info, Map, CreditCard, HeartHandshake, Phone, Globe, MessageSquare } from 'lucide-react';
 
 const MadridEssentials = () => {
   const essentialTopics = [
@@ -42,6 +42,12 @@ const MadridEssentials = () => {
       link: "/madrid-essentials/general-info",
       icon: Info,
       description: "Safety tips, local customs, weather, history, and more."
+    },
+    {
+      title: "Message Boards",
+      link: "/madrid-essentials/message-boards",
+      icon: MessageSquare,
+      description: "Connect with the community and find answers to your questions."
     },
   ];
 
