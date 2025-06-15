@@ -39,6 +39,7 @@ import EmergencyContactsPage from './pages/essentials/EmergencyContactsPage';
 import GeneralInfoPage from './pages/essentials/GeneralInfoPage';
 import EmbassiesPage from './pages/essentials/EmbassiesPage';
 import GymsPage from './pages/do/GymsPage';
+import LivingCategoryPage from './pages/living/LivingCategoryPage';
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ function App() {
             {/* Living in Madrid */}
             <Route path="/living-in-madrid" element={<LivingMadridPage />} />
             <Route path="/living-in-madrid/shopping-services/:categorySlug" element={<ShopCategoryPage />} />
+            <Route path="/living-in-madrid/:categorySlug" element={<LivingCategoryPage />} />
 
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />
