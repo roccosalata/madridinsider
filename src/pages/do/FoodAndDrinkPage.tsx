@@ -1,9 +1,10 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Utensils, CalendarDays, Clock, Phone, Mail, Globe, MapPin, IceCreamCone, Wine, Vegan } from 'lucide-react';
+import { Utensils, CalendarDays, Clock, Phone, Mail, Globe, MapPin, IceCreamCone, Wine, Vegan, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const cheapEats = [
   { name: 'El Tigre', address: 'Infantas, 30 (Metro: Chueca / Banco de España)', description: "If you can elbow your way through the crowds to the bar, you'll find beer or cider for €1.50, immediately followed by a plate of hot tapas: croquettes, patatas bravas and tostadas galore. Amazingly, the bar staff never repeat the dishes that accompany each round." },
@@ -217,9 +218,17 @@ const FoodAndDrinkPage = () => {
         <section>
           <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
             <Vegan className="h-8 w-8 text-madrid-red" />
-            Vegetarian Restaurants
+            Vegetarian Restaurants & Grocery Stores
           </h2>
            <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">Vegetarian food is gaining more and more popularity in Madrid. Recently, more and more restaurants that promote vegetarian cuisine have opened and offer elaborately prepared recipes which yield innovative and very tasty dishes combining basic ingredients such as fresh fruits, vegetables, seitan or tofu.</p>
+           <div className="text-center mb-12">
+            <Button asChild>
+              <Link to="/living-in-madrid/shopping-services/health-food-stores" className="flex items-center">
+                Find Health Food & Grocery Stores
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vegetarianRestaurants.map(item => (
               <Card key={item.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
