@@ -1,4 +1,3 @@
-
 import React from "react";
 import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,6 +68,40 @@ const WorkingInMadridSection = () => (
                 </div>
               </div>
             ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader><CardTitle>Aupair</CardTitle></CardHeader>
+        <CardContent className="space-y-6">
+          <div>
+            <h4 className="font-semibold text-madrid-red mb-2">British School of English</h4>
+            <div className="space-y-2 text-sm text-gray-700">
+                <p>Call for information about work at schools or at private homes with families.</p>
+                <p className="flex items-start gap-2"><MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" /><span>Solano 11, 3º - C, Pozuelo de Alarcón</span></p>
+                <p className="flex items-center gap-2"><User className="h-4 w-4 flex-shrink-0" />Andy</p>
+                <p className="flex items-center gap-2"><Phone className="h-4 w-4 flex-shrink-0" />630-746-838</p>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-semibold text-madrid-red mb-2">Empleados Domesticos</h4>
+            <div className="space-y-2 text-sm text-gray-700">
+                <p>Aupairs and girls/women wishing to work as interns are needed (English & French native speakers). Working and sleeping in a house in Madrid or other cities in Spain. Main duties are taking care of children. Applicants should be responsible and with references of similar jobs in or outside Spain. Salaries around 600 euros/month plus social security.</p>
+                <p className="flex items-center gap-2"><Phone className="h-4 w-4 flex-shrink-0" />915-484-949</p>
+                <a href="mailto:foreign@empleadosdomesticos.com" className="flex items-center gap-2 text-blue-600 hover:underline"><Mail className="h-4 w-4 flex-shrink-0" />foreign@empleadosdomesticos.com</a>
+                <a href="http://www.empleadosdomesticos.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline"><Globe className="h-4 w-4 flex-shrink-0" />www.empleadosdomesticos.com</a>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-semibold text-madrid-red mb-2">Infointer / OleSpain</h4>
+            <div className="space-y-2 text-sm text-gray-700">
+                <p>Everything including: single room, pocket money, all the meals including.</p>
+                <p className="flex items-start gap-2"><MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" /><span>c/ Mayor,32 - 28013 Madrid Spain</span></p>
+                <p className="flex items-center gap-2"><Phone className="h-4 w-4 flex-shrink-0" />00 34 913 663 037</p>
+                <a href="mailto:infointerspain@yahoo.es" className="flex items-center gap-2 text-blue-600 hover:underline"><Mail className="h-4 w-4 flex-shrink-0" />infointerspain@yahoo.es</a>
+                <a href="http://www.olespain.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline"><Globe className="h-4 w-4 flex-shrink-0" />www.olespain.org</a>
+            </div>
           </div>
         </CardContent>
       </Card>
