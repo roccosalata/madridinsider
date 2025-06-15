@@ -1,9 +1,8 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Wine, Music2, Moon, GlassWater, MapPin } from 'lucide-react';
+import { Wine, Music2, Moon, GlassWater, MapPin, Umbrella } from 'lucide-react';
 
 const nightlifeSections = [
     {
@@ -48,6 +47,23 @@ const nightlifeSections = [
             { name: "Círculo de Bellas Artes", address: "Calle de Alcalá, 42", details: "Offers one of the most famous panoramic views of Madrid." },
             { name: "The Hat Madrid", address: "Calle Imperial, 9", details: "A trendy and relaxed rooftop bar on top of a hostel in La Latina." },
             { name: "Ginkgo Sky Bar", address: "Plaza de España, 3", details: "A chic bar with a pool and spectacular views over Plaza de España." },
+        ]
+    },
+    {
+        id: 'open-air-terraces',
+        title: 'Terraces / Terrazas',
+        icon: <Umbrella className="h-8 w-8 text-madrid-red" />,
+        description: "As the temperature rises, terraces begin to spread out over almost every paved space available. After an exhausting day´s work in the heat of the city, relax on a terrace where you can chat quietly with friends and enjoy a meal or a drink. This is the essence of Madrid in summer, and its many terraces offer something to satisfy all tastes.",
+        venues: [
+            { name: 'Ananda', address: 'Atocha Train Station (Metro: Atocha Renfe)', details: 'Hours: 11pm-5am. Tel: 91 506 0256' },
+            { name: 'Hotel Urban', address: 'Carrera de San Jeronimo, 34 (Metro: Sevilla)', details: 'Hours: 10am-4pm. Tel: 91 787 7770' },
+            { name: 'Café de Oriente', address: 'Plaza de Oriente, 2 (Metro: Opera)', details: 'Hours: 8:30am-2:30pm. Tel: 91 547 1564' },
+            { name: 'La Buga del Lobo', address: 'Argumosa, 11 (Metro: Lavapies)', details: 'Hours: 12noon-2pm. Tel: 91 467 6151' },
+            { name: 'Casa Mingo', address: 'Paseo de la Florida, 34', details: 'Hours: 11am-12midnight. Tel: 91 547 7918' },
+            { name: 'Terraza del Museo Thyssen Bornemisza', address: 'Paseo del Prado, 8 (Metro: Banco de España)', details: 'Tel: 91 429 2732' },
+            { name: 'Castellana 8', address: 'Castellana, 8 (Metro: Serrano / Colon)', details: 'Hours: 9pm-12midnight. Tel: 91 578 3478' },
+            { name: 'Terraza de El Espejo', address: 'Paseo de Recoletos, 33 (Metro: Banco Espana)', details: 'Hours: 9am-1:30pm. Tel: 91 308 2347' },
+            { name: 'Circulo de Bellas Artes', address: 'Alcala, 42 (Metro: Banco España / Sevilla)', details: 'Hours: 8am-2pm. Tel: 91 360 5400' }
         ]
     }
 ];
