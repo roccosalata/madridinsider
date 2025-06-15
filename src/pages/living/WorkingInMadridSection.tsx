@@ -1,4 +1,3 @@
-
 import React from "react";
 import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -21,7 +20,7 @@ const WorkingInMadridSection = () => (
         <CardHeader><CardTitle>Working in Madrid</CardTitle></CardHeader>
         <CardContent>
           {workingInMadridData ? (
-            <p>{(workingInmadridData as any).introduction}</p>
+            <p>{(workingInMadridData as any).introduction}</p>
           ) : (
             <p>Information about working in Madrid is coming soon.</p>
           )}
