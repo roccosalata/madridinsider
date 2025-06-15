@@ -10,4 +10,5 @@ export { bookStores } from './books';
 export { internationalGroceries } from './groceries';
 export { barberShops } from './barbers';
 export { locksmiths } from './locksmiths';
+export { healthFoodStores } from './healthfood';
 export { shopCategories } from './categories';

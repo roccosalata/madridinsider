@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ShopContact } from './types';
 import { opticalShops } from './optical';
@@ -9,7 +8,8 @@ import { musicStores } from './music';
 import { computerStores } from './computers';
 import { electronicStores } from './electronics';
 import { locksmiths } from './locksmiths';
-import { Eye, BookOpen, Globe2, Scissors, Music, Laptop, Cpu, Wrench } from 'lucide-react';
+import { healthFoodStores } from './healthfood';
+import { Eye, BookOpen, Globe2, Scissors, Music, Laptop, Cpu, Wrench, Leaf } from 'lucide-react';
 
 export interface ShopCategory {
   title: string;
@@ -61,6 +61,11 @@ const categories = [
         title: 'Electronic Components',
         data: electronicStores,
         icon: <Cpu className="h-6 w-6 text-madrid-red" />,
+    },
+    {
+        title: 'Health Food Stores',
+        data: healthFoodStores,
+        icon: <Leaf className="h-6 w-6 text-madrid-red" />,
     },
 ];
 
