@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Home, FileText, Landmark, HeartPulse, Wifi, Briefcase, School, ShoppingCart, Store, Mail, Church, GraduationCap, Users, ClipboardUser, Star, ClipboardList } from 'lucide-react';
+import { Home, FileText, Landmark, HeartPulse, Wifi, Briefcase, School, ShoppingCart, Store, Mail, Church, GraduationCap, Users, Clipboard, Star, ClipboardList } from 'lucide-react';
 
 export const livingCategories = [
   {
@@ -98,7 +98,7 @@ export const livingCategories = [
     slug: 'internships',
     title: 'Internships',
     link: '/living-in-madrid/internships',
-    icon: ClipboardUser,
+    icon: Clipboard,
     description: 'Information about finding and securing internships in Madrid.'
   },
   {
