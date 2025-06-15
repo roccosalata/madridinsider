@@ -3,9 +3,20 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Utensils, ArrowRight, Coffee, Wine, ChefHat } from 'lucide-react';
+import { Utensils, ArrowRight, Coffee, Wine, ChefHat, Globe } from 'lucide-react';
+import { diningCategories } from '@/data/foodDiningData';
+
+const categoryIcons: { [key: string]: React.ReactElement } = {
+  "Traditional Tapas Bars": <Wine className="h-4 w-4" />,
+  "Traditional Restaurants (Tabernas)": <Utensils className="h-4 w-4" />,
+  "Modern Spanish Cuisine": <ChefHat className="h-4 w-4" />,
+  "International Cuisine": <Globe className="h-4 w-4" />,
+  "Rooftop & Terrace Dining": <Coffee className="h-4 w-4" />,
+};
 
 const FoodDrinkHub = () => {
+  const previewCategories = diningCategories.slice(0, 4);
+
   return (
     <Card className="hover:shadow-lg transition-shadow">
       <CardHeader>
@@ -21,22 +32,12 @@ const FoodDrinkHub = () => {
         
         {/* Preview of available dining options */}
         <div className="space-y-2 mb-4 text-sm">
-          <div className="flex items-center gap-2 text-gray-600">
-            <Utensils className="h-4 w-4" />
-            <span>Traditional Tapas Bars</span>
-          </div>
-          <div className="flex items-center gap-2 text-gray-600">
-            <ChefHat className="h-4 w-4" />
-            <span>Fine Dining Restaurants</span>
-          </div>
-          <div className="flex items-center gap-2 text-gray-600">
-            <Coffee className="h-4 w-4" />
-            <span>Historic Cafés & Coffee Shops</span>
-          </div>
-          <div className="flex items-center gap-2 text-gray-600">
-            <Wine className="h-4 w-4" />
-            <span>Wine Bars & Bodegas</span>
-          </div>
+          {previewCategories.map((category) => (
+            <div key={category.name} className="flex items-center gap-2 text-gray-600">
+              {categoryIcons[category.name] || <Utensils className="h-4 w-4" />}
+              <span>{category.name}</span>
+            </div>
+          ))}
         </div>
         
         <Button asChild variant="outline" className="w-full mt-auto">
