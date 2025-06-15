@@ -1,4 +1,3 @@
-
 import { Compass, Home, Eye, Activity, Clock } from 'lucide-react';
 
 export interface MainCategory {
@@ -55,7 +54,7 @@ export const mainCategories: MainCategory[] = [
   {
     title: "See in Madrid",
     description: "Discover Madrid's incredible sights, from world-class museums to hidden architectural gems.",
-    imageUrl: "https://images.unsplash.com/photo-1577782853630-673eafa2c209?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=800&auto=format&fit=crop", // Replaced with a vibrant Madrid image
     link: "/see-in-madrid",
     icon: <Eye className="h-6 w-6" aria-hidden="true" />,
     subcategories: [

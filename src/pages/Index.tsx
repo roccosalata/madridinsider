@@ -6,6 +6,9 @@ import MadridNowSection from '@/components/MadridNowSection';
 import { mainCategories } from '@/data/mainCategories';
 import { format } from 'date-fns';
 
+const HERO_BG =
+  "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1600&q=80"; // Scenic Madrid option
+
 const IndexPage = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   
@@ -29,17 +32,25 @@ const IndexPage = () => {
         Skip to main content
       </a>
       
-      <div className="bg-gradient-to-br from-gray-100 to-gray-200 py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <div
+        className="relative py-16"
+        style={{
+          backgroundImage: `url(${HERO_BG})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" aria-hidden="true" />
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="text-center mb-8 text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl">
               Welcome to Madrid Insider
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto opacity-90 drop-shadow-lg">
               Your comprehensive English-language directory for Madrid - whether you're visiting for a few days or making Madrid your home.
             </p>
           </div>
-          
           <MadridNowSection madridTime={madridTime} madridDate={madridDate} />
         </div>
       </div>
@@ -57,3 +68,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 export { mainCategories };
+
