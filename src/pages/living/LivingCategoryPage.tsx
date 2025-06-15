@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -11,17 +10,12 @@ import AccommodationSection from './AccommodationSection';
 import BankingFinancesSection from './BankingFinancesSection';
 import CommunityIntegrationSection from './CommunityIntegrationSection';
 import ConnectivityHomeSection from './ConnectivityHomeSection';
-import DailyNecessitiesSection from './DailyNecessitiesSection';
 import EducationChildcareSection from './EducationChildcareSection';
 import HealthcareGuideSection from './HealthcareGuideSection';
-import InternshipsSection from './InternshipsSection';
 import MarketsSection from './MarketsSection';
 import PaperworkSection from './PaperworkSection';
-import PostalServicesSection from './PostalServicesSection';
 import ReligionsFaithsSection from './ReligionsFaithsSection';
 import ShoppingServicesSection from './ShoppingServicesSection';
-import StudentLifeSection from './StudentLifeSection';
-import TalentAgenciesSection from './TalentAgenciesSection';
 import WorkingInMadridSection from './WorkingInMadridSection';
 
 const sectionComponents: Record<string, React.FC> = {
@@ -34,13 +28,8 @@ const sectionComponents: Record<string, React.FC> = {
   'education': EducationChildcareSection,
   'shopping-services': ShoppingServicesSection,
   'markets': MarketsSection,
-  'postal-services': PostalServicesSection,
   'religions-faiths': ReligionsFaithsSection,
-  'student-life': StudentLifeSection,
   'community-integration': CommunityIntegrationSection,
-  'internships': InternshipsSection,
-  'talent-agencies': TalentAgenciesSection,
-  'daily-necessities-services': DailyNecessitiesSection,
 };
 
 const LivingCategoryPage: React.FC = () => {

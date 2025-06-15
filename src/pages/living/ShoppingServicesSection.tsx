@@ -2,6 +2,8 @@
 import React from "react";
 import CategoryHubCard from '@/components/CategoryHubCard';
 import { shopCategories } from '@/data/shops';
+import PostAndMailInfo from "@/components/PostAndMailInfo";
+import { postAndMailInfo } from "@/data/postalServices";
 
 const ShoppingServicesSection = () => (
   <section id="shopping-services" className="mb-12 scroll-mt-20">
@@ -16,6 +18,10 @@ const ShoppingServicesSection = () => (
           icon={category.icon}
         />
       ))}
+    </div>
+    <div className="mt-16">
+        <h3 className="text-3xl font-bold mb-6 text-center">Postal Services</h3>
+        <PostAndMailInfo info={postAndMailInfo} />
     </div>
   </section>
 );
