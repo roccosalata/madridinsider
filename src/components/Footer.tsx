@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 
-// Pick 5 most popular/essential highlights
+// Already the 5 most popular/essential highlights are used here.
 const highlights = [
   {
     label: "Tourist Offices",
@@ -31,11 +31,13 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white border-t border-gray-700">
       <div className="container mx-auto px-4 flex flex-col items-center min-h-[48px] py-2">
-        <div className="flex items-center gap-2 mb-2">
+        {/* Brand on its own line */}
+        <div className="flex items-center gap-2 mb-1">
           <span className="text-lg font-bold text-madrid-red">Madrid</span>
           <span className="text-lg font-bold text-white">Insider</span>
         </div>
-        <nav className="flex flex-wrap gap-4 justify-center mb-1">
+        {/* Centered highlight links */}
+        <nav className="flex flex-wrap gap-4 justify-center mb-1 w-full">
           {highlights.map(link => (
             <Link
               key={link.to}
