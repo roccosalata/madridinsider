@@ -25,6 +25,23 @@ const magicComedyVenues = [
   { name: "Magnus Bar", address: "San Marcos, 28 (Metro: Chueca)", hours: "Thurs, Fri & Sun: Midnight-2am" },
 ];
 
+// New data for Live Theater
+const liveTheaterVenues = [
+    { name: "El Canto de la Cabra", address: "San Gregorio, 8 (Metro: Chueca)", details: "El canto is one of Madrid's most experimental theaters with works by contemporary writers, both Spanish and foreign. The theater is intimate with a capacity of just 70 and in the summer there are outdoor performances in the adjoining square.", phone: "913-104-222" },
+    { name: "La Cuarta Pared", address: "Ercilla, 17 (Metro: Embajadores)", details: "With lots of space and sometimes daring programming, the Cuarta Pared is a great alternative venue. They also run a parallel season of theater for children.", phone: "915-172-317" },
+    { name: "Ensayo 100", address: "Raimundo Lulio, 20 (Metro: Bilbao)", details: "Founded by an Argentine, the Ensayo is generally considered an intellectual fringe venue; it occasionally stages English theater.", phone: "914-479-486" },
+    { name: "Teatro Alfil", address: "Pez, 10 (Metro: Noviciado)", details: "This small, cozy theater, well known for its risky, wacky productions gives playgoers a chance to drink during the performance with a bar right next to the stage.", phone: "915-215-827" },
+    { name: "Teatro Pradillo", address: "Pradillo, 12 (Metro: Concha Espina)", details: "A primary participant in the Festival de Otoño, the Pradillo is known for its consistently outstanding performances - including a lot of puppet theater - and its lobby art gallery.", phone: "914-169-011" },
+    { name: "Sala Triangulo", address: "Zurita, 20 (Metro: Lavapies)", details: "Often premiering new actors and writers, this is one of Madrid's best alternative theaters.", phone: "915-306-891" },
+    { name: "Abadia", address: "Fernandez de los Rios, 42 (Metro: Quevedo)", details: "One of Madrid's newest theaters, the Abadia offers outstanding theatrical and dance performances as well as poetry recitals and chamber concerts.", phone: "914-481-627" },
+    { name: "Albeniz", address: "Paz, 11 (Metro: Sol)", details: "The cornerstone of Madrid theater plays a central role in the city's theater and dance festivals. Also of note is their ten-year collaboration with the National Ballet of Cuba.", phone: "915-318-311" },
+    { name: "Teatro de la Comedia", address: "Principe, 14 (Metro: Sevilla)", details: "This venue offers classical Spanish theater at its best. The company puts on only three productions a year, but they are considered some of Spain's finest.", phone: "915-214-931" },
+    { name: "Teatro Español", address: "Principe, 25 (Metro: Seville)", details: "The Teatro Español was one the site of the Corral del Principe, a theater which dates from 1583 in which many of Lope de Vega's plays premiered. The current theater was built in 1745 and is one of the most elegant in Madrid.", phone: "914-296-297" },
+    { name: "Teatro de Madrid", address: "Ave. de la Ilustracion (Metro: Barrio del Pilar)", details: "A beautiful modern theater, recently built by the city council, this is an ideal venue for ballet and Spanish dance.", phone: "917-301-750" },
+    { name: "Teatro Real", address: "Plaza de Oriente (Metro: Opera)", details: "Madrid's famed opera house first opened in 1850. It was closed for renovation in 1987, and only just came back into business in 1997. The fruits of the lengthy renovation were well worth the wait.", phone: "915-160-606" },
+    { name: "Wonderland Theater Productions", address: "Teatro Calderón: C/ Atocha, 18 & Teatro Mayor: C/ Mayor, 6 (Metro: Sol)", details: "Enjoy all the performances by the WONDERLAND GROUP, the biggest producer of children's theater and family entertainment, by using your Madrid Card and also enjoy the great prices! The Lunnis, the Tweenies, Garfield, Spiderman live, Merlin the Magician or Alice in Wonderland are just some of the productions performed by WONDERLAND. Check billboards and enjoy an afternoon performance with a fairy-tale ending. Websites: www.teatromayor.com, www.teatrocalderon.com, www.elpaisdelasmaravillas.com", phone: "916 376 685" },
+];
+
 const entertainmentSections = [
   {
     id: 'teleferico',
@@ -52,6 +69,13 @@ const entertainmentSections = [
     icon: <Music className="h-6 w-6 text-madrid-red" />,
     description: 'Madrid is the world capital of Flamenco! Below are some highly recommended venues for music, dance, and tapas:',
     venues: flamencoVenues,
+  },
+  {
+      id: 'live-theater',
+      title: 'Live & Alternative Theater',
+      icon: <VenetianMask className="h-6 w-6 text-madrid-red" />,
+      description: 'Madrid boasts a rich and diverse theater scene, from grand classical stages to intimate, experimental venues. Below are some recommended theaters.',
+      venues: liveTheaterVenues,
   },
   {
       id: 'planetarium-imax',
@@ -173,6 +197,7 @@ const EntertainmentPage = () => {
                       <div key={venue.name} className="border rounded px-3 py-2 bg-muted/50 text-sm">
                         <div className="font-medium">{venue.name}</div>
                         <div className="text-xs">{venue.address}</div>
+                        {venue.details && <p className="text-xs text-gray-600 mt-1">{venue.details}</p>}
                         {venue.hours && <div className="text-xs"><strong>Hours:</strong> {venue.hours}</div>}
                         {venue.phone && <div className="text-xs"><strong>Tel.:</strong> {venue.phone}</div>}
                         {venue.phones && <div className="text-xs"><strong>Tel.:</strong> {venue.phones.join(' / ')}</div>}
