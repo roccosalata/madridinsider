@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Utensils, CalendarDays, Clock, Phone, Mail, Globe, MapPin, IceCreamCone, Wine, Vegan, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { vegetarianRestaurants } from '@/data/foodDiningData';
 
 const cheapEats = [
   { name: 'El Tigre', address: 'Infantas, 30 (Metro: Chueca / Banco de España)', description: "If you can elbow your way through the crowds to the bar, you'll find beer or cider for €1.50, immediately followed by a plate of hot tapas: croquettes, patatas bravas and tostadas galore. Amazingly, the bar staff never repeat the dishes that accompany each round." },
@@ -60,20 +61,6 @@ const tapasBars = [
   { name: 'Albur', address: 'Manuela Malesaña, 15 (Metro: Tribunal)', description: "Albur's menu features tapas from northern Spain, such as roasted red peppers stuffed with cod." },
   { name: 'El Brillante', address: 'Plaza Emperador Carlos V, 8 (Metro: Atocha)', description: 'In the square near the entrance of the Reina Sofia, has a great selection of no-frills tapas, such as tender pulpo a la gallega /Galician-style octopus) and a fantastic fried calamari.' },
 ];
-
-const vegetarianRestaurants = [
-  { name: 'Al Natural', address: 'Zorilla, 11', website: 'www.alnatural.biz', phone: '91 369 4709' },
-  { name: 'Comme Bio', address: 'Plaza Olavide Esq. Trafalgar, 25 (Metro: Quevedo)', website: 'www.commebio.es', phone: '91 446 1666' },
-  { name: 'Artemisa', address: 'Tres Cruces, 4 (Metro: Gran Via)', hours: 'Daily 1:30pm-4:30pm / 9pm-midnight', website: 'www.la_red.com/artemisa', email: 'artemisa@la_red.com', phone: '91 521 8721' },
-  { name: 'Ecocentro', address: 'Esquilache, 4 (Metro: Rios Rosas)', hours: 'Mon-Sun 10am-10pm', website: 'www.ecocentro.es', phone: '91 553 5502' },
-  { name: 'La Biotica', address: 'Amor de Dios, 3 (Metro: Anton Martin)', phone: '91 429 0780' },
-  { name: 'El Estragon', address: 'Pl de la Paja, 10 (Metro: La Latina)', hours: 'Daily 1pm-4:30pm / 8pm-12:30am', phone: '91 365 8982' },
-  { name: 'Vegetarian House', address: 'Costanilla de los Desamparados, 21 (Metro: Anton Martin)', description: 'Hindu Vegetarian', hours: 'Tue-Sat 1pm-4:30pm / 8pm-11pm; Sun 1pm-4:30pm', phone: '91 420 3928' },
-  { name: 'Fresc Co', address: 'Sagasta, 30 (Metro: Alonso Martinez)', description: 'All you can eat buffet', hours: 'Daily 1pm-1am', phone: '91 447 4388' },
-  { name: 'Chez Pomme', address: 'Pelayo, 4 (Metro: Chueca)', hours: 'Mon-Sat 1:30pm-4:30pm / 8:30pm-11:30pm. Fri-Sat until midnight', phone: '91 532 1646' },
-  { name: 'La Mazorca', address: 'Paseo Infanta Isabel, 21 (Metro: Atocha)', phone: '91 501 7013' },
-];
-
 
 const FoodAndDrinkPage = () => {
   return (
