@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +7,17 @@ import { volleyballInfo, tennisInfo, skiingInfo, rugbyInfo, raceKartsInfo, poolB
 import { Mail, MountainSnow, Users, Phone, Globe, Target, Snowflake, Award, Dices } from 'lucide-react';
 
 const OtherSportsPage = () => {
+  const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({});
+
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash && sectionsRef.current[hash]) {
+      setTimeout(() => {
+        sectionsRef.current[hash]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, []);
+
   return (
     <Layout>
       <HeroSection
@@ -16,7 +27,7 @@ const OtherSportsPage = () => {
       <div className="container mx-auto py-12 px-4 space-y-16">
         
         {/* Team Sports Section */}
-        <section>
+        <section id="team-sports" ref={el => { if (el) sectionsRef.current['team-sports'] = el; }}>
             <h2 className="text-3xl font-bold mb-8 text-madrid-red flex items-center gap-3">
                 <Users className="h-8 w-8" />
                 Team Sports
@@ -68,7 +79,7 @@ const OtherSportsPage = () => {
         </section>
 
         {/* Racquet Sports Section */}
-        <section>
+        <section id="racquet-sports" ref={el => { if (el) sectionsRef.current['racquet-sports'] = el; }}>
             <h2 className="text-3xl font-bold mb-8 text-madrid-red flex items-center gap-3">
                 <Award className="h-8 w-8" />
                 Racquet Sports
@@ -85,7 +96,7 @@ const OtherSportsPage = () => {
         </section>
 
         {/* Winter Sports Section */}
-        <section>
+        <section id="winter-sports" ref={el => { if (el) sectionsRef.current['winter-sports'] = el; }}>
             <h2 className="text-3xl font-bold mb-8 text-madrid-red flex items-center gap-3">
               <MountainSnow className="h-8 w-8" />
               Winter Sports
@@ -152,7 +163,7 @@ const OtherSportsPage = () => {
         </section>
 
         {/* Leisure & Fun Section */}
-        <section>
+        <section id="leisure-fun" ref={el => { if (el) sectionsRef.current['leisure-fun'] = el; }}>
             <h2 className="text-3xl font-bold mb-8 text-madrid-red flex items-center gap-3">
               <Dices className="h-8 w-8" />
               Leisure & Fun

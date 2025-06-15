@@ -25,7 +25,7 @@ const sportsHubData = {
     categories: [
       { title: "Football (Fútbol)", description: "Experience the passion of Spanish football. Find info on stadiums, matches, and local teams.", link: "/do-in-madrid/sports/football", icon: Trophy },
       { title: "Basketball", description: "Find information on basketball events, including the Copa del Rey, and where to play in Madrid.", link: "/do-in-madrid/sports/basketball", icon: Dribbble },
-      { title: "Other Team Sports", description: "Discover information about Volleyball, Rugby, and Cricket clubs in Madrid.", link: "/do-in-madrid/sports/other-sports", icon: Users },
+      { title: "Other Team Sports", description: "Discover information about Volleyball, Rugby, and Cricket clubs in Madrid.", link: "/do-in-madrid/sports/other-sports#team-sports", icon: Users },
     ]
   },
   "Individual Fitness & Outdoors": {
@@ -42,15 +42,15 @@ const sportsHubData = {
     icon: Award,
     description: "Information on tennis, padel, and other racquet sports in the city.",
     categories: [
-      { title: "Tennis", description: "Learn about the Madrid Masters and find where to play.", link: "/do-in-madrid/sports/other-sports", icon: Award },
+      { title: "Tennis", description: "Learn about the Madrid Masters and find where to play.", link: "/do-in-madrid/sports/other-sports#racquet-sports", icon: Award },
     ]
   },
   "Winter Sports": {
     icon: MountainSnow,
     description: "Hit the slopes or the ice with skiing and skating options near Madrid.",
     categories: [
-        { title: "Skiing & Snowboarding", description: "Find nearby ski resorts for a day trip from Madrid.", link: "/do-in-madrid/sports/other-sports", icon: MountainSnow },
-        { title: "Ice Skating", description: "Enjoy ice skating at various rinks in the city.", link: "/do-in-madrid/sports/other-sports", icon: Snowflake },
+        { title: "Skiing & Snowboarding", description: "Find nearby ski resorts for a day trip from Madrid.", link: "/do-in-madrid/sports/other-sports#winter-sports", icon: MountainSnow },
+        { title: "Ice Skating", description: "Enjoy ice skating at various rinks in the city.", link: "/do-in-madrid/sports/other-sports#winter-sports", icon: Snowflake },
     ]
   },
   "Leisure & Fun": {
@@ -60,7 +60,7 @@ const sportsHubData = {
       { title: "Golf", description: "Tee off at one of the many scenic golf courses in and around the Madrid region.", link: "/do-in-madrid/sports/golf", icon: Flag },
       { title: "Boating", description: "Enjoy a relaxing time on the water at Madrid's main parks.", link: "/do-in-madrid/sports/boating", icon: Sailboat },
       { title: "Bowling", description: "Challenge your friends at one of Madrid's bowling alleys.", link: "/do-in-madrid/sports/bowling", icon: Target },
-      { title: "Karts & Billiards", description: "More fun activities, including go-karting and pool halls.", link: "/do-in-madrid/sports/other-sports", icon: Medal },
+      { title: "Karts & Billiards", description: "More fun activities, including go-karting and pool halls.", link: "/do-in-madrid/sports/other-sports#leisure-fun", icon: Medal },
     ]
   },
 };
