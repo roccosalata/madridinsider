@@ -59,7 +59,7 @@ export const directoryData: Record<string, Record<string, DirectoryCategory>> = 
     },
     'community-integration': {
       title: 'Community & Integration',
-      introduction: 'Information about community and integration is coming soon.'
+      introduction: 'Find ways to meet new people, join communities, and feel at home in Madrid. This section covers language exchanges, places of worship, and other opportunities to integrate into local life.'
     },
     'daily-necessities-services': {
       title: 'Daily Necessities & Services',

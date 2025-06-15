@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -11,7 +10,6 @@ import CommunityIntegrationSection from './CommunityIntegrationSection';
 import EducationChildcareSection from './EducationChildcareSection';
 import EssentialServicesSection from './EssentialServicesSection';
 import PaperworkSection from './PaperworkSection';
-import ReligionsFaithsSection from './ReligionsFaithsSection';
 import ShoppingServicesSection from './ShoppingServicesSection';
 import WorkingInMadridSection from './WorkingInMadridSection';
 
@@ -21,7 +19,6 @@ const sectionComponents: Record<string, React.FC> = {
   'work': WorkingInMadridSection,
   'education': EducationChildcareSection,
   'shopping-services': ShoppingServicesSection,
-  'religions-faiths': ReligionsFaithsSection,
   'community-integration': CommunityIntegrationSection,
 };
 

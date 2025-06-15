@@ -4,7 +4,6 @@ import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import BilingualSchoolsSection from "@/components/living/education/BilingualSchoolsSection";
 import LanguageSchoolsSection from "@/components/living/education/LanguageSchoolsSection";
-import LanguageExchangeSection from "@/components/living/education/LanguageExchangeSection";
 import TeacherTrainingSection from "@/components/living/education/TeacherTrainingSection";
 import LibrariesSection from "@/components/living/education/LibrariesSection";
 
@@ -28,7 +27,6 @@ const EducationChildcareSection = () => (
 
       <BilingualSchoolsSection />
       <LanguageSchoolsSection />
-      <LanguageExchangeSection />
       <TeacherTrainingSection />
       <LibrariesSection />
       

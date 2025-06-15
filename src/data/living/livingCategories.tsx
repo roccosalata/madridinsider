@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Home, FileText, Landmark, HeartPulse, Wifi, Briefcase, School, ShoppingCart, Store, Church, Users, Settings } from 'lucide-react';
 
@@ -37,13 +36,6 @@ export const livingCategories = [
     link: '/living-in-madrid/education',
     icon: School,
     description: "Find information about schools, universities, childcare options, and student life."
-  },
-  {
-    slug: 'religions-faiths',
-    title: 'Religions & Faiths',
-    link: '/living-in-madrid/religions-faiths',
-    icon: Church,
-    description: 'Find places of worship and information about different religious communities.'
   },
   {
     slug: 'paperwork',
