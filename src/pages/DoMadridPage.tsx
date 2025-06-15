@@ -2,11 +2,8 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
-import FoodDrinkHub from '@/components/do/FoodDrinkHub';
-import NightlifeHub from '@/components/do/NightlifeHub';
-import EntertainmentHub from '@/components/do/EntertainmentHub';
-import ShoppingHub from '@/components/do/ShoppingHub';
-import SportsRecreationHub from '@/components/do/SportsRecreationHub';
+import CategoryHubCard from '@/components/CategoryHubCard';
+import { doCategories } from '@/data/do/doCategories';
 
 const DoMadridPage: React.FC = () => {
   return (
@@ -26,11 +23,18 @@ const DoMadridPage: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-8 text-center">Explore by Category</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            <FoodDrinkHub />
-            <NightlifeHub />
-            <EntertainmentHub />
-            <ShoppingHub />
-            <SportsRecreationHub />
+            {doCategories.map((category) => {
+              const IconComponent = category.icon;
+              return (
+                <CategoryHubCard
+                  key={category.link}
+                  title={category.title}
+                  link={category.link}
+                  icon={<IconComponent className="h-8 w-8 mb-2 text-madrid-red" />}
+                  description={category.description}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
