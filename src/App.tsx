@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -38,6 +39,8 @@ import ShopCategoryPage from './pages/living/ShopCategoryPage';
 import MadridCard from './pages/essentials/MadridCard';
 import MarketsPage from './pages/living/MarketsPage';
 import EmergencyContactsPage from './pages/essentials/EmergencyContactsPage';
+import PostalServicesPage from './pages/living/PostalServicesPage';
+import ReligionsFaithsPage from './pages/living/ReligionsFaithsPage';
 
 const queryClient = new QueryClient();
 
@@ -62,6 +65,8 @@ function App() {
             <Route path="/living-in-madrid/shopping-services" element={<ShopsAndServicesPage />} />
             <Route path="/living-in-madrid/shopping-services/:categorySlug" element={<ShopCategoryPage />} />
             <Route path="/living-in-madrid/markets" element={<MarketsPage />} />
+            <Route path="/living-in-madrid/postal-services" element={<PostalServicesPage />} />
+            <Route path="/living-in-madrid/religions-faiths" element={<ReligionsFaithsPage />} />
             
             {/* See in Madrid */}
             <Route path="/see-in-madrid" element={<SeeMadridPage />} />

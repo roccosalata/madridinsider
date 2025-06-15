@@ -49,6 +49,8 @@ export const mainCategories: MainCategory[] = [
       { title: "Education & Schools", link: "/living-in-madrid/education" },
       { title: "Shops & Services", link: "/living-in-madrid/shopping-services" },
       { title: "Markets", link: "/living-in-madrid/markets" },
+      { title: "Postal Services", link: "/living-in-madrid/postal-services" },
+      { title: "Religions & Faiths", link: "/living-in-madrid/religions-faiths" },
     ]
   },
   {
