@@ -7,8 +7,6 @@ import NightlifeHub from '@/components/do/NightlifeHub';
 import EntertainmentHub from '@/components/do/EntertainmentHub';
 import ShoppingHub from '@/components/do/ShoppingHub';
 import SportsRecreationHub from '@/components/do/SportsRecreationHub';
-import SpanishExperiencesSection from '@/components/do/SpanishExperiencesSection';
-import EntertainmentActivitiesSection from '@/components/do/EntertainmentActivitiesSection';
 
 const DoMadridPage: React.FC = () => {
   return (
@@ -24,12 +22,6 @@ const DoMadridPage: React.FC = () => {
           Dive into the heart of Spanish culture. Whether you're a foodie, a night owl, a culture enthusiast, or seeking recreation, Madrid has something for everyone.
         </p>
         
-        {/* Spanish Cultural Experiences */}
-        <SpanishExperiencesSection />
-        
-        {/* Entertainment & Activities */}
-        <EntertainmentActivitiesSection />
-
         {/* Main Category Hubs */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-8 text-center">Explore by Category</h2>
