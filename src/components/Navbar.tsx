@@ -29,8 +29,10 @@ const Navbar = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center" role="menubar">
-            <DropdownNavigation />
+          <div className="hidden md:flex items-center gap-2" role="menubar">
+            {mainCategories.map(category => (
+              <DropdownNavigation key={category.title} category={category} />
+            ))}
           </div>
 
           {/* Mobile menu button */}
