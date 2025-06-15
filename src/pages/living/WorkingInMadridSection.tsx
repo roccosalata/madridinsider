@@ -1,11 +1,13 @@
 
+```typescript
 import React from "react";
 import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { talentAgencies } from "@/data/living/talentAgencies";
+import TalentAgenciesList from "@/components/living/work/TalentAgenciesList";
 
 const workingInMadridData = directoryData['living-in-madrid']?.['working-in-madrid'];
 const internshipsData = directoryData['living-in-madrid']?.['internships'];
-const talentAgenciesData = directoryData['living-in-madrid']?.['talent-agencies'];
 
 const WorkingInMadridSection = () => (
   <section id="work" className="mb-12 scroll-mt-20">
@@ -37,18 +39,10 @@ const WorkingInMadridSection = () => (
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader><CardTitle>Talent Agencies</CardTitle></CardHeader>
-        <CardContent>
-          {talentAgenciesData ? (
-            <p>{(talentAgenciesData as any).introduction}</p>
-          ) : (
-            <p>Information about talent agencies is coming soon.</p>
-          )}
-        </CardContent>
-      </Card>
+      <TalentAgenciesList agencies={talentAgencies} />
     </div>
   </section>
 );
 
 export default WorkingInMadridSection;
+```

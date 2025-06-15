@@ -1,4 +1,3 @@
-
 export interface DirectoryCategory {
   title: string;
   introduction?: string;
@@ -27,7 +26,7 @@ export const directoryData: Record<string, Record<string, DirectoryCategory>> = 
     },
     'talent-agencies': {
       title: 'Talent Agencies',
-      introduction: 'Information about talent agencies is coming soon.'
+      introduction: 'A list of talent and casting agencies in Madrid for actors, models, and other professionals in the audiovisual industry.'
     },
     'internships': {
       title: 'Internships',
