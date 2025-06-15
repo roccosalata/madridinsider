@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
@@ -6,6 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Utensils, Wine, Ticket, Dumbbell, ArrowRight, ShoppingBag } from 'lucide-react';
+import BullfightsCard from "@/components/do/BullfightsCard";
+import FlamencoVenuesCard from "@/components/do/FlamencoVenuesCard";
+import PlanetariumIMAXCard from "@/components/do/PlanetariumIMAXCard";
+import MagicComedyCard from "@/components/do/MagicComedyCard";
 
 const doCategories = [
   {
@@ -54,6 +57,13 @@ const DoMadridPage: React.FC = () => {
         <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">
           Dive into the heart of Spanish culture. Whether you're a foodie, a night owl, a culture enthusiast, or seeking recreation, Madrid has something for everyone. Explore our guides to make the most of your time in the city.
         </p>
+        {/* New experience highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <BullfightsCard />
+          <FlamencoVenuesCard />
+          <PlanetariumIMAXCard />
+          <MagicComedyCard />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {doCategories.map((category) => (

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -22,7 +21,6 @@ const WhatsOnContent = () => {
               <TabsTrigger value="flamenco">Flamenco</TabsTrigger>
               <TabsTrigger value="planetarium">Planetarium & IMAX</TabsTrigger>
               <TabsTrigger value="magic">Magic &amp; Comedy</TabsTrigger>
-              <TabsTrigger value="radio">English Radio</TabsTrigger>
             </TabsList>
 
             {/* Bullfights */}
@@ -117,20 +115,6 @@ const WhatsOnContent = () => {
                 <p className="text-sm mt-2">For classical &amp; alternative comedy or magic shows check local listings and ask at your hotel!</p>
               </div>
             </TabsContent>
-
-            {/* Radio */}
-            <TabsContent value="radio">
-              <div>
-                <h3 className="font-semibold text-lg mb-1">Madrid Live (in English) ― Radio Circulo</h3>
-                <p className="text-sm">A dynamic half-hour of arts &amp; entertainment, presented by Ann Bateson.</p>
-                <ul className="text-sm mb-2">
-                  <li><strong>Broadcast live:</strong> Tues 6:30pm</li>
-                  <li><strong>Repeat:</strong> Weds 9:30am</li>
-                  <li><strong>Frequency:</strong> 100.4 FM</li>
-                  <li><a href="https://www.circulobellasartes.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener">circulobellasartes.com</a></li>
-                </ul>
-              </div>
-            </TabsContent>
           </Tabs>
         </CardContent>
       </Card>
@@ -177,4 +161,3 @@ const WhatsOnContent = () => {
 };
 
 export default WhatsOnContent;
-
