@@ -16,7 +16,7 @@ import HealthcareSection from './HealthcareSection';
 
 const sectionComponents: Record<string, React.FC> = {
   'essential-services': EssentialServicesSection,
-  'work': WorkingIn MadridSection,
+  'work': WorkingInMadridSection,
   'education': EducationChildcareSection,
   'shopping-services': ShoppingServicesSection,
   'community-integration': CommunityIntegrationSection,
