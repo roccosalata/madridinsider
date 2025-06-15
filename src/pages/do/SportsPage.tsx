@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
@@ -32,7 +31,7 @@ const sportsHubData = {
     icon: Dumbbell,
     description: "Stay active on your own terms with gyms, parks, and various individual sports.",
     categories: [
-      { title: "Gyms & Fitness", description: "Stay in shape with a wide range of gyms, fitness centers, and health clubs in Madrid.", link: "#", icon: Dumbbell },
+      { title: "Gyms & Fitness", description: "Stay in shape with a wide range of gyms, fitness centers, and health clubs in Madrid.", link: "/do-in-madrid/sports/gyms", icon: Dumbbell },
       { title: "Running & Parks", description: "Discover the best running routes and parks for outdoor exercise.", link: "/do-in-madrid/sports/running", icon: Footprints },
       { title: "Swimming", description: "Cool off and get a great workout at Madrid's public and private swimming pools.", link: "/do-in-madrid/sports/swimming", icon: Waves },
       { title: "Cycling / Biking", description: "Rent, repair or buy a bike and explore the city on two wheels.", link: "/do-in-madrid/sports/cycling", icon: Bike },
