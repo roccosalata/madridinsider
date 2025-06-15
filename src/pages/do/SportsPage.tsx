@@ -76,7 +76,7 @@ const sportCategories = [
   },
   {
     title: "Other Sports",
-    description: "Explore opportunities for tennis, volleyball, race karts, pool, ice skating, cricket, rugby and more throughout the city.",
+    description: "Discover more activities like team sports, winter sports, racquet sports, and other fun leisure options.",
     link: "/do-in-madrid/sports/other-sports",
     icon: Medal,
   },
