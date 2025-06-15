@@ -1,5 +1,4 @@
 
-```typescript
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TalentAgency } from '@/data/living/talentAgencies';
@@ -40,4 +39,3 @@ const TalentAgenciesList: React.FC<TalentAgenciesListProps> = ({ agencies }) => 
 };
 
 export default TalentAgenciesList;
-```
