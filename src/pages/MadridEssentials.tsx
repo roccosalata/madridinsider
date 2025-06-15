@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import CategoryHubCard from '@/components/CategoryHubCard';
-import { Briefcase, Map, CreditCard, HeartHandshake, ShieldCheck, Users, CloudSun, Building, Phone, Globe } from 'lucide-react';
+import { Briefcase, Map, CreditCard, HeartHandshake, ShieldCheck, Users, CloudSun, Building, Phone, Globe, Landmark, Mail, Church } from 'lucide-react';
 
 const MadridEssentials = () => {
   const essentialTopics = [
@@ -36,6 +36,24 @@ const MadridEssentials = () => {
       link: "/essentials/embassies",
       icon: Globe,
       description: "Contact information for foreign embassies in Madrid."
+    },
+    {
+      title: "Postal Services",
+      link: "/essentials/postal-services",
+      icon: Mail,
+      description: "Your guide to sending and receiving mail in Madrid."
+    },
+    {
+      title: "Banking & Money",
+      link: "/essentials/banking",
+      icon: Landmark,
+      description: "How to open an account, use banks, and exchange currency."
+    },
+    {
+      title: "Religions & Faiths",
+      link: "/essentials/religions-faiths",
+      icon: Church,
+      description: "Find places of worship and spiritual communities."
     },
     {
       title: "Safety & Security",
