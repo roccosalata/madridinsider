@@ -1,4 +1,3 @@
-
 import React from "react";
 import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -81,6 +80,23 @@ const WorkingInMadridSection = () => (
                 </a>
             </div>
           </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader><CardTitle>Hostess / Azafatas</CardTitle></CardHeader>
+        <CardContent>
+            <div>
+              <h4 className="font-semibold text-madrid-red mb-2">Azafatas & Promotoras</h4>
+              <div className="space-y-2 text-sm text-gray-700">
+                  <p>Portal de azafatas y promotoras.</p>
+                  <p>National directory of agencies.</p>
+                  <a href="http://www.azafatasypromotoras.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
+                      <Globe className="h-4 w-4 flex-shrink-0" />
+                      <span>www.azafatasypromotoras.com</span>
+                  </a>
+              </div>
+            </div>
         </CardContent>
       </Card>
     </div>
