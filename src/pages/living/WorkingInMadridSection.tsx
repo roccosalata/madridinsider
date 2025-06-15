@@ -4,10 +4,10 @@ import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { talentAgencies } from "@/data/living/talentAgencies";
 import TalentAgenciesList from "@/components/living/work/TalentAgenciesList";
-import { Globe, Mail, Phone } from "lucide-react";
+import { Globe, Mail, Phone, MapPin, User } from "lucide-react";
+import { internshipOpportunities } from "@/data/living/internshipOpportunities";
 
 const workingInMadridData = directoryData['living-in-madrid']?.['working-in-madrid'];
-const internshipsData = directoryData['living-in-madrid']?.['internships'];
 
 const WorkingInMadridSection = () => (
   <section id="work" className="mb-12 scroll-mt-20">
@@ -31,11 +31,22 @@ const WorkingInMadridSection = () => (
           <p className="text-sm text-red-600 mb-4">
             Disclaimer: Internship regulations and availability can change. Always consult official sources and relevant organizations for the latest information.
           </p>
-          {internshipsData ? (
-            <p>{(internshipsData as any).introduction}</p>
-          ) : (
-            <p>Information about internships is coming soon.</p>
-          )}
+          <div className="space-y-6">
+            {internshipOpportunities.map((opportunity, index) => (
+              <div key={index} className="py-4 border-b last:border-b-0">
+                <h4 className="font-semibold text-madrid-red mb-2">{opportunity.name}</h4>
+                <div className="space-y-1 text-sm text-gray-700">
+                  {opportunity.description && <p>{opportunity.description}</p>}
+                  {opportunity.address && <p className="flex items-start gap-2"><MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" /><span>{opportunity.address}</span></p>}
+                  {opportunity.contactPerson && <p className="flex items-center gap-2"><User className="h-4 w-4 flex-shrink-0" />{opportunity.contactPerson}</p>}
+                  {opportunity.phone && <p className="flex items-center gap-2"><Phone className="h-4 w-4 flex-shrink-0" />{opportunity.phone}</p>}
+                  {opportunity.email && <a href={`mailto:${opportunity.email}`} className="flex items-center gap-2 text-blue-600 hover:underline"><Mail className="h-4 w-4 flex-shrink-0" />{opportunity.email}</a>}
+                  {opportunity.website && <a href={!opportunity.website.startsWith('http') ? `http://${opportunity.website}` : opportunity.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline"><Globe className="h-4 w-4 flex-shrink-0" />{opportunity.website}</a>}
+                  {opportunity.notes && <p className="text-sm text-blue-600 font-medium mt-2">{opportunity.notes}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
         </CardContent>
       </Card>
 
