@@ -76,15 +76,18 @@ const MadridEssentials = () => {
         </div>
         <h2 className="text-3xl font-bold mb-8 text-center">Essential Topics</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {essentialTopics.map((sub) => (
-            <CategoryHubCard
-              key={sub.link}
-              title={sub.title}
-              link={sub.link}
-              icon={sub.icon}
-              description={sub.description}
-            />
-          ))}
+          {essentialTopics.map((sub) => {
+            const Icon = sub.icon;
+            return (
+              <CategoryHubCard
+                key={sub.link}
+                title={sub.title}
+                link={sub.link}
+                icon={<Icon className="h-8 w-8 mb-2 text-madrid-red" />}
+                description={sub.description}
+              />
+            );
+          })}
         </div>
       </div>
     </Layout>
