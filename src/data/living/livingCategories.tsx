@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Home, FileText, Landmark, HeartPulse, Wifi, Briefcase, School, ShoppingCart, Store, Church, Users } from 'lucide-react';
+import { Home, FileText, Landmark, HeartPulse, Wifi, Briefcase, School, ShoppingCart, Store, Church, Users, Settings } from 'lucide-react';
 
 export const livingCategories = [
   {
@@ -18,25 +18,11 @@ export const livingCategories = [
     description: 'Essential shops, markets, postal services, and other services for daily life in Madrid.'
   },
   {
-    slug: 'healthcare',
-    title: 'Healthcare Guide',
-    link: '/living-in-madrid/healthcare',
-    icon: HeartPulse,
-    description: "An overview of the Spanish healthcare system, including public and private options."
-  },
-  {
-    slug: 'banking',
-    title: 'Banking & Finances',
-    link: '/living-in-madrid/banking',
-    icon: Landmark,
-    description: "Guide to opening a bank account and managing your finances in Spain."
-  },
-  {
-    slug: 'utilities',
-    title: 'Internet & Utilities',
-    link: '/living-in-madrid/utilities',
-    icon: Wifi,
-    description: "Setting up internet, electricity, gas, and water services in your new home."
+    slug: 'essential-services',
+    title: 'Essential Services',
+    link: '/living-in-madrid/essential-services',
+    icon: Settings,
+    description: 'Banking, healthcare, utilities, and housing - everything you need to get established.'
   },
   {
     slug: 'work',
@@ -58,13 +44,6 @@ export const livingCategories = [
     link: '/living-in-madrid/religions-faiths',
     icon: Church,
     description: 'Find places of worship and information about different religious communities.'
-  },
-  {
-    slug: 'accommodation',
-    title: 'Finding Accommodation',
-    link: '/living-in-madrid/accommodation',
-    icon: Home,
-    description: "Tips and resources for finding apartments, rooms, and long-term housing."
   },
   {
     slug: 'paperwork',

@@ -13,8 +13,14 @@ import DinersSection from '@/components/do/food/DinersSection';
 import IceCreamSection from '@/components/do/food/IceCreamSection';
 import TapasSection from '@/components/do/food/TapasSection';
 import VegetarianSection from '@/components/do/food/VegetarianSection';
+import MadridSpecialtiesSection from '@/components/do/food/MadridSpecialtiesSection';
+import DiningEtiquetteSection from '@/components/do/food/DiningEtiquetteSection';
+import FoodMarketsSection from '@/components/do/food/FoodMarketsSection';
 
 const sectionComponents: Record<string, React.FC> = {
+  'Madrid Specialties': MadridSpecialtiesSection,
+  'Dining Culture & Etiquette': DiningEtiquetteSection,
+  'Food Markets': FoodMarketsSection,
   'Cheap Eats': CheapEatsSection,
   'Menu del Dia': MenuDelDiaSection,
   'Diners': DinersSection,

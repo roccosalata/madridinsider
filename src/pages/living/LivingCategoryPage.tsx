@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -6,12 +7,9 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { livingCategories } from '@/data/living/livingCategories';
 
-import AccommodationSection from './AccommodationSection';
-import BankingFinancesSection from './BankingFinancesSection';
 import CommunityIntegrationSection from './CommunityIntegrationSection';
-import ConnectivityHomeSection from './ConnectivityHomeSection';
 import EducationChildcareSection from './EducationChildcareSection';
-import HealthcareGuideSection from './HealthcareGuideSection';
+import EssentialServicesSection from './EssentialServicesSection';
 import PaperworkSection from './PaperworkSection';
 import ReligionsFaithsSection from './ReligionsFaithsSection';
 import ShoppingServicesSection from './ShoppingServicesSection';
@@ -19,10 +17,7 @@ import WorkingInMadridSection from './WorkingInMadridSection';
 
 const sectionComponents: Record<string, React.FC> = {
   'paperwork': PaperworkSection,
-  'accommodation': AccommodationSection,
-  'banking': BankingFinancesSection,
-  'healthcare': HealthcareGuideSection,
-  'utilities': ConnectivityHomeSection,
+  'essential-services': EssentialServicesSection,
   'work': WorkingInMadridSection,
   'education': EducationChildcareSection,
   'shopping-services': ShoppingServicesSection,

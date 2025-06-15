@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Pizza, ClipboardList, Coffee, IceCream2, Grape, Leaf } from 'lucide-react';
+import { Pizza, ClipboardList, Coffee, IceCream2, Grape, Leaf, Star, MapPin, Utensils } from 'lucide-react';
 
 type FoodSubCategory = {
     title: string;
@@ -9,6 +9,21 @@ type FoodSubCategory = {
 }
 
 export const foodSubCategories: FoodSubCategory[] = [
+    {
+        title: 'Madrid Specialties',
+        description: 'Traditional Madrid dishes you must try while visiting the city.',
+        icon: Star,
+    },
+    {
+        title: 'Dining Culture & Etiquette',
+        description: 'Learn Spanish dining customs and meal times.',
+        icon: Utensils,
+    },
+    {
+        title: 'Food Markets',
+        description: 'Explore vibrant markets for fresh produce and gourmet foods.',
+        icon: MapPin,
+    },
     {
         title: 'Cheap Eats',
         description: "Great food that won't break the bank.",
