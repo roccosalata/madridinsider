@@ -1,8 +1,9 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import CategoryHubCard from '@/components/CategoryHubCard';
-import { Briefcase, Map, CreditCard, HeartHandshake, ShieldCheck, Users, CloudSun, Building, Phone } from 'lucide-react';
+import { Briefcase, Map, CreditCard, HeartHandshake, ShieldCheck, Users, CloudSun, Building, Phone, Globe } from 'lucide-react';
 
 const MadridEssentials = () => {
   const essentialTopics = [
@@ -25,10 +26,16 @@ const MadridEssentials = () => {
       description: "Navigate the city with ease using public transport."
     },
     {
-      title: "Essential Services & Contacts",
-      link: "/madrid-essentials/general-info#services",
+      title: "Emergency Contacts",
+      link: "/essentials/emergency-contacts",
       icon: Phone,
-      description: "Emergency numbers, lost & found, and other key contacts."
+      description: "Emergency numbers, police stations, and other key contacts."
+    },
+    {
+      title: "Embassies & Consulates",
+      link: "/essentials/embassies",
+      icon: Globe,
+      description: "Contact information for foreign embassies in Madrid."
     },
     {
       title: "Safety & Security",
