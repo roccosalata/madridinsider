@@ -1,58 +1,61 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { AlertTriangle } from 'lucide-react';
+import { ShieldCheck, AlertTriangle, HeartPulse, UserCheck, PhoneCall, MoonStar } from 'lucide-react';
+import { safetyTips } from '@/data/practicalInfoData';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
-const SafetyInfo = () => (
-  <Card id="safety">
-    <CardHeader>
-      <CardTitle className="flex items-center gap-2">
-        <AlertTriangle className="h-5 w-5" />
-        Safety & Security Tips
-      </CardTitle>
-    </CardHeader>
-    <CardContent className="space-y-4">
-      <p className="text-sm text-gray-700">
-          While Madrid is generally safe, bag-snatching and wallet-lifting are unfortunately all too common. But with a little planning ahead and a lot of paying attention, you can travel around more securely.
-      </p>
-      <div>
-        <h4 className="font-semibold mb-2">Before You Go Out</h4>
-        <ul className="text-sm text-gray-600 space-y-1 list-disc pl-5">
-          <li>Do not carry everything with you. Only take one or two credit / bank cards, a little cash and, most importantly, a copy of your passport with you.</li>
-          <li>Write down the numbers of the credit / bank cards that you are taking with you and the phone numbers listed on the back.</li>
-          <li>Carry your valuables in a secure place. Use a bag that rests snugly under your arm or directly in front of you.</li>
-          <li>Beware the backpack. Use a suitcase or combination lock; they're cheap and effective.</li>
-        </ul>
-      </div>
-      <div>
-        <h4 className="font-semibold mb-2">While You're Out: Common Pickpocket Tactics</h4>
-        <p className="text-sm text-gray-600 mb-2">
-          Most pickpockets work in teams and use distraction. One person will divert your attention while another acts. Be aware of:
-        </p>
-        <ul className="text-sm text-gray-600 space-y-1 list-disc pl-5">
-          <li>Staged shows or anything that leads to direct questioning and/or physical contact.</li>
-          <li>People asking for directions while shoving maps in your face.</li>
-          <li>Someone pointing out a "stain" on your shirt and trying to wipe it off.</li>
-          <li>Asking if you dropped a bill on the street.</li>
-          <li>Stepping on your foot and over-apologizing.</li>
-        </ul>
-      </div>
-      <div>
-        <h4 className="font-semibold mb-2">High-Risk Areas</h4>
-        <ul className="text-sm text-gray-600 space-y-1 list-disc pl-5">
-          <li>Crowded buses, metros, trains, and streets. Any crowded place makes you an easier target.</li>
-          <li>Restaurants and cafés. Keep bags in your lap or physically touching you, not on the floor or an empty chair.</li>
-          <li>Even in groups, you are more at risk as you may be paying more attention to friends than your belongings.</li>
-        </ul>
-      </div>
-      <div className="bg-yellow-50 p-4 rounded-lg">
-        <h4 className="font-semibold text-yellow-800 mb-2">Too Late, You've Been Robbed</h4>
-        <p className="text-sm text-yellow-700">
-          If you can't find your belongings, establish what you have lost. For credit cards, call to cancel them. For a passport or items needing an insurance claim, go to the nearest police station to file a report ("denuncia"). Take this report to your embassy for temporary travel papers and to your insurance agency. Most embassies can issue temporary documents within a few hours for a fee.
-        </p>
-      </div>
-    </CardContent>
-  </Card>
-);
+const SafetyInfo = () => {
+    const getIcon = (category: string) => {
+        switch (category.toLowerCase()) {
+            case 'pickpocketing': return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
+            case 'scams': return <UserCheck className="h-5 w-5 text-orange-500" />;
+            case 'emergency': return <PhoneCall className="h-5 w-5 text-red-500" />;
+            case 'night safety': return <MoonStar className="h-5 w-5 text-blue-500" />;
+            case 'health': return <HeartPulse className="h-5 w-5 text-green-500" />;
+            default: return <ShieldCheck className="h-5 w-5" />;
+        }
+    }
+
+    return (
+        <Card id="safety">
+            <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                    <ShieldCheck className="h-5 w-5" />
+                    Safety & Security
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+                <p className="text-gray-600 mb-4">
+                    Madrid is a relatively safe city, but like any major European capital, it's wise to be aware of your surroundings. Here are some tips to ensure a safe and enjoyable visit.
+                </p>
+                <Accordion type="single" collapsible className="w-full">
+                    {safetyTips.map((category) => (
+                        <AccordionItem value={category.category} key={category.category}>
+                            <AccordionTrigger className="font-semibold hover:no-underline">
+                                <div className="flex items-center gap-3">
+                                    {getIcon(category.category)}
+                                    {category.category}
+                                </div>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <ul className="list-disc space-y-2 pl-6 text-gray-600">
+                                    {category.tips.map((tip, index) => (
+                                        <li key={index}>{tip}</li>
+                                    ))}
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+            </CardContent>
+        </Card>
+    );
+}
 
 export default SafetyInfo;

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone } from 'lucide-react';
+import EnglishRadioCard from "@/components/essentials/EnglishRadioCard";
 
 const EssentialServices = () => (
   <Card id="services">
@@ -45,6 +46,9 @@ const EssentialServices = () => (
             <a href="mailto:webmaster@guiademadrid.com" className="text-madrid-red hover:underline">webmaster@guiademadrid.com</a></p>
           </div>
         </div>
+      </div>
+      <div className="pt-4">
+        <EnglishRadioCard />
       </div>
     </CardContent>
   </Card>

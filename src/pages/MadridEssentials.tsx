@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
 import CategoryHubCard from '@/components/CategoryHubCard';
-import EnglishRadioCard from "@/components/essentials/EnglishRadioCard";
 import { Briefcase, Map, CreditCard, HeartHandshake, ShieldCheck, Users, CloudSun, Building, Phone } from 'lucide-react';
 
 const MadridEssentials = () => {
@@ -71,9 +69,6 @@ const MadridEssentials = () => {
         subtitle="Your tourist starting point: Essential information, maps, emergency contacts, and first-timer tips for visiting Madrid." 
       />
       <div className="container mx-auto px-4 py-12">
-        <div className="mb-6 max-w-2xl mx-auto">
-          <EnglishRadioCard />
-        </div>
         <h2 className="text-3xl font-bold mb-8 text-center">Essential Topics</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {essentialTopics.map((sub) => {
