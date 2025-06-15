@@ -1,3 +1,4 @@
+
 import React from "react";
 import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,6 +6,7 @@ import { talentAgencies } from "@/data/living/talentAgencies";
 import TalentAgenciesList from "@/components/living/work/TalentAgenciesList";
 import { Globe, Mail, Phone, MapPin, User } from "lucide-react";
 import { internshipOpportunities } from "@/data/living/internshipOpportunities";
+import { filmResources } from "@/data/living/filmResources";
 
 const workingInMadridData = directoryData['living-in-madrid']?.['working-in-madrid'];
 
@@ -50,6 +52,26 @@ const WorkingInMadridSection = () => (
       </Card>
 
       <TalentAgenciesList agencies={talentAgencies} />
+
+      <Card>
+        <CardHeader><CardTitle>Film & TV Resources</CardTitle></CardHeader>
+        <CardContent>
+          <div className="space-y-6">
+            {filmResources.map((resource, index) => (
+              <div key={index} className="py-4 border-b last:border-b-0">
+                <h4 className="font-semibold text-madrid-red mb-2">{resource.name}</h4>
+                <div className="space-y-1 text-sm text-gray-700">
+                  {resource.description && <p>{resource.description}</p>}
+                  {resource.address && <p className="flex items-start gap-2"><MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" /><span>{resource.address}{resource.metro && ` (Metro: ${resource.metro})`}</span></p>}
+                  {resource.phone && <p className="flex items-center gap-2"><Phone className="h-4 w-4 flex-shrink-0" />{resource.phone}</p>}
+                  {resource.email && <a href={`mailto:${resource.email}`} className="flex items-center gap-2 text-blue-600 hover:underline"><Mail className="h-4 w-4 flex-shrink-0" />{resource.email}</a>}
+                  {resource.website && <a href={!resource.website.startsWith('http') ? `http://${resource.website}` : resource.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline"><Globe className="h-4 w-4 flex-shrink-0" />{resource.website}</a>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader><CardTitle>Journalism / Writing</CardTitle></CardHeader>
