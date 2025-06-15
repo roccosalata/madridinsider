@@ -6,6 +6,7 @@ import BilingualSchoolsSection from "@/components/living/education/BilingualScho
 import LanguageSchoolsSection from "@/components/living/education/LanguageSchoolsSection";
 import TeacherTrainingSection from "@/components/living/education/TeacherTrainingSection";
 import LibrariesSection from "@/components/living/education/LibrariesSection";
+import FilmTheaterSchoolsSection from "@/components/living/education/FilmTheaterSchoolsSection";
 
 const educationChildcareData = directoryData['living-in-madrid']?.['education-childcare'];
 const studentLifeData = directoryData['living-in-madrid']?.['student-life'];
@@ -28,6 +29,7 @@ const EducationChildcareSection = () => (
       <BilingualSchoolsSection />
       <LanguageSchoolsSection />
       <TeacherTrainingSection />
+      <FilmTheaterSchoolsSection />
       <LibrariesSection />
       
       <Card>
