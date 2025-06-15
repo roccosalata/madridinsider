@@ -1,5 +1,4 @@
 
-```typescript
 export interface TalentAgency {
   name: string;
   address?: string;
@@ -136,4 +135,3 @@ export const talentAgencies: TalentAgency[] = [
     phone: "91 521 2229",
   },
 ];
-```

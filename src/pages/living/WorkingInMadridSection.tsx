@@ -1,5 +1,4 @@
 
-```typescript
 import React from "react";
 import { directoryData } from "@/data/directoryData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -45,4 +44,3 @@ const WorkingInMadridSection = () => (
 );
 
 export default WorkingInMadridSection;
-```
