@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ShoppingBag, ArrowRight } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Store, MapPin, Shirt } from 'lucide-react';
 
 const ShoppingHub = () => {
   return (
@@ -18,6 +18,27 @@ const ShoppingHub = () => {
         <p className="text-gray-700 mb-4">
           From luxury brands on the Golden Mile to unique boutiques and bustling markets.
         </p>
+        
+        {/* Preview of shopping options */}
+        <div className="space-y-2 mb-4 text-sm">
+          <div className="flex items-center gap-2 text-gray-600">
+            <Shirt className="h-4 w-4" />
+            <span>Gran Vía & Golden Mile</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <Store className="h-4 w-4" />
+            <span>Local Markets & Artisans</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <MapPin className="h-4 w-4" />
+            <span>Neighborhood Boutiques</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <ShoppingBag className="h-4 w-4" />
+            <span>Shopping Centers & Malls</span>
+          </div>
+        </div>
+        
         <Button asChild variant="outline" className="w-full mt-auto">
           <Link to="/do-in-madrid/shopping" className="flex items-center justify-center gap-2">
             Explore Shopping <ArrowRight className="h-4 w-4" />

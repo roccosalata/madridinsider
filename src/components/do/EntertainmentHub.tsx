@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Ticket, ArrowRight } from 'lucide-react';
+import { Ticket, ArrowRight, Music, Sparkles, Telescope } from 'lucide-react';
 
 const EntertainmentHub = () => {
   return (
@@ -16,8 +16,29 @@ const EntertainmentHub = () => {
       </CardHeader>
       <CardContent className="flex flex-col">
         <p className="text-gray-700 mb-4">
-          Enjoy world-class theater, flamenco shows, concerts, and other live performances.
+          Experience authentic Spanish culture and modern entertainment venues.
         </p>
+        
+        {/* Preview of available activities */}
+        <div className="space-y-2 mb-4 text-sm">
+          <div className="flex items-center gap-2 text-gray-600">
+            <Ticket className="h-4 w-4" />
+            <span>Bullfights at Las Ventas</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <Music className="h-4 w-4" />
+            <span>Flamenco Shows & Tablaos</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <Telescope className="h-4 w-4" />
+            <span>Planetarium & IMAX Madrid</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <Sparkles className="h-4 w-4" />
+            <span>Magic & Comedy Clubs</span>
+          </div>
+        </div>
+        
         <Button asChild variant="outline" className="w-full mt-auto">
           <Link to="/do-in-madrid/entertainment" className="flex items-center justify-center gap-2">
             Explore Entertainment <ArrowRight className="h-4 w-4" />

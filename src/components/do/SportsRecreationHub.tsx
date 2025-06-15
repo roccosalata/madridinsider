@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Dumbbell, ArrowRight } from 'lucide-react';
+import { Dumbbell, ArrowRight, Football, TreePine, Bike } from 'lucide-react';
 
 const SportsRecreationHub = () => {
   return (
@@ -16,8 +16,29 @@ const SportsRecreationHub = () => {
       </CardHeader>
       <CardContent className="flex flex-col">
         <p className="text-gray-700 mb-4">
-          Stay active with football matches, gyms, parks, wellness, and a variety of recreational activities.
+          Stay active with football matches, gyms, parks, wellness, and recreational activities.
         </p>
+        
+        {/* Preview of sports and recreation options */}
+        <div className="space-y-2 mb-4 text-sm">
+          <div className="flex items-center gap-2 text-gray-600">
+            <Football className="h-4 w-4" />
+            <span>Real Madrid & Atlético Matches</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <TreePine className="h-4 w-4" />
+            <span>Parks & Outdoor Activities</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <Bike className="h-4 w-4" />
+            <span>Cycling & Running Paths</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <Dumbbell className="h-4 w-4" />
+            <span>Gyms & Wellness Centers</span>
+          </div>
+        </div>
+        
         <Button asChild variant="outline" className="w-full mt-auto">
           <Link to="/do-in-madrid/sports" className="flex items-center justify-center gap-2">
             Explore Sports & Recreation <ArrowRight className="h-4 w-4" />
