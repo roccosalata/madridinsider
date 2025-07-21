@@ -54,7 +54,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				madrid: {
-					red: '#e10e0e',
+					red: 'hsl(var(--madrid-red))',
 					white: '#ffffff',
 				},
 			},

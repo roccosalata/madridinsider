@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { MainCategory } from '@/data/mainCategories';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 interface CategoryCardProps {
   category: MainCategory;
@@ -8,12 +10,12 @@ interface CategoryCardProps {
 
 const CategoryCard = ({ category }: CategoryCardProps) => {
   return (
-    <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus-within:shadow-xl">
+    <article className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus-within:shadow-xl border border-gray-200 hover:border-madrid-red/20">
       <div className="relative">
         <img 
           src={category.imageUrl} 
           alt={`${category.title} - ${category.description}`}
-          className="w-full h-48 object-cover"
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
           width="400"
           height="192"
@@ -28,37 +30,37 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
       </div>
       
       <div className="p-6">
-        <p className="text-gray-700 mb-4 text-sm leading-relaxed">{category.description}</p>
+        <p className="text-gray-700 mb-6 leading-relaxed">{category.description}</p>
         
-        <div className="mb-4">
+        {/* Preview Subcategories */}
+        <div className="mb-6">
           <nav aria-label={`${category.title} quick links`}>
-            <div className="grid grid-cols-1 gap-1">
+            <ul className="space-y-2">
               {category.subcategories.slice(0, 3).map((sub, index) => (
-                <a 
-                  key={index}
-                  href={sub.link}
-                  className="text-sm text-gray-600 hover:text-madrid-red transition-colors p-1 rounded hover:bg-gray-50 focus:bg-gray-50 focus:text-madrid-red focus:outline-none flex items-center gap-1"
-                >
-                  {sub.icon && React.cloneElement(sub.icon as React.ReactElement, { className: "h-4 w-4"})} 
-                  {sub.title}
-                </a>
+                <li key={index} className="flex items-center text-sm text-gray-600">
+                  <div className="w-1.5 h-1.5 bg-madrid-red rounded-full mr-3 flex-shrink-0" />
+                  <span>{sub.title}</span>
+                </li>
               ))}
-            </div>
+            </ul>
             {category.subcategories.length > 3 && (
-              <p className="text-sm text-madrid-red mt-2 font-medium">
+              <p className="text-sm text-madrid-red mt-3 font-medium">
                 + {category.subcategories.length - 3} more sections
               </p>
             )}
           </nav>
         </div>
         
-        <a 
-          href={category.link}
-          className="inline-flex items-center justify-center w-full bg-madrid-red text-white px-4 py-2 rounded-lg hover:bg-madrid-red/90 transition-all duration-200 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-madrid-red focus:ring-offset-2"
-          aria-label={`Explore all ${category.title} content`}
+        {/* Enhanced CTA Button */}
+        <Button 
+          asChild
+          className="w-full bg-madrid-red hover:bg-madrid-red/90 text-white font-semibold group-hover:shadow-lg transition-all duration-300 text-sm py-3"
         >
-          Explore All →
-        </a>
+          <a href={category.link} aria-label={`Explore all ${category.title} content`}>
+            Explore {category.title}
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </Button>
       </div>
     </article>
   );

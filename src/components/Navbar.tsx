@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { mainCategories } from '@/data/mainCategories';
 import DropdownNavigation from './DropdownNavigation';
+import SearchModal from './SearchModal';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,16 +24,22 @@ const Navbar = () => {
             className="flex items-center focus:outline-none focus:ring-2 focus:ring-madrid-red rounded-md p-1"
             aria-label="Madrid Insider home page"
           >
-            <span className="text-2xl font-bold text-madrid-red">
-              Madrid<span className="text-gray-800">Insider</span>
-            </span>
+            <div className="flex items-center">
+              <div className="w-8 h-8 bg-madrid-red rounded-full flex items-center justify-center mr-2">
+                <span className="text-white font-bold text-sm">📍</span>
+              </div>
+              <span className="text-2xl font-bold">
+                <span className="text-madrid-red">Madrid</span><span className="text-gray-800">Insider</span>
+              </span>
+            </div>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2" role="menubar">
+          <div className="hidden md:flex items-center gap-4" role="menubar">
             {mainCategories.map(category => (
               <DropdownNavigation key={category.title} category={category} />
             ))}
+            <SearchModal />
           </div>
 
           {/* Mobile menu button */}
