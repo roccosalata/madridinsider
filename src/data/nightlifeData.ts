@@ -43,10 +43,13 @@ export interface NightlifeVenue {
     name: string;
     address?: string;
     description?: string;
+    details?: string;
     website?: string;
     phone?: string;
     metro?: string;
     notes?: string;
+    coverCharge?: string;
+    hours?: string;
 }
 
 export const salsaClubs: NightlifeVenue[] = [
@@ -73,4 +76,44 @@ export const streetTerraces: NightlifeVenue[] = [
     { name: 'Plaza de Santa Ana', description: 'A whole plaza filled with classic terrazas, great for people-watching.' },
     { name: 'Plaza de Olavide', description: 'A local favorite, a large circular plaza with many street-level cafes and bars.' }
 ];
+
+// Additional exports for component compatibility
+export const barsAndCafes = cocktailBars;
+export const nightClubs = nightclubs;
+
+// Venue category objects for the nightlife section pages
+export const salsaVenues = {
+    title: "Salsa & Latin Dance Clubs",
+    description: "Experience the passion of Latin dance. These clubs are dedicated to salsa, bachata, and other Latin rhythms, offering a vibrant and energetic atmosphere for dancers of all levels.",
+    icon: "🎵",
+    venues: salsaClubs
+};
+
+export const nightclubVenues = {
+    title: "Nightclubs", 
+    description: "For those who want to dance the night away, Madrid's nightclubs offer everything from electronic music to pop hits in multi-level venues that stay open until sunrise.",
+    icon: "🎉",
+    venues: nightclubs
+};
+
+export const cocktailBarVenues = {
+    title: "Cocktail Bars",
+    description: "Sophisticated spots for inventive drinks. Madrid's cocktail bars range from classic speakeasies to modern lounges, perfect for a relaxed yet refined evening.",
+    icon: "🍸",
+    venues: cocktailBars
+};
+
+export const rooftopTerraceVenues = {
+    title: "Rooftop Bars (For Evening Views)",
+    description: "Enjoy stunning city views with a drink in hand. These rooftop 'terrazas' are perfect for watching the sunset and enjoying Madrid's skyline, typically popular in the evening and at night.",
+    icon: "🌆",
+    venues: rooftopTerraces
+};
+
+export const streetTerraceVenues = {
+    title: "Classic 'Terrazas' (Day & Night)",
+    description: "A quintessential Madrid experience. These street-level 'terrazas' are perfect for people-watching with a coffee, caña, or glass of wine, bustling from morning until late at night.",
+    icon: "☕",
+    venues: streetTerraces
+};
 
