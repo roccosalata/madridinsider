@@ -57,6 +57,12 @@ export default {
 					red: 'hsl(var(--madrid-red))',
 					white: '#ffffff',
 				},
+        "madrid-red": "hsl(var(--madrid-red))",
+        "madrid-red-dark": "hsl(var(--madrid-red-dark))",
+        "madrid-gold": "hsl(var(--madrid-gold))",
+        "madrid-light": "hsl(var(--madrid-light))",
+        "madrid-gray": "hsl(var(--madrid-gray))",
+        "madrid-dark": "hsl(var(--madrid-dark))",
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],

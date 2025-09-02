@@ -1,45 +1,34 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 interface ContentCardProps {
   title: string;
   description: string;
-  imageUrl: string;
-  link: string;
-  icon?: React.ReactNode;
+  image: string;
+  category: string;
+  readTime: string;
+  href?: string;
 }
 
-const ContentCard = ({ title, description, imageUrl, link, icon }: ContentCardProps) => {
+const ContentCard = ({ title, description, image, category, readTime, href = "#" }: ContentCardProps) => {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <Link to={link} className="block">
-        <AspectRatio ratio={16 / 9}>
-          <img 
-            src={imageUrl} 
-            alt={title} 
-            className="w-full h-full object-cover"
-          />
-        </AspectRatio>
-      </Link>
-      <div className="p-5">
-        <div className="flex items-center gap-2 mb-2">
-          {icon && <div className="text-madrid-red">{icon}</div>}
-          <h3 className="font-bold text-lg">{title}</h3>
-        </div>
-        <p className="text-gray-600 text-sm mb-4">{description}</p>
-        <Link 
-          to={link} 
-          className="inline-flex items-center text-madrid-red font-medium hover:underline"
-        >
-          Learn more
-          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
+    <article className="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+      <div className="h-48 overflow-hidden">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          loading="lazy"
+        />
       </div>
-    </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-madrid-dark mb-3">{title}</h3>
+        <p className="text-madrid-gray mb-4 leading-relaxed">{description}</p>
+        <div className="flex justify-between items-center text-sm font-semibold text-primary">
+          <span>{category}</span>
+          <span>{readTime}</span>
+        </div>
+      </div>
+    </article>
   );
 };
 
