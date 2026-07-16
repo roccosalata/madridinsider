@@ -15,6 +15,18 @@ Your complete English-language guide to Madrid — attractions, food, neighborho
 - 🎯 **Madrid Style Quiz** — find your Madrid match in 3 questions
 - 📬 **Newsletter signup** — weekly digest, no spam
 
+## 📝 How to update content (no coding required)
+
+The site’s text, events, and links all live in three easy-to-edit files in `src/data/`. Open one, change the words, save, and redeploy. ChatGPT can help you with this too.
+
+| File | What’s in it |
+| --- | --- |
+| `src/data/categories.ts` | The 5 main categories (Essentials, Living, See, Do, Now) |
+| `src/data/events.ts` | The “What’s on this week” event cards |
+| `src/data/quickAccess.ts` | The 10 “Quick access” cards |
+
+Each file is plain text with the same pattern: a title, a short description, an emoji, and a link. Just edit the text between the quotes and you’re done.
+
 ## 🛠️ Tech stack
 
 - [Vite](https://vitejs.dev/) — build tool & dev server
