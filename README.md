@@ -1,9 +1,33 @@
 # Madrid Insider
 
-Your complete English-language guide to Madrid — attractions, food, neighborhoods, and what's happening right now.
+> 🌐 **The live, production site for [madridinsider.com](https://www.madridinsider.com/)**
+> Your complete English-language guide to Madrid — attractions, food, neighborhoods, and what's happening right now.
 
-> One-Stop Site All About Madrid.
-> Built with Vite + React + TypeScript + Tailwind CSS.
+This repository is the **single source of truth for what users see on the live site**. Multiple people collaborate here — content editors, designers, developers — and every commit on `main` is what gets served to visitors.
+
+---
+
+## 🔗 The four-repo family
+
+| Repo | Role | Owned by |
+| --- | --- | --- |
+| **[roccosalata/madridinsider](https://github.com/roccosalata/madridinsider)** | ✅ **This repo** — production live site, multi-collaborator | Public, everyone |
+| [roccosalata/madridinsider-explorer](https://github.com/roccosalata/madridinsider-explorer) | Mavis's private dev sandbox where new features originate | Mavis only |
+| [roccosalata/madridinsider-data](https://github.com/roccosalata/madridinsider-data) | The content "database" — categories, events, quick-access entries (JSON) | Editors + Mavis |
+| [roccosalata/madridinsider-lab](https://github.com/roccosalata/madridinsider-lab) | Throwaway testbed for risky experiments before they reach production | Mavis only |
+
+### The flow
+
+```
+Mavis (explorer)  ──►  Data updates (data)  ──►  Lab experiments (lab)  ──►  Production (madridinsider)  ──►  madridinsider.com
+```
+
+1. **Explore** in `madridinsider-explorer` — new components, refactors, dependencies.
+2. **Author content** in `madridinsider-data` — categories, events, copy.
+3. **Sanity-check** in `madridinsider-lab` — does it look right at scale? Mobile? Edge cases?
+4. **Promote** to `madridinsider` (this repo) — open a PR, get review, merge, deploy.
+
+---
 
 ## ✨ Features
 
@@ -15,17 +39,26 @@ Your complete English-language guide to Madrid — attractions, food, neighborho
 - 🎯 **Madrid Style Quiz** — find your Madrid match in 3 questions
 - 📬 **Newsletter signup** — weekly digest, no spam
 
+---
+
 ## 📝 How to update content (no coding required)
 
-The site’s text, events, and links all live in three easy-to-edit files in `src/data/`. Open one, change the words, save, and redeploy. ChatGPT can help you with this too.
+The site's text, events, and links all live in three easy-to-edit files in `src/data/`. Open one, change the words, save, and redeploy. ChatGPT can help you with this too.
 
-| File | What’s in it |
+| File | What's in it |
 | --- | --- |
 | `src/data/categories.ts` | The 5 main categories (Essentials, Living, See, Do, Now) |
-| `src/data/events.ts` | The “What’s on this week” event cards |
-| `src/data/quickAccess.ts` | The 10 “Quick access” cards |
+| `src/data/events.ts` | The "What's on this week" event cards |
+| `src/data/quickAccess.ts` | The 10 "Quick access" cards |
 
-Each file is plain text with the same pattern: a title, a short description, an emoji, and a link. Just edit the text between the quotes and you’re done.
+Each file is plain text with the same pattern: a title, a short description, an emoji, and a link. Just edit the text between the quotes and you're done.
+
+> The canonical machine-readable copy of this data lives in
+> [`roccosalata/madridinsider-data`](https://github.com/roccosalata/madridinsider-data)
+> as JSON. When the data repo changes, those JSON files are mirrored into `src/data/`
+> before the next deploy.
+
+---
 
 ## 🛠️ Tech stack
 
@@ -34,6 +67,8 @@ Each file is plain text with the same pattern: a title, a short description, an 
 - [TypeScript](https://www.typescriptlang.org/) — type safety
 - [Tailwind CSS 3](https://tailwindcss.com/) — utility-first styling
 - Inter — font family (Google Fonts)
+
+---
 
 ## 🚀 Getting started
 
@@ -51,10 +86,12 @@ npm run build
 npm run preview
 ```
 
+---
+
 ## 📁 Project structure
 
 ```
-madridinsider-explorer/
+madridinsider/
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -85,6 +122,8 @@ madridinsider-explorer/
 └── package.json
 ```
 
+---
+
 ## 🎨 Design tokens
 
 - **Brand color**: `brand-500` = `#f97316` (orange)
@@ -96,6 +135,30 @@ madridinsider-explorer/
   - Do in Madrid — purple
   - Madrid Now — orange (brand)
 
-## 📝 License
+---
+
+## 🚢 Deploying
+
+`main` is auto-deployed. The build output (`dist/`) is what the live site serves.
+
+1. Make your change on a branch.
+2. Open a PR → CI runs the build.
+3. Get a review from at least one other collaborator.
+4. Merge to `main` → production deploy kicks off.
+5. Verify at [madridinsider.com](https://www.madridinsider.com/).
+
+If you don't have merge access, ask in the PR and a maintainer will land it.
+
+---
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide — branching, PR conventions, code style, and how to add a new content section.
+
+New here? Look for issues labeled **`good first issue`** to start.
+
+---
+
+## 📄 License
 
 MIT — fork, customize, ship.
