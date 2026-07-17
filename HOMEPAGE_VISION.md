@@ -1,5 +1,19 @@
 # Madrid Insider Homepage Vision
 
+## IMPORTANT
+
+The following homepage categories are PERMANENT and must never be changed:
+
+1. Madrid Essentials
+2. Living in Madrid
+3. See in Madrid
+4. Do in Madrid
+5. Madrid Now
+
+These are constitution-level decisions for Madrid Insider.
+
+---
+
 ## Primary Message
 
 Madrid Insider is the English-language operating manual for Madrid.
@@ -10,9 +24,23 @@ Secondary tagline:
 
 ---
 
-## Homepage User Journey
+## Homepage Information Architecture
 
-The homepage should guide users through the following experience:
+HOME PAGE
+
+- Madrid Essentials
+- Living in Madrid
+- See in Madrid
+- Do in Madrid
+- Madrid Now
+
+These five categories are the ONLY top-level navigation categories.
+
+---
+
+## Secondary User Journey System
+
+The following are internal user journeys and NOT homepage categories:
 
 1. ARRIVE
 2. SURVIVE
@@ -20,35 +48,15 @@ The homepage should guide users through the following experience:
 4. EXPLORE
 5. ENJOY
 
-### ARRIVE
-- Airport
-- Metro
-- SIM Cards
-- Left Luggage
+They may be used as:
 
-### SURVIVE
-- Safety
-- Money
-- Emergency Numbers
-- Basic Spanish
+- Tags
+- Filters
+- Database fields
+- Internal navigation
+- Content recommendations
 
-### LIVE
-- Housing
-- Healthcare
-- NIE/TIE
-- Banking
-
-### EXPLORE
-- Museums
-- Neighborhoods
-- Day Trips
-- Parks
-
-### ENJOY
-- Food
-- Nightlife
-- Football
-- Festivals
+They must NEVER replace the five homepage categories.
 
 ---
 
