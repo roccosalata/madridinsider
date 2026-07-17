@@ -2,7 +2,7 @@
 
 Your complete English-language guide to Madrid — attractions, food, neighborhoods, and what's happening right now.
 
-> A clean, fast, opinionated travel site for Madrid.
+> One-Stop Site All About Madrid.
 > Built with Vite + React + TypeScript + Tailwind CSS.
 
 ## ✨ Features
