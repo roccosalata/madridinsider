@@ -1,7 +1,7 @@
 # Madrid Insider
 
 > 🌐 **The live, production site for [madridinsider.com](https://www.madridinsider.com/)**
-> Your complete English-language guide to Madrid — attractions, food, neighborhoods, and what's happening right now.
+> The English-language operating manual for Madrid — helping visitors, expats, students, and future residents navigate Spain's capital.
 
 This repository is the **single source of truth for what users see on the live site**. Every push to `main` is auto-deployed to GitHub Pages and served at `madridinsider.com`.
 
@@ -47,82 +47,31 @@ Each file is a JSON array. Open it, edit the text between the quotes, commit, pu
 
 ## 🛠️ Tech stack
 
-- [Vite](https://vitejs.dev/) — build tool & dev server
-- [React 18](https://react.dev/) — UI framework
-- [TypeScript](https://www.typescriptlang.org/) — type safety
-- [Tailwind CSS 3](https://tailwindcss.com/) — utility-first styling
-- Inter — font family (Google Fonts)
-- [GitHub Pages](https://pages.github.com/) — hosting (free, automatic on push to `main`)
+- Vite
+- React 18
+- TypeScript
+- Tailwind CSS 3
+- Inter
+- GitHub Pages
 
 ---
 
-## 🧑‍💻 Local development
+## 🎯 Editorial Mission
 
-```bash
-# Install dependencies
-npm install
+Madrid Insider exists to answer one question:
 
-# Start dev server (http://localhost:5173)
-npm run dev
+> "How do English speakers successfully visit, survive, live, explore, and enjoy Madrid?"
 
-# Production build (outputs to dist/)
-npm run build
+Content should prioritize:
 
-# Preview the production build
-npm run preview
-```
-
----
-
-## 📁 Project structure
-
-```
-madridinsider/
-├── data/                       # ← Edit content here (the only canonical source)
-│   ├── categories.json         #   5 homepage category cards
-│   ├── events.json             #   "What's on this week" events
-│   └── quickAccess.json        #   10 "Quick access" cards
-├── src/
-│   ├── components/             # React components (Header, Hero, MadridNow, etc.)
-│   ├── data/                   # Thin TS wrappers that re-export the JSON with types
-│   ├── lib/                    # Utilities (e.g. madridTime.ts)
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── .github/workflows/
-│   └── deploy.yml              # Auto-builds & deploys to GitHub Pages on push to main
-├── public/                     # Static assets (favicon, etc.)
-├── index.html
-├── tailwind.config.js
-├── postcss.config.js
-├── tsconfig.json
-├── vite.config.ts
-└── package.json
-```
-
----
-
-## 🎨 Design tokens
-
-- **Brand color**: `brand-500` = `#f97316` (orange)
-- **Fonts**: Inter, weights 300–800
-- **Category colors**:
-  - Madrid Essentials — red
-  - Living in Madrid — blue
-  - See in Madrid — green
-  - Do in Madrid — purple
-  - Madrid Now — orange (brand)
-
----
-
-## 🤝 Contributing
-
-1. **Fork** (or branch if you have push access).
-2. **Edit** the JSON in `data/*.json` for content, or `src/components/*.tsx` for code.
-3. **Open a PR** with a clear title (`content(events): add August Verbena dates`, etc.).
-4. **Merge to `main`** → GitHub Action auto-deploys to the live site.
-
-For full conventions, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+1. Transportation
+2. Housing
+3. Healthcare
+4. Bureaucracy
+5. Attractions
+6. Food
+7. Day Trips
+8. Current Events
 
 ---
 
