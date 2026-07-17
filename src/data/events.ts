@@ -1,3 +1,8 @@
+// Single source of truth for events lives in /data/events.json.
+// This file just gives the JSON a TypeScript type and re-exports it.
+
+import data from '../../data/events.json'
+
 export type MadridEvent = {
   id: string
   title: string
@@ -9,85 +14,4 @@ export type MadridEvent = {
   free: boolean
 }
 
-export const thisWeekEvents: MadridEvent[] = [
-  {
-    id: 'evt-1',
-    title: 'Veranos de la Villa — Open-air concerts, theatre & dance',
-    date: '7 Jul – 30 Aug',
-    day: '7',
-    month: 'JUL',
-    venue: '14 districts across Madrid',
-    category: 'Culture',
-    free: false,
-  },
-  {
-    id: 'evt-2',
-    title: 'Verbena de San Cayetano — streets party in Rastro & Embajadores',
-    date: '5–8 Aug',
-    day: '5',
-    month: 'AUG',
-    venue: 'Plaza del General Vara del Rey & Cascorro',
-    category: 'Food',
-    free: true,
-  },
-  {
-    id: 'evt-3',
-    title: 'Verbena de San Lorenzo — Lavapiés street festival',
-    date: '9–12 Aug',
-    day: '9',
-    month: 'AUG',
-    venue: 'Lavapiés (Plaza Nelson Mandela & Agustín Lara)',
-    category: 'Food',
-    free: true,
-  },
-  {
-    id: 'evt-4',
-    title: 'La Paloma Verbena — Madrid’s biggest street party',
-    date: '14–17 Aug',
-    day: '14',
-    month: 'AUG',
-    venue: 'La Latina (Plaza de la Paja, Vistillas, Calle Toledo)',
-    category: 'Food',
-    free: true,
-  },
-  {
-    id: 'evt-5',
-    title: 'Real Madrid LaLiga — first match of the 2026/27 season',
-    date: 'Weekend of 22 Aug',
-    day: '22',
-    month: 'AUG',
-    venue: 'Santiago Bernabéu',
-    category: 'Sport',
-    free: false,
-  },
-  {
-    id: 'evt-6',
-    title: 'Family Sundays at Retiro Park — puppets, ponies, paddle boats',
-    date: 'Every Sun',
-    day: 'Sun',
-    month: 'JUL',
-    venue: 'Parque del Retiro',
-    category: 'Family',
-    free: true,
-  },
-  {
-    id: 'evt-7',
-    title: 'Las Ventas — Feria de Otoño bullfights',
-    date: 'Late Sep – early Oct',
-    day: 'TBA',
-    month: 'SEP',
-    venue: 'Plaza de Toros de Las Ventas',
-    category: 'Culture',
-    free: false,
-  },
-  {
-    id: 'evt-8',
-    title: 'Tapas tasting at Mercado de San Miguel',
-    date: 'Daily',
-    day: '—',
-    month: 'JUL',
-    venue: 'Mercado de San Miguel',
-    category: 'Food',
-    free: false,
-  },
-]
+export const thisWeekEvents: MadridEvent[] = data as MadridEvent[]

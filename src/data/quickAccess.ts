@@ -1,3 +1,8 @@
+// Single source of truth for quick-access items lives in /data/quickAccess.json.
+// This file just gives the JSON a TypeScript type and re-exports it.
+
+import data from '../../data/quickAccess.json'
+
 export type QuickAccessItem = {
   id: string
   title: string
@@ -6,75 +11,4 @@ export type QuickAccessItem = {
   href: string
 }
 
-export const quickAccess: QuickAccessItem[] = [
-  {
-    id: 'qa-1',
-    title: 'Madrid Metro Map',
-    description: '12 lines, 300+ stations, plus summer closures on Lines 6, 7, 9B, 10.',
-    emoji: '🚇',
-    href: '#essentials',
-  },
-  {
-    id: 'qa-2',
-    title: 'Top 10 Tapas Bars',
-    description: 'Where locals actually go — La Latina, Malasaña, Las Letras.',
-    emoji: '🍷',
-    href: '#do',
-  },
-  {
-    id: 'qa-3',
-    title: 'Free Things to Do',
-    description: 'Parks, plazas, window-shopping, free museum hours.',
-    emoji: '🆓',
-    href: '#see',
-  },
-  {
-    id: 'qa-4',
-    title: 'Day Trips by Train',
-    description: 'Toledo (30 min), Segovia (35 min), Ávila (1h 10), El Escorial (1h).',
-    emoji: '🚆',
-    href: '#see',
-  },
-  {
-    id: 'qa-5',
-    title: 'Where to Stay',
-    description: 'Best neighborhoods by vibe — Sol, Malasaña, Salamanca, Chamberí, Retiro.',
-    emoji: '🏨',
-    href: '#living',
-  },
-  {
-    id: 'qa-6',
-    title: 'Spanish Survival Phrases',
-    description: 'The 20 lines that get you through any situation in Madrid.',
-    emoji: '💬',
-    href: '#essentials',
-  },
-  {
-    id: 'qa-7',
-    title: 'Football in Madrid',
-    description: 'Real, Atlético, Rayo — fixtures, tickets, stadium tours.',
-    emoji: '⚽',
-    href: '#do',
-  },
-  {
-    id: 'qa-8',
-    title: 'Madrid for Families',
-    description: 'Parque de Atracciones, Zoo, Faunia, Retiro paddle boats, kid-friendly tapas.',
-    emoji: '👨‍👩‍👧',
-    href: '#do',
-  },
-  {
-    id: 'qa-9',
-    title: 'Weather & When to Go',
-    description: 'Month-by-month climate — best in spring (Apr–May) and autumn (Sep–Oct).',
-    emoji: '☀️',
-    href: '#now',
-  },
-  {
-    id: 'qa-10',
-    title: 'Local Customs & Etiquette',
-    description: 'Late dinners, siesta rhythm, chotis, mantones — don’t make these faux pas.',
-    emoji: '🤝',
-    href: '#essentials',
-  },
-]
+export const quickAccess: QuickAccessItem[] = data as QuickAccessItem[]

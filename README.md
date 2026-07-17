@@ -3,29 +3,17 @@
 > 🌐 **The live, production site for [madridinsider.com](https://www.madridinsider.com/)**
 > Your complete English-language guide to Madrid — attractions, food, neighborhoods, and what's happening right now.
 
-This repository is the **single source of truth for what users see on the live site**. Multiple people collaborate here — content editors, designers, developers — and every commit on `main` is what gets served to visitors.
+This repository is the **single source of truth for what users see on the live site**. Every push to `main` is auto-deployed to GitHub Pages and served at `madridinsider.com`.
 
 ---
 
-## 🔗 The four-repo family
+## 🚀 How the site is built & deployed
 
-| Repo | Role | Owned by |
-| --- | --- | --- |
-| **[roccosalata/madridinsider](https://github.com/roccosalata/madridinsider)** | ✅ **This repo** — production live site, multi-collaborator | Public, everyone |
-| [roccosalata/madridinsider-explorer](https://github.com/roccosalata/madridinsider-explorer) | Mavis's private dev sandbox where new features originate | Mavis only |
-| [roccosalata/madridinsider-data](https://github.com/roccosalata/madridinsider-data) | The content "database" — categories, events, quick-access entries (JSON) | Editors + Mavis |
-| [roccosalata/madridinsider-lab](https://github.com/roccosalata/madridinsider-lab) | Throwaway testbed for risky experiments before they reach production | Mavis only |
+1. **Edit content** in `data/*.json` (the only place you need to touch for copy changes).
+2. **Push to `main`** — a GitHub Action builds the Vite app and publishes the static output to GitHub Pages.
+3. **Live at [madridinsider.com](https://www.madridinsider.com/)** (or [roccosalata.github.io/madridinsider](https://roccosalata.github.io/madridinsider/) until DNS is updated).
 
-### The flow
-
-```
-Mavis (explorer)  ──►  Data updates (data)  ──►  Lab experiments (lab)  ──►  Production (madridinsider)  ──►  madridinsider.com
-```
-
-1. **Explore** in `madridinsider-explorer` — new components, refactors, dependencies.
-2. **Author content** in `madridinsider-data` — categories, events, copy.
-3. **Sanity-check** in `madridinsider-lab` — does it look right at scale? Mobile? Edge cases?
-4. **Promote** to `madridinsider` (this repo) — open a PR, get review, merge, deploy.
+No Vercel, no Netlify, no other services. The whole stack lives in this one repo.
 
 ---
 
@@ -43,20 +31,17 @@ Mavis (explorer)  ──►  Data updates (data)  ──►  Lab experiments (la
 
 ## 📝 How to update content (no coding required)
 
-The site's text, events, and links all live in three easy-to-edit files in `src/data/`. Open one, change the words, save, and redeploy. ChatGPT can help you with this too.
+The site's text and events all live in three plain JSON files at the repo root. Edit a string, push, the site updates.
 
 | File | What's in it |
 | --- | --- |
-| `src/data/categories.ts` | The 5 main categories (Essentials, Living, See, Do, Now) |
-| `src/data/events.ts` | The "What's on this week" event cards |
-| `src/data/quickAccess.ts` | The 10 "Quick access" cards |
+| `data/categories.json` | The 5 main categories (Essentials, Living, See, Do, Now) |
+| `data/events.json` | The "What's on this week" event cards |
+| `data/quickAccess.json` | The 10 "Quick access" cards |
 
-Each file is plain text with the same pattern: a title, a short description, an emoji, and a link. Just edit the text between the quotes and you're done.
+Each file is a JSON array. Open it, edit the text between the quotes, commit, push. The build will pick it up on the next deploy.
 
-> The canonical machine-readable copy of this data lives in
-> [`roccosalata/madridinsider-data`](https://github.com/roccosalata/madridinsider-data)
-> as JSON. When the data repo changes, those JSON files are mirrored into `src/data/`
-> before the next deploy.
+> 💡 **Tip:** to validate your JSON before pushing, paste it into <https://jsonlint.com> or run `python3 -m json.tool < data/categories.json` locally.
 
 ---
 
@@ -67,10 +52,11 @@ Each file is plain text with the same pattern: a title, a short description, an 
 - [TypeScript](https://www.typescriptlang.org/) — type safety
 - [Tailwind CSS 3](https://tailwindcss.com/) — utility-first styling
 - Inter — font family (Google Fonts)
+- [GitHub Pages](https://pages.github.com/) — hosting (free, automatic on push to `main`)
 
 ---
 
-## 🚀 Getting started
+## 🧑‍💻 Local development
 
 ```bash
 # Install dependencies
@@ -79,10 +65,10 @@ npm install
 # Start dev server (http://localhost:5173)
 npm run dev
 
-# Production build
+# Production build (outputs to dist/)
 npm run build
 
-# Preview production build
+# Preview the production build
 npm run preview
 ```
 
@@ -92,28 +78,20 @@ npm run preview
 
 ```
 madridinsider/
-├── public/
-│   └── favicon.svg
+├── data/                       # ← Edit content here (the only canonical source)
+│   ├── categories.json         #   5 homepage category cards
+│   ├── events.json             #   "What's on this week" events
+│   └── quickAccess.json        #   10 "Quick access" cards
 ├── src/
-│   ├── components/       # React components
-│   │   ├── Header.tsx
-│   │   ├── Hero.tsx
-│   │   ├── MadridNow.tsx
-│   │   ├── CategoryCards.tsx
-│   │   ├── EventsSection.tsx
-│   │   ├── QuickAccess.tsx
-│   │   ├── Quiz.tsx
-│   │   ├── Newsletter.tsx
-│   │   └── Footer.tsx
-│   ├── data/             # Static content (categories, events, etc.)
-│   │   ├── categories.ts
-│   │   ├── events.ts
-│   │   └── quickAccess.ts
-│   ├── lib/              # Utilities
-│   │   └── madridTime.ts
+│   ├── components/             # React components (Header, Hero, MadridNow, etc.)
+│   ├── data/                   # Thin TS wrappers that re-export the JSON with types
+│   ├── lib/                    # Utilities (e.g. madridTime.ts)
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── index.css
+├── .github/workflows/
+│   └── deploy.yml              # Auto-builds & deploys to GitHub Pages on push to main
+├── public/                     # Static assets (favicon, etc.)
 ├── index.html
 ├── tailwind.config.js
 ├── postcss.config.js
@@ -137,25 +115,14 @@ madridinsider/
 
 ---
 
-## 🚢 Deploying
-
-`main` is auto-deployed. The build output (`dist/`) is what the live site serves.
-
-1. Make your change on a branch.
-2. Open a PR → CI runs the build.
-3. Get a review from at least one other collaborator.
-4. Merge to `main` → production deploy kicks off.
-5. Verify at [madridinsider.com](https://www.madridinsider.com/).
-
-If you don't have merge access, ask in the PR and a maintainer will land it.
-
----
-
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide — branching, PR conventions, code style, and how to add a new content section.
+1. **Fork** (or branch if you have push access).
+2. **Edit** the JSON in `data/*.json` for content, or `src/components/*.tsx` for code.
+3. **Open a PR** with a clear title (`content(events): add August Verbena dates`, etc.).
+4. **Merge to `main`** → GitHub Action auto-deploys to the live site.
 
-New here? Look for issues labeled **`good first issue`** to start.
+For full conventions, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ---
 
