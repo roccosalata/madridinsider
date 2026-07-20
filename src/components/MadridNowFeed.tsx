@@ -2,172 +2,144 @@ import { Link } from './Link'
 import type { Record as MRecord } from '../data/records'
 
 /**
- * Dynamic Madrid Now feed — the bottom 2/3 of the homepage.
+ * Madrid Now HIGHLIGHTS — compact teaser for the homepage.
  *
- * Shows the latest content from the 5 Madrid Now subcategories:
- *   - This week's events
- *   - Open exhibitions
- *   - News & updates
- *   - Transit alerts
- *   - Live info
+ * Shows just a few highlights (1 most-urgent transit alert + 2 upcoming
+ * events + 1 top news headline). The full Madrid Now feed lives on the
+ * dedicated /now page, which has the whole page to work with.
  *
- * This is the "dynamic" part of the homepage — it changes as records
- * in the `now` category are updated.
+ * The "View full Madrid Now →" call-to-action is prominent so users
+ * know there's more to see.
  */
 export default function MadridNowFeed({ records }: { records: MRecord[] }) {
-  const events = records.filter((r) => r.category === 'now' && r.subcategory === 'events')
-  const exhibitions = records.filter((r) => r.category === 'now' && r.subcategory === 'exhibitions')
-  const news = records.filter((r) => r.category === 'now' && r.subcategory === 'news')
-  const transit = records.filter((r) => r.category === 'now' && r.subcategory === 'transit')
-  const live = records.filter((r) => r.category === 'now' && r.subcategory === 'live')
+  // Pick just the highlights — at most 4 items total
+  const transit = records
+    .filter((r) => r.category === 'now' && r.subcategory === 'transit')
+    .slice(0, 1)  // 1 most-urgent transit alert
+  const events = records
+    .filter((r) => r.category === 'now' && r.subcategory === 'events')
+    .slice(0, 2)  // 2 upcoming events
+  const news = records
+    .filter((r) => r.category === 'now' && r.subcategory === 'news')
+    .slice(0, 1)  // 1 top headline
+
+  const highlightCount = transit.length + events.length + news.length
 
   return (
-    <div className="space-y-6">
-      {/* Section heading */}
-      <div className="flex items-baseline justify-between border-b border-gray-100 pb-2">
+    <div>
+      {/* Section heading with prominent CTA */}
+      <div className="flex items-baseline justify-between border-b border-gray-100 pb-3">
         <h2 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl">
           <span aria-hidden className="mr-1.5">📡</span>
           Madrid Now
         </h2>
         <Link
           to="/now"
-          className="text-xs font-medium text-brand-600 hover:underline"
+          className="inline-flex items-center gap-1 rounded-md bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 transition hover:bg-brand-100"
         >
-          Full Madrid Now →
+          View full Madrid Now
+          <span aria-hidden>→</span>
         </Link>
       </div>
 
-      {/* Transit alert — most urgent, show first if present */}
-      {transit.length > 0 && (
-        <section>
-          <SectionLabel icon="🚧" label="Transit alerts" count={transit.length} href="/now/transit" />
-          <ul className="mt-2 space-y-1.5">
-            {transit.slice(0, 2).map((r) => (
-              <li key={r.id}>
-                <Link
-                  to={`/${r.category}/${r.subcategory}/${r.id}`}
-                  className="block rounded-md border border-amber-200 bg-amber-50/50 px-3 py-2 text-xs transition hover:bg-amber-50"
-                >
-                  <span className="font-semibold text-amber-900">{r.title}</span>
-                  <span className="mt-0.5 block text-amber-800 line-clamp-2">{r.summary}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
+      {/* Compact highlights grid — single row of 3-4 cards */}
+      {highlightCount > 0 ? (
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Transit alert (amber, urgent) */}
+          {transit.map((r) => (
+            <HighlightCard
+              key={r.id}
+              record={r}
+              icon="🚧"
+              label="Transit alert"
+              accent="amber"
+            />
+          ))}
+
+          {/* Events */}
+          {events.map((r) => (
+            <HighlightCard
+              key={r.id}
+              record={r}
+              icon="🎟️"
+              label="This week"
+              accent="brand"
+            />
+          ))}
+
+          {/* News */}
+          {news.map((r) => (
+            <HighlightCard
+              key={r.id}
+              record={r}
+              icon="📰"
+              label="Top news"
+              accent="blue"
+            />
+          ))}
+        </div>
+      ) : (
+        <p className="mt-4 text-sm text-gray-500">
+          No current Madrid Now highlights.{' '}
+          <Link to="/now" className="text-brand-600 hover:underline">
+            View the full Madrid Now page →
+          </Link>
+        </p>
       )}
 
-      {/* Two-column grid: events + exhibitions */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {/* This week's events */}
-        {events.length > 0 && (
-          <section>
-            <SectionLabel icon="🎟️" label="This week's events" count={events.length} href="/now/events" />
-            <ul className="mt-2 space-y-1.5">
-              {events.slice(0, 4).map((r) => (
-                <li key={r.id}>
-                  <Link
-                    to={`/${r.category}/${r.subcategory}/${r.id}`}
-                    className="block rounded-md border border-gray-100 bg-white px-3 py-2 text-xs transition hover:border-gray-200 hover:bg-gray-50"
-                  >
-                    <span className="font-semibold text-gray-900">{r.title}</span>
-                    <span className="mt-0.5 block text-gray-600 line-clamp-2">{r.summary}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {/* Open exhibitions */}
-        {exhibitions.length > 0 && (
-          <section>
-            <SectionLabel icon="🖼️" label="Open exhibitions" count={exhibitions.length} href="/now/exhibitions" />
-            <ul className="mt-2 space-y-1.5">
-              {exhibitions.slice(0, 4).map((r) => (
-                <li key={r.id}>
-                  <Link
-                    to={`/${r.category}/${r.subcategory}/${r.id}`}
-                    className="block rounded-md border border-gray-100 bg-white px-3 py-2 text-xs transition hover:border-gray-200 hover:bg-gray-50"
-                  >
-                    <span className="font-semibold text-gray-900">{r.title}</span>
-                    <span className="mt-0.5 block text-gray-600 line-clamp-2">{r.summary}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-      </div>
-
-      {/* News */}
-      {news.length > 0 && (
-        <section>
-          <SectionLabel icon="📰" label="News & updates" count={news.length} href="/now/news" />
-          <ul className="mt-2 space-y-1.5">
-            {news.slice(0, 3).map((r) => (
-              <li key={r.id}>
-                <Link
-                  to={`/${r.category}/${r.subcategory}/${r.id}`}
-                  className="block rounded-md border border-gray-100 bg-white px-3 py-2 text-xs transition hover:border-gray-200 hover:bg-gray-50"
-                >
-                  <span className="font-semibold text-gray-900">{r.title}</span>
-                  <span className="mt-0.5 block text-gray-600 line-clamp-2">{r.summary}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {/* Live info (sunrise/sunset, etc.) */}
-      {live.length > 0 && (
-        <section>
-          <SectionLabel icon="🕒" label="Live info" count={live.length} href="/now/live" />
-          <ul className="mt-2 grid grid-cols-1 gap-1.5 sm:grid-cols-2">
-            {live.slice(0, 4).map((r) => (
-              <li key={r.id}>
-                <Link
-                  to={`/${r.category}/${r.subcategory}/${r.id}`}
-                  className="block rounded-md border border-gray-100 bg-white px-3 py-2 text-xs transition hover:border-gray-200 hover:bg-gray-50"
-                >
-                  <span className="font-semibold text-gray-900">{r.title}</span>
-                  <span className="mt-0.5 block text-gray-600 line-clamp-1">{r.summary}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      {/* Subtle reminder that there's more on /now */}
+      <p className="mt-4 text-center text-xs text-gray-400">
+        Plus exhibitions, live info, and more on the{' '}
+        <Link to="/now" className="font-medium text-brand-600 hover:underline">
+          full Madrid Now page
+        </Link>
+        .
+      </p>
     </div>
   )
 }
 
-function SectionLabel({
+/**
+ * A single highlight card — compact, scannable.
+ */
+function HighlightCard({
+  record,
   icon,
   label,
-  count,
-  href,
+  accent,
 }: {
+  record: MRecord
   icon: string
   label: string
-  count: number
-  href: string
+  accent: 'amber' | 'brand' | 'blue'
 }) {
+  const accentClasses = {
+    amber: 'border-amber-200 bg-amber-50/40 hover:bg-amber-50',
+    brand: 'border-gray-100 bg-white hover:border-brand-200 hover:bg-brand-50/30',
+    blue:  'border-gray-100 bg-white hover:border-blue-200 hover:bg-blue-50/30',
+  }[accent]
+
+  const labelClasses = {
+    amber: 'text-amber-700',
+    brand: 'text-gray-500',
+    blue:  'text-blue-600',
+  }[accent]
+
   return (
-    <div className="flex items-center justify-between">
-      <h3 className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gray-500">
+    <Link
+      to={`/${record.category}/${record.subcategory}/${record.id}`}
+      className={`group block rounded-lg border p-3 transition ${accentClasses}`}
+    >
+      <div className={`flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider ${labelClasses}`}>
         <span aria-hidden>{icon}</span>
         {label}
-      </h3>
-      <div className="flex items-center gap-2">
-        <span className="rounded-full bg-gray-100 px-1.5 py-0.5 text-[10px] font-semibold text-gray-600">
-          {count}
-        </span>
-        <Link to={href} className="text-[10px] text-brand-600 hover:underline">
-          All →
-        </Link>
       </div>
-    </div>
+      <div className="mt-1.5 text-sm font-semibold text-gray-900 group-hover:text-brand-600 line-clamp-2">
+        {record.title}
+      </div>
+      <div className="mt-1 text-xs text-gray-600 line-clamp-2">
+        {record.summary}
+      </div>
+    </Link>
   )
 }
