@@ -8,17 +8,21 @@
     <script>
       // Single Page App redirect for GitHub Pages.
       //
-      // When a user visits a deep URL like /essentials/transportation/metro-de-madrid
+      // When a user visits a deep URL like /essentials/transport/metro-de-madrid
       // and there is no static file at that path, GitHub Pages serves this 404.html.
-      // We rewrite the request to the SPA root and preserve the original path in
-      // the query string so the React app can pick it up via window.location.search.
+      // We redirect to the ROOT (/?p=...) so the SPA at / can pick up the original
+      // path from the query string and route accordingly.
+      //
+      // CRITICAL: we must redirect to "/" — NOT to the subdirectory. If we redirect
+      // to /essentials/transport/?p=..., GitHub Pages will serve 404.html AGAIN
+      // (no static file at that path either), creating a redirect loop that doubles
+      // the ?p= parameter on each iteration until the URL exceeds the 8KB limit
+      // and the browser shows "URI Too Long".
       //
       // See src/lib/router.ts (currentPath) for the matching reader.
       (function () {
         var l = window.location
-        var search = l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : ''
-        var query = '?p=' + encodeURIComponent(l.pathname) + search + l.hash
-        l.replace(l.pathname.slice(0, l.pathname.lastIndexOf('/') + 1) + query)
+        l.replace('/?p=' + encodeURIComponent(l.pathname))
       })()
     </script>
   </head>

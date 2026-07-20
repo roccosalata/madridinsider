@@ -119,12 +119,87 @@ const REQUIRED = [
   'last_updated', 'status', 'official_url', 'english_friendly', 'related_records'
 ]
 const VALID_STATUS = new Set(['evergreen', 'annual review', 'dynamic', 'legacy', 'archived'])
+const VALID_ENGLISH_LEVELS = new Set([
+  'english-primary', 'english-available', 'english-partial', 'spanish-only'
+])
 const URL_RE = /^https?:\/\/\S+$/i
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/
 
 // Pass 1: collect IDs, check required fields and per-record shape.
 const ids = new Set()
 const errors = []
+
+// Optional `sections` validation. Each section is one of:
+//   text|callout|stats|checklist|list|steps|do_dont|table
+const VALID_SECTION_TYPES = new Set([
+  'text', 'callout', 'stats', 'checklist', 'list', 'steps', 'do_dont', 'table'
+])
+const VALID_TONES = new Set(['info', 'warning', 'success', 'danger'])
+
+function validateSections(recId, sections) {
+  if (sections === undefined) return
+  if (!Array.isArray(sections)) {
+    errors.push(`${recId}: sections must be an array`)
+    return
+  }
+  sections.forEach((s, i) => {
+    const ctx = `${recId}.sections[${i}]`
+    if (!s || typeof s !== 'object') { errors.push(`${ctx}: not an object`); return }
+    if (!s.type || !VALID_SECTION_TYPES.has(s.type)) {
+      errors.push(`${ctx}: invalid or missing type "${s.type ?? ''}"`)
+      return
+    }
+    if (typeof s.heading !== 'string' || !s.heading.trim()) {
+      errors.push(`${ctx}: missing heading`)
+    }
+    switch (s.type) {
+      case 'text':
+      case 'callout':
+        if (typeof s.body !== 'string') errors.push(`${ctx}: ${s.type} requires string body`)
+        if (s.type === 'callout' && s.tone && !VALID_TONES.has(s.tone)) {
+          errors.push(`${ctx}: invalid tone "${s.tone}"`)
+        }
+        break
+      case 'stats':
+        if (!Array.isArray(s.items)) { errors.push(`${ctx}: stats requires items[]`); break }
+        s.items.forEach((it, j) => {
+          if (!it || typeof it.label !== 'string' || typeof it.value !== 'string')
+            errors.push(`${ctx}.items[${j}]: must have string label and value`)
+        })
+        break
+      case 'checklist':
+      case 'list':
+        if (!Array.isArray(s.items)) { errors.push(`${ctx}: ${s.type} requires items[]`); break }
+        s.items.forEach((it, j) => {
+          if (!it || typeof it.title !== 'string')
+            errors.push(`${ctx}.items[${j}]: must have string title`)
+          if (it.body !== undefined && typeof it.body !== 'string')
+            errors.push(`${ctx}.items[${j}]: body must be a string`)
+          if (it.meta !== undefined && !Array.isArray(it.meta))
+            errors.push(`${ctx}.items[${j}]: meta must be a string array`)
+        })
+        break
+      case 'steps':
+        if (!Array.isArray(s.items)) { errors.push(`${ctx}: steps requires items[]`); break }
+        s.items.forEach((it, j) => {
+          if (!it || typeof it.title !== 'string' || typeof it.body !== 'string')
+            errors.push(`${ctx}.items[${j}]: must have string title and body`)
+          if (it.tip !== undefined && typeof it.tip !== 'string')
+            errors.push(`${ctx}.items[${j}]: tip must be a string`)
+        })
+        break
+      case 'do_dont':
+        if (!Array.isArray(s.do) || !Array.isArray(s.dont))
+          errors.push(`${ctx}: do_dont requires string arrays do[] and dont[]`)
+        break
+      case 'table':
+        if (!Array.isArray(s.columns) || !Array.isArray(s.rows))
+          errors.push(`${ctx}: table requires columns[] and rows[][]`)
+        break
+    }
+  })
+}
+
 for (const r of records) {
   for (const f of REQUIRED) {
     if (!(f in r)) errors.push(`${r.id ?? '?'}: missing field ${f}`)
@@ -139,12 +214,26 @@ for (const r of records) {
   if (r.status && !VALID_STATUS.has(r.status)) {
     errors.push(`${r.id}: invalid status "${r.status}"`)
   }
+  // Optional english_level (added 2026-07-20). 4-tier system.
+  if (r.english_level !== undefined && !VALID_ENGLISH_LEVELS.has(r.english_level)) {
+    errors.push(`${r.id}: invalid english_level "${r.english_level}" — must be one of english-primary, english-available, english-partial, spanish-only`)
+  }
+  // If english_level is set, english_friendly must be consistent:
+  // tiers 1-3 → true, tier 4 (spanish-only) → false.
+  if (r.english_level !== undefined) {
+    const expectedFriendly = r.english_level !== 'spanish-only'
+    if (r.english_friendly !== expectedFriendly) {
+      errors.push(`${r.id}: english_friendly=${r.english_friendly} but english_level="${r.english_level}" — these must be consistent`)
+    }
+  }
   if (r.official_url && !URL_RE.test(r.official_url)) {
     errors.push(`${r.id}: invalid official_url "${r.official_url}"`)
   }
   if (r.last_updated && !DATE_RE.test(r.last_updated)) {
     errors.push(`${r.id}: invalid last_updated "${r.last_updated}"`)
   }
+  // Optional structured-content sections (added 2026-07-20).
+  validateSections(r.id, r.sections)
 }
 
 // Pass 2: now that all IDs are known, check related_records references.

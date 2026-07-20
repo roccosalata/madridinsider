@@ -1,5 +1,6 @@
 import { Link } from './Link'
 import StatusBadge from './StatusBadge'
+import EnglishBadge from './EnglishBadge'
 import type { Record as MRecord } from '../data/records'
 import { categoryById, recordUrl } from '../data/categories'
 
@@ -25,7 +26,10 @@ export default function RecordCard({ record, compact = false }: { record: MRecor
         <h3 className={`text-sm font-semibold text-gray-900 group-hover:${dotColor} line-clamp-2`}>
           {record.title}
         </h3>
-        <StatusBadge status={record.status} />
+        <div className="flex flex-none items-center gap-1">
+          <EnglishBadge record={record} />
+          <StatusBadge status={record.status} />
+        </div>
       </div>
       {!compact && (
         <p className="mt-1.5 text-xs leading-relaxed text-gray-600 line-clamp-2">
@@ -34,11 +38,6 @@ export default function RecordCard({ record, compact = false }: { record: MRecor
       )}
       <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-gray-500">
         {cat && <span className={`font-semibold uppercase tracking-wider ${dotColor}`}>{cat.title}</span>}
-        {record.english_friendly && (
-          <span className="rounded bg-emerald-50 px-1.5 py-0.5 font-semibold text-emerald-700">
-            EN
-          </span>
-        )}
         <span aria-hidden>·</span>
         <span>Updated {record.last_updated}</span>
       </div>

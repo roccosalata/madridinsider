@@ -1,64 +1,92 @@
 # Madrid Insider Homepage Vision
 
-## IMPORTANT
+> **Amended 2026-07-20** — Madrid Now is now the homepage content.
+> Top-level navigation reduced from 5 categories to 4.
 
-The following homepage categories are PERMANENT and must never be changed:
+## Homepage Purpose
 
-1. Madrid Essentials
-2. Living in Madrid
-3. See in Madrid
-4. Do in Madrid
-5. Madrid Now
+The Madrid Insider homepage answers two questions in one screen:
 
-These are constitution-level decisions for Madrid Insider.
-
----
+1. **"What's happening in Madrid right now?"** — live time, weather,
+   this week's events, current transit alerts, top news headline.
+2. **"How do I navigate the rest of the site?"** — four big category
+   links: Essentials, Living, See, Do.
 
 ## Primary Message
 
-Madrid Insider is the English-language operating manual for Madrid.
+**ONE-STOP SITE ALL ABOUT MADRID**
 
 Secondary tagline:
 
-> Everything you need to Visit, Live, and Thrive in Madrid.
+> The English-language operating manual for Madrid.
 
----
+## Homepage Layout
 
-## Homepage Information Architecture
+```
+┌──────────────────────────────────────────────────────────────────┐
+│ [MI] Madrid Insider   ONE-STOP SITE ALL ABOUT MADRID             │
+│                       Essentials · Living · See · Do        [🔍] │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  ┌─── MADRID RIGHT NOW ───────────┐  ┌─── FOUR WAYS IN ──────┐  │
+│  │ 🕒 14:32:07  Madrid time        │  │                        │  │
+│  │ ☀️ 24°C · AQI Good              │  │ 🎒 Madrid Essentials    │  │
+│  │ ─────────────────────────────── │  │    6 subcategories     │  │
+│  │ 📰 Top news headline            │  │                        │  │
+│  │ ─────────────────────────────── │  │ 🏡 Living in Madrid    │  │
+│  │ 🎟️ This week                    │  │    7 subcategories     │  │
+│  │  • Veranos de la Villa          │  │                        │  │
+│  │  • Real Madrid vs Sevilla       │  │ 🏛️ See in Madrid        │  │
+│  │ ─────────────────────────────── │  │    7 subcategories     │  │
+│  │ 🚧 Metro: L6 partial closure    │  │                        │  │
+│  │                                 │  │ 🎉 Do in Madrid         │  │
+│  │ [Full Madrid Now →]             │  │    7 subcategories     │  │
+│  └─────────────────────────────────┘  └────────────────────────┘  │
+│                                                                  │
+├──────────────────────────────────────────────────────────────────┤
+│ © 2026 Madrid Insider · Essentials · Living · See · Do · Now     │
+└──────────────────────────────────────────────────────────────────┘
+```
 
-HOME PAGE
+## Header Bar (every page)
 
-- Madrid Essentials
-- Living in Madrid
-- See in Madrid
-- Do in Madrid
-- Madrid Now
+- **Upper-left**: MI logo badge + "Madrid Insider" wordmark
+- **Center-left**: Slogan "ONE-STOP SITE ALL ABOUT MADRID" (all caps,
+  small tracking)
+- **Center-right**: 4 category nav links (Essentials, Living, See, Do)
+- **Far right**: Search icon (expands to search bar on click)
+- On mobile: hamburger menu replaces the 4 nav links
 
-These five categories are the ONLY top-level navigation categories.
+## Homepage Main Content
 
----
+Two-column layout on desktop (stacks on mobile):
 
-## Secondary User Journey System
+### Left column — "Madrid Right Now" (sidebar, ~40% width)
 
-The following are internal user journeys and NOT homepage categories:
+- **Live Madrid time** — updates every second, Europe/Madrid timezone
+- **Weather stub** — current temperature + condition (placeholder until
+  weather API is integrated)
+- **Top news headline** — latest from `/now/news`
+- **This week's events** — 2-3 cards from `/now/events`
+- **Current transit alert** — latest from `/now/transit`
+- **"Full Madrid Now →"** link to `/now`
 
-1. ARRIVE
-2. SURVIVE
-3. LIVE
-4. EXPLORE
-5. ENJOY
+### Right column — "Four Ways In" (main, ~60% width)
 
-They may be used as:
+The 4 categories as big clickable text rows (no cards, no shadows,
+matching the original clean portal look). Each row shows:
+- Emoji
+- Category title (large, bold)
+- One-line description
+- Subcategory count
+- Arrow → on hover
 
-- Tags
-- Filters
-- Database fields
-- Internal navigation
-- Content recommendations
+## Footer (every page)
 
-They must NEVER replace the five homepage categories.
-
----
+- Copyright line
+- 5 category links (Essentials, Living, See, Do, Now)
+- Source link to GitHub
+- About link
 
 ## User Personas
 
@@ -70,8 +98,6 @@ The homepage should immediately answer:
 - I'm an Expat
 - I'm Here This Weekend
 
----
-
 ## Content Rules
 
 - Madrid first.
@@ -80,16 +106,22 @@ The homepage should immediately answer:
 - Prefer official links.
 - Favor interconnected records.
 
----
-
 ## Launch Checklist
 
-- Remove MiniMax floating badge.
-- Add search.
-- Add breadcrumbs.
-- Add sitemap.
-- Add related records.
-- Implement English Friendly badges.
-- Build first 25 Golden Records.
+- [x] Remove MiniMax branding
+- [x] Add search
+- [x] Add breadcrumbs
+- [x] Add sitemap
+- [x] Add related records
+- [x] Implement English Friendly badges
+- [x] Build first 25 Golden Records (90 records total)
+- [x] Madrid Now as homepage content (Amendment 1, 2026-07-20)
+- [x] 4-category top-level navigation (Amendment 1, 2026-07-20)
+- [ ] Enrich all records with structured sections
+- [ ] Map ~24 legacy article cards from original Madrid Insider
+- [ ] Implement Arrive → Survive → Live → Explore → Enjoy user journeys
+- [ ] Newsletter signup
+- [ ] Interactive maps
+- [ ] AI-assisted recommendations
 
 This document serves as the UX specification for all future homepage implementations.
