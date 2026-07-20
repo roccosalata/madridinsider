@@ -1,8 +1,15 @@
-// Single source of truth for the site's content lives in /data/*.json
-// (kept at the repo root, not in src/, so it's easy to find and edit).
-// This file just gives the JSON a TypeScript type and re-exports it.
+// TypeScript wrapper for data/categories.json.
+// See SCHEMA.md (in madridinsider-data) for the schema.
 
 import data from '../../data/categories.json'
+
+export type Subcategory = {
+  id: string
+  slug?: string
+  title: string
+  icon: string
+  summary: string
+}
 
 export type Category = {
   id: string
@@ -10,7 +17,63 @@ export type Category = {
   description: string
   emoji: string
   color: 'red' | 'blue' | 'green' | 'purple' | 'orange'
-  bullets: string[]
+  subcategories: Subcategory[]
 }
 
 export const categories: Category[] = data as Category[]
+
+// ---------- Lookups ----------
+
+export function categoryById(id: string): Category | undefined {
+  return categories.find((c) => c.id === id)
+}
+
+export function subcategoryById(
+  categoryId: string,
+  subcategoryId: string
+): Subcategory | undefined {
+  return categoryById(categoryId)?.subcategories.find((s) => s.id === subcategoryId)
+}
+
+/** Resolve the URL slug for a subcategory, falling back to its id. */
+export function subcategorySlug(
+  categoryId: string,
+  subcategoryId: string
+): string {
+  const sub = subcategoryById(categoryId, subcategoryId)
+  return sub?.slug ?? sub?.id ?? subcategoryId
+}
+
+// ---------- URL helpers ----------
+
+export function categoryUrl(categoryId: string): string {
+  return `/${categoryId}`
+}
+
+export function subcategoryUrl(categoryId: string, subcategoryId: string): string {
+  return `/${categoryId}/${subcategorySlug(categoryId, subcategoryId)}`
+}
+
+export function recordUrl(
+  categoryId: string,
+  subcategoryId: string,
+  recordId: string
+): string {
+  return `/${categoryId}/${subcategorySlug(categoryId, subcategoryId)}/${recordId}`
+}
+
+// ---------- Counts ----------
+
+export function categoryRecordCount(categoryId: string, allRecords: { category: string }[]): number {
+  return allRecords.filter((r) => r.category === categoryId).length
+}
+
+export function subcategoryRecordCount(
+  categoryId: string,
+  subcategoryId: string,
+  allRecords: { category: string; subcategory: string }[]
+): number {
+  return allRecords.filter(
+    (r) => r.category === categoryId && r.subcategory === subcategoryId
+  ).length
+}

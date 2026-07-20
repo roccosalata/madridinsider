@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Madrid Insider</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="/" />
+    <script>
+      // Single Page App redirect for GitHub Pages.
+      //
+      // When a user visits a deep URL like /essentials/transportation/metro-de-madrid
+      // and there is no static file at that path, GitHub Pages serves this 404.html.
+      // We rewrite the request to the SPA root and preserve the original path in
+      // the query string so the React app can pick it up via window.location.search.
+      //
+      // See src/lib/router.ts (currentPath) for the matching reader.
+      (function () {
+        var l = window.location
+        var search = l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : ''
+        var query = '?p=' + encodeURIComponent(l.pathname) + search + l.hash
+        l.replace(l.pathname.slice(0, l.pathname.lastIndexOf('/') + 1) + query)
+      })()
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>

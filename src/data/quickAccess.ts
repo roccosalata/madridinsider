@@ -1,5 +1,4 @@
-// Single source of truth for quick-access items lives in /data/quickAccess.json.
-// This file just gives the JSON a TypeScript type and re-exports it.
+// Legacy quick-access data — being phased out in favour of records.
 
 import data from '../../data/quickAccess.json'
 

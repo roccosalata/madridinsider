@@ -1,5 +1,5 @@
-// Single source of truth for events lives in /data/events.json.
-// This file just gives the JSON a TypeScript type and re-exports it.
+// Legacy events data — being phased out in favour of records in
+// data/records.json under category=now, subcategory=events.
 
 import data from '../../data/events.json'
 
