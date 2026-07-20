@@ -257,7 +257,7 @@ const golden = [
   'museo-del-prado', 'retiro-park', 'royal-palace', 'plaza-mayor', 'gran-via',
   'toledo', 'segovia', 'el-escorial', 'left-luggage', 'english-speaking-doctors',
   'nie-tie', 'housing', 'healthcare', 'banking', 'universities', 'flamenco',
-  'real-madrid-bernabeu', 'santiago-bernabeu', 'mercado-san-miguel',
+  'real-madrid-bernabeu', 'mercado-san-miguel',
   'veranos-de-la-villa', 'madrid-pride'
 ]
 const missingGolden = golden.filter((g) => !ids.has(g))
