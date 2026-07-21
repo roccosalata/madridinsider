@@ -9,6 +9,7 @@ export type Subcategory = {
   title: string
   icon: string
   summary: string
+  tips?: string                    // optional practical advice shown on subcategory page
 }
 
 export type Category = {

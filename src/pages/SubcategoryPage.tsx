@@ -50,6 +50,23 @@ export default function SubcategoryPage({
         </div>
       </header>
 
+      {/* Tips / practical advice — shown between the header and the record list */}
+      {subcategory.tips && (
+        <div className="mt-4 rounded-xl border border-brand-200 bg-brand-50/40 p-4 sm:p-5">
+          <div className="flex items-start gap-2">
+            <span aria-hidden className="text-base leading-none mt-0.5">💡</span>
+            <div className="min-w-0 flex-1">
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-700">
+                Tips &amp; Practical Info
+              </p>
+              <p className="mt-1 text-xs leading-relaxed text-gray-800 sm:text-sm">
+                {subcategory.tips}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="mt-6 max-w-xl">
         <SearchBar
           placeholder={`Filter ${subcategory.title}…`}
