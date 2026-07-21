@@ -93,6 +93,7 @@ export type Record = {
   title: string
   category: string
   subcategory: string
+  subsubcategory?: string                 // optional grouping within a subcategory
   summary: string
   content: string                 // always required (search + fallback)
   last_updated: string
