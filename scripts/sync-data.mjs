@@ -256,7 +256,7 @@ const golden = [
   'metro-de-madrid', 'madrid-barajas-airport', 'atocha-station', 'puerta-del-sol',
   'museo-del-prado', 'retiro-park', 'royal-palace', 'plaza-mayor', 'gran-via',
   'toledo', 'segovia', 'el-escorial', 'left-luggage', 'english-speaking-doctors',
-  'nie-tie', 'housing', 'healthcare', 'banking', 'universities', 'flamenco',
+  'nie-tie', 'housing', 'healthcare', 'banking', 'universities-madrid', 'flamenco',
   'real-madrid-bernabeu', 'mercado-san-miguel',
   'veranos-de-la-villa', 'madrid-pride'
 ]
