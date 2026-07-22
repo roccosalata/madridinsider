@@ -1,27 +1,85 @@
 import { Link } from './Link'
+import { useState, useEffect } from 'react'
 import type { Record as MRecord } from '../data/records'
 
 /**
  * Madrid Now HIGHLIGHTS — compact teaser for the homepage.
  *
  * Shows just a few highlights (1 most-urgent transit alert + 2 upcoming
- * events + 1 top news headline). The full Madrid Now feed lives on the
- * dedicated /now page, which has the whole page to work with.
- *
- * The "View full Madrid Now →" call-to-action is prominent so users
- * know there's more to see.
+ * events + 1 top news headline) + LIVE WEATHER from Open-Meteo API.
+ * The full Madrid Now feed lives on the /now page.
  */
+
+type WeatherData = {
+  temp: number
+  condition: string
+  icon: string
+  feelsLike: number
+  humidity: number
+  windSpeed: number
+}
+
+// Weather code → emoji + description (Open-Meteo WMO codes)
+const WEATHER_CODES: Record<number, { icon: string; desc: string }> = {
+  0: { icon: '☀️', desc: 'Clear sky' },
+  1: { icon: '🌤️', desc: 'Mainly clear' },
+  2: { icon: '⛅', desc: 'Partly cloudy' },
+  3: { icon: '☁️', desc: 'Overcast' },
+  45: { icon: '🌫️', desc: 'Fog' },
+  48: { icon: '🌫️', desc: 'Rime fog' },
+  51: { icon: '🌦️', desc: 'Light drizzle' },
+  53: { icon: '🌦️', desc: 'Drizzle' },
+  55: { icon: '🌧️', desc: 'Heavy drizzle' },
+  61: { icon: '🌧️', desc: 'Light rain' },
+  63: { icon: '🌧️', desc: 'Rain' },
+  65: { icon: '🌧️', desc: 'Heavy rain' },
+  71: { icon: '🌨️', desc: 'Light snow' },
+  73: { icon: '🌨️', desc: 'Snow' },
+  75: { icon: '❄️', desc: 'Heavy snow' },
+  80: { icon: '🌦️', desc: 'Rain showers' },
+  81: { icon: '🌧️', desc: 'Rain showers' },
+  82: { icon: '⛈️', desc: 'Violent showers' },
+  95: { icon: '⛈️', desc: 'Thunderstorm' },
+  96: { icon: '⛈️', desc: 'Thunderstorm + hail' },
+  99: { icon: '⛈️', desc: 'Severe thunderstorm' },
+}
+
 export default function MadridNowFeed({ records }: { records: MRecord[] }) {
-  // Pick just the highlights — at most 4 items total
+  const [weather, setWeather] = useState<WeatherData | null>(null)
+
+  useEffect(() => {
+    // Fetch live weather from Open-Meteo (free, no API key)
+    // Madrid: lat 40.4168, lon -3.7038
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=40.4168&longitude=-3.7038&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&timezone=Europe/Madrid')
+      .then(res => res.json())
+      .then(data => {
+        if (data?.current) {
+          const code = data.current.weather_code
+          const w = WEATHER_CODES[code] || { icon: '🌡️', desc: 'Unknown' }
+          setWeather({
+            temp: Math.round(data.current.temperature_2m),
+            condition: w.desc,
+            icon: w.icon,
+            feelsLike: Math.round(data.current.apparent_temperature),
+            humidity: data.current.relative_humidity_2m,
+            windSpeed: Math.round(data.current.wind_speed_10m),
+          })
+        }
+      })
+      .catch(() => {
+        // Silent fail — weather is a nice-to-have, not critical
+      })
+  }, [])
+
   const transit = records
     .filter((r) => r.category === 'now' && r.subcategory === 'transit')
-    .slice(0, 1)  // 1 most-urgent transit alert
+    .slice(0, 1)
   const events = records
     .filter((r) => r.category === 'now' && r.subcategory === 'events')
-    .slice(0, 2)  // 2 upcoming events
+    .slice(0, 2)
   const news = records
     .filter((r) => r.category === 'now' && r.subcategory === 'news')
-    .slice(0, 1)  // 1 top headline
+    .slice(0, 1)
 
   const highlightCount = transit.length + events.length + news.length
 
@@ -42,40 +100,35 @@ export default function MadridNowFeed({ records }: { records: MRecord[] }) {
         </Link>
       </div>
 
+      {/* Live weather bar — real data from Open-Meteo */}
+      {weather && (
+        <div className="mt-3 flex items-center gap-4 rounded-lg border border-blue-100 bg-blue-50/40 px-4 py-2.5">
+          <span className="text-2xl" aria-hidden>{weather.icon}</span>
+          <div className="flex items-baseline gap-2">
+            <span className="text-xl font-bold text-gray-900">{weather.temp}°C</span>
+            <span className="text-xs text-gray-600">{weather.condition}</span>
+          </div>
+          <span className="text-[10px] text-gray-400">·</span>
+          <span className="text-xs text-gray-500">Feels {weather.feelsLike}°C</span>
+          <span className="text-[10px] text-gray-400">·</span>
+          <span className="text-xs text-gray-500">💧 {weather.humidity}%</span>
+          <span className="text-[10px] text-gray-400">·</span>
+          <span className="text-xs text-gray-500">💨 {weather.windSpeed} km/h</span>
+          <span className="ml-auto text-[10px] text-blue-500">Live</span>
+        </div>
+      )}
+
       {/* Compact highlights grid — single row of 3-4 cards */}
       {highlightCount > 0 ? (
         <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Transit alert (amber, urgent) */}
           {transit.map((r) => (
-            <HighlightCard
-              key={r.id}
-              record={r}
-              icon="🚧"
-              label="Transit alert"
-              accent="amber"
-            />
+            <HighlightCard key={r.id} record={r} icon="🚧" label="Transit alert" accent="amber" />
           ))}
-
-          {/* Events */}
           {events.map((r) => (
-            <HighlightCard
-              key={r.id}
-              record={r}
-              icon="🎟️"
-              label="This week"
-              accent="brand"
-            />
+            <HighlightCard key={r.id} record={r} icon="🎟️" label="This week" accent="brand" />
           ))}
-
-          {/* News */}
           {news.map((r) => (
-            <HighlightCard
-              key={r.id}
-              record={r}
-              icon="📰"
-              label="Top news"
-              accent="blue"
-            />
+            <HighlightCard key={r.id} record={r} icon="📰" label="Top news" accent="blue" />
           ))}
         </div>
       ) : (
@@ -87,7 +140,6 @@ export default function MadridNowFeed({ records }: { records: MRecord[] }) {
         </p>
       )}
 
-      {/* Subtle reminder that there's more on /now */}
       <p className="mt-4 text-center text-xs text-gray-400">
         Plus exhibitions, live info, and more on the{' '}
         <Link to="/now" className="font-medium text-brand-600 hover:underline">
@@ -99,9 +151,6 @@ export default function MadridNowFeed({ records }: { records: MRecord[] }) {
   )
 }
 
-/**
- * A single highlight card — compact, scannable.
- */
 function HighlightCard({
   record,
   icon,

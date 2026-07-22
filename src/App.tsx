@@ -1,6 +1,7 @@
 import { useRoute, useLinkInterceptor } from './lib/router'
 import { categories, categoryById } from './data/categories'
 import { records } from './data/records'
+import { useEffect } from 'react'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -14,6 +15,9 @@ import NotFoundPage from './pages/NotFoundPage'
 export default function App() {
   const route = useRoute()
   useLinkInterceptor()
+
+  // Dynamic SEO — update document title and meta tags per route
+  useSEO(route)
 
   return (
     <div className="min-h-screen bg-white text-gray-800 antialiased">
@@ -30,6 +34,77 @@ export default function App() {
       <Footer />
     </div>
   )
+}
+
+/**
+ * Dynamic SEO — updates <title> and <meta> tags based on the current route.
+ * This makes every page have its own unique title, which dramatically
+ * improves Google indexing and social media link previews.
+ */
+function useSEO(route: ReturnType<typeof useRoute>) {
+  useEffect(() => {
+    let title = 'Madrid Insider — The English-language operating manual for Madrid'
+    let description = 'The English-language operating manual for Madrid. Visas, transport, housing, museums, tapas, metro, and what is happening this week. All records link to official sources.'
+
+    switch (route.name) {
+      case 'home':
+        title = 'Madrid Insider — One-Stop Site All About Madrid'
+        description = 'Your English-language directory for Madrid, Spain. Five categories: Essentials, Living, See, Do, and Madrid Now. Live weather, events, transit alerts, and 265+ records with official links.'
+        break
+      case 'category': {
+        const cat = categoryById(route.categoryId)
+        if (cat) {
+          title = `${cat.title} — Madrid Insider`
+          description = cat.description
+        }
+        break
+      }
+      case 'subcategory': {
+        const cat = categoryById(route.categoryId)
+        if (cat) {
+          const sub = cat.subcategories.find((s) => (s.slug ?? s.id) === route.subcategorySlug)
+          if (sub) {
+            title = `${sub.title} — ${cat.title} — Madrid Insider`
+            description = sub.summary
+          }
+        }
+        break
+      }
+      case 'record': {
+        const rec = records.find((r) => r.id === route.recordId)
+        if (rec) {
+          title = `${rec.title} — Madrid Insider`
+          description = rec.summary
+        }
+        break
+      }
+      case 'notfound':
+        title = 'Page not found — Madrid Insider'
+        description = 'The page you are looking for does not exist.'
+        break
+    }
+
+    document.title = title
+
+    // Update meta description
+    let metaDesc = document.querySelector('meta[name="description"]')
+    if (metaDesc) {
+      metaDesc.setAttribute('content', description)
+    } else {
+      metaDesc = document.createElement('meta')
+      metaDesc.setAttribute('name', 'description')
+      metaDesc.setAttribute('content', description)
+      document.head.appendChild(metaDesc)
+    }
+
+    // Update Open Graph title
+    let ogTitle = document.querySelector('meta[property="og:title"]')
+    if (ogTitle) ogTitle.setAttribute('content', title)
+
+    // Update Open Graph description
+    let ogDesc = document.querySelector('meta[property="og:description"]')
+    if (ogDesc) ogDesc.setAttribute('content', description)
+  }, [route])
 }
 
 function renderRoute(route: ReturnType<typeof useRoute>) {
