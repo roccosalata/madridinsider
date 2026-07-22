@@ -50,7 +50,7 @@ export default function HomePage({
       {/* TOP 1/3: centered 2×2 table + welcome statement             */}
       {/* Both left and right margins are free.                        */}
       {/* ============================================================ */}
-      <section className="border-b border-gray-100 py-8 sm:py-10">
+      <section className="madrid-gradient border-b border-gray-100 py-8 sm:py-10">
         <div className="mx-auto max-w-2xl">
           {/* 2×2 category table */}
           <table className="w-full border-collapse">

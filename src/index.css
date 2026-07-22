@@ -26,4 +26,22 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  /* Subtle Madrid sunset gradient for header and hero sections.
+     Inspired by the golden light on Madrid's limestone buildings at sunset.
+     Uses CSS only — no external image dependency, no loading delay. */
+  .madrid-gradient {
+    background: linear-gradient(135deg,
+      rgba(255, 247, 237, 0.8) 0%,
+      rgba(255, 237, 213, 0.5) 30%,
+      rgba(254, 215, 170, 0.3) 60%,
+      rgba(253, 186, 116, 0.15) 100%
+    );
+  }
+  .madrid-gradient-strong {
+    background: linear-gradient(135deg,
+      #fff7ed 0%,
+      #ffedd5 40%,
+      #fed7aa 100%
+    );
+  }
 }

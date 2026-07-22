@@ -32,7 +32,7 @@ export default function CategoryPage({
         ]}
       />
 
-      <header className={`mt-4 rounded-2xl border ${accent} p-6 sm:p-8`}>
+      <header className={`mt-4 rounded-2xl border ${accent} madrid-gradient p-6 sm:p-8`}>
         <div className="flex items-center gap-4">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-2xl shadow-sm sm:h-14 sm:w-14 sm:text-3xl" aria-hidden>
             {category.emoji}
