@@ -3,7 +3,7 @@
     "id": "metro-de-madrid",
     "title": "Metro de Madrid",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "12 lines, 300+ stations, the fastest way around. Open 6am-1:30am (2:30am Fri/Sat). €1.50-2.00 single, €12.20 for 10 trips.",
     "content": "Metro de Madrid is one of the world's best metro systems — 12 lines, 300+ stations, 1,700+ trains. Clean, fast, frequent (every 2-5 min peak). Open 6am-1:30am Sun-Wed, 6am-2:30am Fri-Sat. FARES: Single €1.50-2.00 (zone dependent). 10-trip Metrobús €12.20 (works on metro + EMT buses). Monthly pass (Abono) €54.60 zone A. Tourist pass 1 day €8.40, 3 days €17. Airport supplement €4.50 (Line 8). TICKETS: Buy at station machines (English option) or use Tarjeta Transporte Público (rechargeable card, €2.50 deposit). The 10-trip Metrobús is the best value for tourists. APPS: Metro de Madrid app (English) — route planner, real-time arrivals, service alerts, offline map. KEY STATIONS: Sol (Lines 1,2,3 — center), Atocha Renfe (Line 1 — trains), Chamartín (Lines 1,10 — north station), Aeropuerto (Line 8 — airport), Nuevos Ministerios (Lines 6,8,10 — hub). TIPS: (1) Avoid rush hour 8-10am and 6-8pm. (2) Keep your ticket until you exit — inspections are frequent and fines are €50. (3) Summer 2026: closures on Lines 6, 7, 9B, 10 — free shuttle buses. (4) Line 8 to the airport has a €4.50 supplement. (5) Elevators at most major stations — check the app for accessibility. (6) The Metro is safe but watch for pickpockets on Lines 1 and 5 (tourist routes).",
     "official_url": "https://www.metromadrid.es/en",
@@ -127,7 +127,8 @@
         ]
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "Metro & Cercanías"
   },
   {
     "id": "madrid-barajas-airport",
@@ -236,13 +237,14 @@
         "tone": "info"
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "Overview"
   },
   {
     "id": "atocha-station",
     "title": "Atocha Station (Madrid's Main Train Station)",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "intercity-travel",
     "summary": "Madrid's main station. AVE high-speed to Barcelona, Seville, Valencia. Tropical garden in the old hall. Metro: Atocha Renfe L1.",
     "content": "Atocha Station (officially Madrid Puerta de Atocha) is Madrid's main train station, serving high-speed AVE trains and most long-distance routes. Two parts: (1) Atocha Cercanías — commuter trains (Cercanías C1-C10), in the modern part. (2) Madrid Puerta de Atocha — long-distance and AVE high-speed trains, in the restored 19th-century hall with the famous tropical garden (4,000 plants, turtles). AVE DESTINATIONS: Barcelona (2h30, from €25), Seville (2h30, from €20), Valencia (1h40, from €18), Málaga (2h30, from €25), Zaragoza (1h15, from €15), Córdoba (1h45, from €18). Metro: Atocha Renfe (Line 1), Atocha (Line 1, walk 5 min). Cercanías: connects to Chamartín (8 min, faster than Metro), Airport T4 (25 min, C1), El Escorial (1h, C8). FACILITIES: Left luggage (€3.90-5.50/day, ground floor near tropical garden), VIPS café, Starbucks, McDonald's, pharmacy, car rental, taxi rank, hotel booking desk, tropical garden (free to visit, even without a ticket). TIPS: (1) The tropical garden in the old hall is worth seeing even if you're not catching a train — 4,000 plants, turtles, free. (2) Arrive 30 min before AVE departure — security check is like an airport. (3) AVE tickets are cheapest 60+ days ahead — book at renfe.com. (4) Left luggage at Atocha is the cheapest in central Madrid (€3.90/day) — great for sightseeing. (5) The station is 10 min walk from the Prado, Reina Sofía, and Thyssen museums.",
     "official_url": "https://www.adif.es/en/station/atocha",
@@ -336,13 +338,14 @@
         "tone": "info"
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "Major Stations & Hubs"
   },
   {
     "id": "chamartin-station",
     "title": "Chamartín Station (Madrid's North Station)",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "intercity-travel",
     "summary": "Madrid's second major station, north of center. AVE to Galicia, Asturias, Basque Country. Cercanías hub. Metro: Lines 1, 10.",
     "content": "Chamartín Station (officially Madrid-Chamartín-Clara Campoamor) is Madrid's second major train station, located in the north of the city. Renovated in 2022 with a modern glass facade and expanded concourse. AVE high-speed trains depart here for: Galicia (A Coruña, Vigo — 6h), Asturias (Gijón, Oviedo — 4h30), Cantabria (Santander — 4h15), Basque Country (Bilbao — 4h, San Sebastián — 5h30). Also serves Cercanías lines C1, C2, C3, C4, C7, C8, C10 — connecting to Atocha (8 min), Barajas Airport T4 (25 min), El Escorial (1h), and Segovia (via C8 + C9). Metro: Chamartín (Lines 1, 10), plus direct connection to Metro surロン (Line 10). Facilities: VIPS café, Starbucks, McDonald's, pharmacy, car rental (Avis, Hertz), left luggage (€3.90/day), taxi rank, parking. The station is less crowded than Atocha and easier to navigate. For tourists staying in northern Madrid (Chamartín, Tetuán, financial district), this is more convenient than Atocha.",
     "official_url": "https://www.adif.es/en/station/chamartin",
@@ -428,13 +431,14 @@
         "tone": "info"
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "Major Stations & Hubs"
   },
   {
     "id": "emt-buses",
     "title": "EMT Madrid Buses (City Bus Network)",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "200+ lines across Madrid. €1.50 single, €1.20 with Tarjeta Transporte. Airport Express 203 (€5). Night buses (Búhos) from Cibeles.",
     "content": "EMT (Empresa Municipal de Transportes) operates Madrid's city bus network — 200+ lines, 2,000+ buses. Single ticket €1.50 (buy from driver, exact change appreciated). With Tarjeta Transporte Público: €1.20 per trip. 10-trip Metrobús card: €12.20 (works on Metro + buses). KEY LINES FOR TOURISTS: (1) Line 1, 2, 46 — north-south through center. (2) Line 27, 34, 45 — to museums (Prado, Reina Sofía). (3) Line 74 — to El Rastro flea market (Sundays). (4) Line 200, 203 — Airport Express (€5, 24/7). (5) Night buses N1-N28 — from Plaza de Cibeles after Metro closes. HOW TO USE: (1) Wait at a bus stop with a red/white sign showing the line number. (2) Flag the bus (raise your hand). (3) Enter through the front door. (4) Pay driver (cash) or tap your Tarjeta Transporte. (5) Press the 'stop' button before your stop. (6) Exit through the rear door. APP: Download 'EMT Madrid' app (English) — real-time bus arrivals, route planner, buy 10-trip tickets. Bus stops have QR codes — scan with your phone for real-time arrivals. TIPS: (1) Buses are slower than Metro for most routes but go where Metro doesn't. (2) Best for: cross-town routes, reaching neighborhoods not on Metro, airport. (3) Air-conditioned in summer. (4) wheelchair accessible (all buses have ramps). (5) The 10-trip Metrobús card is the best value — works on Metro AND buses.",
     "official_url": "https://www.emtmadrid.es/Index.aspx?lang=en-GB",
@@ -491,13 +495,14 @@
         ]
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "City Buses"
   },
   {
     "id": "taxis-madrid",
     "title": "Taxis in Madrid",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "White taxis with red diagonal stripe. €2.40 initial fare. €30 flat rate airport to center. Book via PideTaxi app. Honest, metered.",
     "content": "Madrid taxis are white with a red diagonal stripe and the Madrid bear crest. They're honest, metered, and reliable — scams are rare. FARES: Initial fare €2.40 (daytime). €1.10/km city, €1.30/km outside city or at night. Airport supplement €5.50. Train/bus station supplement €2.95. Waiting time €22/hour. TYPICAL FARES: Sol to Retiro €8-10. Sol to Bernabéu €12-15. Center to airport €30 (flat rate inside M-30). Center to IFEMA €25-30. FLAT RATES (mandated by city): Airport to central Madrid (inside M-30) = €30 flat rate. Airport to IFEMA = €20 flat rate. These are displayed in the taxi. BOOKING: (1) Street hail — wave your hand, look for the green 'libre' light on the roof. (2) Taxi ranks — at all major plazas, stations, hotels. (3) PideTaxi app (official, English, same fares as street hail). (4) FreeNow app (international, same fares). (5) Phone: Radio Taxi 91 447 51 84. TIPS: (1) Always use the meter (taxímetro) — refuse fixed prices except airport flat rate. (2) Tip: round up to nearest euro, or €1-2 for good service. (3) 4 passengers max per taxi. (4) Large luggage in trunk (free). (5) Taxis can use bus lanes — faster than driving. (6) Night rate applies 11pm-6am and on holidays. (7) For airport: the €30 flat rate is usually cheaper than the meter.",
     "official_url": "https://www.taximadrid.org/english",
@@ -547,13 +552,14 @@
         "tone": "info"
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "Taxis & Ride-Share"
   },
   {
     "id": "left-luggage",
     "title": "Left Luggage (Consignas) — All Stations",
-    "category": "living",
-    "subcategory": "services",
+    "category": "essentials",
+    "subcategory": "tourist-info",
     "summary": "Left luggage facilities at Madrid's main transit hubs: Atocha, Chamartín, Barajas Airport, Méndez Álvaro bus station. €3-6/day.",
     "content": "Left luggage (consignas) facilities in Madrid are located at the main transit hubs. This is the master record — see related records for location-specific details. LOCATIONS: (1) Atocha Station — consignas on the ground floor near the tropical garden, €3.90/day per bag (size S/M), €5.50/day (size L). Open 5:30am-10:30pm daily. (2) Chamartín Station — consignas near the VIPS café, same pricing. Open 6am-11pm. (3) Barajas Airport — left luggage at T1 (4€/bag/day) and T4 (5.50€/bag/day), open 24/7. (4) Méndez Álvaro Bus Station (Estación Sur) — left luggage, €3/day. Open 6am-midnight. PRICES: €3-6 per bag per day depending on size and location. Pay by cash or card. SECURITY: all facilities are staffed and CCTV-monitored. Bags are X-rayed. ID required (passport). Tips: (1) Don't leave valuables, electronics, or important documents in left luggage. (2) Take a photo of your bag before leaving it. (3) Keep your claim ticket safe — losing it means a long ID verification process. (4) Some facilities have size limits (max 80cm). (5) For longer-term storage (weeks/months), see our Public Storage (Trasteros) record.",
     "official_url": "https://www.adif.es/en/services/consignas",
@@ -570,7 +576,7 @@
       "madrid-barajas-airport",
       "metro-de-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Left Luggage",
     "sections": [
       {
         "type": "table",
@@ -621,7 +627,7 @@
     "id": "renfe-trains",
     "title": "Renfe — National Trains",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "intercity-travel",
     "summary": "Spain's national rail operator. AVE high-speed, Alvia, Cercanías commuter. renfe.com for tickets. Book 60+ days ahead for cheapest fares.",
     "content": "Renfe Operadora is Spain's national railway company. SERVICES: (1) AVE — high-speed (up to 310 km/h). Madrid to Barcelona 2h30, Seville 2h30, Valencia 1h40. From €15 if booked 60+ days ahead. (2) Alvia — medium-distance high-speed. Madrid to Galicia, Basque Country, Cantabria. (3) Cercanías — commuter rail in Madrid (9 lines, C1-C10). See our Cercanías record. (4) Larga Distancia — conventional long-distance (slower, cheaper). COMPETITORS: Ouigo (ouigo.com) and Iryo (iryo.eu) now compete with Renfe on the Madrid-Barcelona and Madrid-Valencia routes — often cheaper. BOOKING: renfe.com (English site available). Book 60+ days ahead for cheapest 'Promo' fares (€15-25). Last-minute tickets can be €150+. Tickets are e-tickets — show on your phone at the station. STATIONS: AVE trains depart from Atocha (most destinations) or Chamartín (Galicia, Asturias, Basque Country). Arrive 30 min before departure — security check like an airport. TIPS: (1) The 'Promo' fare is non-refundable but 50-70% cheaper. (2) Prenda-e (bike) service: €10 to bring a bike, book ahead. (3) Renfe+ loyalty program: free to join, accumulate points for discounts. (4) Cercanías is separate from AVE — different tickets, different platforms. (5) For Cercanías, use the Tarjeta Transporte Público (€2.50 deposit) — cheaper than single tickets.",
     "official_url": "https://www.renfe.com/es/en",
@@ -692,7 +698,8 @@
         "tone": "success"
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "Intercity Trains"
   },
   {
     "id": "schengen-visa-us",
@@ -809,7 +816,7 @@
       "spain-golden-visa-ended",
       "aupair-spain-madrid"
     ],
-    "subsubcategory": "Schengen Visa",
+    "subsubcategory": "UK Visa",
     "english_level": "english-available",
     "sections": [
       {
@@ -1015,7 +1022,7 @@
       "spanish-bank-accounts",
       "tipping-spain"
     ],
-    "official_url": "https://www.bankinter.com/banca/en/home",
+    "official_url": "https://www.bde.es/wbe/en/sistemas-de-pago/sistemas-de-pago-en-espana/",
     "subsubcategory": "Cards & Payment",
     "english_level": "english-available",
     "sections": [
@@ -1230,7 +1237,7 @@
       "tourist-scams-madrid",
       "local-police-stations-madrid"
     ],
-    "subsubcategory": "Emergency Services",
+    "subsubcategory": "Emergencies",
     "sections": [
       {
         "type": "stats",
@@ -1889,8 +1896,8 @@
   {
     "id": "neighborhoods-guide",
     "title": "Madrid Neighborhoods Guide",
-    "category": "living",
-    "subcategory": "housing",
+    "category": "see",
+    "subcategory": "neighborhoods",
     "summary": "Overview of Madrid's 10 main neighborhoods for visitors and expats. Each has its own character — pick 2-3 to explore per day.",
     "content": "Madrid Neighborhoods Guide — overview of the 10 main areas for visitors and expats. CENTRAL: (1) Sol & Gran Vía — tourist center, shopping, theaters. Best for first-time visitors. Noisy, busy, overpriced restaurants. (2) Malasaña — hipster, vintage, craft beer, alternative nightlife. Best for 20s-30s travelers. (3) Chueca — LGBTQ+, chic boutiques, cocktail bars. Best for shopping and nightlife. HISTORIC: (4) La Latina — tapas, El Rastro flea market, traditional vermouth. Best for food lovers. (5) Lavapiés — multicultural, Indian curry, flamenco, alternative arts. Best for adventurous eaters. RESIDENTIAL: (6) Chamberí — authentic, local, calm. Best for a quieter base. (7) Retiro — parks, museums, upscale. Best for museum-goers. UPSCALE: (8) Salamanca — luxury shopping, embassies, fine dining. Best for luxury travelers. STUDENT & WEST: (9) Argüelles & Moncloa — students, parks, Temple of Debod sunset. Best for budget travelers. NORTH: (10) Tetuán & Cuatro Caminos — diverse, working-class, cheap eats. Best for budget long-term stays. HOW TO CHOOSE WHERE TO STAY: (1) First visit: Sol/Gran Vía or Chamberí. (2) Nightlife: Malasaña or Chueca. (3) Food: La Latina. (4) Museums: Retiro. (5) Budget: Argüelles or Tetuán. (6) Luxury: Salamanca. (7) Authentic/local: Chamberí or La Latina. EXPLORING: Each neighborhood takes 2-4 hours to walk. Best approach: Sol → Plaza Mayor → La Latina (morning tapas), then Malasaña → Chueca (afternoon vintage), then Gran Vía (evening). See our individual neighborhood records for detailed guides.",
     "status": "evergreen",
@@ -1908,7 +1915,7 @@
       "gran-via"
     ],
     "official_url": "https://www.esmadrid.com/en/areas",
-    "subsubcategory": "Finding a Place",
+    "subsubcategory": "Overview",
     "english_level": "english-available",
     "sections": [
       {
@@ -2162,7 +2169,7 @@
       "empadronamiento"
     ],
     "official_url": "https://www.esmadrid.com/en/practical-information",
-    "subsubcategory": "Private Healthcare",
+    "subsubcategory": "Doctors",
     "sections": [
       {
         "type": "table",
@@ -2666,7 +2673,7 @@
       "boating-madrid",
       "madrid-for-families-guide"
     ],
-    "subsubcategory": "Central Parks",
+    "subsubcategory": "Overview",
     "sections": [
       {
         "type": "stats",
@@ -2918,7 +2925,7 @@
       "casa-de-campo",
       "madrid-rio"
     ],
-    "subsubcategory": "Attractions",
+    "subsubcategory": "Cable Car",
     "english_level": "english-available",
     "sections": [
       {
@@ -3585,7 +3592,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Jazz & Blues"
   },
   {
     "id": "real-madrid-bernabeu",
@@ -3676,7 +3684,8 @@
         "tone": "warning"
       }
     ],
-    "english_level": "english-available"
+    "english_level": "english-available",
+    "subsubcategory": "Football"
   },
   {
     "id": "rayo-vallecas",
@@ -3706,7 +3715,8 @@
         "body": "Rayo Vallecano plays in Vallecas (southeast Madrid, Metro Portazgo). Smaller stadium (Campo de Fútbol de Vallecas, 14,000 seats) but passionate fanbase. Cheapest tickets of the three Madrid clubs (€15-40). Working-class club with cult following.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Football"
   },
   {
     "id": "traditions-summary",
@@ -4090,13 +4100,13 @@
     "id": "metro-closures",
     "title": "Metro Closures",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "[Archived: merged into another record. Same Summer 2026 closure info as metro-closures-summer-2026. Use that record.] Summer 2026: planned closures on Lines 6, 7, 9B, 10. Free shuttle buses cover affected sections.",
     "content": "The Comunidad de Madrid does major track and station work in August when ridership drops. Summer 2026 affected: Line 9B (TFM) Arganda-Rivas closed 25 Jul – 13 Aug. Line 6 Argüelles-Ciudad Universitaria closed 1 Aug – 2 Sep (Moncloa station work). Line 7 Gregorio Marañón-Pitis closed 2–28 Aug. Line 10 Plaza Castilla-Nuevos Ministerios extended to 21 Aug (Bernabéu renovation). All affected sections have free EMT shuttle buses.",
     "official_url": "https://www.crtm.es/comunicacion/actualidad-del-servicio/avisos/avisos-metro/",
     "status": "archived",
     "english_friendly": true,
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "tags": [
       "transit",
       "metro",
@@ -4415,7 +4425,7 @@
       "cost-of-living-madrid",
       "moving-to-madrid-guide"
     ],
-    "subsubcategory": "Renting",
+    "subsubcategory": "DIY Guide",
     "sections": [
       {
         "type": "callout",
@@ -4664,7 +4674,7 @@
       "english-speaking-financial-advisors-madrid",
       "moving-to-madrid-guide"
     ],
-    "subsubcategory": "Bank Accounts",
+    "subsubcategory": "Overview",
     "sections": [
       {
         "type": "callout",
@@ -4728,14 +4738,14 @@
     "id": "ride-sharing-madrid",
     "title": "Ride-Sharing (Uber & Cabify)",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Uber and Cabify both operate in Madrid. Cabify (Spanish company) is often cheaper and more popular with locals.",
     "content": "Both Uber and Cabify operate legally in Madrid. Cabify is a Spanish company and tends to be the preferred choice for locals — often slightly cheaper than Uber and with better Spanish-language support. Both apps work in English. Pick-up points at the airport are signed (follow 'VCN' or 'Ride App' signs). Surge pricing applies during peak hours and rainy days. Payment is cashless via the app. Licensed Madrid taxis can also be booked via the PideTaxi or FreeNow apps.",
     "official_url": "https://cabify.com/en",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "rideshare",
@@ -4794,20 +4804,21 @@
         "body": "At Barajas, follow signs to 'Ride App' or 'VCN' (VTC) pick-up zones. Each terminal has a designated pick-up point — check your app for the exact zone letter. Taxis have a fixed €30 fare to central Madrid (inside the M-30), which is often cheaper than ride-sharing for airport runs.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Taxis & Ride-Share"
   },
   {
     "id": "bicimad",
     "title": "BiciMAD — Electric Bike Sharing",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Madrid's electric bike-share system. 6,000+ e-bikes across 250+ stations. Great for short trips in the flat center.",
     "content": "BiciMAD is Madrid's municipal electric bike-sharing system, operated by EMT (the same company that runs the buses). There are over 6,000 electric bikes at 250+ stations across the city. The center of Madrid is mostly flat and very bikeable, though some outer areas are hilly. The bikes have pedal-assist so hills are manageable. You need the BiciMAD app (English available) to unlock bikes — no magnetic card needed anymore. Annual membership is €25/year for residents, or pay-per-use at €0.10/min. Helmets are not required by law in Spanish cities but recommended.",
     "official_url": "https://www.bicimad.com/en",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "bike",
@@ -4870,13 +4881,14 @@
         "body": "BiciMAD is ideal for trips under 3 km in the center — Retiro Park, Madrid Río, the historic core, and between museums. Avoid the Gran Vía during rush hour (heavy traffic and tram tracks). The Madrid Río park has dedicated bike lanes and is a lovely ride.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Active Transit (Bike/Scooter/Walk)"
   },
   {
     "id": "electric-scooters-madrid",
     "title": "Electric Scooters (Lime, Dott, Tier)",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Shared e-scooters from Lime, Dott, and Tier operate in central Madrid. €1 to unlock + €0.15/min.",
     "content": "Three e-scooter operators are licensed in the Madrid city center: Lime, Dott, and Tier. They're convenient for short trips but the city has strict rules: no riding on sidewalks (€200 fine), no riding in Retiro Park or historic pedestrian zones, and you must park in designated areas shown in the app. Helmets are recommended but not required. The scooters are geofenced to disable outside the service area. Best for the 1-3 km trips that are too long to walk but too short to bother with the metro.",
     "official_url": "https://www.li.me/en-es/locations/madrid",
@@ -4902,13 +4914,14 @@
         "body": "Lime, Dott, and Tier operate e-scooter sharing in Madrid. Download the app, scan QR code, ride. Park in designated zones only. €1 unlock + €0.15/min. Helmets recommended. Not allowed on sidewalks — use bike lanes.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Active Transit (Bike/Scooter/Walk)"
   },
   {
     "id": "walking-madrid",
     "title": "Walking in Madrid",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Madrid's compact center is one of Europe's most walkable cities. Most sights within 20-30 min walk of Puerta del Sol.",
     "content": "Madrid's historic center is extremely walkable — most major sights are within a 20-30 minute walk of Puerta del Sol (the city's kilometer zero). The center is mostly flat, with wide pedestrianized streets (Calles Mayor, Arenal, Preciados) and numerous parks. Walking is the best way to discover the city's hidden plazas, tapas bars, and street art. Avoid walking alone in poorly-lit areas late at night (Lavapiés and Cuatro Caminos after midnight). The official Madrid tourism site has 7 self-guided walking routes (1-3 hours each) covering the Habsburg city, the Bourbons, literary Madrid, and more.",
     "official_url": "https://www.esmadrid.com/en",
@@ -4932,7 +4945,8 @@
         "body": "Central Madrid (Sol, Gran Vía, Plaza Mayor, Huertas, La Latina, Malasaña, Chueca) is all within a 20-30 minute walk. Wear comfortable shoes — lots of cobblestones. Avoid walking 2-5pm in July/August (40°C+). Best walking months: April-June, September-November.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Active Transit (Bike/Scooter/Walk)"
   },
   {
     "id": "airport-express-bus-203",
@@ -4984,7 +4998,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Ground Transport"
   },
   {
     "id": "airport-transfers-private",
@@ -5032,7 +5047,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Ground Transport"
   },
   {
     "id": "major-airlines-madrid",
@@ -5062,20 +5078,21 @@
         "body": "Iberia (hub at T4), Air Europa (Spanish carrier), Vueling (low-cost), Ryanair (low-cost, T1), EasyJet (low-cost). US carriers: American Airlines, Delta (seasonal). Most airline offices cluster around Plaza de España.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Airlines"
   },
   {
     "id": "ave-high-speed-trains",
     "title": "AVE High-Speed Trains",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "intercity-travel",
     "summary": "Europe's largest high-speed rail network. Madrid to Barcelona 2h30, Seville 2h30, Valencia 1h40. From €20 one-way.",
     "content": "Spain has the largest high-speed rail network in Europe and the second-largest in the world (after China). The AVE (Alta Velocidad Española) connects Madrid to major Spanish cities at up to 310 km/h. Trains depart from Atocha station (Puerta de Atocha) for most destinations, and from Chamartín for Galicia and Asturias. Fares start at €20 one-way if booked in advance (up to 60 days ahead) but rise to €150+ for last-minute bookings. The cheapest fares are non-refundable 'Promo' tickets. Renfe's competing low-cost brand 'Ouigo' (French operator) and 'Iryo' (private Spanish operator) offer even cheaper fares on the Madrid-Barcelona and Madrid-Valencia routes. Trains are comfortable, with power outlets, WiFi (spotty), and a café car.",
     "official_url": "https://www.renfe.com/es/en/ave",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "train",
@@ -5135,13 +5152,14 @@
         "body": "Ouigo (ouigo.com) and Iryo (iryo.eu) compete with Renfe on the Madrid-Barcelona and Madrid-Valencia routes. Fares start at €9 one-way. Slightly less legroom and luggage allowance than AVE, but the same travel time.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Intercity Trains"
   },
   {
     "id": "intercity-buses",
     "title": "Intercity Buses (Madrid to other cities)",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "intercity-travel",
     "summary": "Cheaper than trains for intercity travel. Madrid to Granada 5h (€25), Lisbon 8h (€45), Bilbao 4h30 (€22).",
     "content": "Intercity buses are the budget alternative to trains for travel within Spain and to neighboring countries. They're slower but often half the price of the AVE. The main operator is ALSA (owned by National Express), with routes to every major Spanish city and international destinations including Portugal, France, and Morocco (via ferry). Other operators include Avanza (Castilla y León, Extremadura routes) and Daibus (Andalusia). Buses depart from Estación Sur (Méndez Álvaro) for most ALSA routes, and from Moncloa for Avanza routes. Book at alsa.es for the best fares — English site available. Buses are modern, air-conditioned, with WiFi (when it works) and onboard toilets.",
     "official_url": "https://www.alsa.com/en",
@@ -5173,14 +5191,14 @@
     "id": "bus-stations-madrid",
     "title": "Bus Stations in Madrid",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "[Archived: merged into another record. Same list as coach-stations-madrid. Use coach-stations-madrid for intercity list; bus-stations-vs-coach-stations explains city bus vs coach.] Estación Sur (Méndez Álvaro) for ALSA intercity. Moncloa for Castilla y León. Plaza Elíptica for south routes.",
     "content": "Madrid has several bus stations serving different regions. Estación Sur (also called Méndez Álvaro) is the main intercity station — ALSA routes to Barcelona, Valencia, Andalusia, Portugal, and France all depart from here. Moncloa station serves Castilla y León (Segovia, Ávila, Salamanca) and Galicia routes. Plaza Elíptica handles some southern routes (Toledo, Cuenca). Each station is on a Metro line: Estación Sur on Line 6 (Méndez Álvaro), Moncloa on Lines 3 and 6, Plaza Elíptica on Lines 6 and 11. Arrive 20-30 minutes before departure to find your platform — large stations like Estación Sur have 50+ platforms. Buy tickets in advance online or at station ticket windows.",
     "official_url": "https://www.alsa.com/en/bus-stations/madrid-sur-station",
     "status": "archived",
     "english_friendly": false,
     "english_level": "spanish-only",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "bus",
@@ -5198,7 +5216,7 @@
     "id": "eurail-interrail-passes",
     "title": "Eurail / Interrail Passes",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "intercity-travel",
     "summary": "Multi-country train passes for non-European (Eurail) and European (Interrail) residents. Spain is one pass country.",
     "content": "Eurail (for non-European residents) and Interrail (for European residents) passes offer flexible train travel across multiple European countries. A 'Global Pass' covers 33 countries including Spain. A 'One Country Pass' for Spain is also available. Passes give you a set number of travel days within a period (e.g., 3 days within 1 month, 7 days within 1 month, or continuous travel for up to 3 months). High-speed AVE trains in Spain require a seat reservation (€10-20 additional per trip) even with a pass — book these in advance at renfe.com or at Atocha station. The pass is best for travelers visiting 3+ countries or 4+ Spanish cities. For just Madrid + 1-2 other cities, point-to-point tickets booked in advance are usually cheaper.",
     "official_url": "https://www.eurail.com/en",
@@ -5224,13 +5242,14 @@
         "body": "Eurail (non-EU residents) and Interrail (EU residents) passes offer unlimited train travel across Europe. Spain pass: 3-8 days within 1 month. Renfe AVE requires seat reservation (€10-20 extra). Book reservations at renfe.com or stations. Lost/stolen passes cannot be replaced.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Intercity Trains"
   },
   {
     "id": "driving-madrid",
     "title": "Driving & Car Rental in Madrid",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Don't drive in central Madrid (LEZ restrictions, expensive parking). Rent a car only for day trips outside the city.",
     "content": "Driving in central Madrid is not recommended for visitors. The city has a Low Emission Zone (ZBE — Zona de Bajas Emisiones) that restricts older vehicles, and parking is expensive (€2-4/hour on-street, €25-40/day in lots) with limited spaces. The historic center has narrow one-way streets and pedestrian zones. Traffic is heavy and Spanish drivers are aggressive. That said, renting a car for day trips OUTSIDE Madrid is worthwhile — destinations like Toledo, Segovia, El Escorial, and the Castilian countryside are easy drives (1 hour each way) and not all are reachable by train. Major rental companies (Avis, Hertz, Europcar, Enterprise) have offices at Barajas Airport and Atocha station. An International Driving Permit is recommended for non-EU licenses. Drive on the right. Speed limits: 50 km/h city, 90 km/h highway, 120 km/h motorway.",
     "official_url": "https://www.dgt.es",
@@ -5255,13 +5274,14 @@
         "body": "Madrid has a Low Emission Zone (ZBE) in the center — older cars are banned. Parking is expensive (€2-4/hour) and nearly impossible in the center. Public transport is faster, cheaper, and less stressful. Only rent a car for day trips outside Madrid.",
         "tone": "warning"
       }
-    ]
+    ],
+    "subsubcategory": "Driving & Parking"
   },
   {
     "id": "parking-madrid",
     "title": "Parking in Madrid",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "On-street parking is regulated (SER zones) and expensive. Public lots cost €25-40/day. Most central hotels don't include parking.",
     "content": "Parking in central Madrid is challenging and expensive. On-street parking in the SER (Servicio de Estacionamiento Regulado) zones costs €1.05-3.00/hour depending on the zone (blue zones are cheaper, green zones are resident-only). Maximum stay is usually 2 hours. Pay at the meter with a credit card or via the ElParking app. Most central hotels do NOT include parking — expect to pay €25-40/day extra. The cheapest public lots are around Gran Vía (Parking Gran Vía, €28/day) and Plaza Mayor (Parking Plaza Mayor, €30/day). Free parking is virtually nonexistent in the center. If you're staying outside the center, look for hotels near Metro stations with free parking, then take the Metro in. The M-30 ring road has park-and-ride lots at some Metro stations (€3-5/day including Metro tickets for all passengers).",
     "official_url": "https://www.madrid.es/portales/munimadrid/en/Inicio/Mobility-and-transport/Parking",
@@ -5284,7 +5304,8 @@
         "body": "Street parking: €2-4/hour (SER zone, pay at meter). Underground garages: €3-5/hour, €20-35/day. Many central streets are pedestrianized or Low Emission Zone (ZBE). Best advice: don't drive in central Madrid. Use public transport.",
         "tone": "warning"
       }
-    ]
+    ],
+    "subsubcategory": "Driving & Parking"
   },
   {
     "id": "sim-cards-madrid",
@@ -5640,7 +5661,7 @@
       "coworking-madrid",
       "public-wifi-madrid"
     ],
-    "subsubcategory": "Connectivity",
+    "subsubcategory": "Internet Cafés",
     "sections": [
       {
         "type": "callout",
@@ -5705,7 +5726,7 @@
       "moving-shipping-madrid",
       "translating-services-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Post Office",
     "sections": [
       {
         "type": "callout",
@@ -5755,7 +5776,7 @@
       "dry-cleaning"
     ],
     "related_records": [],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Launderettes",
     "sections": [
       {
         "type": "callout",
@@ -5786,7 +5807,7 @@
     "related_records": [
       "emergency-numbers"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Locksmiths",
     "sections": [
       {
         "type": "callout",
@@ -5817,7 +5838,7 @@
     "related_records": [
       "post-office-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Moving & Shipping",
     "sections": [
       {
         "type": "callout",
@@ -5850,7 +5871,7 @@
       "empadronamiento",
       "post-office-madrid"
     ],
-    "subsubcategory": "Translating & Interpreting",
+    "subsubcategory": "Translating",
     "sections": [
       {
         "type": "list",
@@ -5895,7 +5916,7 @@
       "salon"
     ],
     "related_records": [],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Barbers & Hair",
     "sections": [
       {
         "type": "callout",
@@ -6941,7 +6962,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "tour",
       "walking",
@@ -6955,7 +6976,7 @@
       "lavapies-neighborhood",
       "sol-gran-via-neighborhood"
     ],
-    "subsubcategory": "Walking Tours",
+    "subsubcategory": "Walking & SEG Tours",
     "sections": [
       {
         "type": "callout",
@@ -7634,7 +7655,8 @@
           "Don't expect modern enclosures everywhere — some are dated"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Zoo & Aquarium"
   },
   {
     "id": "imax-planetarium-madrid",
@@ -7686,7 +7708,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "IMAX & Planetarium"
   },
   {
     "id": "warner-park-madrid",
@@ -8974,7 +8997,7 @@
       "sol-gran-via-neighborhood",
       "el-rastro-flea-market"
     ],
-    "subsubcategory": "Specialty Shops",
+    "subsubcategory": "Bookstores",
     "sections": [
       {
         "type": "callout",
@@ -8987,15 +9010,15 @@
   {
     "id": "bullfights-madrid",
     "title": "Bullfighting (Las Ventas)",
-    "category": "see",
-    "subcategory": "spectator-sports",
+    "category": "do",
+    "subcategory": "traditions",
     "summary": "Madrid's Las Ventas bullring — the 'cathedral of bullfighting'. Season March-October, Sundays at 7pm. €25-150.",
     "content": "Las Ventas is Madrid's main bullring and the most important venue in Spain for bullfighting (corrida de toros). Built in 1931 in Neo-Mudéjar style, it seats 23,798 spectators and is considered the 'cathedral of bullfighting'. The bullfighting season runs March-October, with the main events on Sundays at 7pm (earlier in autumn). Special fairs: San Isidro (May-June, daily events), Feria de Otoño (October). Tickets €25-150 depending on seat location — sombra (shade) is more expensive than sol (sun). Buy at the Las Ventas box office (Calle Alcalá 237, Metro Las Ventas L2/L5) or at taurotop.com. Each corrida has 3 matadors who each fight 2 bulls, lasting 2-3 hours total. Bullfighting is controversial — animal rights activists have succeeded in banning it in Catalonia and the Canary Islands, but it remains legal and culturally important in Madrid and Andalusia. If you do attend, you'll see a spectacle that has inspired Spanish artists from Goya to Picasso to Hemingway.",
     "official_url": "https://www.las-ventas.com/",
     "status": "annual review",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "traditions",
       "bullfight",
@@ -9034,7 +9057,8 @@
         "body": "Bullfighting is controversial — Catalonia and Canary Islands have banned it. But in Madrid it remains legal and culturally significant. If you attend, you'll see a spectacle that has inspired Spanish artists from Goya to Picasso to Hemingway. Make your own judgment.",
         "tone": "warning"
       }
-    ]
+    ],
+    "subsubcategory": "Bullfighting"
   },
   {
     "id": "verbenas-festivals",
@@ -9188,7 +9212,7 @@
     "id": "metro-closures-summer-2026",
     "title": "Metro Closures — Summer 2026",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Planned closures on Lines 6, 7, 9B, and 10 for renovations. Free shuttle buses cover affected sections.",
     "content": "Metro de Madrid has scheduled track and signal renovations during summer 2026 (June 15 - September 15) on multiple lines. Affected: Line 6 (circular) — closed between Méndez Álvaro and Argüelles on weekends, shuttles every 5 min. Line 7 — closed between Pitis and Arroyofresno (no shuttle — take bus 89). Line 9B — closed between Puerta de Arganda and Arganda del Rey (shuttle bus available). Line 10 — closed between Tres Olivos and Hospital Infanta Sofía on weekday nights 11pm-6am. Free shuttle buses replace metro service on closed sections — follow signs to 'Autobús Sustitutivo'. Plan extra 15-30 minutes for affected routes. Check the official Metro de Madrid app (English) or @metromadrid on Twitter for real-time updates. Stations close to home/work? Identify alternative lines and bus routes in advance. The Cercanías commuter rail (Lines C1-C10) is unaffected and is often faster than Metro for cross-city trips during closures.",
     "official_url": "https://www.metromadrid.es/en/avisos",
@@ -9209,7 +9233,7 @@
       "madrid-barajas-airport",
       "metro-closures"
     ],
-    "subsubcategory": "Metro Alerts",
+    "subsubcategory": "Metro & Cercanías",
     "sections": [
       {
         "type": "callout",
@@ -9288,7 +9312,7 @@
     "id": "emt-bus-detours",
     "title": "EMT Bus Detours — Current",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Bus routes altered for construction and events. Check EMT app or Twitter for current detours.",
     "content": "EMT Madrid buses frequently have temporary detours due to construction, demonstrations, sports events, and street markets. Current major detours (always verify with the EMT app or @EMTMadrid on Twitter for the latest): (1) Lines 1, 2, 46 — detoured during demonstrations at Puerta del Sol (typically Saturday evenings). (2) Lines 27, 34, 45 — detoured during football matches at the Bernabéu (Real Madrid home games, mainly Sun evenings). (3) Lines 23, 35, 116 — detoured for El Rastro flea market (every Sunday 9am-3pm, expect delays in La Latina). (4) Various lines detoured during the San Isidro festival (May 11-15) and Madrid Pride (June 28-July 7). The EMT Madrid app (English available) shows real-time bus locations and current detours. Twitter @EMTMadrid posts major detours 24-48 hours in advance. For demonstrations and large events, expect delays of 15-45 minutes and consider Metro alternatives. For the most accurate predictions, use Google Maps or Citymapper with real-time data.",
     "official_url": "https://www.emtmadrid.es/Index.aspx?lang=en-GB",
@@ -9308,7 +9332,7 @@
       "metro-closures-summer-2026",
       "metro-de-madrid"
     ],
-    "subsubcategory": "Bus Alerts",
+    "subsubcategory": "City Buses",
     "sections": [
       {
         "type": "callout",
@@ -9390,7 +9414,7 @@
     "id": "cercanias-delays",
     "title": "Cercanías (Commuter Rail) Delays",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "transport",
     "summary": "Renfe Cercanías occasional delays due to signal issues and infrastructure work. Check @CercaniasMadrid for real-time updates.",
     "content": "Renfe Cercanías Madrid is the commuter rail network (10 lines, C1-C10) serving Madrid and its suburbs. Generally reliable, but delays do occur — especially during morning rush (7:30-9:30am) and evening rush (5-7pm). Common causes: signal failures (especially on C1, C2, C7, C10), infrastructure work (weekend and nighttime), train breakdowns, and strikes (rare but possible — French-style labor actions). For real-time updates: @CercaniasMadrid on Twitter, the Renfe Cercanías app (Spanish only), or the screens at each station. Major delays (>15 min) are announced on station PA systems (Spanish only — learn 'retraso' = delay, 'cancelado' = cancelled, 'sin servicio' = no service). The Cercanías network is critical for: airport to Atocha/Chamartín (C1), Atocha to Chamartín (C1, C2, C7, C8, C10 — 8 min), day trips to El Escorial (C8), Alcalá de Henares (C2, C7), and Segovia connection (C8 to Cercedilla, then C9 to Segovia). If you commute daily, sign up for Renfe alerts (free, Spanish).",
     "official_url": "https://www.renfe.com/es/en/suburban/suburban-madrid",
@@ -9419,13 +9443,14 @@
         "body": "Cercanías delays are common, especially during rush hour (7:30-9:30am, 5:30-7:30pm). Check @CercaniasMadrid on Twitter or the Renfe app before traveling. Delays of 5-15 minutes are normal; 30+ minutes during incidents.",
         "tone": "warning"
       }
-    ]
+    ],
+    "subsubcategory": "Metro & Cercanías"
   },
   {
     "id": "taxi-strikes-madrid",
     "title": "Taxi & Ride-Share Disruptions",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Taxi strikes occasionally affect Madrid (last major strike 2018 vs ride-sharing). Watch for strike dates — use Metro during strikes.",
     "content": "Madrid's taxi drivers have occasionally gone on strike — most notably the January 2018 strike against ride-sharing (Uber, Cabify) that lasted 8 days. Smaller protests and 24-hour strikes happen every few years. When strikes occur: (1) Licensed taxis become scarce — expect 1-2 hour wait times for street hails, longer for dispatch. (2) Ride-sharing apps (Uber, Cabify) see surge pricing — sometimes 3-4x normal rates. (3) Metro and EMT buses are unaffected and are the best alternatives. (4) Airport to city: use Metro L8 (Pink) — €4.50 + €1.50 metro fare, takes 30 min. (5) Long-distance: Renfe trains are unaffected. Strike announcements: taxi strikes are typically announced 7-10 days in advance via the major taxi associations (Federación Profesional del Taxi de Madrid, @TaxiMad on Twitter). For specific strike dates and affected services, follow local English news: El País English edition (elpais.com/english), The Local Spain (thelocal.es). Plan ahead — last-minute transit during strikes is a nightmare.",
     "official_url": "https://www.taximadrid.org/english",
@@ -9446,7 +9471,7 @@
       "metro-de-madrid",
       "emt-buses"
     ],
-    "subsubcategory": "Taxi & Ride-Share",
+    "subsubcategory": "Taxis & Ride-Share",
     "sections": [
       {
         "type": "callout",
@@ -9488,7 +9513,8 @@
         "body": "Barajas Airport (MAD) occasionally experiences delays from ATC strikes, weather, or security incidents. Check AENA app or aena.es for real-time flight status. Spanish ATC strikes happen periodically — check news before travel days.",
         "tone": "warning"
       }
-    ]
+    ],
+    "subsubcategory": "Airport Alerts"
   },
   {
     "id": "madrid-tourist-offices",
@@ -9749,7 +9775,8 @@
         "body": "AENA information desks at every Barajas terminal. Hotel booking, transport advice, tourist info. English-speaking. Open 24/7 at T1 and T4.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Airport Services"
   },
   {
     "id": "visitor-centers-madrid",
@@ -10327,8 +10354,8 @@
   {
     "id": "language-exchanges-madrid",
     "title": "Language Exchanges (Intercambios)",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "living",
+    "subcategory": "education",
     "summary": "Free language exchange meetups in Madrid. Practice Spanish with locals, help them with English. Bars and cafés.",
     "content": "Intercambios (language exchanges) are meetups where you practice Spanish with locals and help them with English (or your native language). Free, social, and a great way to meet people. Major Madrid intercambios: (1) Madrid Babel — every Wednesday 9pm at The Dubliner (c/ San Vincente Ferrer 33, Malasaña). The original and biggest. Free entry, just buy a drink. (2) Mundo Lingo — every Thursday 9pm at different bars (check their website). Participants wear flag stickers showing what languages they speak. (3) Interpals / Conversation Exchange — online platforms to find 1-on-1 partners. (4) Meetup.com — search 'Madrid language exchange' for dozens of meetups. (5) University intercambios — Universidad Complutense and Carlos III host free exchanges for international and Spanish students. Tips: (1) Don't be shy — everyone is there to practice. (2) Spend half the time in Spanish, half in English. (3) Bring a notebook for new vocabulary. (4) Be patient with beginners. (5) Avoid the 'all English trap' — it's easy to default to English, force yourself to use Spanish.",
     "official_url": "https://www.meetup.com/find/?keywords=language%20exchange&location=es--Madrid",
@@ -10351,7 +10378,7 @@
       "acting-schools-madrid",
       "spanish-immersion-adults-spain"
     ],
-    "subsubcategory": "Learning",
+    "subsubcategory": "Language Learning",
     "sections": [
       {
         "type": "callout",
@@ -10883,7 +10910,7 @@
       "moving-to-madrid-guide",
       "madrid-for-families-guide"
     ],
-    "subsubcategory": "Universities & Schools",
+    "subsubcategory": "Schools",
     "sections": [
       {
         "type": "stats",
@@ -11512,7 +11539,8 @@
         "body": "No, you're not crazy — Atlético Madrid DID play at the Vicente Calderón Stadium (Paseo Virgen del Puerto 67, Metro Pirámides) until 2017. The Calderón was demolished and the site is being redeveloped as a residential/commercial complex. Atlético moved to the Metropolitano (Wanda/Estadio Cívitas Metropolitano) in the northeast of Madrid in 2017. The old Madrid Insider listed the Calderón as Atlético's home.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Football"
   },
   {
     "id": "malasana-bars-nightlife",
@@ -11751,7 +11779,8 @@
         "body": "No, you're not crazy — the old Madrid Insider listed these theaters that may have changed: Teatro Albéniz (Paz 11, Metro Sol) — closed for years, planned renovation; Teatro de la Comedia (Príncipe 14, Metro Sevilla) — still active (Spain's national theater company); Teatro Español (Príncipe 25, Metro Sevilla) — still active (on site of Corral del Príncipe, 1583). The Teatro de Madrid (Av. de la Ilustración, Metro Barrio del Pilar) was listed but has been renamed/reorganized.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Opera & Classical"
   },
   {
     "id": "the-local-spain",
@@ -11809,7 +11838,7 @@
       "el-pais-english",
       "the-local-spain"
     ],
-    "subsubcategory": "Radio",
+    "subsubcategory": "English Radio",
     "sections": [
       {
         "type": "callout",
@@ -12525,7 +12554,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Tennis"
   },
   {
     "id": "basketball-madrid",
@@ -12557,7 +12587,8 @@
         "body": "Real Madrid Baloncesto (multi-time Euroleague champions) and Movistar Estudiantes are Madrid's two ACB League teams. Tickets €15-40. Games at WiZink Center (formerly Palacio de Deportes). See real-madrid-bernabeu and estudiantes-basketball records.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Basketball"
   },
   {
     "id": "running-madrid",
@@ -12636,7 +12667,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Running"
   },
   {
     "id": "photoespana-festival",
@@ -13097,7 +13129,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Swimming"
   },
   {
     "id": "gyms-fitness-madrid",
@@ -13110,7 +13143,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "sports",
       "gym",
@@ -13198,7 +13231,8 @@
         "body": "Madrid's parks (Retiro, Casa de Campo, Parque Juan Carlos I) have free calisthenics parks and are popular with running groups. Free yoga sessions happen in Retiro on summer weekends. See running-madrid and yoga-madrid records for details.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Gyms & Fitness"
   },
   {
     "id": "golf-madrid",
@@ -13250,7 +13284,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Golf"
   },
   {
     "id": "cycling-mtb-madrid",
@@ -13263,7 +13298,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-partial",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "sports",
       "cycling",
@@ -13361,7 +13396,8 @@
           "Don't attempt Sierra de Guadarrama trails without checking weather — snow through May"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Cycling"
   },
   {
     "id": "tennis-madrid",
@@ -13415,7 +13451,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Tennis"
   },
   {
     "id": "skiing-snowboarding-madrid",
@@ -13465,13 +13502,14 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Skiing"
   },
   {
     "id": "supermarkets-grocery-madrid",
     "title": "Supermarkets & Grocery Stores in Madrid",
-    "category": "living",
-    "subcategory": "services",
+    "category": "do",
+    "subcategory": "food",
     "summary": "Main chains: Mercadona (best value), Carrefour (largest), El Corte Inglés (premium), Lidl, Aldi. Open Mon-Sat 9am-9:30pm.",
     "content": "Madrid's supermarket scene. MAIN CHAINS: (1) Mercadona — Spain's largest, Spanish-owned, best value. ~40 stores in Madrid. Own-brand (Hacendado) is excellent quality. Known for fresh meat/fish counter (ask for what you want). Open Mon-Sat 9am-9:30pm. Closed Sundays. (2) Carrefour — French, largest hypermarkets (Carrefour Planet in Pinto, Alcobendas). Good international section, electronics, clothing. Some open Sundays. (3) El Corte Inglés Supermercados (Supercor, Hipercor) — premium, higher prices but excellent quality. Open Sundays 11am-9pm. Good for international products. (4) Lidl — German discount, good quality own-brand. ~25 stores. (5) Aldi — German discount, similar to Lidl. (6) Dia — Spanish discount, ~80 stores, very cheap. (7) Consum — Spanish, mid-range. (8) Ahorramás — Spanish, ~50 stores. INTERNATIONAL GROCERY: (1) Mantequerías Alemanas (Calle de Ayala) — German products. (2) Tatsumi (Calle del General Yagüe) — Japanese. (3) Seoul (Calle de la Princesa) — Korean. (4) El Mercado de la Cebada — Latin American products. (5) Calle de Lavapiés — Indian, Pakistani, African shops. TIPS: (1) Bring your own bags (€0.10/bag charge). (2) Most supermarkets don't take American Express. (3) Mercadona is cashless at many stores — bring Visa/Mastercard. (4) Self-checkout available at most (English option). (5) Sunday: only El Corte Inglés, Supercor, some Carrefour, and neighborhood 'ultramarinos' (small corner shops) are open.",
     "official_url": "https://www.mercadona.es/",
@@ -13491,7 +13529,7 @@
       "post-office-madrid",
       "health-food-stores-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Grocery & Food Stores",
     "sections": [
       {
         "type": "table",
@@ -13581,7 +13619,8 @@
         "body": "No, you're not crazy — these V.O. (original version) cinemas from the old Madrid Insider DID exist: Alphaville (Martín de los Héros 14, Metro Plaza España) — classic art-house cinema, verify current status; Pequeño Cine Estudio (Magallanes 1) — small art-house; Cine Bellas Artes (Marqués de Casa Riera 2) — closed; Cine Princesa (Princesa 3, Metro Plaza España) — closed; California (Andrés Mellado 53, Metro Moncloa) — closed. The V.O. cinema scene has consolidated: Cinesa Manoteras and Yelmo Cines Ideal are now the main V.O. venues. The Cine Doré (Filmoteca Española) remains for classic films.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Cinema"
   },
   {
     "id": "casinos-gambling-madrid",
@@ -13642,7 +13681,7 @@
       "la-latina-neighborhood",
       "chueca-bars-nightlife"
     ],
-    "subsubcategory": "Dancing & Clubs",
+    "subsubcategory": "Salsa",
     "sections": [
       {
         "type": "callout",
@@ -13797,13 +13836,14 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Yoga"
   },
   {
     "id": "hammams-arab-baths-madrid",
     "title": "Hammams & Arab Baths (Baños Árabes)",
     "category": "do",
-    "subcategory": "nightlife",
+    "subcategory": "sports",
     "summary": "Hammam Al Ándalus (Calle de Atocha 14) — authentic Arab baths, massage, tea. €40-80. 5 min from Plaza Mayor.",
     "content": "Hammam Al Ándalus is Madrid's authentic Arab bathhouse, located at Calle de Atocha 14 (5 min walk from Plaza Mayor). Built on the site of an original 16th-century hammam, the modern hammam opened in 2009. What's included: (1) Thermal water circuit — cold pool (16°C), warm pool (36°C), hot pool (40°C), plus steam room (45°C) and salt bath. (2) Massage (50 minutes) — adds €30-50 to the basic entry. (3) Mint tea and water included. (4) Relaxation room with cushions and Arabic music. Sessions: 90 minutes basic (€40 weekday, €50 weekend), 90 minutes + 30-min massage (€70-80), 2-hour + 50-min massage + body scrub (€110). Sessions start every 2 hours (10am, 12pm, 2pm, 4pm, 6pm, 8pm). Book online ahead — popular times sell out. TIPS: (1) Bring a swimsuit (or rent €3). (2) Towels, slippers, and robes provided. (3) Silence is required — it's a relaxation space. (4) No phones in the bath area. (5) Best for jet lag recovery, couples, or rainy days. (6) The hammam is underground — beautiful Arabic architecture, mosaic tiles, marble pools. OTHER WELLNESS: (1) Hotel Riu Plaza España spa (€50 day pass). (2) Four Seasons Madrid spa (€120 treatments). (3) Public: Piscinas de Vicálvaro (cheap spa day €15).",
     "official_url": "https://madrid.hammamalandalus.com/en",
@@ -13823,7 +13863,7 @@
       "terrazas-rooftop-bars-madrid",
       "yoga-madrid"
     ],
-    "subsubcategory": "Wellness & Relaxation",
+    "subsubcategory": "Hammams & Baths",
     "sections": [
       {
         "type": "stats",
@@ -13954,7 +13994,8 @@
         "body": "No, you're not crazy — these flamenco venues from the old Madrid Insider DID exist: Casa Patas (Cañizares 10, Metro Antón Martín) — closed ca. 2020; Café de Chinitas (Torija 7, Metro Santo Domingo) — relocated/rebranded; Sala Axarquía (Calavatra 32, Metro La Latina) — closed; Torres Bermejas (Mesonero Romanos 11, Metro Gran Vía) — verify current status; El Juglar (Lavapiés 37) — now primarily a bar, flamenco reduced. Madrid's flamenco scene changes constantly — tablaos open and close. The venues that survive (Cardamomo, Corral de la Morería, Las Carboneras) are the strongest.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Flamenco"
   },
   {
     "id": "magic-comedy-madrid",
@@ -13988,7 +14029,8 @@
         "body": "The Giggling Guiri Comedy Club pioneered English-language stand-up in Madrid. For magic, Houdini Sala de Magia (García Luna 13) offers intimate magic shows. Check current schedules — comedy nights are typically weekly.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Magic & Comedy"
   },
   {
     "id": "summer-outdoor-cinema-madrid",
@@ -14023,7 +14065,8 @@
         "body": "Every summer (July-August), Madrid hosts outdoor cinema screenings in parks and cultural centers. The main venue is the Cine de Verano in various parks. Films often in V.O. (original version). Check esmadrid.com for current summer schedule. Bring a blanket + picnic.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Cinema"
   },
   {
     "id": "phone-tv-internet-providers-madrid",
@@ -14048,7 +14091,7 @@
     "related_records": [
       "sim-cards-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Phone, TV & Internet",
     "sections": [
       {
         "type": "callout",
@@ -14061,8 +14104,8 @@
   {
     "id": "satellite-tv-madrid",
     "title": "Satellite TV (UK TV in Spain)",
-    "category": "living",
-    "subcategory": "services",
+    "category": "essentials",
+    "subcategory": "tourist-info",
     "summary": "Watch UK TV in Spain: Sky, Freesat via satellite; or VPN for streaming. Movistar+ has English Premier League.",
     "content": "For UK expats in Madrid who want British TV. SATELLITE: (1) Sky UK — requires UK satellite dish (60-80cm in Madrid) and Sky box. UK subscription required (use UK address). All Sky channels: Sky Sports, Sky Cinema, Sky One, etc. €40-80/month. (2) Freesat — free UK satellite TV (BBC, ITV, Channel 4, Channel 5). One-time equipment cost €200-300 (dish + box), no subscription. BBC iPlayer and ITV Hub not geo-blocked when viewed via Freesat. INSTALLATION: Several Madrid companies install UK satellite dishes — search 'Sky TV Madrid' or 'UK satellite Madrid'. Cost €250-400 (dish + box + installation). STREAMING (with VPN): (1) Use a UK VPN (ExpressVPN, NordVPN, Surfshark) to access BBC iPlayer, ITV Hub, Channel 4, My5, UK Netflix. €6-12/month for VPN. (2) Sky Stream — Sky's streaming box, works with UK IP (VPN). €25/month + VPN. (3) NOW TV — streaming-only Sky, UK IP needed. €10-30/month. SPANISH TV WITH ENGLISH: (1) Movistar+ — shows some series and films in V.O. (original version) with Spanish subtitles. Check the 'Versión Original' section. €10/month extra. (2) DAZN — Premier League with English commentary. €15/month. (3) Netflix, Prime Video, HBO Max — switch audio to English in settings. TIPS: (1) BBC iPlayer is getting better at blocking VPNs — use a dedicated IP. (2) Movistar+ is excellent for La Liga, Champions League (English commentary on some matches via Movistar+ Dispositivo).",
     "official_url": "https://www.sky.com/",
@@ -14083,7 +14126,7 @@
       "phone-tv-internet-providers-madrid",
       "movie-theaters-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Satellite TV",
     "sections": [
       {
         "type": "callout",
@@ -14096,15 +14139,15 @@
   {
     "id": "computer-electronics-stores-madrid",
     "title": "Computer & Electronics Stores",
-    "category": "living",
-    "subcategory": "services",
+    "category": "do",
+    "subcategory": "shopping",
     "summary": "PcComponentes (best online), MediaMarkt (large retail), El Corte Inglés (premium), Apple Store Gran Vía.",
     "content": "Madrid electronics shopping. LARGE RETAIL CHAINS: (1) MediaMarkt — German, large electronics superstores. 8+ locations in Madrid area. Competitive prices, good selection. Open Mon-Sat 10am-10pm, some Sundays. (2) PcComponentes — Spanish online-only, often cheapest prices. Order online, deliver to home or pickup point. Excellent customer service. (3) El Corte Inglés (multiple, especially Castellana and Goya) — premium, higher prices but excellent service and 14-day returns. Open Sundays. (4) Worten (Portuguese) — similar to MediaMarkt, fewer locations. (5) Boulanger (French) — small premium chain. APPLE: (1) Apple Store Gran Vía (Calle Gran Vía 54) — flagship store, opened 2022. Genius Bar, all products. English-speaking staff. Open daily 10am-9pm. (2) Apple Store La Gavia (shopping mall south of Madrid) — smaller. (3) Apple Premium Resellers: K-tuin (multiple), Urule (Calle de Alcalá). COMPUTER PARTS (DIY): (1) PcComponentes (online) — best selection. (2) Coolmod (online) — gaming specialist. (3) Appinformática (Calle de la Princesa) — small retail store. REPAIR: (1) Tech Station (multiple) — phone and computer repair. (2) Mr. Phone (multiple) — phone repair. (3) Apple authorized service: K-tuin, Urule. TIPS: (1) Spanish warranty is 3 years on electronics (EU law). (2) VAT (IVA) 21% included in displayed prices. (3) Compare prices on idealo.es before buying. (4) El Corte Inglés price-matches MediaMarkt and PcComponentes — show them the lower price. (5) Black Friday (November) and Amazon Prime Day (July) have the best sales.",
     "official_url": "https://www.pccomponentes.com/",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "services",
       "electronics",
@@ -14116,7 +14159,7 @@
       "sim-cards-madrid",
       "supermarkets-grocery-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Computer & Electronics",
     "sections": [
       {
         "type": "table",
@@ -14159,15 +14202,15 @@
   {
     "id": "bookstores-madrid-detail",
     "title": "Bookstores & Stationery in Madrid",
-    "category": "living",
-    "subcategory": "services",
+    "category": "do",
+    "subcategory": "shopping",
     "summary": "Casa del Libro (largest), FNAC, La Central. English books at J&J Books, Coffee & Books. Book Depository for online.",
     "content": "Madrid bookstores. SPANISH-LANGUAGE: (1) Casa del Libro (Calle Gran Vía 29) — Spain's largest bookstore chain, 7 floors, excellent selection. Open Mon-Sat 10am-9:30pm, Sun 11am-9pm. (2) FNAC (Calle Marqués de Casa Riera 4 / Castellana 28) — French chain, books + electronics + music. Good selection. (3) La Central (Calle de Postigo de San Martín 8 / Calle del Doctor Cortezo) — beautiful independent bookstores, curated selection. (4) Cuspide (Calle de Alcalá 78) — large, well-organized. ENGLISH-LANGUAGE: (1) J&J Books and Coffee (Calle del Espíritu Santo 47, Malasaña) — English used bookstore with café. (2) Coffee & Books (Calle de León 12, Barrio de las Letras) — small English bookstore + café. (3) Books4Spain (online) — Spain-focused English books. (4) El Corte Inglés book sections (especially Castellana) — decent English section. SECOND-HAND: (1) El Rastro flea market (Sundays) — book stalls on Calle de la Mira. (2) Oxfam Books (Calle de Alcalá 67) — charity shop with English books. (3) Libros de Segunda Mano (online) — wallapop.com. STATIONERY: (1) ELCO (Calle de la Princesa) — premium stationery. (2) Staples (multiple) — office supplies. (3) Tobogán (Calle de la Colegiata) — design-focused stationery. ONLINE: (1) Amazon.es — fast delivery, large selection. (2) Book Depository (bookdepository.com) — free shipping worldwide, often cheaper than Amazon for English books. (3) Casa del Libro online. TIPS: (1) Book prices are fixed in Spain (Ley del Libro) — same price everywhere. (2) Amazon Prime in Spain (€20/year) includes free 1-day delivery. (3) Library cards at Bibliotecas Públicas Municipales are free for residents (bring ID and proof of address).",
     "official_url": "https://www.casadellibro.com/",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "services",
       "bookstore",
@@ -14180,7 +14223,7 @@
       "el-rastro-flea-market",
       "language-schools-madrid"
     ],
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Bookstores",
     "sections": [
       {
         "type": "table",
@@ -14372,7 +14415,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "tags": [
       "housing",
       "aparthotel",
@@ -14384,7 +14427,7 @@
       "hostels-madrid",
       "shared-housing-flatmates-madrid"
     ],
-    "subsubcategory": "Serviced Apartments",
+    "subsubcategory": "Apart-Hotels",
     "sections": [
       {
         "type": "table",
@@ -14520,7 +14563,7 @@
       "japanese-restaurants-madrid",
       "cost-of-living-madrid"
     ],
-    "subsubcategory": "Food Culture & Basics",
+    "subsubcategory": "Cheap Eats",
     "sections": [
       {
         "type": "table",
@@ -14591,7 +14634,7 @@
       "lavapies-neighborhood",
       "health-food-stores-madrid"
     ],
-    "subsubcategory": "Food Culture & Basics",
+    "subsubcategory": "Vegetarian & Vegan",
     "sections": [
       {
         "type": "table",
@@ -14667,7 +14710,7 @@
       "cheap-eats-madrid",
       "vermouth-madrid"
     ],
-    "subsubcategory": "Food Culture & Basics",
+    "subsubcategory": "Ice Cream",
     "sections": [
       {
         "type": "callout",
@@ -14688,7 +14731,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "services",
       "religion",
@@ -14705,7 +14748,7 @@
       "english-speaking-wedding-planners-madrid",
       "meditation-retreats-spain"
     ],
-    "subsubcategory": "Community & Faith",
+    "subsubcategory": "Religion & Faith",
     "sections": [
       {
         "type": "table",
@@ -14944,7 +14987,7 @@
       "job-search-spain",
       "internships-spain"
     ],
-    "subsubcategory": "Work Visas & Permits",
+    "subsubcategory": "Hostess & Promo",
     "sections": [
       {
         "type": "stats",
@@ -14994,7 +15037,7 @@
       "the-local-spain",
       "job-search-spain"
     ],
-    "subsubcategory": "Job Search & Career",
+    "subsubcategory": "Journalism",
     "sections": [
       {
         "type": "list",
@@ -15028,14 +15071,14 @@
     "id": "cercanias-madrid",
     "title": "Cercanías Madrid (Commuter Rail)",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "transport",
     "summary": "Madrid's commuter rail network. 9 lines (C1-C10). Connects city center to suburbs, airport, El Escorial, Alcalá. €1.70-5.60.",
     "content": "Cercanías Madrid is the commuter rail network operated by Renfe, serving Madrid and its metropolitan area. 9 lines (C1-C10) with 90+ stations. KEY LINES: (1) C1 — Atocha to Chamartín (8 min, faster than Metro), continues to Aeropuerto T4 (25 min) and Príncipe Pío. (2) C3 — Atocha to El Escorial (1 hour, €5.60). (3) C7 — Atocha to Alcalá de Henares (35 min, €2.60). (4) C8 — Atocha to Cercedilla (1h 15min, gateway to Sierra de Guadarrama). (5) C10 — Atocha to Chamartín to Madrid-Barajas T4. FARES: zone A (city center) €1.70-2.60; zone B1 (airport, closer suburbs) €2.60-3.40; zone B2 (El Escorial, Alcalá) €4.10-5.60. Tickets: buy at station machines (English option) or use a Tarjeta Transporte Público (10-trip card, 30% discount). Cercanías is FREE for holders of the Madrid City Card. FREQUENCY: every 5-15 min during peak, every 15-30 min off-peak. First train ~5am, last ~midnight. Less frequent on weekends. ADVANTAGES over Metro: (1) Faster for cross-city trips (Atocha to Chamartín in 8 min vs 15+ on Metro). (2) Goes to suburbs Metro doesn't reach (El Escorial, Alcalá). (3) Connects both major train stations to the airport. DISADVANTAGES: (1) Less frequent than Metro. (2) Delays during rush hour and signal failures. (3) Some older trains without AC. TIPS: Download the Renfe Cercanías app for real-time info. Follow @CercaniasMadrid on Twitter for delays. The C1 airport line is often faster than Metro L8.",
     "official_url": "https://www.renfe.com/es/en/suburban/suburban-madrid",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "cercanias",
@@ -15099,20 +15142,21 @@
         "body": "Cercanías is faster than Metro for cross-city trips (Atocha to Chamartín: 8 min vs 15+ on Metro). It's also the only public transport to El Escorial, Alcalá, and the Sierra. Fares: €1.70-5.60 depending on zone. Use your Tarjeta Transporte Público.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Metro & Cercanías"
   },
   {
     "id": "night-buses-buhos-madrid",
     "title": "Night Buses (Búhos) — Madrid 24h Transit",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Madrid's night bus network (búhos). 27 routes from Plaza de Cibeles. Run midnight-6am. €1.50-2.60. Frequents every 30-60 min.",
     "content": "When the Metro closes (1:30am Sun-Wed, 2:30am Fri-Sat), Madrid's night buses (búhos) take over. 27 routes (N1-N28), all starting from Plaza de Cibeles (the central hub). FARE: €1.50 single ticket, or use Tarjeta Transporte Público (€1.20 with the card). Routes fan out from Cibeles to all neighborhoods and suburbs. KEY ROUTES: (1) N1 — Cibeles to Sanchinarro (north). (2) N13 — Cibeles to Carabanchel (south). (3) N17 — Cibeles to Villaverde (south). (4) N4 — Cibeles to Barajas Airport (the only night transport to the airport, €1.50 — runs every 35 min). (5) N20 — Cibeles to Alcobendas (north). FREQUENCY: every 30 min on main routes (N1-N7), every 60 min on secondary routes. Last buses leave Cibeles around 5:30-6:00am (when Metro starts). TIPS: (1) All night buses pass through Plaza de Cibeles — use it as a transfer hub. (2) The N4 is the only public transport to Barajas Airport between 1:30am and 6am. (3) Buy tickets on the bus (cash) or use your Tarjeta Transporte Público. (4) Drivers don't always speak English — have your destination written down. (5) Buses can be crowded and rowdy on weekend nights (drunk passengers). (6) For women traveling alone at night, the front of the bus near the driver is safest. (7) The EMT Madrid app shows real-time night bus locations. ALTERNATIVE: Uber and Cabify operate 24/7, but surge pricing after 2am can be 2-3x normal rates. A taxi from the center to most neighborhoods is €10-15.",
     "official_url": "https://www.emtmadrid.es/EMTBUS/Mi-linea?lang=en-GB",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "night-bus",
@@ -15156,20 +15200,21 @@
         "body": "The N4 is the ONLY public transport to Barajas Airport between 1:30am and 6am. Runs every 35 min from Cibeles. €1.50 — much cheaper than a €30 taxi or surge-priced Uber.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "City Buses"
   },
   {
     "id": "coach-stations-madrid",
     "title": "Coach Stations (Estaciones de Autobús)",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "intercity-travel",
     "summary": "Madrid's 3 main coach stations: Estación Sur (long-distance), Moncloa (Castilla y León), Méndez Álvaro (south). Metro connected.",
     "content": "Madrid has 3 main coach (long-distance bus) stations, each serving different regions. ESTACIÓN SUR (also called Méndez Álvaro): Madrid's largest bus station. All ALSA long-distance routes depart here — Barcelona, Valencia, Andalusia, Portugal, France. 50+ platforms. Metro: Méndez Álvaro (L6). Open 24/7. Facilities: cafés, shops, ATMs, left luggage, taxi rank. Allow 20 min to find your platform. MONLOCA INTERCAMBIADOR: Serves Castilla y León (Segovia, Ávila, Salamanca, Zamora) and Galicia. Also serves some Sierra de Guadarrama routes. Metro: Moncloa (L3, L6). Modern interchange (2012), bright and clean. Open 6am-midnight. PLAZA ELÍPTICA: Smaller station serving southern routes — Toledo, Cuenca, Aranjuez, some Andalusia routes. Metro: Plaza Elíptica (L6, L11). Open 6am-11pm. AVANZA is the main operator from Moncloa and Plaza Elíptica; ALSA from Estación Sur. TIPS: (1) Arrive 20-30 min before departure to find your platform (large stations like Estación Sur are confusing). (2) Buy tickets online at alsa.es or avanzabus.es for the best fares. (3) Print or screenshot your ticket — some operators require printed tickets. (4) Luggage goes under the bus (free, 1 bag up to 30kg + 1 carry-on). (5) Coach stations are NOT the same as intercity bus stops — the stations have platforms, ticket windows, and facilities. (6) The Metro connection to all 3 stations is excellent — you can get from any Madrid neighborhood to any coach station in under 30 min.",
     "official_url": "https://www.alsa.com/en/bus-stations/madrid-sur-station",
     "status": "evergreen",
     "english_friendly": false,
     "english_level": "spanish-only",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "coach",
@@ -15258,7 +15303,8 @@
           "Don't store valuables in checked luggage — keep passport/meds with you"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Intercity Buses & Coaches"
   },
   {
     "id": "padel-madrid",
@@ -15271,7 +15317,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "sports",
       "padel",
@@ -15313,21 +15359,22 @@
         "body": "Padel is the best way to meet Spanish people. Join 'Madrid Pádel International' WhatsApp/Facebook groups. The game is doubles — very social. After 2-3 lessons you can play socially.",
         "tone": "success"
       }
-    ]
+    ],
+    "subsubcategory": "Padel & Racket Sports"
   },
   {
     "id": "madrid-clubs-electronic",
     "title": "Nightclubs & Electronic Music in Madrid",
     "category": "do",
     "subcategory": "nightlife",
-    "subsubcategory": "Dancing & Clubs",
+    "subsubcategory": "Night Clubs",
     "summary": "Top clubs: Mondo, Fabrik, Capital, Goya Social Club. Tech house, techno, reggaeton. €15-30 entry. Open 1am-6am.",
     "content": "Madrid's club scene. TOP CLUBS: (1) Mondo Disko (Calle de la Alameda 28) — iconic, 30+ years, tech house and techno. €20-25 entry. Open Fri-Sat 1am-6am. (2) Fabrik (Calle de la Ctra. Fuenlabrada a Moraleja, Móstoles, 30 min south) — massive 5,000-capacity warehouse, EDM, techno. €25-30. Saturdays only. Free shuttle from Méndez Álvaro Metro. (3) Capital (Calle de la Gran Vía 8) — central, 2 rooms (house/techno + reggaeton/pop). €15-20. Open Thu-Sat midnight-6am. Popular with younger crowd. (4) Goya Social Club (Calle de Goya 43) — boutique, deep house, intimate (300 capacity). €15-20. (5) Spekummat (Calle de la Ballesta 14, Sol) — small, techno, underground. €10-15. (6) Room 18 (Hotel Ganivet, Plaza de España) — gay-friendly, mixed music. €15-20. (7) Pacha Madrid (Calle de la Castellana 27) — Ibiza brand, mixed crowd, EDM. €20-25. FESTIVALS: (1) Sonar Madrid (May) — electronic and avant-garde. (2) Mad Cool (July) — major music festival (indie, electronic, pop). €120-200 day ticket. (3) DCODE (September) — university-focused music festival. €40. (4) A Summer Story (June) — electronic. €60-80. TIPS: (1) Madrid clubs start late — don't arrive before 1:30am, peak is 3-4am. (2) Dress code: smart casual at most; no sportswear, no flip-flops. (3) Pre-game (botellón) in a park or apartment before going — drinks at clubs are €10-15. (4) Line up early for popular DJs (1am). (5) Use the app Discotech or wantickets.com to buy tickets in advance. (6) The Metro starts at 6am — perfect timing for the journey home. (7) Taxi/Uber after 3am can have 3x surge pricing.",
     "official_url": "https://www.wantickets.com/madrid",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "tags": [
       "nightlife",
       "club",
@@ -15448,7 +15495,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "nightlife",
       "jazz",
@@ -15498,7 +15545,8 @@
           ]
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Jazz & Blues"
   },
   {
     "id": "official-madrid-city-map",
@@ -15538,7 +15586,7 @@
     "id": "metro-map-pdf",
     "title": "Madrid Metro Map (Official PDF)",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "subsubcategory": "Transit Maps",
     "summary": "Official Metro de Madrid map. PDF download + printed at every station. 12 lines, 300+ stations.",
     "content": "The official Madrid Metro map is published by Metro de Madrid. Formats: (1) PDF download at metromadrid.es/en (English) — print before you go or save to phone. (2) Free printed map at any Metro station ticket office (ask 'un plano del Metro, por favor'). (3) Interactive map in the Metro de Madrid app (English) with route planner. (4) Wall maps at every station entrance and platform. The map shows all 12 Metro lines (color-coded), 300+ stations, interchange connections (Renfe Cercanías, EMT buses, tram), and zone boundaries (A, B1, B2, B3). Key features: (1) Lines are color-coded (L1 light blue, L2 red, L3 yellow, L4 brown, L5 green, L6 grey/circular, L7 orange, L8 pink/airport, L9 purple, L10 dark blue, L11 green, L12 light green/Metrosur). (2) Interchange stations are marked with a special icon. (3) The map includes the Renfe Cercanías network overlay. (4) Airport stations (Barajas T1-T2-T3, T4) are clearly marked. TIPS: (1) Download the PDF and save offline — no data needed. (2) The Metro app route planner is excellent — faster than Google Maps for Metro-only routes. (3) Free paper maps at stations are great backups. (4) The map is updated 2-3 times per year — check for the latest version.",
@@ -15574,7 +15622,7 @@
     "id": "cercanias-map",
     "title": "Cercanías Madrid Map (Commuter Rail)",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "transport",
     "summary": "Official Cercanías Madrid map. 9 lines (C1-C10) covering Madrid + suburbs. PDF + app.",
     "content": "The Cercanías Madrid map shows the commuter rail network. Formats: (1) PDF download at renfe.com/en (English) — search 'Cercanías Madrid plano'. (2) Free printed map at Atocha and Chamartín stations (ticket office). (3) Interactive map in the Renfe Cercanías app (Spanish only). (4) Wall maps at every Cercanías station. The map shows all 9 lines (C1-C10) and 90+ stations, covering Madrid and its metropolitan area. Key features: (1) Lines are color-coded (C1 blue, C2 green, C3 purple, C4 red, C5 orange, C7 grey, C8 dark green, C9 brown, C10 light blue). (2) Major interchanges with Metro are marked. (3) Zone boundaries (A, B1, B2, C1, C2) are shown — important for fares. (4) Airport connection (C1 to Barajas T4) is highlighted. (5) Connections to other Cercanías networks (Guadalajara, Segovia) are shown. TIPS: (1) Cercanías is faster than Metro for cross-city trips (Atocha to Chamartín in 8 min). (2) The C1 line is the most useful for tourists (Atocha, Chamartín, Airport T4, Príncipe Pío). (3) Download the PDF and save offline. (4) The Renfe Cercanías app has a route planner (Spanish only — use Google Translate). (5) Real-time train info at @CercaniasMadrid on Twitter.",
     "official_url": "https://www.renfe.com/es/en/suburban/suburban-madrid",
@@ -15602,13 +15650,14 @@
         "body": "The Cercanías Madrid network has 9 lines (C1-C10) connecting Madrid to suburbs + nearby cities (El Escorial, Toledo direction, Guadalajara). Download the map from renfe.com. Key stations: Atocha, Chamartín, Nuevos Ministerios, Príncipe Pío.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Transit Maps"
   },
   {
     "id": "emt-bus-map",
     "title": "EMT Bus Map & Route Planner",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "subsubcategory": "Transit Maps",
     "summary": "EMT Madrid bus network map + route planner app. 200+ lines. Real-time arrivals in the app.",
     "content": "EMT (Empresa Municipal de Transportes) operates Madrid's city buses. The network is too complex for a single map, so the official resources are: (1) EMT Madrid app (English) — the best resource. Includes route planner, real-time bus arrivals, saved routes, ticket purchase. Free. (2) Interactive map at emtmadrid.es/English — shows all 200+ lines, searchable by line number or stop. (3) Individual line maps (PDF) at emtmadrid.es — search for a specific line number. (4) Printed line maps at major bus stops (sometimes). KEY BUS LINES for tourists: (1) 1, 2, 46 — north-south through the center. (2) 27, 45, 150 — to museums (Prado, Reina Sofía). (3) 74 — to El Rastro flea market. (4) 133, 134 — to Las Tablas business district. (5) 200, 203 — airport express buses. NIGHT BUSES (Búhos): 27 routes from Cibeles, N1-N28. The EMT app shows real-time locations of all buses on a map. TIPS: (1) Download the EMT Madrid app — it's essential for bus travel. (2) Bus stops have QR codes that show real-time arrivals (scan with phone). (3) The app's route planner integrates with Metro and Cercanías. (4) Day passes (€5.20) include Metro, EMT buses, and Cercanías zone A. (5) Most bus stops have shelters with route maps posted.",
@@ -15644,8 +15693,8 @@
     "id": "bike-maps-madrid",
     "title": "Madrid Cycling Maps (BiciMAD + Bike Lanes)",
     "category": "essentials",
-    "subcategory": "transportation",
-    "subsubcategory": "Transit Maps",
+    "subcategory": "transport",
+    "subsubcategory": "Active Transit (Bike/Scooter/Walk)",
     "summary": "Madrid bike lane maps + BiciMAD station map. 130km of bike lanes. Anillo Verde Ciclista 65km loop.",
     "content": "Madrid cycling maps. BIKE LANE MAP: Madrid has 130km of dedicated bike lanes, with more being added yearly. The official map (madrid.es, Spanish only) shows all bike lanes, cycle paths, and bike-friendly streets. Print version free at bicycle shops and tourist offices. BICIMAD STATION MAP: 250+ electric bike stations across Madrid. Live availability shown in the BiciMAD app (English) and at bicimad.com. Search by address or use the map. ANILLO VERDE CICLISTA: The 65km 'Green Cycling Ring' is Madrid's longest continuous bike path, circling the city through parks and green corridors. The official map shows the full route with access points. PDF at madrid.es. MADRID RÍO BIKE PATH: 10km linear park along the Manzanares River, dedicated bike path, connects to Casa de Campo. CASA DE CAMPO TRAILS: 1,535 hectares of trails, mostly unpaved, popular with mountain bikers. No official map — use Trailforks or MTB project apps. RETIRO PARK: 4.5km perimeter loop, flat, bike-friendly (but crowded on weekends). BEST APPS: (1) BiciMAD (English) — for the electric bike-share. (2) Komoot (English, paid) — route planning. (3) Strava (English, free) — heatmaps show popular routes. (4) Google Maps — bike mode shows bike lanes (but not always accurate). TIPS: (1) Cycling in central Madrid is possible but tricky — narrow streets, aggressive drivers. (2) Best cycling is in parks (Retiro, Casa de Campo, Madrid Río) and on the Anillo Verde. (3) Helmets mandatory on intercity roads, recommended in city. (4) Bikes on Metro: allowed outside rush hours (no e-bikes on Metro).",
     "official_url": "https://www.bicimad.com/en",
@@ -15891,14 +15940,15 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Airport Services"
   },
   {
     "id": "left-luggage-atocha",
     "title": "Left Luggage at Atocha Station",
-    "category": "living",
-    "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "category": "essentials",
+    "subcategory": "tourist-info",
+    "subsubcategory": "Left Luggage",
     "summary": "Left luggage at Atocha train station. €3.90-5.50/bag/day. Open 5:30am-10:30pm. Near the tropical garden.",
     "content": "Atocha Station has the most convenient left luggage in central Madrid. LOCATION: ground floor, near the tropical garden (the old station hall with 4,000 plants). Follow signs for 'Consignas'. PRICES: €3.90/bag/day (size S/M, up to 60cm), €5.50/bag/day (size L, over 60cm). Pay by cash or card. HOURS: 5:30am-10:30pm daily (last drop-off 10pm, last pickup 10:30pm). SECURITY: bags are X-rayed. ID required (passport or NIE). Staffed with CCTV. MAXIMUM STAY: 30 days (then bags are sent to lost property). TIPS: (1) Atocha is the best option for sightseeing — central location, near the Prado and Reina Sofía. (2) Arrive early (before 9am) to avoid lines — cruise ship groups and tour buses use this facility. (3) The tropical garden is free to visit while you wait. (4) Don't leave valuables or electronics. (5) Keep your claim ticket — losing it requires ID verification and a 30+ min wait. (6) For longer storage, see Public Storage (Trasteros). (7) Atocha also has a VIP luggage service (left luggage + delivery to your hotel) for €15-25.",
     "official_url": "https://www.adif.es/en/stations/atocha",
@@ -15955,9 +16005,9 @@
   {
     "id": "left-luggage-chamartin",
     "title": "Left Luggage at Chamartín Station",
-    "category": "living",
-    "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "category": "essentials",
+    "subcategory": "tourist-info",
+    "subsubcategory": "Left Luggage",
     "summary": "Left luggage at Chamartín train station. €3.90-5.50/bag/day. Open 6am-11pm. Near the VIPS café.",
     "content": "Chamartín Station (Madrid's second major train station, north of center) has left luggage facilities. LOCATION: ground floor, near the VIPS café. Follow signs for 'Consignas'. PRICES: same as Atocha — €3.90/bag/day (size S/M, up to 60cm), €5.50/bag/day (size L, over 60cm). HOURS: 6am-11pm daily (last drop-off 10:30pm, last pickup 11pm). SECURITY: bags are X-rayed. ID required (passport or NIE). Staffed with CCTV. MAXIMUM STAY: 30 days. TIPS: (1) Chamartín is less crowded than Atocha — usually no lines. (2) Chamartín is in the north of Madrid — use it if you're staying in Chamartín, Tetuán, or financial district. (3) For tourists staying in the center, Atocha is more convenient. (4) The station has good food options (VIPS, Starbucks) while you wait. (5) Don't leave valuables or electronics. (6) Keep your claim ticket. (7) Chamartín connects to Barajas Airport via Cercanías C1 (25 min) — if you have a layover, you could store bags at Chamartín and take the train to the airport.",
     "official_url": "https://www.adif.es/en/stations/chamartin",
@@ -16006,7 +16056,7 @@
     "id": "left-luggage-bus-station",
     "title": "Left Luggage at Bus Stations (Estación Sur)",
     "category": "essentials",
-    "subcategory": "trains",
+    "subcategory": "intercity-travel",
     "summary": "Left luggage at Estación Sur (Méndez Álvaro) bus station. €3/bag/day. Open 6am-midnight.",
     "content": "Estación Sur (also called Méndez Álvaro) — Madrid's main long-distance bus station — has left luggage. LOCATION: inside the station, ground floor, near platform 1. Follow signs for 'Consignas'. PRICES: €3/bag/day (any size). Cheapest left luggage in Madrid. HOURS: 6am-midnight daily (last drop-off 11:30pm). SECURITY: bags are X-rayed. ID required. Staffed with CCTV. TIPS: (1) Estación Sur is the cheapest option (€3 vs €3.90-5.50 at train stations). (2) Located south of center — take Metro L6 to Méndez Álvaro (15 min from Sol). (3) Less crowded than Atocha. (4) The bus station has food courts and shops while you wait. (5) Other bus stations (Moncloa, Plaza Elíptica) do NOT have left luggage — only Estación Sur. (6) Don't leave valuables. (7) Keep your claim ticket. ALTERNATIVE: If you're near Moncloa or Plaza Elíptica, consider taking the Metro to Estación Sur specifically for the cheaper luggage storage.",
     "official_url": "https://www.alsa.com/en/bus-stations/madrid-sur-station",
@@ -16050,14 +16100,15 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Intercity Buses & Coaches"
   },
   {
     "id": "public-storage-trasteros",
     "title": "Public Storage (Trasteros) — Long-Term",
     "category": "living",
     "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Storage & Self-Storage",
     "summary": "Self-storage units (trasteros) for long-term storage. €50-150/month. Chains: Accessa, City Trastero, Trastero Madrid.",
     "content": "Trasteros are self-storage units — like Public Storage in the US or Access Self Storage in the UK. Used for long-term storage (weeks, months, or years) — much cheaper than left luggage for extended periods. MAIN CHAINS: (1) Accessa (accessa.es) — Spain's largest, 8 locations in Madrid area. Units from 1m² to 20m². €50-200/month depending on size. 24/7 access at most locations. (2) City Trastero (citytrastero.com) — 4 locations in Madrid. €60-150/month. Modern, clean. (3) Trastero Madrid (trasteromadrid.com) — local, 3 locations. €45-120/month. (4) Storage Madrid — small, central. (5) Ibertrastero — chain, multiple. PRICING: 1m² (a few boxes) €45-60/month. 3m² (small apartment contents) €80-120/month. 6m² (1-bedroom apartment) €120-180/month. 10m²+ (house) €180-300/month. First month often discounted (€1 promotions). WHAT'S INCLUDED: 24/7 access (most), CCTV, climate control (some), free truck + driver for move-in (some), packing supplies for sale. USES: (1) Between apartments (store furniture during a move). (2) For expats going home for summer. (3) For businesses storing inventory. (4) For students storing stuff between academic years. TIPS: (1) Compare prices — there's a big range. (2) Negotiate — ask for a discount, especially for 6+ month commitments. (3) Check access hours — some are 24/7, some 8am-8pm. (4) Insurance: usually €10-15/month extra. (5) Climate control matters for electronics, art, leather — ask if the unit has it. (6) Reserve 1-2 weeks ahead in summer (peak season for student storage).",
     "official_url": "https://www.accessa.es/",
@@ -16191,16 +16242,16 @@
   {
     "id": "spanish-culture-madrid",
     "title": "Spanish Culture — A Quick Guide",
-    "category": "essentials",
-    "subcategory": "tourist-info",
-    "subsubcategory": "Cultural Guides",
+    "category": "do",
+    "subcategory": "traditions",
+    "subsubcategory": "Overview",
     "summary": "Spanish customs: mealtimes, siesta (mostly gone), personal space, greetings, holidays, family life.",
     "content": "Spanish culture for visitors. MEALTIMES (later than northern Europe): Breakfast (desayuno) 7-9am (coffee + toast/pastry). Mid-morning snack (almuerzo) 11am-noon (bocadillo). Lunch (comida) 2-3:30pm (main meal, often 3 courses). Afternoon snack (merienda) 6-7pm (small). Dinner (cena) 9-11pm (lighter than lunch). Restaurants don't serve lunch before 1pm or dinner before 8:30pm. SIESTA: The traditional afternoon nap is mostly gone in Madrid (especially for office workers). Some shops still close 2-5pm in smaller towns, but in Madrid most shops stay open. Spanish people do stay up later than northern Europeans — dinner at 10pm is normal. GREETINGS: (1) Handshake for business/first meetings. (2) Two kisses (one on each cheek, starting with the right) for friends and social situations. (3) 'Hola, buenas' is a casual greeting usable anytime. (4) 'Buenos días' (morning), 'Buenas tardes' (afternoon), 'Buenas noches' (evening/night). PERSONAL SPACE: Spaniards stand closer when talking and touch more (arm on shoulder, etc.) than northern Europeans. This is normal, not flirtatious. FAMILY: Family is central to Spanish life. Many young adults live with parents until 30+. Sunday family lunch is sacred. Multigenerational households are common. TIME: Spaniards have a relaxed attitude toward time. Being 10-15 min late to a social meeting is normal. Business meetings start on time. QUEUING: Spaniards don't queue as formally as the British — it's more of a crowd. Don't be too polite about waiting your turn — you'll never get served. FOOTBALL: Real Madrid vs Atlético is a serious divide. Don't wear a Real Madrid shirt in Atlético areas and vice versa. BULLFIGHTING: Controversial. Some Spaniards love it, others consider it animal cruelty. Catalonia and Canary Islands have banned it. RELIGION: Spain is officially Catholic, but most Spaniards are non-practicing. Easter (Semana Santa) processions are cultural events even for atheists. TIPPING: Optional, 5-10% in restaurants. FLAMENCO: From Andalusia, not Madrid — but Madrid has the best flamenco tablaos. SPANISH HUMOR: Direct, loud, physical, often political. Different from British irony or American sarcasm.",
     "official_url": "https://www.esmadrid.com/en/culture",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "tourist-info",
       "culture",
@@ -16263,7 +16314,7 @@
     "id": "bus-stations-vs-coach-stations",
     "title": "Bus vs Coach Stations in Madrid",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "intercity-travel",
     "subsubcategory": "Intercity Buses & Coaches",
     "summary": "Madrid has both city bus stops (EMT) and coach stations (intercity). This explains the difference.",
     "content": "Madrid has two different types of bus infrastructure — city buses (EMT) and intercity coaches (ALSA, Avanza). CITY BUSES (EMT): Operated by Empresa Municipal de Transportes. 200+ lines within Madrid city. Stops every 200-400m on major streets. Marked with red/white signs showing line numbers. €1.50 single ticket (€1.20 with Tarjeta Transporte Público). No stations — just stops. See our EMT Buses record. COACH STATIONS (intercity/long-distance): Three main stations for buses leaving Madrid — Estación Sur (Méndez Álvaro) for ALSA long-distance, Moncloa for Avanza (Castilla y León, Galicia), Plaza Elíptica for southern routes. See our Coach Stations record. KEY DIFFERENCE: City buses (EMT) operate within Madrid city limits, stop every few blocks, and use simple stops. Coaches (autocares) travel between cities, depart from stations with platforms and ticket offices, and require advance booking. CONFUSION: The Spanish word 'autobús' is used for BOTH city buses and intercity coaches. Context matters. 'Autobús' or 'bus' usually means city bus. 'Autocar' or 'coach' means long-distance. TIPS: (1) For getting around Madrid: use EMT buses (see our EMT Buses record). (2) For travel to other cities: use ALSA or Avanza coaches from one of the 3 coach stations. (3) The Metro is usually faster than EMT buses for tourists — use buses only when Metro doesn't go where you need. (4) For coach travel, book ahead at alsa.es or avanzabus.es. (5) Bus stops in Madrid are well-marked with route maps and real-time arrival displays (or QR codes to scan with your phone).",
@@ -16271,7 +16322,7 @@
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-available",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "bus",
@@ -16299,14 +16350,14 @@
     "id": "taxi-companies-madrid",
     "title": "Taxi Companies & Booking Apps",
     "category": "essentials",
-    "subcategory": "transportation",
+    "subcategory": "transport",
     "summary": "Madrid taxi booking apps: PideTaxi, FreeNow, Radio Taxi. White taxis with red stripe. €30 flat airport fare.",
     "content": "Madrid taxis are white with a red diagonal stripe and the Madrid bear (oso y el madroño) crest on the doors. BOOKING APPS: (1) PideTaxi (pidetaxi.com) — official Madrid taxi app. English available. Same fares as street hail (no surge pricing). Free to use. (2) FreeNow (formerly MyTaxi) — international taxi app. English. Same fares. Slightly higher demand than PideTaxi. (3) Radio Taxi Independiente (91 447 51 84) — phone dispatch, Spanish only. (4) Radio Teléfono Taxi (91 547 82 00) — phone dispatch, Spanish only. (5) Teletaxi (91 445 90 08) — phone dispatch. WHEN TO USE APPS vs STREET HAIL: (1) Use apps at night, in the rain, or in areas with few taxis. (2) Street hail is faster in central Madrid during the day. (3) Always use the official apps — avoid unlicensed 'taxis' that solicit at tourist spots. FARES: (1) Initial fare €2.40 (daytime). (2) €1.10/km city. (3) €1.30/km outside city or at night. (4) Airport supplement €5.50. (5) Train/bus station supplement €2.95. (6) Waiting time €22/hour. TYPICAL FARES: Sol to Retiro €8-10. Sol to Bernabéu €12-15. Center to airport €30 (flat rate inside M-30). Center to IFEMA €25-30. TIPS: (1) Madrid taxis are honest — scams are rare. (2) Always use the meter (taxímetro). Refuse if the driver wants a fixed price (except airport flat rate). (3) Tip: round up to the nearest euro, or €1-2 for good service. (4) Taxis can use bus lanes — faster than driving. (5) 4 passengers max per taxi. (6) Large luggage goes in the trunk (free). (7) For airport runs, the €30 flat rate (inside M-30) is usually cheaper than the meter.",
     "official_url": "https://www.madrid.es/portales/munimadrid/en/Inicio/Mobility-and-transport/Taxis",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "transport",
       "taxi",
@@ -16351,7 +16402,8 @@
           ]
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Taxis & Ride-Share"
   },
   {
     "id": "airport-shuttle-services-madrid",
@@ -16404,14 +16456,15 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Shuttle Service"
   },
   {
     "id": "optical-shops-madrid",
     "title": "Optical Shops (Ópticas) in Madrid",
-    "category": "living",
-    "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "category": "do",
+    "subcategory": "shopping",
+    "subsubcategory": "Optical Shops",
     "summary": "Optical shops: Óptica Universitaria, Alain Afflelou, Multiópticas. Eye exams €40-80, glasses €80-300.",
     "content": "Optical shops (ópticas) in Madrid. MAIN CHAINS: (1) Alain Afflelou — French chain, 50+ Madrid locations, eye exams €40-60, glasses from €80. (2) Multiópticas — Spanish chain, similar pricing. (3) Óptica Universitaria (Calle Gran Vía 28) — central, popular with students. (4) Cottet — Catalan chain, premium. (5) Óptica Suiza — high-end. INDEPENDENT: (1) Óptica Besada (Calle de la Velázquez 21) — English-speaking, premium. (2) Óptica Val (Calle de la Alcalá 55) — mid-range. SERVICES: Eye exams (examen de la vista) €40-80, sometimes free with glasses purchase. Contact lens fitting €50-80. Glasses (gafas) from €80 (basic) to €300+ (designer). Contact lenses (lentillas) €30-60/month. Sunglasses (gafas de sol) from €50. INSURANCE: Spanish public health covers eye exams for under-18s and over-65s. Private insurance (Sanitas, Adeslas) often includes optical coverage €100-200/year. TIPS: (1) Bring your prescription — Spanish opticians accept international prescriptions. (2) Glasses are ready in 1-2 hours for standard lenses, 1-2 weeks for special prescriptions. (3) Tax-free shopping available for non-EU residents on purchases over €90. (4) Bargaining is not common but chains sometimes offer promotions (2-for-1, free eye exam with purchase).",
     "official_url": "https://www.afflelou.com/",
@@ -16441,9 +16494,9 @@
   {
     "id": "music-stores-madrid",
     "title": "Music Stores in Madrid",
-    "category": "living",
-    "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "category": "do",
+    "subcategory": "shopping",
+    "subsubcategory": "Music Stores",
     "summary": "Music stores: El Corte Inglés music, Discos Melopelo (vinyl), Mariscal (instruments). CDs €10-20, vinyl €15-30.",
     "content": "Music stores in Madrid. CD/DVD: (1) El Corte Inglés (multiple) — Spain's largest CD/DVD selection, 7th floor of Castellana store. Mainstream and Spanish artists. CDs €10-18, DVDs €10-20. (2) FNAC (Calle Marqués de Casa Riera 4) — good selection, similar pricing. VINYL: (1) Discos Melopelo (Calle de la Colegiata 12, La Latina) — Madrid's best vinyl shop, new and used, €15-30 per LP. Jazz, rock, flamenco, electronic. (2) Flash Records (Calle de la Escorial 6, Malasaña) — used vinyl, €10-25. (3) Bicolor Music (Calle de la Pez 8) — new vinyl, focus on indie. (4) Disco 100 (Calle de la Montera 30) — dance/electronic vinyl. INSTRUMENTS: (1) Mariscal (Calle de la Marqués de Cubas 4) — Madrid's oldest music shop (1921), guitars, violins, brass. (2) Casa Luthier (Calle de la Balmes 22) — classical guitars, high-end. (3) Yamaha Music Madrid (Calle de la Alcalá 119) — pianos, keyboards, all instruments. (4) Guitar Center Madrid (Calle de la Atocha 28) — guitars, amps. CONCERT TICKETS: (1) El Corte Inglés ticket counters — large events. (2) Tick Tack Ticket (online) — most concerts. (3) Wegow (online) — indie concerts. TIPS: (1) Vinyl is having a renaissance in Madrid — Melopelo is the must-visit. (2) Spanish music to look for: flamenco (Paco de Lucía, Camarón), pop (Alaska, Rosalía), rock (Héroes del Silencio, Jarabe de Palo). (3) El Corte Inglés has the best selection of Spanish classical and flamenco CDs.",
     "official_url": "https://www.elcorteingles.es/",
@@ -16483,9 +16536,9 @@
   {
     "id": "international-grocery-madrid",
     "title": "International Grocery Stores",
-    "category": "living",
-    "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "category": "do",
+    "subcategory": "food",
+    "subsubcategory": "Grocery & Food Stores",
     "summary": "International food: Mantequerías Alemanas (German), Tatsumi (Japanese), Seoul (Korean), Lavapiés (Indian/African).",
     "content": "International grocery stores in Madrid for expat and specialty foods. BRITISH/IRISH: (1) The Irish Shop (Calle de la Espíritu Santo 1, Malasaña) — HP sauce, Marmite, Cadbury, Walker's crisps. (2) UK food sections at El Corte Inglés (Castellana, Goya) — PG Tips, McVitie's, Colman's. GERMAN: (1) Mantequerías Alemanas (Calle de Ayala 25, Salamanca) — German bread, sausages, beer, mustard. Established 1930. JAPANESE: (1) Tatsumi (Calle del General Yagüe 14) — Japanese groceries, sushi-grade fish, miso, nori, sake. (2) Warehouse Japanese Market (Calle de la Orense 31) — larger selection. KOREAN: (1) Seoul (Calle de la Princesa 5) — kimchi, gochujang, Korean snacks. (2) Korean Market (Calle de la Luna 3) — smaller. CHINESE: (1) Casa Asia (Calle del Cardenal Cisneros 9) — has a small Asian food section. (2) Barrio de Usera (south Madrid) — Madrid's Chinatown, 20+ Chinese supermarkets. INDIAN/PAKISTANI: (1) Lavapiés neighborhood (Calle de Lavapiés, Calle de la Ollerías) — 10+ Indian grocery stores, spices, lentils, basmati. (2) Yatai Market (Calle de la Lavapiés 28) — pan-Asian. LATIN AMERICAN: (1) Mercado de la Cebada (La Latina) — Latin American products. (2) Calle de la Tolmo (Lavapiés) — Peruvian, Colombian, Ecuadorian. AFRICAN: (1) Calle de la Lavapiés (south end) — Senegalese, Nigerian products. HALAL: (1) Halal Butcher shops in Lavapiés and Cuatro Caminos. ITALIAN: (1) Obika (various) — mozzarella bar, Italian products. (2) Giglio (Calle de la Jorge Juan 10) — Italian deli. AMERICAN: (1) Taste of America (Calle de la Modesto Lafuente 45) — American candy, baking supplies, Pepsi Wild Cherry. TIPS: (1) El Corte Inglés Gourmet section (Castellana) has the best all-in-one international selection. (2) For Asian ingredients, Usera is cheapest. (3) For Latin American, La Latina is best. (4) Most international stores are closed Sundays.",
     "official_url": "https://www.elcorteingles.es/",
@@ -16560,14 +16613,14 @@
     "title": "Architects & General Contractors (Refurbishment)",
     "category": "living",
     "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Architects",
     "summary": "Architects and contractors for apartment renovation. Permits required from City Hall. Budget €800-1,500/m² for full renovation.",
     "content": "Architects and contractors for apartment renovation in Madrid. WHEN YOU NEED AN ARCHITECT: (1) Structural changes (removing walls, changing layout). (2) Changing facade or windows. (3) Adding bathrooms or kitchens. (4) Any work requiring a city permit (licencia de obra). WHEN YOU NEED A CONTRACTOR (without architect): (1) Painting, flooring. (2) Kitchen/bathroom replacement (no layout change). (3) Electrical and plumbing upgrades. (4) Minor repairs. ARCHITECTS: (1) COAM (Colegio Oficial de Arquitectos de Madrid) — the official architects' association. Search their directory at coam.org. Rates: €80-150/hour or 8-12% of project cost. (2) Recommended English-speaking architects: BmasC Arquitectos, Studio Marco Vermeulen, OOAA Arquitectura. CONTRACTORS (Empresas de Reformas): (1) Reformas Madrid (multiple) — chains, €800-1,200/m² for full renovation. (2) Pepe's Reformas — local, mid-range. (3) Habitissimo (habitissimo.es) — online platform to get quotes from multiple contractors. PERMITS: (1) Licencia de obra mayor — major renovation (structural changes). Apply at Madrid City Hall (Portal de Urbanismo). Takes 1-3 months. Fee €300-800. (2) Licencia de obra menor — minor work (painting, flooring). Takes 2-4 weeks. Fee €50-200. (3) Comunidad de Propietarios — you MUST notify your building's community before starting work. They can't refuse but may set conditions (hours, elevator use). COSTS: Full apartment renovation (80m²): €60,000-120,000. Kitchen: €8,000-20,000. Bathroom: €4,000-10,000. Flooring: €30-80/m². Painting: €10-20/m². TIMELINE: 2-4 months for full renovation (including permits). TIPS: (1) Get 3+ quotes. (2) Check the contractor's license ( Registro de Empresas Calificadas). (3) Never pay more than 30% upfront. (4) Get everything in writing. (5) For building permits, use a 'gestor' (administrative agent) — €200-400 to handle paperwork.",
     "official_url": "https://www.coam.org/",
     "status": "evergreen",
     "english_friendly": false,
     "english_level": "spanish-only",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "services",
       "architect",
@@ -16617,14 +16670,14 @@
     "title": "Meeting Rooms & Rehearsal Spaces",
     "category": "living",
     "subcategory": "services",
-    "subsubcategory": "Daily Practical",
+    "subsubcategory": "Meeting Rooms",
     "summary": "Rent meeting rooms and rehearsal spaces by the hour. Spaces: WeWork, Atenasia, Espacio Ronda. €15-50/hour.",
     "content": "Meeting rooms and rehearsal spaces for rent in Madrid. MEETING ROOMS: (1) WeWork (3 locations: Velázquez, Caleido, Castellana) — meeting rooms for members and non-members. €15-30/hour. English. (2) Atenasia (Calle de la Zorrilla 7) — meeting rooms, videoconferencing. €20-40/hour. (3) Spaces (Calle de la Miguel Ángel 22) — Regus brand, meeting rooms €20-50/hour. (4) Regus (multiple) — business centers, meeting rooms €15-50/hour. (5) Impact Hub Madrid (Calle de la Goya 43) — coworking + meeting rooms, social enterprise focus. REHEARSAL SPACES (music/theater): (1) Espacio Ronda (Calle de la Ronda de Segovia 39) — rehearsal rooms for music, theater, dance. €10-15/hour. (2) La Nave (Calle de la Creta 12) — music rehearsal rooms. €8-12/hour. (3) Music Gallery (Calle de la Almirante 18) — band rehearsal, equipment included. €12-18/hour. (4) Estudio Río (Calle del Río Tajo 14) — recording + rehearsal. €15-25/hour. CONFERENCE ROOMS (larger events): (1) Hotel meeting rooms — most hotels rent meeting rooms. €200-800/day. (2) Círculo de Bellas Artes (Calle de Alcalá 42) — event spaces, €500-2,000/day. (3) Matadero Madrid (Plaza de Legazpi) — cultural event spaces. (4) IFEMA (Campo de las Naciones) — large conference venue, 10,000+ capacity. FREE OPTIONS: (1) Madrid public libraries have free meeting rooms (book ahead, 1 week). (2) Some cafés (Starbucks, Café de Oriente) allow small meetings with purchase. TIPS: (1) Book 1-2 weeks ahead for meeting rooms. (2) Bring your own laptop/HDMI adapter. (3) Most spaces have wifi and whiteboards. (4) For rehearsal spaces, bring your own instruments (some have drum kits/PAs). (5) Coworking spaces often offer 1 free meeting room hour per day for members.\n\nIMPORTANT ADDITION: EL HORNO (Calle de la Esgrima 11, Metro Tribunal L1/L10, phone 91 527 57 01, centroelhorno.com) — Madrid's longest-running rehearsal space (since the 1980s). 13 rooms for music, dance, and theater rehearsal. €49/month for unlimited off-peak access. Also offers dance classes, fitness, yoga, pilates, and pole dance. Active Facebook page (4.6 stars, 125 reviews). English spoken. Open Mon-Fri 10am-11pm, Sat 10am-8pm.",
     "official_url": "https://www.wework.com/buildings/madrid-spain",
     "status": "evergreen",
     "english_friendly": true,
     "english_level": "english-primary",
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "tags": [
       "services",
       "meeting-room",
@@ -16710,7 +16763,8 @@
         "body": "Palacio de Hielo (Silvano 77, Metro Canillas) is Madrid's main ice rink — open year-round. Part of a larger entertainment complex with bowling, shopping, and cinema. €8-12 for skating session + skate rental.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Ice Skating"
   },
   {
     "id": "pool-billiards-madrid",
@@ -16741,7 +16795,8 @@
         "body": "Pool halls in Madrid: No Se Lo Digas a Nadie (Ventura de la Vega 7, Metro Sevilla) — 6 pool tables, 2 floors, bar atmosphere, open until 6am. Search 'billar Madrid' for more halls. €6-10/hour per table.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Pool & Billiards"
   },
   {
     "id": "bowling-madrid",
@@ -16773,7 +16828,8 @@
         "body": "Bowling alleys in Madrid: Palacio de Hielo (Canillas, 24 lanes), Diversia (Alcobendas). Part of entertainment complexes. €6-10/game + shoe rental. Good rainy day family activity.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Bowling"
   },
   {
     "id": "race-karts-madrid",
@@ -16804,14 +16860,15 @@
         "body": "Karting Feliz Vía (Ctra El Pardo km 3.4, Somontes Sports Complex) — electric karts for kids 4+ and adults. 10 min from Madrid. Outdoor track. Book ahead on weekends.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Race Karts"
   },
   {
     "id": "expat-publications-madrid",
     "title": "English-Language Publications & Magazines",
     "category": "now",
     "subcategory": "news",
-    "subsubcategory": "Magazines & Blogs",
+    "subsubcategory": "Publications",
     "summary": "English magazines and blogs: Madrid No Frills, Spain Reporter, Essential Magazine, InMadrid. Free and paid.",
     "content": "English-language publications about Madrid and Spain. MAGAZINES (print + online): (1) Essential Magazine (essentialmagazine.com) — free monthly lifestyle magazine for expats in Madrid and Barcelona. Pick up at hotels, restaurants, British Council. (2) InMadrid (in-madrid.com) — free bilingual magazine, distributed at tourist spots. Focus on culture and events. BLOGS: (1) Madrid No Frills (madridnofrills.com) — independent, authentic, cheap eats and hidden gems. Excellent. (2) Madrid Foodie (madridfoodie.com) — restaurant reviews, food events. Spanish/English. (3) Madrid Secreto (madridsecreto.co) — Spanish-language city blog, hidden events. Use Google Translate. (4) Devour Madrid (devour-tours.com/blog/madrid) — food and culture blog by Devour Tours. (5) Spain Reporter (spainreporter.com) — English news and features about Spain. PRINT: (1) Broadsheet-style listings in El País English edition (Thursdays — 'Madrid' section). (2) Time Out Madrid (timeout.com/madrid) — online + annual print guide. (3) Metrópoli (weekend supplement of El Economista newspaper) — culture and lifestyle, Spanish. TIPS: (1) For events, esMadrid.com (official) is most reliable. (2) For authentic, off-the-beaten-path recommendations, Madrid No Frills is the best. (3) Essential Magazine is free and widely available — good for newcomers. (4) Most blogs have email newsletters — subscribe for weekly updates.",
     "official_url": "https://madridnofrills.com/",
@@ -16974,7 +17031,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Jazz & Blues"
   },
   {
     "id": "gran-via-theaters-musicals",
@@ -17026,7 +17084,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Theater & Musicals"
   },
   {
     "id": "warner-beach-water-park",
@@ -17182,7 +17241,8 @@
           "Don't miss the Night Zone — unique in Madrid"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Zoo & Aquarium"
   },
   {
     "id": "marionetas-titere-madrid",
@@ -17216,7 +17276,8 @@
         "body": "El Retiro Park has a historic puppet theater (Teatro de Títeres) with weekend shows for children. Casa de Titeres de El Retiro. Free or low-cost. Also check Cultural Center San Blas and other civic centers for children's theater programming.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Kids Shows & Theater"
   },
   {
     "id": "natural-sciences-museum-madrid",
@@ -17755,7 +17816,8 @@
         "body": "Movistar Estudiantes is Madrid's historic basketball club (founded 1948). Plays in ACB League. Games at Palacio de Deportes (WiZink Center). Tickets €15-30. Less expensive than Real Madrid basketball.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Basketball"
   },
   {
     "id": "parkrun-madrid",
@@ -17809,7 +17871,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Running"
   },
   {
     "id": "madrid-tourist-map-pdf",
@@ -18521,7 +18584,7 @@
     "title": "The Official Madrid Guide Booklet (with Madrid Card)",
     "category": "essentials",
     "subcategory": "tourist-info",
-    "subsubcategory": "Tourist Passes",
+    "subsubcategory": "Madrid Card",
     "summary": "The booklet that comes with the Madrid Card. 150+ pages: itineraries, museums, restaurants, maps, discounts. Available as free PDF.",
     "content": "The Official Madrid Guide is the booklet that accompanies the Madrid City Card (and is also available as a free PDF download). CONTENTS (150+ pages): (1) Madrid itineraries — 1-day, 2-day, 3-day, and family itineraries with maps. (2) Museums and monuments — descriptions, hours, admission prices, and how to get there for 50+ attractions. (3) Restaurants and gastronomy — curated restaurant recommendations by neighborhood and budget. (4) Shopping guide — by neighborhood (Gran Vía, Salamanca, Malasaña). (5) Nightlife — bars, clubs, flamenco, theaters. (6) Parks and gardens — Retiro, Casa de Campo, Madrid Río, Quinta de los Molinos. (7) Day trips — Toledo, Segovia, El Escorial, Aranjuez, Alcalá de Henares. (8) Practical info — transport, emergency numbers, embassies, hospitals, pharmacies. (9) Maps — city center, Metro, bus, neighborhoods. (10) Discount coupons — 20-50% off at selected restaurants, shops, and attractions. HOW TO GET IT: (1) Free PDF download at esmadrid.com/en/madrid-guide (27MB, 150+ pages). (2) Paper copy at any Tourist Office (Plaza Mayor, airport, Atocha) — free. (3) Included with the Madrid City Card purchase (€48-108). (4) At hotels — most hotel receptions have copies. HOW WE COMPARE: Our Madrid Insider website covers ALL the same topics as the guidebook, but: (1) We're updated continuously (the PDF is annual). (2) We have 286 records vs the guidebook's ~150 listings. (3) We have live weather, real-time transit alerts, and search. (4) We link directly to official websites. (5) We have English availability badges (EN★, EN, 🗝️ MI). (6) We have tips on every subcategory page. WHAT THE GUIDEBOOK HAS THAT WE DON'T: (1) Beautiful photos (we're text-focused). (2) Discount coupons. (3) Offline access (a PDF works without internet). WHAT WE HAVE THAT THE GUIDEBOOK DOESN'T: (1) 4-tier English availability system. (2) Sub-subcategory grouping (160 groups). (3) Bidirectional related-records linking. (4) Live weather API. (5) Dynamic per-page SEO. (6) Search across all 286 records. (7) Updated daily (not annually). (8) Spanish-only resource coverage (🗝️ MI badge). TIPS: (1) Download the PDF guidebook AND bookmark Madrid Insider — use both. (2) The guidebook is great for planning before your trip (print it). (3) Madrid Insider is better during your trip (search, live data, always current). (4) The guidebook has discount coupons worth €20-50 if you visit multiple attractions. (5) If you buy the Madrid City Card (€48+), the guidebook comes free.",
     "official_url": "https://www.esmadrid.com/en/madrid-guide",
@@ -19377,7 +19440,7 @@
         ]
       }
     ],
-    "subsubcategory": "Community & Faith"
+    "subsubcategory": "Community & Expat Groups"
   },
   {
     "id": "devour-madrid-food-tours",
@@ -19399,7 +19462,7 @@
       "malasana",
       "lavapies"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "food-tours-madrid",
@@ -19489,7 +19552,8 @@
           "Don't eat a big meal before the tour — most tours include 5-7 substantial tastings"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Food Tours"
   },
   {
     "id": "moving2madrid-relocation",
@@ -19604,7 +19668,8 @@
         "body": "Other English-speaking relocation services in Madrid include MADRIDEM (madridem.com), PropXper (propxper.com), and Help in Spain (spain-help.com). Compare quotes from 2-3 before committing — pricing models vary significantly.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Booking Services"
   },
   {
     "id": "english-speaking-lawyers-madrid",
@@ -19764,7 +19829,7 @@
       "depression",
       "couples"
     ],
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "english-speaking-doctors-madrid",
@@ -19871,7 +19936,8 @@
         "body": "If you are in immediate danger, call 112 (Spanish emergency services, English-speaking operators). For mental health crises, Teléfono de la Esperanza (717 003 717) is a Spanish-language helpline; English-language crisis support is available via the Samaritans English-speaking line (+44 116 123 from Spain).",
         "tone": "danger"
       }
-    ]
+    ],
+    "subsubcategory": "Mental Health"
   },
   {
     "id": "international-chambers-madrid",
@@ -20010,7 +20076,7 @@
       "church-of-england",
       "expat"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "evergreen",
     "related_records": [
       "churches-religion-madrid",
@@ -20115,7 +20181,7 @@
         ]
       }
     ],
-    "subsubcategory": "Community & Faith"
+    "subsubcategory": "Religion & Faith"
   },
   {
     "id": "english-speaking-vets-madrid",
@@ -20138,7 +20204,7 @@
       "expat",
       "house-calls"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "english-speaking-doctors-madrid",
@@ -20243,7 +20309,7 @@
         "tone": "warning"
       }
     ],
-    "subsubcategory": "Community & Faith"
+    "subsubcategory": "Pet Services"
   },
   {
     "id": "english-summer-camps-madrid",
@@ -20265,7 +20331,7 @@
       "family",
       "international-school"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "bilingual-schools-madrid",
@@ -20384,7 +20450,8 @@
         "body": "Madrid in July and August regularly exceeds 38°C (100°F). For day camps, verify the facility has air-conditioned indoor space for the hottest hours (1-5pm). For residential camps, prefer those in the Madrid mountains (Sierra de Guadarrama) where temperatures are 5-8°C cooler.",
         "tone": "warning"
       }
-    ]
+    ],
+    "subsubcategory": "Summer Camps (English)"
   },
   {
     "id": "aupair-spain-madrid",
@@ -20512,7 +20579,7 @@
         "tone": "info"
       }
     ],
-    "subsubcategory": "Internships & Entry-Level"
+    "subsubcategory": "Aupair"
   },
   {
     "id": "digital-nomad-visa-spain-services",
@@ -20836,7 +20903,7 @@
       "residential",
       "international"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "english-summer-camps-madrid",
@@ -20942,7 +21009,8 @@
           "Don't assume English-only — camps are bilingual, basic Spanish helps kids integrate"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Football/Soccer Camps"
   },
   {
     "id": "yoga-teacher-training-spain",
@@ -20966,7 +21034,7 @@
       "wellness",
       "english-taught"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "yoga-madrid",
@@ -21061,7 +21129,8 @@
           "Don't expect to teach immediately after — YTT is foundational, practice required"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Yoga & Wellness Training"
   },
   {
     "id": "camino-de-santiago-services",
@@ -21084,7 +21153,7 @@
       "northern-spain",
       "english-speaking"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "day-tours-from-madrid",
@@ -21187,7 +21256,8 @@
           "Don't skip the Pilgrim's Mass at Santiago Cathedral — emotional endpoint"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Pilgrimage & Long-Distance"
   },
   {
     "id": "culinary-schools-madrid",
@@ -21333,7 +21403,7 @@
       "english-speaking-clinics",
       "international-patients"
     ],
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "english-speaking-doctors-madrid",
@@ -21432,7 +21502,8 @@
         "body": "Spain is Europe's IVF capital: permissive laws (embryo donation, no age limit up to 50), high success rates, English-speaking clinics, and lower costs. Madrid has 15+ fertility clinics. Eugin, IVI, Bernabeu all have Madrid offices.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Medical Tourism"
   },
   {
     "id": "spain-golden-visa-ended",
@@ -21453,7 +21524,7 @@
       "real-estate",
       "investment"
     ],
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "status": "legacy",
     "related_records": [
       "digital-nomad-visa-spain-services",
@@ -21530,7 +21601,8 @@
         "body": "If you obtained your Golden Visa before April 3, 2025, your residency rights are preserved. You can renew under the previous rules. Contact an immigration lawyer (see english-speaking-lawyers-madrid) for renewal questions.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Investor Visas (Historical)"
   },
   {
     "id": "international-school-jobs-madrid",
@@ -22015,7 +22087,7 @@
       "stott-pilates",
       "wellness"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "yoga-teacher-training-spain",
@@ -22112,7 +22184,8 @@
           "Don't enroll without verifying the certifying organization's international recognition"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Yoga & Wellness Training"
   },
   {
     "id": "music-summer-programs-madrid",
@@ -22366,8 +22439,8 @@
   },
   {
     "id": "artist-residencies-madrid",
-    "category": "see",
-    "subcategory": "neighborhoods",
+    "category": "do",
+    "subcategory": "arts-education",
     "title": "Artist Residencies & Writer Retreats in Madrid",
     "summary": "Madrid hosts multiple artist residencies recruiting English-speaking artists: ROOSTERGNN (Madrid), Matadero Madrid residencies, ArtConnect Madrid directory. From 1-week intensives to 6-month programs. Most actively recruit international artists.",
     "content": "Madrid has a growing artist residency ecosystem that actively recruits international (English-speaking) artists, writers, and creative practitioners. These residencies provide studio space, accommodation, and often a stipend in exchange for engaging with the local artistic community. ROOSTERGNN Artist Residency is one of the most established Madrid-based programs recruiting international artists — they run collaborative residencies for cross-arts practice development with text in English or Spanish. Matadero Madrid, the city's contemporary arts center in Legazpi, runs residencies and is the largest public-funded residency host. ArtConnect maintains a directory of Madrid's top artist residencies, including most active programs. The Res Artis network (global residency association) lists open calls for Spanish residencies. A newer development is the writer + artist residency model launched in Madrid (Reddit r/writers references an August launch) where writers and artists work in the same space — explicitly English-language. Residencies typically run 1-6 months, with costs ranging from fully funded (competitive) to €800-€2,500/month (self-funded). Madrid's growing international arts community, lower cost of living than London/Berlin, and excellent transport links make it increasingly attractive to international artists seeking residency experiences.",
@@ -22384,7 +22457,7 @@
       "matadero",
       "artconnect"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "lavapies-neighborhood",
@@ -22479,7 +22552,7 @@
         ]
       }
     ],
-    "subsubcategory": "Overview & Creative"
+    "subsubcategory": "Arts Education"
   },
   {
     "id": "internship-services-madrid",
@@ -23744,7 +23817,7 @@
       "residential",
       "sports-academy"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "soccer-camps-madrid",
@@ -23867,7 +23940,8 @@
         "body": "Madrid residents reach Sánchez-Casal (Barcelona) in 2.5 hours by AVE train or 1-hour flight. Rafa Nadal Academy (Manacor, Mallorca) is 1.5-hour flight from Madrid-Barajas + 45-min drive. Madrid also has its own tennis infrastructure at Caja Mágica (Madrid Open venue).",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Tennis & Padel Camps"
   },
   {
     "id": "golf-academies-spain",
@@ -23889,7 +23963,7 @@
       "international-students",
       "summer-camp"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "tennis-academies-spain",
@@ -24011,7 +24085,8 @@
           "Don't forget sun protection — Spanish golf is year-round but summer is brutal"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Golf Camps"
   },
   {
     "id": "equestrian-camps-madrid",
@@ -24153,7 +24228,7 @@
       "eugin",
       "medical-tourism"
     ],
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "medical-tourism-madrid",
@@ -24306,7 +24381,8 @@
         "body": "Embryo donation allowed (not in all countries). No age limit up to 50 (UK limit is 42). Donor anonymity (means large donor pool, no waitlist). Same-sex couples and single women eligible. Surrogacy NOT allowed in Spain (illegal).",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Medical Tourism"
   },
   {
     "id": "art-design-schools-madrid",
@@ -24444,7 +24520,7 @@
   {
     "id": "fashion-summer-courses-madrid",
     "category": "do",
-    "subcategory": "shopping",
+    "subcategory": "arts-education",
     "title": "Fashion Summer Courses in Madrid (English)",
     "summary": "IED Madrid offers English-taught fashion summer courses: Fashion Experience Junior (ages 15-17), Global Design Summer, Design Experience. 2-3 week intensives, €1,300+. Madrid Fashion Week access.",
     "content": "Madrid has a small but growing English-taught fashion summer course market, anchored by IED Madrid (Istituto Europeo di Design). The Fashion Experience Junior course (30 June - 11 July 2026) is designed for ages 15-17, immersing them in fashion design, styling, and art direction — taught in English at IED Madrid. The 3-week Global Design Summer Course covers the four fundamental areas of design (Fashion, Product, Interior, Graphic), allowing students to develop a total design proposal. The Design Experience summer course explores how one concept can be developed into visual identity, physical object, wearable piece, and spatial experience. All IED Madrid summer courses are taught in English by industry professionals. Madrid's fashion scene is anchored by Mercedes-Benz Fashion Week Madrid (IFEMA exhibition center, February and September), which attracts international press and buyers. Beyond IED, fashion summer options include TAI's fashion communication program, and various independent styling and design workshops. Madrid is also home to major Spanish fashion brands (Inditex/Zara headquarters in Arteixo but design offices in Madrid; Loewe flagship and design team in Madrid; Mango design team in Barcelona but retail presence in Madrid). For international fashion students wanting a Spanish alternative to Milan or Paris, Madrid offers lower costs, growing international recognition, and access to Spanish-language fashion industry. IED Madrid fashion summer courses typically cost €1,300-€2,500 for 2-3 week intensives.",
@@ -24461,7 +24537,7 @@
       "art-direction",
       "junior-program"
     ],
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "art-design-schools-madrid",
@@ -24572,7 +24648,8 @@
           "Don't underestimate Madrid summer heat (40°C+) — choose morning classes"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Arts Education"
   },
   {
     "id": "cooking-classes-tourists-madrid",
@@ -24743,7 +24820,7 @@
       "wine-tourism",
       "tempranillo"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "day-tours-from-madrid",
@@ -24868,7 +24945,8 @@
         "body": "day-tours-from-madrid (general day trips), wine-certification-spain (WSET courses in Madrid), spanish-wines-madrid (Spanish wine basics), devour-madrid-food-tours (food tours in Madrid).",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Food Tours"
   },
   {
     "id": "gap-year-programs-madrid",
@@ -25026,8 +25104,8 @@
   },
   {
     "id": "spanish-immersion-adults-spain",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "living",
+    "subcategory": "education",
     "title": "Spanish Immersion Programs for Adults in Spain",
     "summary": "Adult Spanish immersion programs in Spain: Pueblo Español (8-day intensive, €1,800-€2,500), Expanish Young Adults (16-20), Harvard Summer School Madrid (8 weeks), IES Abroad. Recruit international adults.",
     "content": "Adult Spanish immersion programs are one of the most established English-language recruitment channels into Spain. These programs run intensive Spanish-language courses specifically designed for adult (and young adult) international students — combining formal language classes with cultural activities, homestays, and immersion experiences. Pueblo Español is a multi-day Spanish immersion program in Spain designed to greatly increase Spanish listening and communication skills — they offer 8-day intensives (€1,800-€2,500) in various Spanish cities including Madrid area. Expanish runs a Young Adults Program for ages 16-20 with small group classes, life skills workshops, and cultural activities. Harvard Summer School operates an 8-week immersion program in Madrid for intermediate Spanish students — academic credit available. IES Abroad Madrid Summer program offers intermediate and advanced Spanish language courses plus area studies courses taught in Spanish, with activities with Spaniards. LAE Madrid runs a Spanish Immersion Program designed to help students improve Spanish while immersing in Madrid life. The adult immersion market targets: (1) university students wanting summer academic credit, (2) professionals wanting to improve Spanish for career reasons, (3) retirees wanting to learn Spanish before relocating, (4) serious language learners wanting faster progress than weekly classes provide. Programs typically last 1-8 weeks, with prices ranging from €500/week (budget) to €3,000+/week (premium with accommodation + activities). Most programs include: placement test, daily Spanish classes (3-5 hours), cultural activities, accommodation options (homestay, residence, apartment), and a certificate of completion. Madrid is particularly popular for adult immersion because of its size, cultural offerings, and central location for weekend travel.",
@@ -25045,7 +25123,7 @@
       "harvard-summer",
       "expanish"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "language-schools-madrid",
@@ -25180,7 +25258,8 @@
           "Don't over-schedule — leave time for spontaneous Madrid life"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Language Learning"
   },
   {
     "id": "scuba-diving-certification-madrid",
@@ -25312,7 +25391,8 @@
           "Don't expect warm water at Spanish coast in winter (12-15°C)"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Water Sports Certification"
   },
   {
     "id": "rock-climbing-courses-madrid",
@@ -25333,7 +25413,7 @@
       "outdoor-sports",
       "mountain"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "cycling-mtb-madrid",
@@ -25452,7 +25532,8 @@
           "Don't skip the safety briefing — Spanish climbing has specific conventions"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Outdoor Adventure"
   },
   {
     "id": "ski-school-spain-english",
@@ -25473,7 +25554,7 @@
       "granada",
       "instructor"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "rock-climbing-courses-madrid",
@@ -25590,7 +25671,8 @@
           "Don't skip lunch — Spanish ski culture includes long midday meals"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Outdoor Adventure"
   },
   {
     "id": "pre-university-summer-madrid",
@@ -25739,7 +25821,7 @@
       "five-star",
       "spain"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "soccer-camps-madrid",
@@ -25844,7 +25926,8 @@
           "Don't book a 'beginner' camp for an experienced player — too basic"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Basketball Camps"
   },
   {
     "id": "guitar-luthier-schools-spain",
@@ -26291,8 +26374,8 @@
   },
   {
     "id": "instituto-cervantes-accredited-schools-madrid",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "living",
+    "subcategory": "education",
     "title": "Instituto Cervantes-Accredited Spanish Schools in Madrid",
     "summary": "Instituto Cervantes accreditation is the gold standard for Spanish language schools. Madrid accredited schools: Cervantes EI, LAE Madrid, Inhispania, Enforex, don Quijote. Quality assurance + international recognition.",
     "content": "Instituto Cervantes accreditation is the international gold standard for Spanish language teaching quality — analogous to Cambridge English for English schools. The accreditation system (SACIC) ensures accredited centers meet strict quality criteria in teaching, facilities, teacher qualifications, and student services. Madrid has multiple Instituto Cervantes-accredited Spanish schools, all actively recruiting international students through English-language marketing. Cervantes Escuela Internacional (cervantes.to) offers Spanish courses in Madrid for all levels — accredited, all ages, 41% of students aged 16-24. LAE Madrid (laemadrid.com) is accredited by Instituto Cervantes and has welcomed 1000s of students — they describe themselves as 'the highest reference in teaching Spanish worldwide.' Inhispania (inhispania.com) is a highly accredited and recognized Spanish language school in Madrid — Instituto Cervantes accredited. Enforex Madrid is part of the largest Spanish language school chain in Spain, with Instituto Cervantes accreditation. Don Quijote Madrid is similarly accredited. esMadrid (official Madrid tourism portal) maintains a list of Instituto Cervantes-accredited Spanish schools in Madrid. For international students choosing a Spanish school in Madrid, Instituto Cervantes accreditation is the most reliable quality signal — non-accredited schools may be cheaper but vary wildly in quality. The accreditation is reviewed every 3 years, so accredited schools must maintain standards. Costs at accredited schools: €150-€300/week for intensive courses (20 hours/week), with longer programs offering better per-week rates. Most accredited schools offer DELE exam preparation (the official Spanish proficiency exam, also run by Instituto Cervantes).",
@@ -26311,7 +26394,7 @@
       "lae-madrid",
       "inhispania"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "language-schools-madrid",
@@ -26414,7 +26497,8 @@
         "body": "The DELE (Diploma de Español como Lengua Extranjera) is the official Spanish proficiency certification, run by Instituto Cervantes. Levels A1-C2. Required for some Spanish university programs and Spanish citizenship. Accredited Madrid schools offer DELE preparation courses.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Language Learning"
   },
   {
     "id": "coding-bootcamps-madrid",
@@ -26689,8 +26773,8 @@
   },
   {
     "id": "writer-residencies-spain",
-    "category": "see",
-    "subcategory": "neighborhoods",
+    "category": "do",
+    "subcategory": "arts-education",
     "title": "Writer Residencies & Writing Retreats in Spain (English)",
     "summary": "Spain writer residencies recruiting English-language writers: Casa Ana (Alpujarra), NN Madrid (literary residency), Madrid writer+artist residency. From €900 (2 weeks) to €3,800 (longer).",
     "content": "Spain has a small but growing writer residency and writing retreat ecosystem, with multiple programs recruiting English-language writers through English-language marketing. Casa Ana in the Alpujarra (Andalusia) is one of the most established — writing retreats designed to help writers achieve success with novels, short stories, poetry, plays, or non-fiction. The Alpujarra setting (mountain villages south of Granada) provides quiet, inspiration, and natural beauty. NN (Nueva Narrativa) holds residencies in Madrid, Spain, and Havana, Cuba — with accommodations provided and a bilingual orientation coordinator. The Madrid Writer + Artist Residency (Reddit r/writers references an August launch) is a newer concept where writers and artists work in the same space, explicitly English-language. Audrey Gidman's Substack maintains a non-exhaustive list of international writing and art residencies including Spanish options — typical costs €3,500-€3,800 for longer programs, €900 for two weeks, €1,500 for one month. Art Omi: Writers (international but referenced for Spanish participants) hosts authors and translators from around the world for residencies throughout spring and fall. Aspiring Author maintains a list of unique and inspiring international writing residencies including the Madrid options. For English-language writers, Spain offers: (1) lower cost than UK/US residencies, (2) Mediterranean climate, (3) rich literary tradition (Cervantes, Lope de Vega, Lorca), (4) quiet rural settings (Alpujarra, Pyrenees) for focused writing. Most residencies provide private accommodation, writing space, and often meals. Some offer stipends; most are self-funded. Application is competitive — typical 3-6 month lead time.",
@@ -26707,7 +26791,7 @@
       "literary",
       "creative-writing"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "artist-residencies-madrid",
@@ -26802,7 +26886,7 @@
         ]
       }
     ],
-    "subsubcategory": "Overview & Creative"
+    "subsubcategory": "Arts Education"
   },
   {
     "id": "jazz-music-workshops-madrid",
@@ -26923,8 +27007,8 @@
   },
   {
     "id": "spanish-history-culture-courses-madrid",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "do",
+    "subcategory": "arts-education",
     "title": "Spanish History & Culture Summer Courses in Madrid (English)",
     "summary": "Madrid university summer programs teaching Spanish history and culture in English: Cornell Summer Program (6 weeks), CEA CAPA Spanish Language & Culture, IES Abroad Madrid Summer, LAE Madrid culture-integrated Spanish.",
     "content": "Multiple Madrid institutions run summer programs teaching Spanish history and culture in English, recruiting international university students and adult learners. Cornell University runs a Summer Program in Madrid — an intensive 6-week program (May 24 - July 3 typical dates) where students immerse in Spanish culture, significantly improve their Spanish, and study Spanish history and culture. CEA CAPA offers Madrid Spanish Language & Culture summer programs (4-week sessions in July) — designed for students from beginner to advanced, immersing them in Spanish learning environment and local culture in Spain's capital. IES Abroad Madrid Summer Language & Cultural Studies (already in spanish-immersion-adults-spain) integrates Madrid's historic and cultural offerings into intermediate and advanced Spanish courses. Carlos V Education (already in pre-university-summer-madrid) runs summer programs with organized activities, cultural visits, and shared experiences where participants discover authentic Spanish life while practicing the language. LAE Madrid integrates gastronomy, history, and culture of Spain within their Spanish classes so students understand the fabric of the language and real-life context. The Madrid history/culture summer course market targets: (1) US university students wanting summer academic credit, (2) adult learners wanting substantive Spanish culture education, (3) serious Spanish students wanting context for language learning, (4) retirees wanting structured cultural education. Madrid is uniquely attractive for Spanish culture study because it's the capital — Spanish Parliament, Royal Palace, Prado Museum, Reina Sofía, Thyssen-Bornemisza, National Library, and Archaeological Museum all in one city. Program costs: €3,000-€7,000 for 4-6 week programs (often including housing and excursions). Cornell, IES Abroad, CEA CAPA offer academic credit transferable to US universities.",
@@ -26942,7 +27026,7 @@
       "academic-credit",
       "international-students"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "spanish-immersion-adults-spain",
@@ -27051,7 +27135,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Arts Education"
   },
   {
     "id": "chef-masterclass-madrid",
@@ -27301,7 +27386,7 @@
       "altitude-training",
       "international-cyclists"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "cycling-mtb-madrid",
@@ -27424,7 +27509,8 @@
           "Don't skip the recovery meals — Spanish cycling food is excellent"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Cycling & Endurance Camps"
   },
   {
     "id": "altitude-running-camps-spain",
@@ -27445,7 +27531,7 @@
       "navacerrada",
       "international-athletes"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "cycling-training-camps-spain",
@@ -27563,7 +27649,8 @@
           "Don't skip hydration — altitude increases fluid loss"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Cycling & Endurance Camps"
   },
   {
     "id": "startup-accelerators-madrid",
@@ -27846,7 +27933,8 @@
           "Don't skip the industry forums — that's where real business happens"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Film Festivals"
   },
   {
     "id": "robotics-stem-camps-madrid",
@@ -27869,7 +27957,7 @@
       "video-games",
       "international-students"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "english-summer-camps-madrid",
@@ -27967,7 +28055,8 @@
           "Don't book without confirming language of instruction"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Summer Camps (English)"
   },
   {
     "id": "cooking-holidays-spain",
@@ -28139,7 +28228,7 @@
       "international-audience",
       "english-language"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "acting-schools-madrid",
@@ -28247,12 +28336,13 @@
           "Don't underestimate Madrid theater scene — major year-round programming"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Theater & Musicals"
   },
   {
     "id": "business-spanish-executives-madrid",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "living",
+    "subcategory": "education",
     "title": "Business Spanish Courses for Executives in Madrid (English-Speaking)",
     "summary": "Madrid business Spanish courses for executives: LSI Madrid (50+ years), TANDEM Madrid (intensive 1+ week), SpainIEE (1-4 weeks), Expanish Madrid. Recruiting international professionals. €500-€1,500/week.",
     "content": "Madrid has a dedicated ecosystem of business Spanish courses designed for executives and professionals, with multiple operators recruiting international students through English-language marketing. LSI Madrid (Language Studies International) offers Business Spanish courses for professionals in small groups and private lessons — 50+ years of language training expertise. Language International lists business Spanish courses in Spain for business executives wanting to learn Spanish for Spanish business — 2-16 week courses. TANDEM Madrid runs an intensive Spanish for Business program lasting at least a week, including 20 group lessons per week + 10 private lessons. SpainIEE offers Spanish Courses for Professionals and Executives with 20 lessons including workshops + 5 individual tutorial lessons, duration 1-4 weeks. Expanish runs Madrid-based Spanish courses including intensive options for professionals — 'the perfect place to start your Spanish language journey!' The business Spanish market targets: (1) international executives being relocated to Spain or Latin America, (2) professionals doing business with Spanish-speaking clients, (3) MBA students wanting Spanish for Latin American markets, (4) diplomats and international organization staff. Programs typically run 1-4 weeks intensive, with costs €500-€1,500/week depending on group vs. private, intensity, and prestige of school. Most business Spanish programs include: business vocabulary (finance, marketing, HR), professional writing (emails, reports, presentations), cultural business etiquette, negotiation Spanish, and meeting facilitation. Some programs include industry-specific modules (banking, healthcare, engineering, law). Madrid is the natural destination for business Spanish because it's Spain's commercial capital — home to BBVA, Santander, Iberia, Inditex, Telefónica headquarters, plus the Madrid Stock Exchange and IE Business School.",
@@ -28269,7 +28359,7 @@
       "expanish",
       "international-professionals"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "instituto-cervantes-accredited-schools-madrid",
@@ -28388,7 +28478,8 @@
           "Don't choose general Spanish course for business needs — business programs differ"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Language Learning"
   },
   {
     "id": "creative-writing-workshops-madrid",
@@ -28678,7 +28769,7 @@
       "author-signings",
       "literary-quarter"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "creative-writing-workshops-madrid",
@@ -28799,12 +28890,13 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Literary Events"
   },
   {
     "id": "spanish-family-immersion-madrid",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "living",
+    "subcategory": "education",
     "title": "Spanish Family Immersion Programs in Madrid (English-Speaking)",
     "summary": "Madrid Spanish immersion for families: LAE Kids Spanish for Kids and Families, TANDEM Madrid family courses, Vamos Spanish family programs, don Quijote Family Program. Tailor-made for parents + kids together.",
     "content": "Madrid offers multiple Spanish immersion programs specifically designed for families wanting to learn Spanish together. LAE Kids runs Spanish for Kids and Families in Madrid — Spanish Immersion Camp in Madrid Spring 2026, with classes ideal for families looking to learn about the Spanish language. TANDEM Madrid runs Spanish for Families courses for families (minimum 2 people) who want to spend time together in Madrid and combine Spanish learning with cultural activities. Vamos Spanish offers Spanish classes for kids and families in Madrid — immersion-style program that prepares families for their travels, knowing how great the benefit of Spanish exposure. don Quijote runs a Family Program — a tailor-made course for families that want to learn Spanish in Spain or Latin America while spending quality time together. The Madrid family immersion market targets: (1) expat families wanting their children to maintain or improve Spanish, (2) international families wanting to learn Spanish before relocating, (3) tourists wanting family cultural immersion beyond typical sightseeing, (4) bilingual families wanting structured Spanish instruction. Programs typically run 1-4 weeks with costs €500-€2,000/week depending on family size and program intensity. Most programs include: shared Spanish classes (parents + kids together), separate age-appropriate activities (parents cultural visits, kids games), family cultural activities, and accommodation options (homestay for full immersion, apartment for independence). Madrid is particularly attractive for family Spanish immersion because of its safety (one of Europe's safest capitals), family-friendly infrastructure (parks, museums, public transport), and the cultural density (Prado family programs, Retiro Park, Madrid Río).",
@@ -28822,7 +28914,7 @@
       "don-quijote",
       "international-families"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "spanish-immersion-adults-spain",
@@ -28945,12 +29037,13 @@
           "Don't skip the cultural activities — they're often the highlight"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Language Learning"
   },
   {
     "id": "spanish-art-history-madrid",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "do",
+    "subcategory": "arts-education",
     "title": "Spanish Art History Courses in Madrid (English)",
     "summary": "Madrid art history summer programs recruiting international students: IE University Arts & Culture, CEA CAPA Spanish Museology, Prado Museum Visual Arts Summer Program, IES Abroad Madrid cultural studies. Madrid's museum ecosystem as classroom.",
     "content": "Madrid is one of Europe's premier destinations for English-taught art history study — combining world-class museums (Prado, Reina Sofía, Thyssen-Bornemisza) with academic programs that use the city as a living classroom. Multiple institutions recruit international students through English-language marketing. IE University runs an Arts & Culture Summer Program — a 10-day immersive experience taking students beyond the classroom into Madrid's living culture. CEA CAPA offers Introduction to Spanish Museology, Society and Culture in Madrid — a course introducing students to Spanish society, culture, and museology with focus on Madrid's rich and varied museum landscape. The Prado Museum Visual Arts Summer Program (listed by Summer Schools in Europe) is an intensive and rigorous project-based Art Immersion Course in Madrid, focusing on Historical and Cultural Patrimonies. IES Abroad Madrid Summer Language & Cultural Studies integrates Madrid's historic and cultural opportunities into intermediate and advanced Spanish courses. educations.com lists 10 creative arts and design summer course programs in Madrid including art history content — full time 2-week on-campus courses in English and Spanish. The Madrid art history study market targets: (1) US university students wanting European academic credit, (2) adult art enthusiasts wanting structured museum education, (3) art professionals wanting Spanish art specialization, (4) retirees wanting substantive cultural education. Madrid's museum ecosystem is unique: the 'Golden Triangle of Art' (Prado, Reina Sofía, Thyssen within 10-minute walk of each other), plus 50+ other museums (Sorolla, Lázaro Galdiano, Arqueológico, Romanticismo, Cerralbo). Programs typically run 2-10 weeks with costs €1,500-€5,000. The Prado alone has 8,000+ paintings — more than any other museum in the world.",
@@ -29078,7 +29171,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Arts Education"
   },
   {
     "id": "teen-entrepreneurship-summer-madrid",
@@ -29246,7 +29340,7 @@
       "canary-islands",
       "summer-camp"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "scuba-diving-certification-madrid",
@@ -29353,7 +29447,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Water Sports Certification"
   },
   {
     "id": "volleyball-camps-spain",
@@ -29375,7 +29470,7 @@
       "isc-spain",
       "slam-international"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "soccer-camps-madrid",
@@ -29450,7 +29545,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Team Sports Camps"
   },
   {
     "id": "equestrian-holidays-spain",
@@ -29472,7 +29568,7 @@
       "spanish-horses",
       "international"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "equestrian-camps-madrid",
@@ -29581,7 +29677,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Equestrian & Animal Camps"
   },
   {
     "id": "science-summer-programs-spain",
@@ -29852,8 +29949,8 @@
   },
   {
     "id": "spanish-seniors-programs-spain",
-    "category": "essentials",
-    "subcategory": "communication",
+    "category": "living",
+    "subcategory": "education",
     "title": "Spanish Programs for Seniors (50+) in Spain (English-Speaking)",
     "summary": "Spain Spanish programs for seniors 50+ recruiting internationally: IH Madrid 55+ program, Colegio de España 50+, Enforex Seniors (50+), Fluenz mature learners Madrid, Pueblo Español adult immersion.",
     "content": "Spain is one of Europe's top destinations for senior Spanish learners (50+), with multiple schools offering dedicated programs targeting the demographic. International House Madrid runs a 55+ program designed for mature learners to enjoy the language, culture, and the company of new friends in a relaxed, exclusive, and truly Spanish environment. Colegio de España runs a Spanish Program for Seniors 50+ designed exclusively for people who wish to learn or improve their Spanish with people of their own age group. Enforex runs a Seniors Program (50+) including 20 group Spanish classes and 4 cultural activities each week, plus one full-day weekend excursion. Fluenz runs a Spanish Immersion in Madrid specifically serving mature learners through sophisticated programming, educator expertise, and cultural depth. Pueblo Español runs adult Spanish immersion programs designed for an entertaining environment made comfortable for mature learners. The senior Spanish market targets: (1) retirees wanting to learn Spanish before/after relocating to Spain, (2) empty nesters wanting structured cultural travel, (3) professionals approaching retirement wanting Spanish for travel, (4) life-long learners wanting intellectual engagement. Programs typically run 1-4 weeks with costs €500-€2,000/week depending on intensity, accommodations, and inclusions. Most senior programs include: age-appropriate pacing, cultural activities (museum visits, cooking classes, wine tastings), accommodation in comfortable hotels or homestays, and small group sizes. Madrid is particularly attractive for senior Spanish learners because of safety (one of Europe's safest capitals), excellent healthcare, walkable historic center, world-class museums, and established expat community. The 50+ demographic is well-served in Spain — many schools explicitly market to this age group with tailored programming.",
@@ -29871,7 +29968,7 @@
       "ih-madrid",
       "enforex"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "spanish-immersion-adults-spain",
@@ -29996,7 +30093,8 @@
           "Don't skip travel insurance covering pre-existing conditions"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Summer & Pre-University Programs"
   },
   {
     "id": "madrid-music-festivals",
@@ -30018,7 +30116,7 @@
       "festival",
       "live-music"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "nightlife-etiquette-madrid",
@@ -30128,12 +30226,13 @@
           "Don't drive to the festival — parking impossible"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Music Festivals"
   },
   {
     "id": "yoga-wellness-retreats-spain",
     "category": "do",
-    "subcategory": "sports",
+    "subcategory": "sports-camps",
     "title": "Yoga & Wellness Retreats in Spain (English-Speaking)",
     "summary": "Spain yoga + wellness retreats recruiting international guests: BookYogaRetreats (top 10), BookRetreats (580 wellness), yoga + massage + meditation. From €500-€2,500/week. Andalusia, Canary Islands, Mallorca strongest.",
     "content": "Spain is one of Europe's premier yoga and wellness retreat destinations, with hundreds of operators recruiting international guests through English-language marketing. BookYogaRetreats lists the top 10 yoga retreats in Spain for 2026/2027 — including 8-day Yoga and Wellness Relaxation Holidays, plus festivals that include yoga workshops and meditation sessions. BookRetreats lists 580 best wellness retreats around Spain with 21,131 reviews — covering rejuvenation of mind, body, and soul. Condé Nast Traveller documents Europe's best affordable yoga retreats including Spanish options. Responsible Travel covers yoga vacations in Spain — from daily yoga, massage, and meditation classes to authentic Spanish experiences. The Spanish yoga retreat market is concentrated in: Andalusia (Cabo de Gata, Tarifa, Granada), Canary Islands (Tenerife, Lanzarote, Fuerteventura), Mallorca, and Ibiza (luxury wellness). Madrid itself has fewer residential yoga retreats but is the gateway city — most international guests fly into Madrid-Barajas then transfer. The yoga retreat market targets: (1) stressed professionals wanting decompression, (2) solo female travelers wanting safe wellness travel, (3) couples wanting active + spiritual vacation, (4) experienced yogis wanting daily practice in beautiful settings. Programs typically run 3-8 days with costs €500-€2,500/person including accommodation, all meals (usually vegetarian/vegan), 2x daily yoga, meditation sessions, and often massage/treatments. Most Spanish retreats follow a similar daily schedule: 7-8am meditation, 8-10am yoga, 10am brunch, free time/excursion, 4-5pm workshop, 6-8pm yoga, 8pm dinner. Spain is particularly attractive for yoga retreats because of: sunny climate year-round, lower cost than Italy/France, established wellness infrastructure, and Mediterranean diet supporting healthy eating.",
@@ -30151,7 +30250,7 @@
       "andalusia",
       "canary-islands"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "yoga-teacher-training-spain",
@@ -30287,7 +30386,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Yoga & Wellness Training"
   },
   {
     "id": "kids-music-summer-camps-madrid",
@@ -30309,7 +30409,7 @@
       "st-george-madrid",
       "reina-sofia"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "music-summer-programs-madrid",
@@ -30419,7 +30519,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Summer Camps (English)"
   },
   {
     "id": "madrid-law-summer-programs",
@@ -30699,7 +30800,7 @@
       "international-poets",
       "versopolis"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "madrid-book-fair-literary-events",
@@ -30797,7 +30898,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Literary Events"
   },
   {
     "id": "paddle-tennis-camps-madrid",
@@ -30819,7 +30921,7 @@
       "madrid",
       "international-players"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "tennis-academies-spain",
@@ -30940,7 +31042,8 @@
           "Don't book without verifying English-speaking coaches (most clubs are Spanish-only)"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Tennis & Padel Camps"
   },
   {
     "id": "andalusian-horses-dance-show",
@@ -30963,7 +31066,7 @@
       "performing-arts",
       "royal-school"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "equestrian-holidays-spain",
@@ -31053,7 +31156,8 @@
         "body": "For equestrian holidays (trail riding, dressage training, horse + yoga retreats) where you PARTICIPATE, see equestrian-holidays-spain (Equitours, Equus Journeys, Far and Ride) in Do → Theme Parks & Active Family Fun. For kids' equestrian camps, see equestrian-camps-madrid.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Equestrian Shows"
   },
   {
     "id": "zarzuela-madrid",
@@ -31076,7 +31180,7 @@
       "performing-arts",
       "royal-palace"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "annual review",
     "related_records": [
       "teatro-real-madrid",
@@ -31176,7 +31280,8 @@
         "body": "The Sabatini Gardens (next to Royal Palace) and nearby Plaza de Oriente host outdoor cultural events throughout summer (July-August), including zarzuela performances, concerts, and dance shows. These are organized by Madrid's municipal culture department and are often free. Check esmadrid.com for current summer programming. See sabatini-gardens record for garden details.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Opera & Classical"
   },
   {
     "id": "plaza-de-espana-madrid",
@@ -31200,7 +31305,7 @@
       "rooftop",
       "landmark"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "evergreen",
     "related_records": [
       "gran-via",
@@ -31269,7 +31374,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Plazas"
   },
   {
     "id": "plaza-de-colon",
@@ -31291,7 +31397,7 @@
       "castellana",
       "landmark"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "evergreen",
     "related_records": [
       "salamanca-neighborhood",
@@ -31362,7 +31468,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Plazas"
   },
   {
     "id": "cibeles-fountain-city-hall",
@@ -31386,7 +31493,7 @@
       "landmark",
       "cybele"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "evergreen",
     "related_records": [
       "puerta-de-alcala",
@@ -31460,7 +31567,8 @@
         "body": "When Real Madrid wins La Liga, Champions League, or Copa del Rey, thousands of fans gather at Cibeles Fountain. Players appear on the City Hall balcony. If you're visiting during a championship celebration, Cibeles is the place to be — but be prepared for massive crowds.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Fountains & Monuments"
   },
   {
     "id": "madrid-historic-gates",
@@ -31484,7 +31592,7 @@
       "landmark",
       "monument"
     ],
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-30",
     "status": "evergreen",
     "related_records": [
       "puerta-de-alcala",
@@ -31571,7 +31679,8 @@
           "Don't try to drive to them — traffic is heavy and parking impossible"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Fountains & Monuments"
   },
   {
     "id": "paseo-del-prado-fountains",
@@ -31674,7 +31783,8 @@
         "body": "The two Madrid football clubs have rival fountain celebration points: Real Madrid fans gather at Cibeles (goddess of nature), Atlético Madrid fans at Neptuno (god of the sea). When both teams win on the same weekend, Madrid's Paseo del Prado becomes a sea of white (Real) and red-and-white (Atlético) fans. The rivalry is friendly but passionate.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Fountains & Monuments"
   },
   {
     "id": "outdoor-dining-terraces-madrid",
@@ -31924,7 +32034,8 @@
         "body": "The Thyssen is within 10 minutes' walk of both the Prado (next door) and the Reina Sofía (5 min south). All three can be visited in one day with the Paseo del Arte card, but it's exhausting — better to do one per day. See museo-del-prado and museo-reina-sofia records for the other two.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Golden Triangle"
   },
   {
     "id": "local-police-stations-madrid",
@@ -32037,12 +32148,13 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Police Stations"
   },
   {
     "id": "health-food-stores-madrid",
-    "category": "living",
-    "subcategory": "services",
+    "category": "do",
+    "subcategory": "food",
     "title": "Health Food & Organic Stores in Madrid",
     "summary": "Madrid's organic and health food stores: Planeta Biológico, Herbolario Navarro, Ecocentro, Vegan Books. Organic produce, supplements, natural cosmetics, gluten-free, vegan products.",
     "content": "Madrid's health food and organic store ecosystem has grown significantly. Planeta Biológico (Calle de Cardenal Cisneros 27, Metro Bilbao) is one of Madrid's largest organic supermarkets — organic produce, bulk grains, supplements, natural cosmetics, eco-friendly household products. Herbolario Navarro (multiple locations including Calle de la Magdalena 14, Metro Antón Martín) is a chain of traditional herbalists with natural remedies, supplements, teas, and organic foods. Ecocentro (Calle de Espronceda 5, Metro Alvarado) is a 3-floor organic lifestyle center — supermarket, restaurant, bookshop, and natural beauty salon. Vegan Books (Calle del Espíritu Santo 18, Metro Noviciado — inside J&J Books and Coffee) offers vegan products alongside English books. El Corte Inglés supermarkets have growing organic sections ('biológico' aisle). For fresh organic produce markets, the Mercado de San Antón (Chueca) and Mercado de Vallehermoso (Chamberí) have organic stalls. Madrid's organic restaurant scene includes Ecocentro's restaurant, Vega (Centro), and Rayen Vegano (multiple locations). For supplements, Herbolario Navarro and Planeta Biológico have the best selection. Spanish organic certification: 'Agricultura Ecológica' (EU organic leaf logo + Spanish certification body code).",
@@ -32132,7 +32244,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Grocery & Food Stores"
   },
   {
     "id": "japanese-restaurants-madrid",
@@ -32219,7 +32332,7 @@
         ]
       }
     ],
-    "subsubcategory": "Food Culture & Basics"
+    "subsubcategory": "Japanese"
   },
   {
     "id": "cricket-madrid",
@@ -32280,7 +32393,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Cricket"
   },
   {
     "id": "rugby-madrid",
@@ -32365,7 +32479,8 @@
         "body": "The old Madrid Insider (2013, node/141) listed: Madrid Lions Rugby Club — seeking players of all levels and nationalities, pub nights Thursdays 20:30 at Finnegan's (Plaza de las Salesas), contact Charlie 636-067-716, madridlionsrfc.com. Also: Madrid Barbarians Rugby Club — welcomes players from all over the world, both expat and Spanish, contact madridbarbarians@ymail.com. Verify current status of both clubs before contacting.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Rugby"
   },
   {
     "id": "boating-madrid",
@@ -32456,7 +32571,8 @@
         "body": "The old Madrid Insider (2013, node/90) noted that you can rent rowing and pedal boats by the hour at the Retiro Park lake (Metro Retiro). This is the closest boating to central Madrid — no need to travel to reservoirs. Also: Casa de Campo lake (Metro Lago) had boat rentals. These are casual recreational boating, not sailing.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Boating"
   },
   {
     "id": "hidden-parks-gardens-madrid",
@@ -32560,7 +32676,8 @@
         "body": "The old Madrid Insider (2013) listed these hidden parks. They all still exist but hours may have changed. The Crystal Palace of Arganzuela (not to be confused with the Crystal Palace in Retiro Park) is particularly magical — a massive tropical greenhouse few tourists know about. El Capricho is worth the trip to the suburbs for its 18th-century romantic atmosphere.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Hidden Gems"
   },
   {
     "id": "version-original-cinemas-madrid",
@@ -32658,7 +32775,8 @@
         "body": "The old Madrid Insider (2013) listed these V.O. cinemas: Alphaville (Martín de los Héros 14) — classic art-house cinema, verify status; Pequeño Cine Estudio (Magallanes 1) — small art-house; Cine Bellas Artes (Marqués de Casa Riera 2) — closed; Cine Princesa (Princesa 3) — closed; Cine California (Andrés Mellado 53) — closed. The V.O. cinema scene has consolidated into chains (Cinesa, Yelmo) with the Cine Doré remaining as the independent/art-house option.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "Version Original Cinema"
   },
   {
     "id": "english-teacher-agencies-madrid",
@@ -32822,7 +32940,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Film Resources"
   },
   {
     "id": "talent-modeling-agencies-madrid",
@@ -32898,7 +33017,8 @@
           "Don't expect US/UK-style agency sizes — Madrid market is smaller"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Talent Agencies"
   },
   {
     "id": "usa-citizens-spain-guide",
@@ -32993,7 +33113,8 @@
         "body": "The old Madrid Insider (2013, node/130) listed the US Embassy at Serrano 75 (Metro Rubén Darío). The US Embassy moved to a new compound at Calle Diego de León 16 in 2022. The old site also referenced ETA terrorism concerns — ETA declared a permanent ceasefire in 2011 and dissolved in 2018, so this is no longer a concern.",
         "tone": "info"
       }
-    ]
+    ],
+    "subsubcategory": "USA Citizens"
   },
   {
     "id": "immunizations-travel-health-madrid",
@@ -33057,7 +33178,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Immunizations"
   },
   {
     "id": "cost-of-living-madrid",
@@ -33241,7 +33363,8 @@
           "Don't forget Modelo 720 (foreign asset declaration) — €10,000+ penalties"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Budgeting"
   },
   {
     "id": "moving-to-madrid-guide",
@@ -33409,7 +33532,8 @@
           }
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Practical Guides"
   },
   {
     "id": "madrid-for-families-guide",
@@ -33526,6 +33650,7 @@
           "Don't forget — August is emptiest (locals on holiday) = fewer crowds"
         ]
       }
-    ]
+    ],
+    "subsubcategory": "Family Guides"
   }
 ]

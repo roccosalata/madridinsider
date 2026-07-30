@@ -97,11 +97,11 @@ export function useLinkInterceptor(): void {
 // Redirect map for old subcategory paths that changed during reorganization
 const OLD_PATH_REDIRECTS: Record<string, string> = {
   '/essentials/transportation/': '/essentials/transport/',
-  '/see/tours/': '/do/tours/',
-  '/see/day-trips/': '/do/tours/',
-  '/do/arts/': '/do/arts-education/',
-  '/now/transit/': '/essentials/transport/',
-  '/see/spectator-sports/': '/see/spectator-sports/', // no redirect needed (same)
+  '/essentials/trains/':         '/essentials/intercity-travel/',
+  '/see/tours/':                 '/do/tours/',
+  '/see/day-trips/':             '/do/tours/',
+  '/do/arts/':                   '/do/arts-education/',
+  '/now/transit/':               '/essentials/transport/',
 }
 
 /** Check if an old path should be redirected to a new path */
