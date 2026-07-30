@@ -265,12 +265,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.madridinsider.com/now/transit</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.madridinsider.com/essentials/transport/metro-de-madrid</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -1033,13 +1027,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.madridinsider.com/now/transit/metro-closures-summer-2026</loc>
+    <loc>https://www.madridinsider.com/essentials/transport/metro-closures-summer-2026</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.madridinsider.com/now/transit/emt-bus-detours</loc>
+    <loc>https://www.madridinsider.com/essentials/transport/emt-bus-detours</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1051,7 +1045,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.madridinsider.com/now/transit/taxi-strikes-madrid</loc>
+    <loc>https://www.madridinsider.com/essentials/transport/taxi-strikes-madrid</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2750,6 +2744,12 @@
   </url>
   <url>
     <loc>https://www.madridinsider.com/essentials/tourist-info/moving-to-madrid-guide</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.madridinsider.com/do/family/madrid-for-families-guide</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
