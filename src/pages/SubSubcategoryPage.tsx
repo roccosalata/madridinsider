@@ -74,12 +74,23 @@ export default function SubSubcategoryPage({
         </div>
       )}
 
-      <div className="mt-6 max-w-xl">
-        <SearchBar
-          placeholder={`Filter ${subsubName}…`}
-          scope={{ category: category.id, subcategory: subcategory.id }}
-          limit={20}
-        />
+      <div className="mt-6 flex flex-wrap items-center gap-4">
+        <div className="max-w-xl flex-1">
+          <SearchBar
+            placeholder={`Filter ${subsubName}…`}
+            scope={{ category: category.id, subcategory: subcategory.id }}
+            limit={20}
+          />
+        </div>
+        <div className="flex items-center gap-2 text-xs text-gray-500">
+          <span className="font-semibold">English:</span>
+          <span className="inline-flex items-center gap-1">
+            <span className="h-2 w-2 rounded-full bg-amber-400" title="EN★ Primary" />
+            <span className="h-2 w-2 rounded-full bg-green-500" title="EN Available" />
+            <span className="h-2 w-2 rounded-full bg-yellow-400" title="EN Partial" />
+            <span className="h-2 w-2 rounded-full bg-gray-300" title="ES Only" />
+          </span>
+        </div>
       </div>
 
       {records.length === 0 ? (

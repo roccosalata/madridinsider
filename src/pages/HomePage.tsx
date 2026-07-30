@@ -1,5 +1,6 @@
 import { Link } from '../components/Link'
 import MadridNowFeed from '../components/MadridNowFeed'
+import RecordCard from '../components/RecordCard'
 import type { Category } from '../data/categories'
 import type { Record as MRecord } from '../data/records'
 
@@ -10,18 +11,16 @@ import type { Record as MRecord } from '../data/records'
  *   │  HEADER (same on all pages): logo + slogan + 5 nav         │
  *   ├────────────────────────────────────────────────────────────┤
  *   │  TOP 1/3 — single centered block:                          │
- *   │                                                            │
  *   │     ┌─────────┬─────────┐                                  │
  *   │     │Essentials│ Living │   ← 2×2 table (centered)         │
  *   │     ├─────────┼─────────┤                                  │
  *   │     │   See   │   Do   │                                  │
  *   │     └─────────┴─────────┘                                  │
- *   │                                                            │
  *   │     WELCOME TO MADRID INSIDER     ← invisible row under    │
- *   │     Your English-language          the table (centered)    │
- *   │     directory for Madrid, Spain                           │
- *   │                                                            │
  *   │     [both left and right margins are free]                 │
+ *   ├────────────────────────────────────────────────────────────┤
+ *   │  POPULAR RECORDS (full width)                              │
+ *   │  Top 8 most-linked records as quick-access cards           │
  *   ├────────────────────────────────────────────────────────────┤
  *   │  BOTTOM 2/3 — Madrid Now (full width, both margins free):  │
  *   │  Transit alerts | This week's events | Open exhibitions    │
@@ -29,10 +28,6 @@ import type { Record as MRecord } from '../data/records'
  *   ├────────────────────────────────────────────────────────────┤
  *   │  FOOTER (same on all pages)                                │
  *   └────────────────────────────────────────────────────────────┘
- *
- * The 2×2 table + welcome statement form a single centered block
- * in the top third. Both left and right margins are free (empty).
- * Madrid Now fills the entire bottom 2/3 at full width.
  */
 export default function HomePage({
   categories,
@@ -41,18 +36,20 @@ export default function HomePage({
   categories: Category[]
   records: MRecord[]
 }) {
-  // The 4 content categories (excluding Madrid Now, which IS the homepage)
   const navCategories = categories.filter((c) => c.id !== 'now')
+
+  // Popular records = records with the most related_records connections
+  // (most-connected = most cross-referenced = most useful hub pages)
+  const popularRecords = [...records]
+    .filter((r) => r.status !== 'archived')
+    .sort((a, b) => (b.related_records?.length ?? 0) - (a.related_records?.length ?? 0))
+    .slice(0, 8)
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      {/* ============================================================ */}
-      {/* TOP 1/3: centered 2×2 table + welcome statement             */}
-      {/* Both left and right margins are free.                        */}
-      {/* ============================================================ */}
+      {/* TOP 1/3: centered 2×2 table + welcome statement */}
       <section className="madrid-gradient border-b border-gray-100 py-8 sm:py-10">
         <div className="mx-auto max-w-2xl">
-          {/* 2×2 category table */}
           <table className="w-full border-collapse">
             <tbody>
               <tr>
@@ -63,8 +60,6 @@ export default function HomePage({
                 <CategoryCell category={navCategories[2]} />
                 <CategoryCell category={navCategories[3]} />
               </tr>
-              {/* Invisible row underneath — holds the welcome statement, */}
-              {/* centered, spanning both columns. */}
               <tr>
                 <td colSpan={2} className="p-2 pt-8 text-center">
                   <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
@@ -80,9 +75,24 @@ export default function HomePage({
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* BOTTOM 2/3: Madrid Now feed (full width, both margins free) */}
-      {/* ============================================================ */}
+      {/* POPULAR RECORDS — quick access to most-linked pages */}
+      <section className="border-b border-gray-100 py-6 sm:py-8">
+        <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+          Popular Resources
+        </h2>
+        <p className="mt-1 text-xs text-gray-400">
+          The most cross-referenced guides on Madrid Insider — start here
+        </p>
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {popularRecords.map((r) => (
+            <li key={r.id}>
+              <RecordCard record={r} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* BOTTOM 2/3: Madrid Now feed (full width) */}
       <section className="py-8 sm:py-10">
         <MadridNowFeed records={records} />
       </section>
@@ -90,10 +100,6 @@ export default function HomePage({
   )
 }
 
-/**
- * A single cell in the 2×2 category grid. Renders as a clickable
- * link to the category page, with the emoji, title, and description.
- */
 function CategoryCell({ category }: { category: Category | undefined }) {
   if (!category) return <td className="p-2" />
   return (
