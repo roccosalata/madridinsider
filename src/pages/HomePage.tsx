@@ -74,24 +74,33 @@ export default function HomePage({
       <section className="py-6 sm:py-8">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 
-          {/* LEFT: Popular Resources */}
+          {/* LEFT: Popular Resources (top 2 + link to more) */}
           <div>
             <div className="flex items-baseline justify-between border-b border-gray-100 pb-3">
               <h2 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl">
                 <span aria-hidden className="mr-1.5">⭐</span>
                 Popular Resources
               </h2>
-              <span className="text-xs text-gray-400">
-                Most-referenced guides
-              </span>
+              <Link
+                to="/essentials"
+                className="text-xs font-semibold text-brand-600 hover:underline"
+              >
+                View all →
+              </Link>
             </div>
             <ul className="mt-4 space-y-2">
-              {popularRecords.map((r) => (
+              {popularRecords.slice(0, 2).map((r) => (
                 <li key={r.id}>
                   <RecordCard record={r} />
                 </li>
               ))}
             </ul>
+            <Link
+              to="/essentials"
+              className="mt-3 inline-block text-xs font-semibold text-brand-600 hover:underline"
+            >
+              Browse all {records.filter((r) => r.status !== 'archived').length} resources →
+            </Link>
           </div>
 
           {/* RIGHT: Madrid Now (compact) */}
