@@ -78,3 +78,50 @@ export function subcategoryRecordCount(
     (r) => r.category === categoryId && r.subcategory === subcategoryId
   ).length
 }
+
+// ---------- Sub-subcategory (group) helpers ----------
+
+/** Convert a subsubcategory display name to a URL slug. */
+export function subsubSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+/** Build the URL for a subsubcategory group page. */
+export function subsubUrl(
+  categoryId: string,
+  subcategoryId: string,
+  subsubName: string
+): string {
+  return `/${categoryId}/${subcategorySlug(categoryId, subcategoryId)}/${subsubSlug(subsubName)}`
+}
+
+/** Find the subsubcategory display name from a URL slug, given matching records. */
+export function subsubFromSlug(
+  slug: string,
+  scopedRecords: { subsubcategory?: string }[]
+): string | undefined {
+  const names = new Set(
+    scopedRecords
+      .map((r) => r.subsubcategory)
+      .filter((n): n is string => !!n)
+  )
+  for (const name of names) {
+    if (subsubSlug(name) === slug) return name
+  }
+  return undefined
+}
+
+/** Get distinct subsubcategory names from a list of records. */
+export function distinctSubsubs(
+  scopedRecords: { subsubcategory?: string }[]
+): string[] {
+  const names = new Set(
+    scopedRecords
+      .map((r) => r.subsubcategory)
+      .filter((n): n is string => !!n)
+  )
+  return Array.from(names).sort()
+}

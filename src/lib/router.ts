@@ -20,6 +20,7 @@ export type Route =
       subcategorySlug: string
       recordId: string
     }
+  | { name: 'subsubcategory'; categoryId: string; subcategorySlug: string; subsubSlug: string }
   | { name: 'notfound'; path: string }
 
 function currentPath(): string {
@@ -147,6 +148,8 @@ export function matchRoute(path: string): Route {
     if (!cat) return { name: 'notfound', path }
     const sub = cat.subcategories.find((s) => (s.slug ?? s.id) === segments[1])
     if (!sub) return { name: 'notfound', path }
+    
+    // First: try to match as a record
     const rec = recordById(segments[2])
     if (rec && rec.category === cat.id && rec.subcategory === sub.id) {
       return {
@@ -156,7 +159,15 @@ export function matchRoute(path: string): Route {
         recordId: rec.id,
       }
     }
-    return { name: 'notfound', path }
+    
+    // Second: try to match as a subsubcategory group slug
+    // Return as subsubcategory route — App.tsx will verify the slug exists
+    return {
+      name: 'subsubcategory',
+      categoryId: cat.id,
+      subcategorySlug: sub.slug ?? sub.id,
+      subsubSlug: segments[2],
+    }
   }
 
   return { name: 'notfound', path }

@@ -1,7 +1,8 @@
+import { Link } from '../components/Link'
 import Breadcrumb from '../components/Breadcrumb'
 import SearchBar from '../components/SearchBar'
 import RecordCard from '../components/RecordCard'
-import { categoryUrl } from '../data/categories'
+import { categoryUrl, subsubUrl, distinctSubsubs } from '../data/categories'
 import type { Category, Subcategory } from '../data/categories'
 import type { Record as MRecord } from '../data/records'
 
@@ -14,10 +15,22 @@ export default function SubcategoryPage({
   subcategory: Subcategory
   records: MRecord[]
 }) {
-  // Group records by subsubcategory (if present).
-  // Records without subsubcategory go in a default group (rendered without a heading).
-  const groups = groupBySubsubcategory(records)
-  const hasGroups = groups.some((g) => g.name !== null)
+  // Check if records have subsubcategory groups
+  const groups = distinctSubsubs(records)
+  const hasGroups = groups.length >= 2
+
+  // Group records by subsubcategory
+  const groupMap = new Map<string, MRecord[]>()
+  const ungrouped: MRecord[] = []
+  for (const r of records) {
+    const ss = (r as Record<string, unknown>).subsubcategory as string | undefined
+    if (ss) {
+      if (!groupMap.has(ss)) groupMap.set(ss, [])
+      groupMap.get(ss)!.push(r)
+    } else {
+      ungrouped.push(r)
+    }
+  }
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
@@ -50,7 +63,7 @@ export default function SubcategoryPage({
         </div>
       </header>
 
-      {/* Tips / practical advice — shown between the header and the record list */}
+      {/* Tips / practical advice */}
       {subcategory.tips && (
         <div className="mt-4 rounded-xl border border-brand-200 bg-brand-50/40 p-4 sm:p-5">
           <div className="flex items-start gap-2">
@@ -80,30 +93,44 @@ export default function SubcategoryPage({
           No records in this subcategory yet.
         </div>
       ) : hasGroups ? (
-        // Render grouped by subsubcategory with section headings
-        <div className="mt-6 space-y-8">
-          {groups.map((group) => (
-            <section key={group.name ?? 'default'}>
-              {group.name && (
-                <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-gray-500">
-                  {group.name}
-                  <span className="ml-2 rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-semibold text-gray-600">
-                    {group.records.length}
-                  </span>
-                </h2>
-              )}
-              <ul className={`grid gap-3 ${group.name ? 'sm:grid-cols-2' : 'sm:grid-cols-2'}`}>
-                {group.records.map((r) => (
-                  <li key={r.id}>
-                    <RecordCard record={r} />
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
+        // SHOW GROUP CARDS (like CategoryPage shows subcategory cards)
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+            Groups
+          </h2>
+          <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {groups.map((groupName) => {
+              const groupRecords = groupMap.get(groupName) ?? []
+              const count = groupRecords.length
+              return (
+                <li key={groupName}>
+                  <Link
+                    to={subsubUrl(category.id, subcategory.id, groupName)}
+                    className="group flex h-full flex-col rounded-xl border border-gray-100 bg-white p-4 transition hover:border-gray-200 hover:bg-gray-50"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="text-2xl" aria-hidden>📁</span>
+                      <span className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-semibold text-gray-600">
+                        {count}
+                      </span>
+                    </div>
+                    <h3 className="mt-2 text-sm font-bold text-gray-900 group-hover:text-brand-600">
+                      {groupName}
+                    </h3>
+                    <p className="mt-1 flex-1 text-xs leading-relaxed text-gray-600">
+                      {count} record{count === 1 ? '' : 's'} in this group
+                    </p>
+                    <span className="mt-2 text-xs font-semibold text-gray-400 group-hover:text-brand-600">
+                      Open →
+                    </span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       ) : (
-        // No sub-subcategories — render flat
+        // NO GROUPS — render records flat (original behavior)
         <ul className="mt-6 grid gap-3 sm:grid-cols-2">
           {records.map((r) => (
             <li key={r.id}>
@@ -114,39 +141,4 @@ export default function SubcategoryPage({
       )}
     </div>
   )
-}
-
-/**
- * Group records by subsubcategory.
- * Returns an array of { name, records } pairs.
- * Records without a subsubcategory go in the first group with name=null.
- * If all records lack a subsubcategory, returns a single group with name=null.
- */
-function groupBySubsubcategory(records: MRecord[]): { name: string | null; records: MRecord[] }[] {
-  const groupMap = new Map<string, MRecord[]>()
-  const ungrouped: MRecord[] = []
-
-  for (const r of records) {
-    const subsub = (r as Record<string, unknown>).subsubcategory as string | undefined
-    if (subsub) {
-      if (!groupMap.has(subsub)) groupMap.set(subsub, [])
-      groupMap.get(subsub)!.push(r)
-    } else {
-      ungrouped.push(r)
-    }
-  }
-
-  const groups: { name: string | null; records: MRecord[] }[] = []
-
-  // Ungrouped records first (no heading), if any
-  if (ungrouped.length > 0) {
-    groups.push({ name: null, records: ungrouped })
-  }
-
-  // Then named groups, sorted alphabetically
-  for (const [name, recs] of Array.from(groupMap.entries()).sort((a, b) => a[0].localeCompare(b[0]))) {
-    groups.push({ name, records: recs })
-  }
-
-  return groups
 }

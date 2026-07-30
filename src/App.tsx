@@ -1,5 +1,5 @@
 import { useRoute, useLinkInterceptor } from './lib/router'
-import { categories, categoryById } from './data/categories'
+import { categories, categoryById, subsubFromSlug } from './data/categories'
 import { records } from './data/records'
 import { useEffect } from 'react'
 
@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import CategoryPage from './pages/CategoryPage'
 import SubcategoryPage from './pages/SubcategoryPage'
+import SubSubcategoryPage from './pages/SubSubcategoryPage'
 import RecordPage from './pages/RecordPage'
 import NotFoundPage from './pages/NotFoundPage'
 
@@ -38,8 +39,6 @@ export default function App() {
 
 /**
  * Dynamic SEO — updates <title> and <meta> tags based on the current route.
- * This makes every page have its own unique title, which dramatically
- * improves Google indexing and social media link previews.
  */
 function useSEO(route: ReturnType<typeof useRoute>) {
   useEffect(() => {
@@ -49,7 +48,7 @@ function useSEO(route: ReturnType<typeof useRoute>) {
     switch (route.name) {
       case 'home':
         title = 'Madrid Insider — One-Stop Site All About Madrid'
-        description = 'Your English-language directory for Madrid, Spain. Five categories: Essentials, Living, See, Do, and Madrid Now. Live weather, events, transit alerts, and 265+ records with official links.'
+        description = 'Your English-language directory for Madrid, Spain. Five categories: Essentials, Living, See, Do, and Madrid Now. Live weather, events, transit alerts, and 424+ records with official links.'
         break
       case 'category': {
         const cat = categoryById(route.categoryId)
@@ -70,6 +69,23 @@ function useSEO(route: ReturnType<typeof useRoute>) {
         }
         break
       }
+      case 'subsubcategory': {
+        const cat = categoryById(route.categoryId)
+        if (cat) {
+          const sub = cat.subcategories.find((s) => (s.slug ?? s.id) === route.subcategorySlug)
+          if (sub) {
+            const scoped = records.filter(
+              (r) => r.category === cat.id && r.subcategory === sub.id
+            )
+            const name = subsubFromSlug(route.subsubSlug, scoped)
+            if (name) {
+              title = `${name} — ${sub.title} — ${cat.title} — Madrid Insider`
+              description = `${name} group within ${sub.title}. ${scoped.filter(r => (r as Record<string, unknown>).subsubcategory === name).length} records.`
+            }
+          }
+        }
+        break
+      }
       case 'record': {
         const rec = records.find((r) => r.id === route.recordId)
         if (rec) {
@@ -86,7 +102,6 @@ function useSEO(route: ReturnType<typeof useRoute>) {
 
     document.title = title
 
-    // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]')
     if (metaDesc) {
       metaDesc.setAttribute('content', description)
@@ -97,11 +112,9 @@ function useSEO(route: ReturnType<typeof useRoute>) {
       document.head.appendChild(metaDesc)
     }
 
-    // Update Open Graph title
     let ogTitle = document.querySelector('meta[property="og:title"]')
     if (ogTitle) ogTitle.setAttribute('content', title)
 
-    // Update Open Graph description
     let ogDesc = document.querySelector('meta[property="og:description"]')
     if (ogDesc) ogDesc.setAttribute('content', description)
   }, [route])
@@ -130,6 +143,30 @@ function renderRoute(route: ReturnType<typeof useRoute>) {
           records={records.filter(
             (r) => r.category === cat.id && r.subcategory === sub.id
           )}
+        />
+      )
+    }
+    case 'subsubcategory': {
+      const cat = categoryById(route.categoryId)
+      if (!cat) return <NotFoundPage />
+      const sub = cat.subcategories.find(
+        (s) => (s.slug ?? s.id) === route.subcategorySlug
+      )
+      if (!sub) return <NotFoundPage />
+      const scoped = records.filter(
+        (r) => r.category === cat.id && r.subcategory === sub.id
+      )
+      const name = subsubFromSlug(route.subsubSlug, scoped)
+      if (!name) return <NotFoundPage />
+      const groupRecords = scoped.filter(
+        (r) => (r as Record<string, unknown>).subsubcategory === name
+      )
+      return (
+        <SubSubcategoryPage
+          category={cat}
+          subcategory={sub}
+          subsubName={name}
+          records={groupRecords}
         />
       )
     }
