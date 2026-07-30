@@ -138,7 +138,7 @@ export default function RecordPage({
           </span>
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href={\`mailto:info@madridinsider.com?subject=Correction%20for%20\${encodeURIComponent(record.title)}%20(\${record.id})&body=I%20found%20an%20error%20on%20this%20page%3A%0A%0A\`}
+              href={`mailto:info@madridinsider.com?subject=Correction%20for%20${encodeURIComponent(record.title)}%20(${record.id})&body=I%20found%20an%20error%20on%20this%20page%3A%0A%0A`}
               className="text-xs text-gray-400 underline hover:text-gray-600"
             >
               Report an error
