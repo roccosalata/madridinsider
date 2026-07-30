@@ -5,28 +5,24 @@ import type { Category } from '../data/categories'
 import type { Record as MRecord } from '../data/records'
 
 /**
- * Homepage layout (per CONSTITUTION.md Amendment 2, 2026-07-20):
+ * Homepage layout:
  *
  *   ┌────────────────────────────────────────────────────────────┐
- *   │  HEADER (same on all pages): logo + slogan + 5 nav         │
+ *   │  HEADER                                                     │
  *   ├────────────────────────────────────────────────────────────┤
- *   │  TOP 1/3 — single centered block:                          │
- *   │     ┌─────────┬─────────┐                                  │
- *   │     │Essentials│ Living │   ← 2×2 table (centered)         │
- *   │     ├─────────┼─────────┤                                  │
- *   │     │   See   │   Do   │                                  │
- *   │     └─────────┴─────────┘                                  │
- *   │     WELCOME TO MADRID INSIDER     ← invisible row under    │
- *   │     [both left and right margins are free]                 │
- *   ├────────────────────────────────────────────────────────────┤
- *   │  POPULAR RECORDS (full width)                              │
- *   │  Top 8 most-linked records as quick-access cards           │
- *   ├────────────────────────────────────────────────────────────┤
- *   │  BOTTOM 2/3 — Madrid Now (full width, both margins free):  │
- *   │  Transit alerts | This week's events | Open exhibitions    │
- *   │  News & updates | Live info                                │
- *   ├────────────────────────────────────────────────────────────┤
- *   │  FOOTER (same on all pages)                                │
+ *   │  TOP — centered 2×2 table + welcome                        │
+ *   │     ┌─────────┬─────────┐                                   │
+ *   │     │Essentials│ Living │                                   │
+ *   │     ├─────────┼─────────┤                                   │
+ *   │     │   See   │   Do   │                                   │
+ *   │     └─────────┴─────────┘                                   │
+ *   │     WELCOME TO MADRID INSIDER                               │
+ *   ├──────────────────────────┬─────────────────────────────────┤
+ *   │  POPULAR (left column)   │  MADRID NOW (right column)      │
+ *   │  Top 6 quick-access      │  Weather + highlights           │
+ *   │  record cards            │  (compact, not full version)    │
+ *   ├──────────────────────────┴─────────────────────────────────┤
+ *   │  FOOTER                                                     │
  *   └────────────────────────────────────────────────────────────┘
  */
 export default function HomePage({
@@ -38,16 +34,15 @@ export default function HomePage({
 }) {
   const navCategories = categories.filter((c) => c.id !== 'now')
 
-  // Popular records = records with the most related_records connections
-  // (most-connected = most cross-referenced = most useful hub pages)
+  // Popular records = most-connected (most cross-referenced = most useful hubs)
   const popularRecords = [...records]
     .filter((r) => r.status !== 'archived')
     .sort((a, b) => (b.related_records?.length ?? 0) - (a.related_records?.length ?? 0))
-    .slice(0, 8)
+    .slice(0, 6)
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      {/* TOP 1/3: centered 2×2 table + welcome statement */}
+      {/* TOP: centered 2×2 table + welcome statement */}
       <section className="madrid-gradient border-b border-gray-100 py-8 sm:py-10">
         <div className="mx-auto max-w-2xl">
           <table className="w-full border-collapse">
@@ -75,26 +70,36 @@ export default function HomePage({
         </div>
       </section>
 
-      {/* POPULAR RECORDS — quick access to most-linked pages */}
-      <section className="border-b border-gray-100 py-6 sm:py-8">
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-          Popular Resources
-        </h2>
-        <p className="mt-1 text-xs text-gray-400">
-          The most cross-referenced guides on Madrid Insider — start here
-        </p>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {popularRecords.map((r) => (
-            <li key={r.id}>
-              <RecordCard record={r} />
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* BOTTOM: two-column layout — Popular (left) + Madrid Now (right) */}
+      <section className="py-6 sm:py-8">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 
-      {/* BOTTOM 2/3: Madrid Now feed (full width) */}
-      <section className="py-8 sm:py-10">
-        <MadridNowFeed records={records} />
+          {/* LEFT: Popular Resources */}
+          <div>
+            <div className="flex items-baseline justify-between border-b border-gray-100 pb-3">
+              <h2 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl">
+                <span aria-hidden className="mr-1.5">⭐</span>
+                Popular Resources
+              </h2>
+              <span className="text-xs text-gray-400">
+                Most-referenced guides
+              </span>
+            </div>
+            <ul className="mt-4 space-y-2">
+              {popularRecords.map((r) => (
+                <li key={r.id}>
+                  <RecordCard record={r} />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* RIGHT: Madrid Now (compact) */}
+          <div>
+            <MadridNowFeed records={records} />
+          </div>
+
+        </div>
       </section>
     </div>
   )
