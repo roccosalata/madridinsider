@@ -128,7 +128,7 @@ export default function RecordPage({
           </div>
         )}
 
-        {/* Bottom meta box — last updated + secondary official link */}
+        {/* Bottom meta box — last updated + report error + official link */}
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-gray-100 bg-gray-50 px-4 py-3 text-xs text-gray-600">
           <span>
             Last updated:{' '}
@@ -136,16 +136,24 @@ export default function RecordPage({
               {record.last_updated}
             </time>
           </span>
-          {record.official_url && (
-            <ExtLink
-              to={record.official_url}
-              external
-              className="inline-flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 shadow-sm transition hover:bg-brand-50"
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href={\`mailto:info@madridinsider.com?subject=Correction%20for%20\${encodeURIComponent(record.title)}%20(\${record.id})&body=I%20found%20an%20error%20on%20this%20page%3A%0A%0A\`}
+              className="text-xs text-gray-400 underline hover:text-gray-600"
             >
-              Visit official site
-              <span aria-hidden>↗</span>
-            </ExtLink>
-          )}
+              Report an error
+            </a>
+            {record.official_url && (
+              <ExtLink
+                to={record.official_url}
+                external
+                className="inline-flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 shadow-sm transition hover:bg-brand-50"
+              >
+                Visit official site
+                <span aria-hidden>↗</span>
+              </ExtLink>
+            )}
+          </div>
         </div>
 
         {related.length > 0 && (
