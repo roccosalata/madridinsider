@@ -43,7 +43,7 @@ export default function HomePage({
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {/* TOP: centered 2×2 table + welcome statement */}
-      <section className="madrid-gradient border-b border-gray-100 py-8 sm:py-10">
+      <section className="madrid-gradient border-b border-gray-100 py-4 sm:py-6">
         <div className="mx-auto max-w-2xl">
           <table className="w-full border-collapse">
             <tbody>
@@ -56,11 +56,11 @@ export default function HomePage({
                 <CategoryCell category={navCategories[3]} />
               </tr>
               <tr>
-                <td colSpan={2} className="p-2 pt-8 text-center">
-                  <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+                <td colSpan={2} className="p-2 pt-4 text-center">
+                  <h1 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
                     WELCOME TO MADRID INSIDER
                   </h1>
-                  <p className="mt-2 text-sm font-medium uppercase tracking-wider text-brand-600 sm:text-base">
+                  <p className="mt-1 text-xs font-medium uppercase tracking-wider text-brand-600 sm:text-sm">
                     Your English-language directory for Madrid, Spain
                   </p>
                 </td>
@@ -71,7 +71,7 @@ export default function HomePage({
       </section>
 
       {/* BOTTOM: two-column layout — Popular (left) + Madrid Now (right) */}
-      <section className="py-6 sm:py-8">
+      <section className="py-4 sm:py-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 
           {/* LEFT: Popular Resources (top 2 + link to more) */}
@@ -117,21 +117,21 @@ export default function HomePage({
 function CategoryCell({ category }: { category: Category | undefined }) {
   if (!category) return <td className="p-2" />
   return (
-    <td className="p-2 align-top">
+    <td className="p-1.5 align-top">
       <Link
         to={`/${category.id}`}
-        className="group block h-full rounded-xl border border-gray-200 bg-white p-5 text-center transition hover:border-brand-300 hover:bg-brand-50/30 hover:shadow-sm sm:p-6"
+        className="group block h-full rounded-lg border border-gray-200 bg-white p-3 text-center transition hover:border-brand-300 hover:bg-brand-50/30 hover:shadow-sm sm:p-4"
       >
-        <div className="text-3xl sm:text-4xl" aria-hidden>
+        <div className="text-2xl sm:text-3xl" aria-hidden>
           {category.emoji}
         </div>
-        <div className="mt-2 text-base font-bold text-gray-900 group-hover:text-brand-600 sm:text-lg">
+        <div className="mt-1 text-sm font-bold text-gray-900 group-hover:text-brand-600 sm:text-base">
           {category.title}
         </div>
-        <div className="mt-1 text-[11px] leading-relaxed text-gray-500 sm:text-xs">
+        <div className="mt-0.5 text-[10px] leading-snug text-gray-500 sm:text-[11px]">
           {category.description}
         </div>
-        <div className="mt-2 text-[10px] font-semibold uppercase tracking-wider text-gray-400 group-hover:text-brand-500">
+        <div className="mt-1 text-[9px] font-semibold uppercase tracking-wider text-gray-400 group-hover:text-brand-500">
           {category.subcategories.length} subcategories →
         </div>
       </Link>
