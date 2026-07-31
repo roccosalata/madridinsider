@@ -32,10 +32,17 @@
       },
       {
         "id": "intercity-travel",
-        "title": "Intercity Travel from Madrid",
+        "title": "Intercity Trains & Stations",
         "icon": "🚆",
-        "summary": "Leaving Madrid: AVE high-speed trains, Renfe national trains, Eurail/Interrail passes, intercity buses & coaches, coach stations, and Madrid's major transit hubs (Atocha, Chamartín). Original 2014 site: Travel → Airport, Buses: Madrid to..., Trains, Eurail Passes.",
-        "tips": "AVE high-speed trains: Madrid→Toledo 30 min, Madrid→Sevilla 2.5 hr, Madrid→Barcelona 2.5 hr. Book early at renfe.com (€20–80). Intercity buses from Estación Sur (Méndez Álvaro) are cheaper but slower. Atocha serves south/east; Chamartín serves north. Eurail/Interrail passes require seat reservations (€10–35 per AVE trip)."
+        "summary": "High-speed and national trains from Madrid: AVE, Renfe, Eurail/Interrail passes, and major stations (Atocha, Chamartín). For intercity buses, see Intercity Buses & Coaches.",
+        "tips": "AVE high-speed trains: Madrid→Toledo 30 min, Madrid→Sevilla 2.5 hr, Madrid→Barcelona 2.5 hr. Book early at renfe.com (€20-80). Atocha serves south/east; Chamartín serves north. Eurail/Interrail passes require seat reservations (€10-35 per AVE trip)."
+      },
+      {
+        "id": "intercity-buses",
+        "title": "Intercity Buses & Coaches",
+        "icon": "🚌",
+        "summary": "Buses and coaches from Madrid to other cities: intercity routes, coach stations (Estación Sur, Moncloa, Méndez Álvaro), left luggage at bus stations, and bus vs coach station guide. Cheaper than trains.",
+        "tips": "Intercity buses are cheaper than AVE trains but slower. Estación Sur (Méndez Álvaro) is the main hub for long-distance buses. Moncloa serves Castilla y León. Book at alsa.es or in person. Left luggage at Estación Sur: €3/bag/day, open 6am-midnight."
       },
       {
         "id": "airport",
